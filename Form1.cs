@@ -23,6 +23,8 @@ namespace AutoCare_Pro
             this.btnRegister.BackColor = Color.FromArgb(26, 31, 46);
             this.pnlLoginForm.Visible = true;
             this.pnlRegister.Visible = false;
+            this.btnLoginSubmit.Visible = true;
+            this.btnRegSubmit.Visible = false;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -31,6 +33,8 @@ namespace AutoCare_Pro
             this.btnLogin.BackColor = Color.FromArgb(26, 31, 46);
             this.pnlRegister.Visible = true;
             this.pnlLoginForm.Visible = false;
+            this.btnLoginSubmit.Visible = false;
+            this.btnRegSubmit.Visible = true;
         }
     }
 }

@@ -33,12 +33,13 @@ namespace AutoCare_Pro
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginPage));
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.pnlRegister = new System.Windows.Forms.Panel();
+            this.btnLoginSubmit = new System.Windows.Forms.Button();
             this.pnlLoginForm = new System.Windows.Forms.Panel();
             this.txtLoginPass = new System.Windows.Forms.TextBox();
             this.lblLoginPass = new System.Windows.Forms.Label();
             this.txtLoginEmail = new System.Windows.Forms.TextBox();
             this.lblLoginEmail = new System.Windows.Forms.Label();
+            this.pnlRegister = new System.Windows.Forms.Panel();
             this.txtOutputPass = new System.Windows.Forms.TextBox();
             this.lblRegPass = new System.Windows.Forms.Label();
             this.txtRegEmail = new System.Windows.Forms.TextBox();
@@ -51,9 +52,10 @@ namespace AutoCare_Pro
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlCar = new System.Windows.Forms.Panel();
             this.picCar = new System.Windows.Forms.PictureBox();
+            this.btnRegSubmit = new System.Windows.Forms.Button();
             this.pnlLogin.SuspendLayout();
-            this.pnlRegister.SuspendLayout();
             this.pnlLoginForm.SuspendLayout();
+            this.pnlRegister.SuspendLayout();
             this.pnlCar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +64,8 @@ namespace AutoCare_Pro
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(102)))));
             this.pnlLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLogin.Controls.Add(this.btnRegSubmit);
+            this.pnlLogin.Controls.Add(this.btnLoginSubmit);
             this.pnlLogin.Controls.Add(this.pnlLoginForm);
             this.pnlLogin.Controls.Add(this.pnlRegister);
             this.pnlLogin.Controls.Add(this.btnRegister);
@@ -71,22 +75,20 @@ namespace AutoCare_Pro
             this.pnlLogin.Controls.Add(this.pnlCar);
             this.pnlLogin.Location = new System.Drawing.Point(329, 103);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(453, 388);
+            this.pnlLogin.Size = new System.Drawing.Size(453, 450);
             this.pnlLogin.TabIndex = 0;
             // 
-            // pnlRegister
+            // btnLoginSubmit
             // 
-            this.pnlRegister.Controls.Add(this.txtOutputPass);
-            this.pnlRegister.Controls.Add(this.lblRegPass);
-            this.pnlRegister.Controls.Add(this.txtRegEmail);
-            this.pnlRegister.Controls.Add(this.lblRegEmail);
-            this.pnlRegister.Controls.Add(this.txtRegUsername);
-            this.pnlRegister.Controls.Add(this.lblUserName);
-            this.pnlRegister.Location = new System.Drawing.Point(65, 177);
-            this.pnlRegister.Name = "pnlRegister";
-            this.pnlRegister.Size = new System.Drawing.Size(324, 192);
-            this.pnlRegister.TabIndex = 5;
-            this.pnlRegister.Visible = false;
+            this.btnLoginSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(115)))), ((int)(((byte)(10)))));
+            this.btnLoginSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoginSubmit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginSubmit.Location = new System.Drawing.Point(184, 375);
+            this.btnLoginSubmit.Name = "btnLoginSubmit";
+            this.btnLoginSubmit.Size = new System.Drawing.Size(91, 32);
+            this.btnLoginSubmit.TabIndex = 7;
+            this.btnLoginSubmit.Text = "Login";
+            this.btnLoginSubmit.UseVisualStyleBackColor = false;
             // 
             // pnlLoginForm
             // 
@@ -135,6 +137,20 @@ namespace AutoCare_Pro
             this.lblLoginEmail.Size = new System.Drawing.Size(53, 18);
             this.lblLoginEmail.TabIndex = 2;
             this.lblLoginEmail.Text = "Email";
+            // 
+            // pnlRegister
+            // 
+            this.pnlRegister.Controls.Add(this.txtOutputPass);
+            this.pnlRegister.Controls.Add(this.lblRegPass);
+            this.pnlRegister.Controls.Add(this.txtRegEmail);
+            this.pnlRegister.Controls.Add(this.lblRegEmail);
+            this.pnlRegister.Controls.Add(this.txtRegUsername);
+            this.pnlRegister.Controls.Add(this.lblUserName);
+            this.pnlRegister.Location = new System.Drawing.Point(65, 177);
+            this.pnlRegister.Name = "pnlRegister";
+            this.pnlRegister.Size = new System.Drawing.Size(324, 192);
+            this.pnlRegister.TabIndex = 5;
+            this.pnlRegister.Visible = false;
             // 
             // txtOutputPass
             // 
@@ -261,6 +277,19 @@ namespace AutoCare_Pro
             this.picCar.TabIndex = 0;
             this.picCar.TabStop = false;
             // 
+            // btnRegSubmit
+            // 
+            this.btnRegSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(115)))), ((int)(((byte)(10)))));
+            this.btnRegSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegSubmit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegSubmit.Location = new System.Drawing.Point(184, 375);
+            this.btnRegSubmit.Name = "btnRegSubmit";
+            this.btnRegSubmit.Size = new System.Drawing.Size(91, 32);
+            this.btnRegSubmit.TabIndex = 8;
+            this.btnRegSubmit.Text = "Register";
+            this.btnRegSubmit.UseVisualStyleBackColor = false;
+            this.btnRegSubmit.Visible = false;
+            // 
             // loginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,10 +304,10 @@ namespace AutoCare_Pro
             this.Text = "AutoCare Pro | Login Portal";
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
-            this.pnlRegister.ResumeLayout(false);
-            this.pnlRegister.PerformLayout();
             this.pnlLoginForm.ResumeLayout(false);
             this.pnlLoginForm.PerformLayout();
+            this.pnlRegister.ResumeLayout(false);
+            this.pnlRegister.PerformLayout();
             this.pnlCar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCar)).EndInit();
             this.ResumeLayout(false);
@@ -306,6 +335,8 @@ namespace AutoCare_Pro
         private Label lblLoginPass;
         private TextBox txtLoginEmail;
         private Label lblLoginEmail;
+        private Button btnLoginSubmit;
+        private Button btnRegSubmit;
     }
 }
 

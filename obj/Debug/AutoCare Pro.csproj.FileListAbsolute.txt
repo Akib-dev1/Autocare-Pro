@@ -1,0 +1,10 @@
+E:\Code\C#\AutoCare Pro\bin\Debug\AutoCare Pro.exe.config
+E:\Code\C#\AutoCare Pro\bin\Debug\AutoCare Pro.exe
+E:\Code\C#\AutoCare Pro\bin\Debug\AutoCare Pro.pdb
+E:\Code\C#\AutoCare Pro\obj\Debug\AutoCare Pro.csproj.AssemblyReference.cache
+E:\Code\C#\AutoCare Pro\obj\Debug\AutoCare_Pro.loginPage.resources
+E:\Code\C#\AutoCare Pro\obj\Debug\AutoCare_Pro.Properties.Resources.resources
+E:\Code\C#\AutoCare Pro\obj\Debug\AutoCare Pro.csproj.GenerateResource.cache
+E:\Code\C#\AutoCare Pro\obj\Debug\AutoCare Pro.csproj.CoreCompileInputs.cache
+E:\Code\C#\AutoCare Pro\obj\Debug\AutoCare Pro.exe
+E:\Code\C#\AutoCare Pro\obj\Debug\AutoCare Pro.pdb

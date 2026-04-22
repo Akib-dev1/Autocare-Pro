@@ -30,48 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userForm));
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.lblLogo = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.pnlNavnlink1 = new System.Windows.Forms.Panel();
-            this.lblNavlink1 = new System.Windows.Forms.Label();
-            this.picNavlink1 = new System.Windows.Forms.PictureBox();
-            this.pnlNavlink2 = new System.Windows.Forms.Panel();
-            this.picNavlink2 = new System.Windows.Forms.PictureBox();
-            this.lblNavlink2 = new System.Windows.Forms.Label();
-            this.pnlNavlink3 = new System.Windows.Forms.Panel();
-            this.picNavlink3 = new System.Windows.Forms.PictureBox();
-            this.lblNavlink3 = new System.Windows.Forms.Label();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.btnNavlink1 = new System.Windows.Forms.Button();
+            this.btnNavlink2 = new System.Windows.Forms.Button();
+            this.btnNavlink3 = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
-            this.pnlNavnlink1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNavlink1)).BeginInit();
-            this.pnlNavlink2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNavlink2)).BeginInit();
-            this.pnlNavlink3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNavlink3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
             // 
-            this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
-            this.pnlSidebar.Controls.Add(this.pnlNavlink3);
-            this.pnlSidebar.Controls.Add(this.pnlNavlink2);
+            this.pnlSidebar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.pnlSidebar.Controls.Add(this.btnNavlink3);
+            this.pnlSidebar.Controls.Add(this.btnNavlink2);
+            this.pnlSidebar.Controls.Add(this.btnNavlink1);
             this.pnlSidebar.Controls.Add(this.lblDescription);
             this.pnlSidebar.Controls.Add(this.lblLogo);
-            this.pnlSidebar.Location = new System.Drawing.Point(1, 0);
+            this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(200, 746);
             this.pnlSidebar.TabIndex = 0;
-            // 
-            // lblLogo
-            // 
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.ForeColor = System.Drawing.Color.White;
-            this.lblLogo.Location = new System.Drawing.Point(11, 18);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(141, 19);
-            this.lblLogo.TabIndex = 0;
-            this.lblLogo.Text = "AUTOCARE PRO";
             // 
             // lblDescription
             // 
@@ -84,117 +64,76 @@
             this.lblDescription.TabIndex = 1;
             this.lblDescription.Text = "Service Ledger";
             // 
-            // pnlNavnlink1
+            // lblLogo
             // 
-            this.pnlNavnlink1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.pnlNavnlink1.Controls.Add(this.picNavlink1);
-            this.pnlNavnlink1.Controls.Add(this.lblNavlink1);
-            this.pnlNavnlink1.Location = new System.Drawing.Point(1, 96);
-            this.pnlNavnlink1.Name = "pnlNavnlink1";
-            this.pnlNavnlink1.Size = new System.Drawing.Size(200, 45);
-            this.pnlNavnlink1.TabIndex = 2;
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.ForeColor = System.Drawing.Color.White;
+            this.lblLogo.Location = new System.Drawing.Point(11, 18);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(141, 19);
+            this.lblLogo.TabIndex = 0;
+            this.lblLogo.Text = "AUTOCARE PRO";
             // 
-            // lblNavlink1
+            // btnNavlink1
             // 
-            this.lblNavlink1.AutoSize = true;
-            this.lblNavlink1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavlink1.ForeColor = System.Drawing.Color.White;
-            this.lblNavlink1.Location = new System.Drawing.Point(36, 12);
-            this.lblNavlink1.Name = "lblNavlink1";
-            this.lblNavlink1.Size = new System.Drawing.Size(92, 23);
-            this.lblNavlink1.TabIndex = 0;
-            this.lblNavlink1.Text = "Job Cards";
+            this.btnNavlink1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnNavlink1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btnNavlink1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavlink1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavlink1.ForeColor = System.Drawing.Color.White;
+            this.btnNavlink1.Image = ((System.Drawing.Image)(resources.GetObject("btnNavlink1.Image")));
+            this.btnNavlink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavlink1.Location = new System.Drawing.Point(0, 118);
+            this.btnNavlink1.Name = "btnNavlink1";
+            this.btnNavlink1.Size = new System.Drawing.Size(200, 48);
+            this.btnNavlink1.TabIndex = 2;
+            this.btnNavlink1.Text = "Job Cards";
+            this.btnNavlink1.UseVisualStyleBackColor = false;
             // 
-            // picNavlink1
+            // btnNavlink2
             // 
-            this.picNavlink1.Image = ((System.Drawing.Image)(resources.GetObject("picNavlink1.Image")));
-            this.picNavlink1.Location = new System.Drawing.Point(11, 10);
-            this.picNavlink1.Name = "picNavlink1";
-            this.picNavlink1.Size = new System.Drawing.Size(29, 32);
-            this.picNavlink1.TabIndex = 1;
-            this.picNavlink1.TabStop = false;
+            this.btnNavlink2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnNavlink2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btnNavlink2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavlink2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavlink2.ForeColor = System.Drawing.Color.White;
+            this.btnNavlink2.Image = ((System.Drawing.Image)(resources.GetObject("btnNavlink2.Image")));
+            this.btnNavlink2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavlink2.Location = new System.Drawing.Point(0, 186);
+            this.btnNavlink2.Name = "btnNavlink2";
+            this.btnNavlink2.Size = new System.Drawing.Size(200, 48);
+            this.btnNavlink2.TabIndex = 3;
+            this.btnNavlink2.Text = "Customers";
+            this.btnNavlink2.UseVisualStyleBackColor = false;
             // 
-            // pnlNavlink2
+            // btnNavlink3
             // 
-            this.pnlNavlink2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.pnlNavlink2.Controls.Add(this.picNavlink2);
-            this.pnlNavlink2.Controls.Add(this.lblNavlink2);
-            this.pnlNavlink2.Location = new System.Drawing.Point(0, 160);
-            this.pnlNavlink2.Name = "pnlNavlink2";
-            this.pnlNavlink2.Size = new System.Drawing.Size(200, 45);
-            this.pnlNavlink2.TabIndex = 3;
-            // 
-            // picNavlink2
-            // 
-            this.picNavlink2.Image = ((System.Drawing.Image)(resources.GetObject("picNavlink2.Image")));
-            this.picNavlink2.Location = new System.Drawing.Point(11, 10);
-            this.picNavlink2.Name = "picNavlink2";
-            this.picNavlink2.Size = new System.Drawing.Size(29, 32);
-            this.picNavlink2.TabIndex = 1;
-            this.picNavlink2.TabStop = false;
-            // 
-            // lblNavlink2
-            // 
-            this.lblNavlink2.AutoSize = true;
-            this.lblNavlink2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavlink2.ForeColor = System.Drawing.Color.White;
-            this.lblNavlink2.Location = new System.Drawing.Point(36, 12);
-            this.lblNavlink2.Name = "lblNavlink2";
-            this.lblNavlink2.Size = new System.Drawing.Size(97, 23);
-            this.lblNavlink2.TabIndex = 0;
-            this.lblNavlink2.Text = "Customers";
-            // 
-            // pnlNavlink3
-            // 
-            this.pnlNavlink3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
-            this.pnlNavlink3.Controls.Add(this.picNavlink3);
-            this.pnlNavlink3.Controls.Add(this.lblNavlink3);
-            this.pnlNavlink3.Location = new System.Drawing.Point(0, 224);
-            this.pnlNavlink3.Name = "pnlNavlink3";
-            this.pnlNavlink3.Size = new System.Drawing.Size(200, 45);
-            this.pnlNavlink3.TabIndex = 4;
-            // 
-            // picNavlink3
-            // 
-            this.picNavlink3.Image = ((System.Drawing.Image)(resources.GetObject("picNavlink3.Image")));
-            this.picNavlink3.Location = new System.Drawing.Point(11, 10);
-            this.picNavlink3.Name = "picNavlink3";
-            this.picNavlink3.Size = new System.Drawing.Size(29, 32);
-            this.picNavlink3.TabIndex = 1;
-            this.picNavlink3.TabStop = false;
-            // 
-            // lblNavlink3
-            // 
-            this.lblNavlink3.AutoSize = true;
-            this.lblNavlink3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavlink3.ForeColor = System.Drawing.Color.White;
-            this.lblNavlink3.Location = new System.Drawing.Point(36, 12);
-            this.lblNavlink3.Name = "lblNavlink3";
-            this.lblNavlink3.Size = new System.Drawing.Size(90, 23);
-            this.lblNavlink3.TabIndex = 0;
-            this.lblNavlink3.Text = "Inventory";
+            this.btnNavlink3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnNavlink3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btnNavlink3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavlink3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavlink3.ForeColor = System.Drawing.Color.White;
+            this.btnNavlink3.Image = ((System.Drawing.Image)(resources.GetObject("btnNavlink3.Image")));
+            this.btnNavlink3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavlink3.Location = new System.Drawing.Point(0, 251);
+            this.btnNavlink3.Name = "btnNavlink3";
+            this.btnNavlink3.Size = new System.Drawing.Size(200, 48);
+            this.btnNavlink3.TabIndex = 4;
+            this.btnNavlink3.Text = "Inventory";
+            this.btnNavlink3.UseVisualStyleBackColor = false;
             // 
             // userForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1357, 746);
-            this.Controls.Add(this.pnlNavnlink1);
             this.Controls.Add(this.pnlSidebar);
             this.Name = "userForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employe | Manager Dashboard";
             this.pnlSidebar.ResumeLayout(false);
             this.pnlSidebar.PerformLayout();
-            this.pnlNavnlink1.ResumeLayout(false);
-            this.pnlNavnlink1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNavlink1)).EndInit();
-            this.pnlNavlink2.ResumeLayout(false);
-            this.pnlNavlink2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNavlink2)).EndInit();
-            this.pnlNavlink3.ResumeLayout(false);
-            this.pnlNavlink3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNavlink3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,14 +143,8 @@
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.Panel pnlNavnlink1;
-        private System.Windows.Forms.Label lblNavlink1;
-        private System.Windows.Forms.PictureBox picNavlink1;
-        private System.Windows.Forms.Panel pnlNavlink2;
-        private System.Windows.Forms.PictureBox picNavlink2;
-        private System.Windows.Forms.Label lblNavlink2;
-        private System.Windows.Forms.Panel pnlNavlink3;
-        private System.Windows.Forms.PictureBox picNavlink3;
-        private System.Windows.Forms.Label lblNavlink3;
+        private System.Windows.Forms.Button btnNavlink1;
+        private System.Windows.Forms.Button btnNavlink3;
+        private System.Windows.Forms.Button btnNavlink2;
     }
 }

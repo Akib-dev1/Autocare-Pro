@@ -18,3 +18,4 @@ F:\Code\Autocare-Pro\obj\Debug\AutoCare Pro.csproj.GenerateResource.cache
 F:\Code\Autocare-Pro\obj\Debug\AutoCare Pro.csproj.CoreCompileInputs.cache
 F:\Code\Autocare-Pro\obj\Debug\AutoCare Pro.exe
 F:\Code\Autocare-Pro\obj\Debug\AutoCare Pro.pdb
+E:\Code\C#\AutoCare Pro\obj\Debug\AutoCare_Pro.userForm.resources

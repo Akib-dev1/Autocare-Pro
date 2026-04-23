@@ -16,69 +16,156 @@ namespace AutoCare_Pro
         public Jobcard()
         {
             InitializeComponent();
+            pnlCustomer.Resize += (s, e) =>
+            {
+                pnlCustomer.Region = new Region(GetRoundedRect(pnlCustomer.ClientRectangle, 15));
+            };
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private GraphicsPath GetRoundedRect(Rectangle rect, int radius)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmailShow_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            Panel panel = sender as Panel;
-            Graphics g = e.Graphics;
-            g.SmoothingMode = SmoothingMode.AntiAlias;
-
-            Rectangle rect = new Rectangle(0, 0, panel.Width - 1, panel.Height - 1);
-            int radius = 12; // change this value
-
-            GraphicsPath path = GetRoundedPath(rect, radius);
-
-            // Fill background
-            g.FillPath(new SolidBrush(panel.BackColor), path);
-
-            // Draw border
-            g.DrawPath(new Pen(Color.LightGray, 1), path);
-        }
-        private GraphicsPath GetRoundedPath(Rectangle bounds, int radius)
-        {
-            int d = radius * 2;
             GraphicsPath path = new GraphicsPath();
-            path.AddArc(bounds.X, bounds.Y, d, d, 180, 90);                          // top-left
-            path.AddArc(bounds.Right - d, bounds.Y, d, d, 270, 90);                  // top-right
-            path.AddArc(bounds.Right - d, bounds.Bottom - d, d, d, 0, 90);           // bottom-right
-            path.AddArc(bounds.X, bounds.Bottom - d, d, d, 90, 90);                  // bottom-left
+            int d = radius * 2;
+
+            path.StartFigure();
+            path.AddArc(rect.X, rect.Y, d, d, 180, 90);
+            path.AddArc(rect.Right - d, rect.Y, d, d, 270, 90);
+            path.AddArc(rect.Right - d, rect.Bottom - d, d, d, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - d, d, d, 90, 90);
             path.CloseFigure();
+
             return path;
         }
-        
 
-        private void lblCustomerName_Click(object sender, EventArgs e)
+        private void pnlCustomer_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
+            Rectangle rect = pnlCustomer.ClientRectangle;
+            rect.Width -= 1;
+            rect.Height -= 1;
+
+            // Shadow (draw slightly offset)
+            using (GraphicsPath shadowPath = GetRoundedRect(
+                new Rectangle(rect.X + 3, rect.Y + 3, rect.Width, rect.Height), 15))
+            using (SolidBrush shadowBrush = new SolidBrush(Color.FromArgb(50, Color.Black)))
+            {
+                e.Graphics.FillPath(shadowBrush, shadowPath);
+            }
+
+            // Main border
+            using (GraphicsPath path = GetRoundedRect(rect, 15))
+            using (Pen pen = new Pen(Color.LightGray, 2))
+            {
+                e.Graphics.DrawPath(pen, path);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblModelHolder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVehicleYear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPlateNumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPlateNumberHolder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblModel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Jobcard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHourRow3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblStatusTitle_Click(object sender, EventArgs e)
         {
 
         }

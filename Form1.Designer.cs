@@ -36,27 +36,17 @@ namespace AutoCare_Pro
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.btnRegSubmit = new System.Windows.Forms.Button();
             this.btnLogSubmit = new System.Windows.Forms.Button();
             this.pnlLoginForm = new System.Windows.Forms.Panel();
             this.txtLoginPass = new System.Windows.Forms.TextBox();
             this.lblLoginPass = new System.Windows.Forms.Label();
             this.txtLoginEmail = new System.Windows.Forms.TextBox();
             this.lblLoginEmail = new System.Windows.Forms.Label();
-            this.pnlRegister = new System.Windows.Forms.Panel();
-            this.txtRegPass = new System.Windows.Forms.TextBox();
-            this.lblRegPass = new System.Windows.Forms.Label();
-            this.txtRegEmail = new System.Windows.Forms.TextBox();
-            this.lblRegEmail = new System.Windows.Forms.Label();
-            this.txtRegUsername = new System.Windows.Forms.TextBox();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.pnlCar = new System.Windows.Forms.Panel();
             this.picCar = new System.Windows.Forms.PictureBox();
+            this.checkShowPass = new System.Windows.Forms.CheckBox();
             this.pnlLogin.SuspendLayout();
             this.pnlLoginForm.SuspendLayout();
-            this.pnlRegister.SuspendLayout();
             this.pnlCar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCar)).BeginInit();
             this.SuspendLayout();
@@ -92,36 +82,19 @@ namespace AutoCare_Pro
             this.pnlLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.pnlLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLogin.Controls.Add(this.btnRegSubmit);
             this.pnlLogin.Controls.Add(this.btnLogSubmit);
             this.pnlLogin.Controls.Add(this.pnlLoginForm);
-            this.pnlLogin.Controls.Add(this.pnlRegister);
-            this.pnlLogin.Controls.Add(this.btnRegister);
-            this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Location = new System.Drawing.Point(418, 266);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(453, 378);
+            this.pnlLogin.Size = new System.Drawing.Size(453, 275);
             this.pnlLogin.TabIndex = 0;
-            // 
-            // btnRegSubmit
-            // 
-            this.btnRegSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(64)))));
-            this.btnRegSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegSubmit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegSubmit.Location = new System.Drawing.Point(36, 299);
-            this.btnRegSubmit.Name = "btnRegSubmit";
-            this.btnRegSubmit.Size = new System.Drawing.Size(381, 49);
-            this.btnRegSubmit.TabIndex = 8;
-            this.btnRegSubmit.Text = "Register";
-            this.btnRegSubmit.UseVisualStyleBackColor = false;
-            this.btnRegSubmit.Visible = false;
             // 
             // btnLogSubmit
             // 
             this.btnLogSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(64)))));
             this.btnLogSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogSubmit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogSubmit.Location = new System.Drawing.Point(36, 299);
+            this.btnLogSubmit.Location = new System.Drawing.Point(36, 206);
             this.btnLogSubmit.Name = "btnLogSubmit";
             this.btnLogSubmit.Size = new System.Drawing.Size(381, 49);
             this.btnLogSubmit.TabIndex = 7;
@@ -131,20 +104,21 @@ namespace AutoCare_Pro
             // 
             // pnlLoginForm
             // 
+            this.pnlLoginForm.Controls.Add(this.checkShowPass);
             this.pnlLoginForm.Controls.Add(this.txtLoginPass);
             this.pnlLoginForm.Controls.Add(this.lblLoginPass);
             this.pnlLoginForm.Controls.Add(this.txtLoginEmail);
             this.pnlLoginForm.Controls.Add(this.lblLoginEmail);
             this.pnlLoginForm.Location = new System.Drawing.Point(21, 32);
             this.pnlLoginForm.Name = "pnlLoginForm";
-            this.pnlLoginForm.Size = new System.Drawing.Size(415, 146);
+            this.pnlLoginForm.Size = new System.Drawing.Size(413, 168);
             this.pnlLoginForm.TabIndex = 6;
             // 
             // txtLoginPass
             // 
             this.txtLoginPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.txtLoginPass.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginPass.Location = new System.Drawing.Point(15, 108);
+            this.txtLoginPass.Location = new System.Drawing.Point(15, 127);
             this.txtLoginPass.Name = "txtLoginPass";
             this.txtLoginPass.PasswordChar = '*';
             this.txtLoginPass.Size = new System.Drawing.Size(381, 26);
@@ -155,7 +129,7 @@ namespace AutoCare_Pro
             this.lblLoginPass.AutoSize = true;
             this.lblLoginPass.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.lblLoginPass.Location = new System.Drawing.Point(12, 79);
+            this.lblLoginPass.Location = new System.Drawing.Point(12, 98);
             this.lblLoginPass.Name = "lblLoginPass";
             this.lblLoginPass.Size = new System.Drawing.Size(95, 18);
             this.lblLoginPass.TabIndex = 4;
@@ -181,111 +155,6 @@ namespace AutoCare_Pro
             this.lblLoginEmail.TabIndex = 2;
             this.lblLoginEmail.Text = "Email";
             // 
-            // pnlRegister
-            // 
-            this.pnlRegister.Controls.Add(this.txtRegPass);
-            this.pnlRegister.Controls.Add(this.lblRegPass);
-            this.pnlRegister.Controls.Add(this.txtRegEmail);
-            this.pnlRegister.Controls.Add(this.lblRegEmail);
-            this.pnlRegister.Controls.Add(this.txtRegUsername);
-            this.pnlRegister.Controls.Add(this.lblUserName);
-            this.pnlRegister.Location = new System.Drawing.Point(21, 32);
-            this.pnlRegister.Name = "pnlRegister";
-            this.pnlRegister.Size = new System.Drawing.Size(409, 198);
-            this.pnlRegister.TabIndex = 5;
-            this.pnlRegister.Visible = false;
-            // 
-            // txtRegPass
-            // 
-            this.txtRegPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.txtRegPass.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegPass.Location = new System.Drawing.Point(18, 149);
-            this.txtRegPass.Name = "txtRegPass";
-            this.txtRegPass.PasswordChar = '*';
-            this.txtRegPass.Size = new System.Drawing.Size(378, 26);
-            this.txtRegPass.TabIndex = 5;
-            // 
-            // lblRegPass
-            // 
-            this.lblRegPass.AutoSize = true;
-            this.lblRegPass.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.lblRegPass.Location = new System.Drawing.Point(15, 128);
-            this.lblRegPass.Name = "lblRegPass";
-            this.lblRegPass.Size = new System.Drawing.Size(95, 18);
-            this.lblRegPass.TabIndex = 4;
-            this.lblRegPass.Text = "Password";
-            // 
-            // txtRegEmail
-            // 
-            this.txtRegEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.txtRegEmail.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegEmail.Location = new System.Drawing.Point(18, 91);
-            this.txtRegEmail.Name = "txtRegEmail";
-            this.txtRegEmail.Size = new System.Drawing.Size(378, 26);
-            this.txtRegEmail.TabIndex = 3;
-            // 
-            // lblRegEmail
-            // 
-            this.lblRegEmail.AutoSize = true;
-            this.lblRegEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.lblRegEmail.Location = new System.Drawing.Point(15, 70);
-            this.lblRegEmail.Name = "lblRegEmail";
-            this.lblRegEmail.Size = new System.Drawing.Size(54, 18);
-            this.lblRegEmail.TabIndex = 2;
-            this.lblRegEmail.Text = "Email";
-            // 
-            // txtRegUsername
-            // 
-            this.txtRegUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.txtRegUsername.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegUsername.Location = new System.Drawing.Point(18, 37);
-            this.txtRegUsername.Name = "txtRegUsername";
-            this.txtRegUsername.Size = new System.Drawing.Size(378, 26);
-            this.txtRegUsername.TabIndex = 1;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.lblUserName.Location = new System.Drawing.Point(15, 16);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(98, 18);
-            this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "Username";
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.btnRegister.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(227, 245);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(190, 35);
-            this.btnRegister.TabIndex = 4;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.btnLogin.Location = new System.Drawing.Point(36, 245);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(194, 35);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
             // pnlCar
             // 
             this.pnlCar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -306,6 +175,18 @@ namespace AutoCare_Pro
             this.picCar.TabIndex = 0;
             this.picCar.TabStop = false;
             // 
+            // checkShowPass
+            // 
+            this.checkShowPass.AutoSize = true;
+            this.checkShowPass.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkShowPass.Location = new System.Drawing.Point(250, 94);
+            this.checkShowPass.Name = "checkShowPass";
+            this.checkShowPass.Size = new System.Drawing.Size(146, 22);
+            this.checkShowPass.TabIndex = 6;
+            this.checkShowPass.Text = "Show Password";
+            this.checkShowPass.UseVisualStyleBackColor = true;
+            this.checkShowPass.CheckedChanged += new System.EventHandler(this.checkShowPass_CheckedChanged);
+            // 
             // loginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,8 +206,6 @@ namespace AutoCare_Pro
             this.pnlLogin.ResumeLayout(false);
             this.pnlLoginForm.ResumeLayout(false);
             this.pnlLoginForm.PerformLayout();
-            this.pnlRegister.ResumeLayout(false);
-            this.pnlRegister.PerformLayout();
             this.pnlCar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCar)).EndInit();
             this.ResumeLayout(false);
@@ -339,24 +218,14 @@ namespace AutoCare_Pro
         private Label lblDescription;
         private Label lblTitle;
         private Panel pnlLogin;
-        private Button btnRegSubmit;
         private Button btnLogSubmit;
         private Panel pnlLoginForm;
         private TextBox txtLoginPass;
         private Label lblLoginPass;
         private TextBox txtLoginEmail;
         private Label lblLoginEmail;
-        private Panel pnlRegister;
-        private TextBox txtRegPass;
-        private Label lblRegPass;
-        private TextBox txtRegEmail;
-        private Label lblRegEmail;
-        private TextBox txtRegUsername;
-        private Label lblUserName;
-        private Button btnRegister;
-        private Button btnLogin;
         private Panel pnlCar;
         private PictureBox picCar;
+        private CheckBox checkShowPass;
     }
 }
-

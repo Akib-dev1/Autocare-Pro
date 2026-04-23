@@ -36,6 +36,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblCusDetails = new System.Windows.Forms.Label();
             this.pnlCustomer = new System.Windows.Forms.Panel();
+            this.btnEditCusDetails = new System.Windows.Forms.Button();
             this.lblLocationShow = new System.Windows.Forms.Label();
             this.lblLocationTag = new System.Windows.Forms.Label();
             this.lblEmailShow = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.pcbUser = new System.Windows.Forms.PictureBox();
             this.pnlVehicleDetails = new System.Windows.Forms.Panel();
+            this.btnEditVehicleDetails = new System.Windows.Forms.Button();
             this.pcbLicensePlate = new System.Windows.Forms.PictureBox();
             this.pcbVehicle = new System.Windows.Forms.PictureBox();
             this.lblPlateNumber = new System.Windows.Forms.Label();
@@ -191,7 +193,7 @@
             // 
             this.lblCusDetails.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCusDetails.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblCusDetails.Location = new System.Drawing.Point(18, 20);
+            this.lblCusDetails.Location = new System.Drawing.Point(15, 32);
             this.lblCusDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCusDetails.Name = "lblCusDetails";
             this.lblCusDetails.Size = new System.Drawing.Size(176, 22);
@@ -204,6 +206,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.pnlCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCustomer.Controls.Add(this.btnEditCusDetails);
             this.pnlCustomer.Controls.Add(this.lblLocationShow);
             this.pnlCustomer.Controls.Add(this.lblLocationTag);
             this.pnlCustomer.Controls.Add(this.lblEmailShow);
@@ -216,15 +219,31 @@
             this.pnlCustomer.Location = new System.Drawing.Point(48, 154);
             this.pnlCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCustomer.Name = "pnlCustomer";
-            this.pnlCustomer.Size = new System.Drawing.Size(321, 150);
+            this.pnlCustomer.Size = new System.Drawing.Size(321, 184);
             this.pnlCustomer.TabIndex = 5;
+            // 
+            // btnEditCusDetails
+            // 
+            this.btnEditCusDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditCusDetails.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditCusDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCusDetails.Image")));
+            this.btnEditCusDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditCusDetails.Location = new System.Drawing.Point(209, 8);
+            this.btnEditCusDetails.Name = "btnEditCusDetails";
+            this.btnEditCusDetails.Padding = new System.Windows.Forms.Padding(5);
+            this.btnEditCusDetails.Size = new System.Drawing.Size(107, 46);
+            this.btnEditCusDetails.TabIndex = 8;
+            this.btnEditCusDetails.Text = "Edit Details";
+            this.btnEditCusDetails.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditCusDetails.UseVisualStyleBackColor = true;
+            this.btnEditCusDetails.Click += new System.EventHandler(this.btnEditCusDetails_Click);
             // 
             // lblLocationShow
             // 
             this.lblLocationShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocationShow.Location = new System.Drawing.Point(91, 113);
+            this.lblLocationShow.Location = new System.Drawing.Point(89, 137);
             this.lblLocationShow.Name = "lblLocationShow";
-            this.lblLocationShow.Size = new System.Drawing.Size(184, 14);
+            this.lblLocationShow.Size = new System.Drawing.Size(218, 33);
             this.lblLocationShow.TabIndex = 7;
             this.lblLocationShow.Text = "Mohammadpur, Dhaka\r\n";
             // 
@@ -232,7 +251,7 @@
             // 
             this.lblLocationTag.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocationTag.ForeColor = System.Drawing.Color.DimGray;
-            this.lblLocationTag.Location = new System.Drawing.Point(17, 113);
+            this.lblLocationTag.Location = new System.Drawing.Point(15, 137);
             this.lblLocationTag.Name = "lblLocationTag";
             this.lblLocationTag.Size = new System.Drawing.Size(68, 14);
             this.lblLocationTag.TabIndex = 6;
@@ -241,7 +260,7 @@
             // lblEmailShow
             // 
             this.lblEmailShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailShow.Location = new System.Drawing.Point(91, 89);
+            this.lblEmailShow.Location = new System.Drawing.Point(89, 113);
             this.lblEmailShow.Name = "lblEmailShow";
             this.lblEmailShow.Size = new System.Drawing.Size(226, 24);
             this.lblEmailShow.TabIndex = 5;
@@ -251,7 +270,7 @@
             // 
             this.lblEmail.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmail.Location = new System.Drawing.Point(18, 87);
+            this.lblEmail.Location = new System.Drawing.Point(16, 111);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(55, 17);
             this.lblEmail.TabIndex = 4;
@@ -260,7 +279,7 @@
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(61, 61);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(59, 85);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(199, 21);
             this.lblPhoneNumber.TabIndex = 3;
@@ -269,7 +288,7 @@
             // lblCustomerName
             // 
             this.lblCustomerName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(62, 42);
+            this.lblCustomerName.Location = new System.Drawing.Point(60, 66);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(240, 21);
             this.lblCustomerName.TabIndex = 2;
@@ -278,7 +297,7 @@
             // pcbUser
             // 
             this.pcbUser.Image = ((System.Drawing.Image)(resources.GetObject("pcbUser.Image")));
-            this.pcbUser.Location = new System.Drawing.Point(19, 42);
+            this.pcbUser.Location = new System.Drawing.Point(17, 66);
             this.pcbUser.Name = "pcbUser";
             this.pcbUser.Size = new System.Drawing.Size(38, 37);
             this.pcbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -291,6 +310,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlVehicleDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.pnlVehicleDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlVehicleDetails.Controls.Add(this.btnEditVehicleDetails);
             this.pnlVehicleDetails.Controls.Add(this.pcbLicensePlate);
             this.pnlVehicleDetails.Controls.Add(this.pcbVehicle);
             this.pnlVehicleDetails.Controls.Add(this.lblPlateNumber);
@@ -301,16 +321,32 @@
             this.pnlVehicleDetails.Controls.Add(this.lblModelHolder);
             this.pnlVehicleDetails.Controls.Add(this.lblVehicleProfile);
             this.pnlVehicleDetails.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pnlVehicleDetails.Location = new System.Drawing.Point(48, 312);
+            this.pnlVehicleDetails.Location = new System.Drawing.Point(48, 346);
             this.pnlVehicleDetails.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVehicleDetails.Name = "pnlVehicleDetails";
-            this.pnlVehicleDetails.Size = new System.Drawing.Size(321, 156);
+            this.pnlVehicleDetails.Size = new System.Drawing.Size(321, 171);
             this.pnlVehicleDetails.TabIndex = 8;
+            // 
+            // btnEditVehicleDetails
+            // 
+            this.btnEditVehicleDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditVehicleDetails.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditVehicleDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnEditVehicleDetails.Image")));
+            this.btnEditVehicleDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditVehicleDetails.Location = new System.Drawing.Point(209, 3);
+            this.btnEditVehicleDetails.Name = "btnEditVehicleDetails";
+            this.btnEditVehicleDetails.Padding = new System.Windows.Forms.Padding(5);
+            this.btnEditVehicleDetails.Size = new System.Drawing.Size(107, 46);
+            this.btnEditVehicleDetails.TabIndex = 9;
+            this.btnEditVehicleDetails.Text = "Edit Details";
+            this.btnEditVehicleDetails.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditVehicleDetails.UseVisualStyleBackColor = true;
+            this.btnEditVehicleDetails.Click += new System.EventHandler(this.btnEditVehicleDetails_Click);
             // 
             // pcbLicensePlate
             // 
             this.pcbLicensePlate.Image = ((System.Drawing.Image)(resources.GetObject("pcbLicensePlate.Image")));
-            this.pcbLicensePlate.Location = new System.Drawing.Point(16, 105);
+            this.pcbLicensePlate.Location = new System.Drawing.Point(15, 114);
             this.pcbLicensePlate.Name = "pcbLicensePlate";
             this.pcbLicensePlate.Size = new System.Drawing.Size(38, 33);
             this.pcbLicensePlate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -320,7 +356,7 @@
             // pcbVehicle
             // 
             this.pcbVehicle.Image = ((System.Drawing.Image)(resources.GetObject("pcbVehicle.Image")));
-            this.pcbVehicle.Location = new System.Drawing.Point(16, 50);
+            this.pcbVehicle.Location = new System.Drawing.Point(15, 59);
             this.pcbVehicle.Name = "pcbVehicle";
             this.pcbVehicle.Size = new System.Drawing.Size(38, 33);
             this.pcbVehicle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,7 +366,7 @@
             // lblPlateNumber
             // 
             this.lblPlateNumber.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlateNumber.Location = new System.Drawing.Point(187, 114);
+            this.lblPlateNumber.Location = new System.Drawing.Point(186, 123);
             this.lblPlateNumber.Name = "lblPlateNumber";
             this.lblPlateNumber.Size = new System.Drawing.Size(133, 13);
             this.lblPlateNumber.TabIndex = 9;
@@ -340,16 +376,16 @@
             // 
             this.lblPlateNumberHolder.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlateNumberHolder.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPlateNumberHolder.Location = new System.Drawing.Point(59, 112);
+            this.lblPlateNumberHolder.Location = new System.Drawing.Point(58, 121);
             this.lblPlateNumberHolder.Name = "lblPlateNumberHolder";
-            this.lblPlateNumberHolder.Size = new System.Drawing.Size(103, 24);
+            this.lblPlateNumberHolder.Size = new System.Drawing.Size(103, 15);
             this.lblPlateNumberHolder.TabIndex = 8;
             this.lblPlateNumberHolder.Text = " Plate Number";
             // 
             // lblVehicleYear
             // 
             this.lblVehicleYear.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVehicleYear.Location = new System.Drawing.Point(218, 74);
+            this.lblVehicleYear.Location = new System.Drawing.Point(217, 83);
             this.lblVehicleYear.Name = "lblVehicleYear";
             this.lblVehicleYear.Size = new System.Drawing.Size(55, 19);
             this.lblVehicleYear.TabIndex = 7;
@@ -359,7 +395,7 @@
             // 
             this.lblYear.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.ForeColor = System.Drawing.Color.DimGray;
-            this.lblYear.Location = new System.Drawing.Point(218, 50);
+            this.lblYear.Location = new System.Drawing.Point(217, 59);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(52, 17);
             this.lblYear.TabIndex = 6;
@@ -368,7 +404,7 @@
             // lblModel
             // 
             this.lblModel.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModel.Location = new System.Drawing.Point(60, 74);
+            this.lblModel.Location = new System.Drawing.Point(59, 83);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(152, 24);
             this.lblModel.TabIndex = 5;
@@ -378,7 +414,7 @@
             // 
             this.lblModelHolder.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModelHolder.ForeColor = System.Drawing.Color.DimGray;
-            this.lblModelHolder.Location = new System.Drawing.Point(60, 50);
+            this.lblModelHolder.Location = new System.Drawing.Point(59, 59);
             this.lblModelHolder.Name = "lblModelHolder";
             this.lblModelHolder.Size = new System.Drawing.Size(76, 24);
             this.lblModelHolder.TabIndex = 4;
@@ -388,7 +424,7 @@
             // 
             this.lblVehicleProfile.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleProfile.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblVehicleProfile.Location = new System.Drawing.Point(16, 18);
+            this.lblVehicleProfile.Location = new System.Drawing.Point(15, 27);
             this.lblVehicleProfile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVehicleProfile.Name = "lblVehicleProfile";
             this.lblVehicleProfile.Size = new System.Drawing.Size(153, 22);
@@ -404,7 +440,7 @@
             this.pnlTechnicalNote.Controls.Add(this.richtextTechnote);
             this.pnlTechnicalNote.Controls.Add(this.lblNoteHolderText);
             this.pnlTechnicalNote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pnlTechnicalNote.Location = new System.Drawing.Point(48, 481);
+            this.pnlTechnicalNote.Location = new System.Drawing.Point(48, 525);
             this.pnlTechnicalNote.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTechnicalNote.Name = "pnlTechnicalNote";
             this.pnlTechnicalNote.Size = new System.Drawing.Size(321, 117);
@@ -526,7 +562,7 @@
             this.tableServiceItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.14199F));
             this.tableServiceItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.85801F));
             this.tableServiceItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tableServiceItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableServiceItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableServiceItems.Controls.Add(this.lblRateRow3, 2, 3);
             this.tableServiceItems.Controls.Add(this.lblHourRow3, 1, 3);
             this.tableServiceItems.Controls.Add(this.lblRateRow2, 2, 2);
@@ -557,7 +593,7 @@
             // 
             this.lblRateRow3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRateRow3.ForeColor = System.Drawing.Color.Black;
-            this.lblRateRow3.Location = new System.Drawing.Point(364, 173);
+            this.lblRateRow3.Location = new System.Drawing.Point(361, 173);
             this.lblRateRow3.Margin = new System.Windows.Forms.Padding(3, 3, 0, 2);
             this.lblRateRow3.Name = "lblRateRow3";
             this.lblRateRow3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -570,11 +606,11 @@
             // 
             this.lblHourRow3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHourRow3.ForeColor = System.Drawing.Color.Black;
-            this.lblHourRow3.Location = new System.Drawing.Point(231, 173);
+            this.lblHourRow3.Location = new System.Drawing.Point(229, 173);
             this.lblHourRow3.Margin = new System.Windows.Forms.Padding(3, 3, 0, 2);
             this.lblHourRow3.Name = "lblHourRow3";
             this.lblHourRow3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblHourRow3.Size = new System.Drawing.Size(130, 53);
+            this.lblHourRow3.Size = new System.Drawing.Size(129, 53);
             this.lblHourRow3.TabIndex = 14;
             this.lblHourRow3.Text = "0.5\r\n";
             this.lblHourRow3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -583,7 +619,7 @@
             // 
             this.lblRateRow2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRateRow2.ForeColor = System.Drawing.Color.Black;
-            this.lblRateRow2.Location = new System.Drawing.Point(364, 116);
+            this.lblRateRow2.Location = new System.Drawing.Point(361, 116);
             this.lblRateRow2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblRateRow2.Name = "lblRateRow2";
             this.lblRateRow2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
@@ -596,11 +632,11 @@
             // 
             this.lblHourRow2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHourRow2.ForeColor = System.Drawing.Color.Black;
-            this.lblHourRow2.Location = new System.Drawing.Point(231, 116);
+            this.lblHourRow2.Location = new System.Drawing.Point(229, 116);
             this.lblHourRow2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblHourRow2.Name = "lblHourRow2";
             this.lblHourRow2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblHourRow2.Size = new System.Drawing.Size(130, 54);
+            this.lblHourRow2.Size = new System.Drawing.Size(129, 54);
             this.lblHourRow2.TabIndex = 12;
             this.lblHourRow2.Text = "1.0\r\n";
             this.lblHourRow2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -609,7 +645,7 @@
             // 
             this.lblRateRow1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRateRow1.ForeColor = System.Drawing.Color.Black;
-            this.lblRateRow1.Location = new System.Drawing.Point(364, 57);
+            this.lblRateRow1.Location = new System.Drawing.Point(361, 57);
             this.lblRateRow1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblRateRow1.Name = "lblRateRow1";
             this.lblRateRow1.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -622,11 +658,11 @@
             // 
             this.lblHourRow1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHourRow1.ForeColor = System.Drawing.Color.Black;
-            this.lblHourRow1.Location = new System.Drawing.Point(231, 57);
+            this.lblHourRow1.Location = new System.Drawing.Point(229, 57);
             this.lblHourRow1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblHourRow1.Name = "lblHourRow1";
             this.lblHourRow1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblHourRow1.Size = new System.Drawing.Size(130, 56);
+            this.lblHourRow1.Size = new System.Drawing.Size(129, 56);
             this.lblHourRow1.TabIndex = 10;
             this.lblHourRow1.Text = "1.5\r\n";
             this.lblHourRow1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -635,7 +671,7 @@
             // 
             this.lblTotal.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.Gray;
-            this.lblTotal.Location = new System.Drawing.Point(496, 3);
+            this.lblTotal.Location = new System.Drawing.Point(493, 3);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
@@ -648,7 +684,7 @@
             // 
             this.lblRate.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRate.ForeColor = System.Drawing.Color.Gray;
-            this.lblRate.Location = new System.Drawing.Point(364, 3);
+            this.lblRate.Location = new System.Drawing.Point(361, 3);
             this.lblRate.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblRate.Name = "lblRate";
             this.lblRate.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
@@ -661,11 +697,11 @@
             // 
             this.lblHour.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHour.ForeColor = System.Drawing.Color.Gray;
-            this.lblHour.Location = new System.Drawing.Point(231, 3);
+            this.lblHour.Location = new System.Drawing.Point(229, 3);
             this.lblHour.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblHour.Name = "lblHour";
             this.lblHour.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.lblHour.Size = new System.Drawing.Size(130, 51);
+            this.lblHour.Size = new System.Drawing.Size(129, 51);
             this.lblHour.TabIndex = 1;
             this.lblHour.Text = "HOURS";
             this.lblHour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -678,7 +714,7 @@
             this.lblServiceDescription.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblServiceDescription.Name = "lblServiceDescription";
             this.lblServiceDescription.Padding = new System.Windows.Forms.Padding(0, 16, 0, 0);
-            this.lblServiceDescription.Size = new System.Drawing.Size(225, 27);
+            this.lblServiceDescription.Size = new System.Drawing.Size(223, 27);
             this.lblServiceDescription.TabIndex = 0;
             this.lblServiceDescription.Text = "SERVICE DESCRIPTION\r\n";
             this.lblServiceDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -687,7 +723,7 @@
             // 
             this.lblTotalRow1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRow1.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalRow1.Location = new System.Drawing.Point(496, 57);
+            this.lblTotalRow1.Location = new System.Drawing.Point(493, 57);
             this.lblTotalRow1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblTotalRow1.Name = "lblTotalRow1";
             this.lblTotalRow1.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
@@ -700,7 +736,7 @@
             // 
             this.lblTotalRow2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRow2.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalRow2.Location = new System.Drawing.Point(496, 116);
+            this.lblTotalRow2.Location = new System.Drawing.Point(493, 116);
             this.lblTotalRow2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblTotalRow2.Name = "lblTotalRow2";
             this.lblTotalRow2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
@@ -717,7 +753,7 @@
             this.lblServiceRow1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblServiceRow1.Name = "lblServiceRow1";
             this.lblServiceRow1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblServiceRow1.Size = new System.Drawing.Size(225, 56);
+            this.lblServiceRow1.Size = new System.Drawing.Size(223, 56);
             this.lblServiceRow1.TabIndex = 7;
             this.lblServiceRow1.Text = "Standard Oil & Filter Service (Full Synthetic)\r\n";
             this.lblServiceRow1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -730,7 +766,7 @@
             this.lblServiceRow2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblServiceRow2.Name = "lblServiceRow2";
             this.lblServiceRow2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblServiceRow2.Size = new System.Drawing.Size(225, 54);
+            this.lblServiceRow2.Size = new System.Drawing.Size(223, 54);
             this.lblServiceRow2.TabIndex = 8;
             this.lblServiceRow2.Text = "Brake System Diagnostic & Fluid Flush\r\n";
             this.lblServiceRow2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -739,7 +775,7 @@
             // 
             this.lblTotalRow3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRow3.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalRow3.Location = new System.Drawing.Point(496, 173);
+            this.lblTotalRow3.Location = new System.Drawing.Point(493, 173);
             this.lblTotalRow3.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblTotalRow3.Name = "lblTotalRow3";
             this.lblTotalRow3.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
@@ -756,7 +792,7 @@
             this.lblServiceRow3.Margin = new System.Windows.Forms.Padding(3, 3, 0, 2);
             this.lblServiceRow3.Name = "lblServiceRow3";
             this.lblServiceRow3.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblServiceRow3.Size = new System.Drawing.Size(225, 53);
+            this.lblServiceRow3.Size = new System.Drawing.Size(223, 53);
             this.lblServiceRow3.TabIndex = 9;
             this.lblServiceRow3.Text = "Multi-Point Safety Inspection\r\n";
             this.lblServiceRow3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -817,7 +853,7 @@
             this.tablePartsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.14199F));
             this.tablePartsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.85801F));
             this.tablePartsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tablePartsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tablePartsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tablePartsTable.Controls.Add(this.lblUnitPriceRow2, 2, 2);
             this.tablePartsTable.Controls.Add(this.lblQtyRow2, 1, 2);
             this.tablePartsTable.Controls.Add(this.lblUnitPriceRow1, 2, 1);
@@ -843,7 +879,7 @@
             // 
             this.lblUnitPriceRow2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnitPriceRow2.ForeColor = System.Drawing.Color.Black;
-            this.lblUnitPriceRow2.Location = new System.Drawing.Point(364, 109);
+            this.lblUnitPriceRow2.Location = new System.Drawing.Point(361, 109);
             this.lblUnitPriceRow2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblUnitPriceRow2.Name = "lblUnitPriceRow2";
             this.lblUnitPriceRow2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
@@ -856,11 +892,11 @@
             // 
             this.lblQtyRow2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQtyRow2.ForeColor = System.Drawing.Color.Black;
-            this.lblQtyRow2.Location = new System.Drawing.Point(231, 109);
+            this.lblQtyRow2.Location = new System.Drawing.Point(229, 109);
             this.lblQtyRow2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblQtyRow2.Name = "lblQtyRow2";
             this.lblQtyRow2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblQtyRow2.Size = new System.Drawing.Size(130, 52);
+            this.lblQtyRow2.Size = new System.Drawing.Size(129, 52);
             this.lblQtyRow2.TabIndex = 12;
             this.lblQtyRow2.Text = "7";
             this.lblQtyRow2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -869,7 +905,7 @@
             // 
             this.lblUnitPriceRow1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnitPriceRow1.ForeColor = System.Drawing.Color.Black;
-            this.lblUnitPriceRow1.Location = new System.Drawing.Point(364, 53);
+            this.lblUnitPriceRow1.Location = new System.Drawing.Point(361, 53);
             this.lblUnitPriceRow1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblUnitPriceRow1.Name = "lblUnitPriceRow1";
             this.lblUnitPriceRow1.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -882,11 +918,11 @@
             // 
             this.lblQtyRow1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQtyRow1.ForeColor = System.Drawing.Color.Black;
-            this.lblQtyRow1.Location = new System.Drawing.Point(231, 53);
+            this.lblQtyRow1.Location = new System.Drawing.Point(229, 53);
             this.lblQtyRow1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblQtyRow1.Name = "lblQtyRow1";
             this.lblQtyRow1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblQtyRow1.Size = new System.Drawing.Size(130, 41);
+            this.lblQtyRow1.Size = new System.Drawing.Size(129, 41);
             this.lblQtyRow1.TabIndex = 10;
             this.lblQtyRow1.Text = "1";
             this.lblQtyRow1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -895,7 +931,7 @@
             // 
             this.lblPartsTotalTitle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPartsTotalTitle.ForeColor = System.Drawing.Color.Gray;
-            this.lblPartsTotalTitle.Location = new System.Drawing.Point(496, 3);
+            this.lblPartsTotalTitle.Location = new System.Drawing.Point(493, 3);
             this.lblPartsTotalTitle.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.lblPartsTotalTitle.Name = "lblPartsTotalTitle";
             this.lblPartsTotalTitle.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
@@ -908,7 +944,7 @@
             // 
             this.lblUnitPriceTitle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnitPriceTitle.ForeColor = System.Drawing.Color.Gray;
-            this.lblUnitPriceTitle.Location = new System.Drawing.Point(364, 3);
+            this.lblUnitPriceTitle.Location = new System.Drawing.Point(361, 3);
             this.lblUnitPriceTitle.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblUnitPriceTitle.Name = "lblUnitPriceTitle";
             this.lblUnitPriceTitle.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
@@ -921,11 +957,11 @@
             // 
             this.lblQtyTitle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQtyTitle.ForeColor = System.Drawing.Color.Gray;
-            this.lblQtyTitle.Location = new System.Drawing.Point(231, 3);
+            this.lblQtyTitle.Location = new System.Drawing.Point(229, 3);
             this.lblQtyTitle.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblQtyTitle.Name = "lblQtyTitle";
             this.lblQtyTitle.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.lblQtyTitle.Size = new System.Drawing.Size(130, 36);
+            this.lblQtyTitle.Size = new System.Drawing.Size(129, 36);
             this.lblQtyTitle.TabIndex = 1;
             this.lblQtyTitle.Text = "QTY";
             this.lblQtyTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -938,7 +974,7 @@
             this.lblPartTitle.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblPartTitle.Name = "lblPartTitle";
             this.lblPartTitle.Padding = new System.Windows.Forms.Padding(0, 16, 0, 0);
-            this.lblPartTitle.Size = new System.Drawing.Size(225, 36);
+            this.lblPartTitle.Size = new System.Drawing.Size(223, 36);
             this.lblPartTitle.TabIndex = 0;
             this.lblPartTitle.Text = "PART NUMBER AND NAME\r\n";
             this.lblPartTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -947,7 +983,7 @@
             // 
             this.lblPartsTotalRow1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPartsTotalRow1.ForeColor = System.Drawing.Color.Black;
-            this.lblPartsTotalRow1.Location = new System.Drawing.Point(496, 53);
+            this.lblPartsTotalRow1.Location = new System.Drawing.Point(493, 53);
             this.lblPartsTotalRow1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblPartsTotalRow1.Name = "lblPartsTotalRow1";
             this.lblPartsTotalRow1.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
@@ -960,7 +996,7 @@
             // 
             this.lblPartsTotalRow2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPartsTotalRow2.ForeColor = System.Drawing.Color.Black;
-            this.lblPartsTotalRow2.Location = new System.Drawing.Point(496, 109);
+            this.lblPartsTotalRow2.Location = new System.Drawing.Point(493, 109);
             this.lblPartsTotalRow2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblPartsTotalRow2.Name = "lblPartsTotalRow2";
             this.lblPartsTotalRow2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
@@ -977,7 +1013,7 @@
             this.lblPartsRow2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblPartsRow2.Name = "lblPartsRow2";
             this.lblPartsRow2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblPartsRow2.Size = new System.Drawing.Size(225, 52);
+            this.lblPartsRow2.Size = new System.Drawing.Size(223, 52);
             this.lblPartsRow2.TabIndex = 8;
             this.lblPartsRow2.Text = "SYN-0W30-QT(Shell Helix Ultra Professional)";
             this.lblPartsRow2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -990,7 +1026,7 @@
             this.lblPartsRow1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.lblPartsRow1.Name = "lblPartsRow1";
             this.lblPartsRow1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblPartsRow1.Size = new System.Drawing.Size(225, 19);
+            this.lblPartsRow1.Size = new System.Drawing.Size(223, 19);
             this.lblPartsRow1.TabIndex = 7;
             this.lblPartsRow1.Text = "BMW-OF-0042(Genuine OEM Oil Filter)\r\n\r\n\r\n";
             this.lblPartsRow1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1285,5 +1321,7 @@
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label lblStatusTitle;
         private System.Windows.Forms.Button btnPrintPdf;
+        private System.Windows.Forms.Button btnEditCusDetails;
+        private System.Windows.Forms.Button btnEditVehicleDetails;
     }
 }

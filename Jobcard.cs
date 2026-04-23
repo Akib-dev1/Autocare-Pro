@@ -17,5 +17,28 @@ namespace AutoCare_Pro
         {
             InitializeComponent();
         }
+
+        private void btnEditCusDetails_Click(object sender, EventArgs e)
+        {
+            CustomerDetails cs = new CustomerDetails();
+            if (cs.ShowDialog() == DialogResult.OK)
+            {
+                this.lblCustomerName.Text = cs.CustomerName;
+                this.lblPhoneNumber.Text = cs.PhoneNumber;
+                this.lblLocationShow.Text = cs.CustomerLocation;
+                this.lblEmailShow.Text = cs.Email;
+            }
+        }
+
+        private void btnEditVehicleDetails_Click(object sender, EventArgs e)
+        {
+            VehicleInfo vi = new VehicleInfo();
+            if (vi.ShowDialog() == DialogResult.OK)
+            {
+                this.lblModel.Text = vi.Model;
+                this.lblVehicleYear.Text = vi.Year;
+                this.lblPlateNumber.Text = vi.PlateNumber;
+            }
+        }
     }
 }

@@ -29,30 +29,6 @@ namespace AutoCare_Pro
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            this.btnLogin.BackColor= Color.FromArgb(248, 249, 250);
-            this.btnRegister.BackColor = Color.FromArgb(26, 31, 46);
-            this.btnLogin.ForeColor = Color.Black;
-            this.btnRegister.ForeColor = Color.White;
-            this.pnlLoginForm.Visible = true;
-            this.pnlRegister.Visible = false;
-            this.btnLogSubmit.Visible = true;
-            this.btnRegSubmit.Visible = false;
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            this.btnRegister.BackColor = Color.FromArgb(248, 249, 250);
-            this.btnLogin.BackColor = Color.FromArgb(26, 31, 46);
-            this.btnLogin.ForeColor = Color.White;
-            this.btnRegister.ForeColor = Color.Black;
-            this.pnlRegister.Visible = true;
-            this.pnlLoginForm.Visible = false;
-            this.btnLogSubmit.Visible = false;
-            this.btnRegSubmit.Visible = true;
-        }
-
         private void loginPage_Load(object sender, EventArgs e)
         {
             this.pnlLogin.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.pnlLogin.Width, this.pnlLogin.Height, 20, 20));
@@ -62,6 +38,18 @@ namespace AutoCare_Pro
         {
             userForm us = new userForm();
             us.Show();
+        }
+
+        private void checkShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkShowPass.Checked)
+            {
+                this.txtLoginPass.PasswordChar = '\0';
+            }
+            else
+            {
+                this.txtLoginPass.PasswordChar = '*';
+            }
         }
     }
 }

@@ -16,6 +16,5 @@ namespace AutoCare_Pro
         {
             InitializeComponent();
         }
-
     }
 }

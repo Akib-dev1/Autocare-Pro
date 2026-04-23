@@ -61,7 +61,7 @@ namespace AutoCare_Pro
         private void btnLogSubmit_Click(object sender, EventArgs e)
         {
             userForm us = new userForm();
-            us.Visible = true;
+            us.Show();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -36,8 +37,26 @@ namespace AutoCare_Pro
 
         private void btnLogSubmit_Click(object sender, EventArgs e)
         {
-            userForm us = new userForm();
-            us.Show();
+            string sqlQuery = "select * from user_info where email='" + this.txtLoginEmail.Text + "' and password='" + this.txtLoginPass.Text+"';";
+            SqlConnection sqlCon = new SqlConnection("Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False");
+            sqlCon.Open();
+            SqlCommand sql = new SqlCommand(sqlQuery, sqlCon);
+            SqlDataAdapter sqlData = new SqlDataAdapter(sql);
+            DataSet ds = new DataSet();
+            sqlData.Fill(ds);
+
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                MessageBox.Show("Valid User");
+                userForm us = new userForm(this);
+                us.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid User");
+            }
+            sqlCon.Close();
         }
 
         private void checkShowPass_CheckedChanged(object sender, EventArgs e)

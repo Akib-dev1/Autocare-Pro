@@ -146,9 +146,11 @@
             this.ClientSize = new System.Drawing.Size(1357, 746);
             this.Controls.Add(this.ucJobcard);
             this.Controls.Add(this.pnlSidebar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "userForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employe | Manager Dashboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.userForm_FormClosed);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlSidebar.PerformLayout();
             this.ResumeLayout(false);

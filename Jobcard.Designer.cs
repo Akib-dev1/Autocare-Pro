@@ -748,7 +748,7 @@
             // dgvService
             // 
             this.dgvService.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvService.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmnDescription,
             this.clmnHours,
@@ -787,7 +787,7 @@
             // dgvParts
             // 
             this.dgvParts.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmnPartData,
             this.clmnQty,

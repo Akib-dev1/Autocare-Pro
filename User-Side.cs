@@ -12,9 +12,17 @@ namespace AutoCare_Pro
 {
     public partial class userForm : Form
     {
-        public userForm()
+        internal loginPage Lp { get; set; }
+        public userForm(loginPage lp)
         {
             InitializeComponent();
+            this.Lp = lp;
+        }
+
+        private void userForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //this.Lp.Show();
+            Application.Exit();
         }
     }
 }

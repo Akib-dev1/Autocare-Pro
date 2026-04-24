@@ -40,5 +40,25 @@ namespace AutoCare_Pro
                 this.lblPlateNumber.Text = vi.PlateNumber;
             }
         }
+
+        private void btnAddLabour_Click(object sender, EventArgs e)
+        {
+            LabourLineForm lf = new LabourLineForm();
+            if (lf.ShowDialog() == DialogResult.OK)
+            {
+                this.dgvService.Rows.Add(lf.LabourDescription, lf.Hours.ToString(), lf.Rate.ToString(), (lf.Hours*lf.Rate).ToString());
+            }
+            //dgvService.Rows.Add("asdda", "ssdaada", "sdawadasd", "sdwadsada");
+            //this.lblCustomerName.Text=dgvService.Rows[0].Cells[1].Value.ToString();
+        }
+
+        private void btnAddinventory_Click(object sender, EventArgs e)
+        {
+            PartsForm pf = new PartsForm();
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                this.dgvParts.Rows.Add(pf.PartsName, pf.Quantity, pf.UnitPrice, (pf.UnitPrice * pf.Quantity).ToString());
+            }
+        }
     }
 }

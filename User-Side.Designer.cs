@@ -35,7 +35,9 @@
             this.btnNavlink1 = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
+            this.ucCusList = new AutoCare_Pro.CustomerList();
             this.ucJobcard = new AutoCare_Pro.Jobcard();
+            this.ucInventoryList = new AutoCare_Pro.InventoryList();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +71,7 @@
             this.btnNavlink3.TabIndex = 4;
             this.btnNavlink3.Text = "Inventory";
             this.btnNavlink3.UseVisualStyleBackColor = false;
+            this.btnNavlink3.Click += new System.EventHandler(this.btnNavlink3_Click);
             // 
             // btnNavlink2
             // 
@@ -85,6 +88,7 @@
             this.btnNavlink2.TabIndex = 3;
             this.btnNavlink2.Text = "Customers";
             this.btnNavlink2.UseVisualStyleBackColor = false;
+            this.btnNavlink2.Click += new System.EventHandler(this.btnNavlink2_Click);
             // 
             // btnNavlink1
             // 
@@ -101,6 +105,7 @@
             this.btnNavlink1.TabIndex = 2;
             this.btnNavlink1.Text = "Job Cards";
             this.btnNavlink1.UseVisualStyleBackColor = false;
+            this.btnNavlink1.Click += new System.EventHandler(this.btnNavlink1_Click);
             // 
             // lblDescription
             // 
@@ -124,6 +129,15 @@
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "AUTOCARE PRO";
             // 
+            // ucCusList
+            // 
+            this.ucCusList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
+            this.ucCusList.Location = new System.Drawing.Point(198, 0);
+            this.ucCusList.Name = "ucCusList";
+            this.ucCusList.Size = new System.Drawing.Size(1160, 745);
+            this.ucCusList.TabIndex = 2;
+            this.ucCusList.Visible = false;
+            // 
             // ucJobcard
             // 
             this.ucJobcard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -139,11 +153,21 @@
             this.ucJobcard.Size = new System.Drawing.Size(1161, 746);
             this.ucJobcard.TabIndex = 1;
             // 
+            // ucInventoryList
+            // 
+            this.ucInventoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
+            this.ucInventoryList.Location = new System.Drawing.Point(198, 0);
+            this.ucInventoryList.Name = "ucInventoryList";
+            this.ucInventoryList.Size = new System.Drawing.Size(1160, 745);
+            this.ucInventoryList.TabIndex = 3;
+            // 
             // userForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1357, 746);
+            this.Controls.Add(this.ucInventoryList);
+            this.Controls.Add(this.ucCusList);
             this.Controls.Add(this.ucJobcard);
             this.Controls.Add(this.pnlSidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -151,6 +175,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employe | Manager Dashboard";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.userForm_FormClosed);
+            this.Load += new System.EventHandler(this.userForm_Load);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlSidebar.PerformLayout();
             this.ResumeLayout(false);
@@ -166,5 +191,7 @@
         private System.Windows.Forms.Button btnNavlink3;
         private System.Windows.Forms.Button btnNavlink2;
         private Jobcard ucJobcard;
+        private CustomerList ucCusList;
+        private InventoryList ucInventoryList;
     }
 }

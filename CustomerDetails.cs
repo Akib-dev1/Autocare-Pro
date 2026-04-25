@@ -31,10 +31,10 @@ namespace AutoCare_Pro
         {
             if (!(this.txtName.Text=="")&& !(this.txtEmail.Text == "")&& !(this.txtPhone.Text == "")&& !(this.txtLocation.Text == ""))
             {
-                this.CustomerName = this.txtName.Text;
-                this.Email = this.txtEmail.Text;
-                this.PhoneNumber = this.txtPhone.Text;
-                this.CustomerLocation = this.txtLocation.Text;
+                this.CustomerName = this.txtName.Text.Trim();
+                this.Email = this.txtEmail.Text.Trim();
+                this.PhoneNumber = this.txtPhone.Text.Trim();
+                this.CustomerLocation = this.txtLocation.Text.Trim();
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

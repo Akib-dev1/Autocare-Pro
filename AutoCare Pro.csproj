@@ -55,11 +55,24 @@
     <Compile Include="CustomerDetails.Designer.cs">
       <DependentUpon>CustomerDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerList.Designer.cs">
+      <DependentUpon>CustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbHelper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InventoryList.Designer.cs">
+      <DependentUpon>InventoryList.cs</DependentUpon>
     </Compile>
     <Compile Include="Jobcard.cs">
       <SubType>UserControl</SubType>
@@ -96,8 +109,14 @@
     <EmbeddedResource Include="CustomerDetails.resx">
       <DependentUpon>CustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerList.resx">
+      <DependentUpon>CustomerList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryList.resx">
+      <DependentUpon>InventoryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Jobcard.resx">
       <DependentUpon>Jobcard.cs</DependentUpon>

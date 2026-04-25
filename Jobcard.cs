@@ -94,27 +94,30 @@ namespace AutoCare_Pro
             // STEP 1 — Save Customer
             string cusId = "";
 
-            string sqlQuery = "INSERT INTO Customers (Name, Phone, Email, Address, Vehicle_Model, Vehicle_Year, Vehicle_Plate, Vehicle_Color) VALUES ('" + cusName + "','" + cusPhone + "','" + cusEmail + "','" + cusLocation + "','" + vehicleModel + "','" + vehicleYear + "','" + vehiclePlate + "','" + vehicleColor + "'); SELECT SCOPE_IDENTITY();";
-            SqlConnection sqlCon = new SqlConnection("Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False");
-            sqlCon.Open();
-            SqlCommand sql = new SqlCommand(sqlQuery, sqlCon);
-            SqlDataAdapter sqlData = new SqlDataAdapter(sql);
-            DataSet ds = new DataSet();
-            sqlData.Fill(ds);
-            cusId = ds.Tables[0].Rows[0][0].ToString();
-            sqlCon.Close();
+            // First check if customer already exists by phone number
+            DataSet dsCheck = DbHelper.GetData("SELECT Customer_Id FROM Customers WHERE Phone = '" + cusPhone + "';");
+
+            
+
+            if (dsCheck.Tables[0].Rows.Count > 0)
+            {
+                // Customer already exists — just get their existing Customer_Id
+                cusId = dsCheck.Tables[0].Rows[0]["Customer_Id"].ToString();
+                MessageBox.Show("Existing customer found! Using existing record.");
+            }
+            else
+            {
+                // Customer not found — insert new customer
+                cusId = DbHelper.ExecuteScalar("INSERT INTO Customers (Name, Phone, Email, Address, Vehicle_Model, Vehicle_Year, Vehicle_Plate, Vehicle_Color) VALUES ('" + cusName + "','" + cusPhone + "','" + cusEmail + "','" + cusLocation + "','" + vehicleModel + "','" + vehicleYear + "','" + vehiclePlate + "','" + vehicleColor + "'); SELECT SCOPE_IDENTITY();");
+            }
+
             // STEP 2 — Save Invoice and get Invoice_Id
             string invoiceId = "";
 
             string sqlQuery2 = "INSERT INTO Invoices (Customer_Id, Employe_Id, Tech_Notes, Sub_Total, Tax_Percent, Tax_Amount, Grand_Total) VALUES ('" + cusId + "','" + employeeId + "','" + technicalInstructions + "','" + subtotal + "','" + taxRate + "','" + tax + "','" + grandTotal + "'); SELECT SCOPE_IDENTITY();";
-            SqlConnection sqlCon2 = new SqlConnection("Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False");
-            sqlCon2.Open();
-            SqlCommand sql2 = new SqlCommand(sqlQuery2, sqlCon2);
-            SqlDataAdapter sqlData2 = new SqlDataAdapter(sql2);
-            DataSet ds2 = new DataSet();
-            sqlData2.Fill(ds2);
-            invoiceId = ds2.Tables[0].Rows[0][0].ToString();
-            sqlCon2.Close();
+            
+            invoiceId = DbHelper.ExecuteScalar(sqlQuery2);
+            
             // STEP 3 — Save each row from dgvService
             foreach (DataGridViewRow row in dgvService.Rows)
             {
@@ -128,11 +131,8 @@ namespace AutoCare_Pro
                 if (string.IsNullOrEmpty(description)) continue;
 
                 string sqlQuery3 = "INSERT INTO Job_Services (Invoice_Id, Description, Hours, Rate, Total) VALUES ('" + invoiceId + "','" + description + "','" + hours + "','" + rate + "','" + total + "');";
-                SqlConnection sqlCon3 = new SqlConnection("Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False");
-                sqlCon3.Open();
-                SqlCommand sql3 = new SqlCommand(sqlQuery3, sqlCon3);
-                sql3.ExecuteNonQuery();
-                sqlCon3.Close();
+                
+                DbHelper.ExecuteQuery(sqlQuery3);
             }
             // STEP 4 — Save each row from dgvParts
             foreach (DataGridViewRow row in dgvParts.Rows)
@@ -147,14 +147,56 @@ namespace AutoCare_Pro
                 if (string.IsNullOrEmpty(partName)) continue;
 
                 string sqlQuery4 = "INSERT INTO Job_Parts (Invoice_Id, Part_Name, Qty, Unit_Price, Total) VALUES ('" + invoiceId + "','" + partName + "','" + qty + "','" + price + "','" + partTotal + "');";
-                SqlConnection sqlCon4 = new SqlConnection("Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False");
-                sqlCon4.Open();
-                SqlCommand sql4 = new SqlCommand(sqlQuery4, sqlCon4);
-                sql4.ExecuteNonQuery();
-                sqlCon4.Close();
+                DbHelper.ExecuteQuery(sqlQuery4);
             }
             // DONE
             MessageBox.Show("Invoice #" + invoiceId + " Generated Successfully!");
+        }
+
+        private void Jobcard_Load(object sender, EventArgs e)
+        {
+            this.lblEmployeeName.Text = userForm.EmpName;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string phone = this.txtSearch.Text.Trim();
+
+            if (phone == "")
+            {
+                MessageBox.Show("Please enter a phone number to search!");
+                return;
+            }
+
+            string sqlQuery = "SELECT * FROM Customers WHERE Phone = '" + phone + "';";
+            DataSet ds = DbHelper.GetData(sqlQuery);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                // Customer found — auto fill all labels
+                this.lblCustomerName.Text = ds.Tables[0].Rows[0]["Name"].ToString();
+                this.lblPhoneNumber.Text = ds.Tables[0].Rows[0]["Phone"].ToString();
+                this.lblEmailShow.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+                this.lblLocationShow.Text = ds.Tables[0].Rows[0]["Address"].ToString();
+                this.lblModel.Text = ds.Tables[0].Rows[0]["Vehicle_Model"].ToString();
+                this.lblVehicleYear.Text = ds.Tables[0].Rows[0]["Vehicle_Year"].ToString();
+                this.lblPlateNumber.Text = ds.Tables[0].Rows[0]["Vehicle_Plate"].ToString();
+
+                MessageBox.Show("Customer Found!");
+            }
+            else
+            {
+                // Customer not found — clear all labels
+                this.lblCustomerName.Text = "";
+                this.lblPhoneNumber.Text = "";
+                this.lblEmailShow.Text = "";
+                this.lblLocationShow.Text = "";
+                this.lblModel.Text = "";
+                this.lblVehicleYear.Text = "";
+                this.lblPlateNumber.Text = "";
+
+                MessageBox.Show("No customer found with this phone number!");
+            }
         }
     }
 }

@@ -64,9 +64,6 @@
             this.picProfile = new System.Windows.Forms.PictureBox();
             this.lblEmployeeDesignation = new System.Windows.Forms.Label();
             this.lblEmployeeName = new System.Windows.Forms.Label();
-            this.picLine = new System.Windows.Forms.PictureBox();
-            this.picBellIcon = new System.Windows.Forms.PictureBox();
-            this.picCalender = new System.Windows.Forms.PictureBox();
             this.lblServiceTitle = new System.Windows.Forms.Label();
             this.btnAddLabour = new System.Windows.Forms.Button();
             this.lblPartsTitle = new System.Windows.Forms.Label();
@@ -101,9 +98,6 @@
             this.pnlTechnicalNote.SuspendLayout();
             this.pnlTopbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBellIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCalender)).BeginInit();
             this.pnlBottombar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParts)).BeginInit();
@@ -141,9 +135,9 @@
             this.lblOrangeCard.Location = new System.Drawing.Point(110, 81);
             this.lblOrangeCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrangeCard.Name = "lblOrangeCard";
-            this.lblOrangeCard.Size = new System.Drawing.Size(101, 13);
+            this.lblOrangeCard.Size = new System.Drawing.Size(90, 13);
             this.lblOrangeCard.TabIndex = 3;
-            this.lblOrangeCard.Text = "NEW JOB CARD";
+            this.lblOrangeCard.Text = "NEW INVOICE";
             // 
             // lblJobId
             // 
@@ -169,6 +163,7 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "    Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblCusDetails
             // 
@@ -488,9 +483,6 @@
             this.pnlTopbar.Controls.Add(this.picProfile);
             this.pnlTopbar.Controls.Add(this.lblEmployeeDesignation);
             this.pnlTopbar.Controls.Add(this.lblEmployeeName);
-            this.pnlTopbar.Controls.Add(this.picLine);
-            this.pnlTopbar.Controls.Add(this.picBellIcon);
-            this.pnlTopbar.Controls.Add(this.picCalender);
             this.pnlTopbar.Controls.Add(this.txtSearch);
             this.pnlTopbar.Controls.Add(this.btnSearch);
             this.pnlTopbar.Location = new System.Drawing.Point(0, 0);
@@ -515,7 +507,7 @@
             this.lblEmployeeDesignation.AutoSize = true;
             this.lblEmployeeDesignation.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeDesignation.ForeColor = System.Drawing.Color.Gray;
-            this.lblEmployeeDesignation.Location = new System.Drawing.Point(973, 33);
+            this.lblEmployeeDesignation.Location = new System.Drawing.Point(918, 33);
             this.lblEmployeeDesignation.Name = "lblEmployeeDesignation";
             this.lblEmployeeDesignation.Size = new System.Drawing.Size(97, 14);
             this.lblEmployeeDesignation.TabIndex = 12;
@@ -526,44 +518,11 @@
             this.lblEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmployeeName.AutoSize = true;
             this.lblEmployeeName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeName.Location = new System.Drawing.Point(973, 11);
+            this.lblEmployeeName.Location = new System.Drawing.Point(918, 11);
             this.lblEmployeeName.Name = "lblEmployeeName";
             this.lblEmployeeName.Size = new System.Drawing.Size(84, 14);
             this.lblEmployeeName.TabIndex = 11;
             this.lblEmployeeName.Text = "Admin Staff";
-            // 
-            // picLine
-            // 
-            this.picLine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picLine.Image = ((System.Drawing.Image)(resources.GetObject("picLine.Image")));
-            this.picLine.Location = new System.Drawing.Point(957, 1);
-            this.picLine.Name = "picLine";
-            this.picLine.Size = new System.Drawing.Size(10, 63);
-            this.picLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLine.TabIndex = 10;
-            this.picLine.TabStop = false;
-            // 
-            // picBellIcon
-            // 
-            this.picBellIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBellIcon.Image = ((System.Drawing.Image)(resources.GetObject("picBellIcon.Image")));
-            this.picBellIcon.Location = new System.Drawing.Point(917, 17);
-            this.picBellIcon.Name = "picBellIcon";
-            this.picBellIcon.Size = new System.Drawing.Size(31, 30);
-            this.picBellIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBellIcon.TabIndex = 9;
-            this.picBellIcon.TabStop = false;
-            // 
-            // picCalender
-            // 
-            this.picCalender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCalender.Image = ((System.Drawing.Image)(resources.GetObject("picCalender.Image")));
-            this.picCalender.Location = new System.Drawing.Point(877, 17);
-            this.picCalender.Name = "picCalender";
-            this.picCalender.Size = new System.Drawing.Size(34, 30);
-            this.picCalender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCalender.TabIndex = 8;
-            this.picCalender.TabStop = false;
             // 
             // lblServiceTitle
             // 
@@ -855,6 +814,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Jobcard";
             this.Size = new System.Drawing.Size(1160, 745);
+            this.Load += new System.EventHandler(this.Jobcard_Load);
             this.pnlCustomer.ResumeLayout(false);
             this.pnlCustomer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).EndInit();
@@ -866,9 +826,6 @@
             this.pnlTopbar.ResumeLayout(false);
             this.pnlTopbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBellIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCalender)).EndInit();
             this.pnlBottombar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParts)).EndInit();
@@ -906,9 +863,6 @@
         private System.Windows.Forms.Label lblNoteHolderText;
         private System.Windows.Forms.RichTextBox richtextTechnote;
         private System.Windows.Forms.Panel pnlTopbar;
-        private System.Windows.Forms.PictureBox picCalender;
-        private System.Windows.Forms.PictureBox picLine;
-        private System.Windows.Forms.PictureBox picBellIcon;
         private System.Windows.Forms.Label lblEmployeeDesignation;
         private System.Windows.Forms.Label lblEmployeeName;
         private System.Windows.Forms.PictureBox picProfile;

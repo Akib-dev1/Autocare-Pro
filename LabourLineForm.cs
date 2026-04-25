@@ -22,7 +22,7 @@ namespace AutoCare_Pro
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            this.LabourDescription = this.rtextDescription.Text;
+            this.LabourDescription = this.rtextDescription.Text.Trim();
             this.Hours = Convert.ToDouble(this.numHours.Value);
             this.Rate = Convert.ToDouble(this.numRate.Value);
             this.DialogResult = DialogResult.OK;

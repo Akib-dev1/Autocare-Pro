@@ -38,17 +38,12 @@ namespace AutoCare_Pro
         private void btnLogSubmit_Click(object sender, EventArgs e)
         {
             string sqlQuery = "select * from user_info where email='" + this.txtLoginEmail.Text + "' and password='" + this.txtLoginPass.Text+"';";
-            SqlConnection sqlCon = new SqlConnection("Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False");
-            sqlCon.Open();
-            SqlCommand sql = new SqlCommand(sqlQuery, sqlCon);
-            SqlDataAdapter sqlData = new SqlDataAdapter(sql);
-            DataSet ds = new DataSet();
-            sqlData.Fill(ds);
+            DataSet ds=DbHelper.GetData(sqlQuery);
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                MessageBox.Show("User Authenticated Successfully!");
-                userForm us = new userForm(this, ds.Tables[0].Rows[0][0].ToString());
+                MessageBox.Show("User Authenticated Successfully! Name: "+ ds.Tables[0].Rows[0][1].ToString());
+                userForm us = new userForm(this, ds.Tables[0].Rows[0][0].ToString(), ds.Tables[0].Rows[0][1].ToString());
                 us.Show();
                 this.Hide();
             }
@@ -56,7 +51,6 @@ namespace AutoCare_Pro
             {
                 MessageBox.Show("Invalid Credentials!");
             }
-            sqlCon.Close();
         }
 
         private void checkShowPass_CheckedChanged(object sender, EventArgs e)

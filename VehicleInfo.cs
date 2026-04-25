@@ -12,12 +12,10 @@ namespace AutoCare_Pro
 {
     public partial class VehicleInfo : Form
     {
-        string model;
-        string year;
-        string plateNumber;
         internal string Model { get; set; }
         internal string Year { get; set; }
         internal string PlateNumber { get; set; }
+        internal string Color { get; set; }
         public VehicleInfo()
         {
             InitializeComponent();
@@ -30,6 +28,7 @@ namespace AutoCare_Pro
                 this.Model = this.txtModel.Text;
                 this.Year = this.txtYear.Text;
                 this.PlateNumber = this.txtPlateNum.Text;
+                this.Color = this.txtColor.Text;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

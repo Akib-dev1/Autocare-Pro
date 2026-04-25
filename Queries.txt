@@ -1,0 +1,67 @@
+Delete From Invoices
+Delete From Customers
+Delete From Job_Services
+Delete From Job_Parts
+DBCC CHECKIDENT (Invoices, RESEED, 0);
+DBCC CHECKIDENT (Customers, RESEED, 0);
+DBCC CHECKIDENT (Job_Services, RESEED, 0);
+DBCC CHECKIDENT (Job_Parts, RESEED, 0);
+Select * From Invoices
+Select * From Customers
+Select * From Job_Services
+Select * From Job_Parts
+
+CREATE TABLE Customers
+(
+    Customer_Id   INT           IDENTITY(1,1)  PRIMARY KEY,
+    Name          VARCHAR(40)   NOT NULL,
+    Phone         VARCHAR(30)   NOT NULL,
+    Email         VARCHAR(30)   NOT NULL,
+    Address       VARCHAR(100)  NOT NULL,
+    Vehicle_Model VARCHAR(50)   NOT NULL,
+    Vehicle_Year  INT           NOT NULL,
+    Vehicle_Plate VARCHAR(50)   NOT NULL,
+    Vehicle_Color VARCHAR(20)   NOT NULL
+);
+
+CREATE TABLE Invoices
+(
+    Invoice_Id  INT           IDENTITY(1,1)  PRIMARY KEY,
+    Customer_Id INT           NOT NULL,
+    Employe_Id  VARCHAR(15)   NOT NULL,
+    Tech_Notes  VARCHAR(100)  NOT NULL,
+    Sub_Total   DECIMAL(10,2) NOT NULL,
+    Tax_Percent DECIMAL(5,2)  NOT NULL,
+    Tax_Amount  DECIMAL(10,2) NOT NULL,
+    Grand_Total DECIMAL(10,2) NOT NULL,
+    created_at  DATETIME      NOT NULL DEFAULT GETDATE()
+);
+
+CREATE TABLE Job_Parts
+(
+    Part_Id     INT           IDENTITY(1,1)  PRIMARY KEY,
+    Invoice_Id  INT           NOT NULL,
+    Part_Name   VARCHAR(50)   NOT NULL,
+    Qty         INT           NOT NULL,
+    Unit_Price  DECIMAL(10,2) NOT NULL,
+    Total       DECIMAL(18,0) NOT NULL
+);
+
+CREATE TABLE Job_Services
+(
+    Service_Id  INT           IDENTITY(1,1)  PRIMARY KEY,
+    Invoice_Id  INT           NOT NULL,
+    Description VARCHAR(100)  NOT NULL,
+    Hours       DECIMAL(5,2)  NOT NULL,
+    Rate        DECIMAL(10,2) NOT NULL,
+    Total       DECIMAL(18,0) NOT NULL
+);
+
+CREATE TABLE user_info
+(
+    Id       VARCHAR(8)   NOT NULL PRIMARY KEY,
+    Name     VARCHAR(40)  NULL,
+    Email    VARCHAR(30)  NULL,
+    Password VARCHAR(30)  NULL,
+    Role     VARCHAR(15)  NULL
+);

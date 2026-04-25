@@ -118,6 +118,10 @@
             // cmbParts
             // 
             this.cmbParts.FormattingEnabled = true;
+            this.cmbParts.Items.AddRange(new object[] {
+            "Brakepad",
+            "Clutch",
+            "Gear"});
             this.cmbParts.Location = new System.Drawing.Point(149, 107);
             this.cmbParts.Name = "cmbParts";
             this.cmbParts.Size = new System.Drawing.Size(121, 21);

@@ -45,6 +45,8 @@
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.pcbUser = new System.Windows.Forms.PictureBox();
             this.pnlVehicleDetails = new System.Windows.Forms.Panel();
+            this.lblColorShow = new System.Windows.Forms.Label();
+            this.lblColor = new System.Windows.Forms.Label();
             this.btnEditVehicleDetails = new System.Windows.Forms.Button();
             this.pcbLicensePlate = new System.Windows.Forms.PictureBox();
             this.pcbVehicle = new System.Windows.Forms.PictureBox();
@@ -79,8 +81,6 @@
             this.lblDiscountTitle = new System.Windows.Forms.Label();
             this.lblTaxTitle = new System.Windows.Forms.Label();
             this.lblSubtotalTitle = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.lblStatusTitle = new System.Windows.Forms.Label();
             this.btnPrintPdf = new System.Windows.Forms.Button();
             this.dgvService = new System.Windows.Forms.DataGridView();
             this.clmnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -221,12 +221,13 @@
             // 
             // lblLocationShow
             // 
+            this.lblLocationShow.AutoSize = true;
             this.lblLocationShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocationShow.Location = new System.Drawing.Point(89, 137);
             this.lblLocationShow.Name = "lblLocationShow";
-            this.lblLocationShow.Size = new System.Drawing.Size(218, 33);
+            this.lblLocationShow.Size = new System.Drawing.Size(172, 13);
             this.lblLocationShow.TabIndex = 7;
-            this.lblLocationShow.Text = "Mohammadpur, Dhaka\r\n";
+            this.lblLocationShow.Text = "Location will appear here";
             // 
             // lblLocationTag
             // 
@@ -240,12 +241,13 @@
             // 
             // lblEmailShow
             // 
+            this.lblEmailShow.AutoSize = true;
             this.lblEmailShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailShow.Location = new System.Drawing.Point(89, 113);
             this.lblEmailShow.Name = "lblEmailShow";
-            this.lblEmailShow.Size = new System.Drawing.Size(226, 24);
+            this.lblEmailShow.Size = new System.Drawing.Size(153, 13);
             this.lblEmailShow.TabIndex = 5;
-            this.lblEmailShow.Text = "abdurrahimrafi99@gmail.com";
+            this.lblEmailShow.Text = "Email will appear here";
             // 
             // lblEmail
             // 
@@ -259,21 +261,23 @@
             // 
             // lblPhoneNumber
             // 
+            this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumber.Location = new System.Drawing.Point(59, 85);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(199, 21);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(206, 14);
             this.lblPhoneNumber.TabIndex = 3;
-            this.lblPhoneNumber.Text = "+880 01732309991";
+            this.lblPhoneNumber.Text = "Phone Number will appear here";
             // 
             // lblCustomerName
             // 
+            this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerName.Location = new System.Drawing.Point(60, 66);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(240, 21);
+            this.lblCustomerName.Size = new System.Drawing.Size(157, 14);
             this.lblCustomerName.TabIndex = 2;
-            this.lblCustomerName.Text = "Abdur Rahim Rafi";
+            this.lblCustomerName.Text = "Name will appear here";
             // 
             // pcbUser
             // 
@@ -291,6 +295,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlVehicleDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.pnlVehicleDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlVehicleDetails.Controls.Add(this.lblColorShow);
+            this.pnlVehicleDetails.Controls.Add(this.lblColor);
             this.pnlVehicleDetails.Controls.Add(this.btnEditVehicleDetails);
             this.pnlVehicleDetails.Controls.Add(this.pcbLicensePlate);
             this.pnlVehicleDetails.Controls.Add(this.pcbVehicle);
@@ -305,8 +311,29 @@
             this.pnlVehicleDetails.Location = new System.Drawing.Point(48, 346);
             this.pnlVehicleDetails.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVehicleDetails.Name = "pnlVehicleDetails";
-            this.pnlVehicleDetails.Size = new System.Drawing.Size(321, 171);
+            this.pnlVehicleDetails.Size = new System.Drawing.Size(321, 198);
             this.pnlVehicleDetails.TabIndex = 8;
+            // 
+            // lblColorShow
+            // 
+            this.lblColorShow.AutoSize = true;
+            this.lblColorShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColorShow.Location = new System.Drawing.Point(187, 154);
+            this.lblColorShow.Name = "lblColorShow";
+            this.lblColorShow.Size = new System.Drawing.Size(41, 13);
+            this.lblColorShow.TabIndex = 13;
+            this.lblColorShow.Text = "Color";
+            // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColor.ForeColor = System.Drawing.Color.DimGray;
+            this.lblColor.Location = new System.Drawing.Point(59, 154);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(42, 14);
+            this.lblColor.TabIndex = 12;
+            this.lblColor.Text = "Color";
             // 
             // btnEditVehicleDetails
             // 
@@ -327,7 +354,7 @@
             // pcbLicensePlate
             // 
             this.pcbLicensePlate.Image = ((System.Drawing.Image)(resources.GetObject("pcbLicensePlate.Image")));
-            this.pcbLicensePlate.Location = new System.Drawing.Point(15, 114);
+            this.pcbLicensePlate.Location = new System.Drawing.Point(16, 107);
             this.pcbLicensePlate.Name = "pcbLicensePlate";
             this.pcbLicensePlate.Size = new System.Drawing.Size(38, 33);
             this.pcbLicensePlate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -346,18 +373,19 @@
             // 
             // lblPlateNumber
             // 
+            this.lblPlateNumber.AutoSize = true;
             this.lblPlateNumber.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlateNumber.Location = new System.Drawing.Point(186, 123);
+            this.lblPlateNumber.Location = new System.Drawing.Point(187, 116);
             this.lblPlateNumber.Name = "lblPlateNumber";
-            this.lblPlateNumber.Size = new System.Drawing.Size(133, 13);
+            this.lblPlateNumber.Size = new System.Drawing.Size(95, 13);
             this.lblPlateNumber.TabIndex = 9;
-            this.lblPlateNumber.Text = "bimmer-23";
+            this.lblPlateNumber.Text = "Plate Number";
             // 
             // lblPlateNumberHolder
             // 
             this.lblPlateNumberHolder.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlateNumberHolder.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPlateNumberHolder.Location = new System.Drawing.Point(58, 121);
+            this.lblPlateNumberHolder.Location = new System.Drawing.Point(59, 114);
             this.lblPlateNumberHolder.Name = "lblPlateNumberHolder";
             this.lblPlateNumberHolder.Size = new System.Drawing.Size(103, 15);
             this.lblPlateNumberHolder.TabIndex = 8;
@@ -365,12 +393,13 @@
             // 
             // lblVehicleYear
             // 
+            this.lblVehicleYear.AutoSize = true;
             this.lblVehicleYear.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleYear.Location = new System.Drawing.Point(217, 83);
             this.lblVehicleYear.Name = "lblVehicleYear";
-            this.lblVehicleYear.Size = new System.Drawing.Size(55, 19);
+            this.lblVehicleYear.Size = new System.Drawing.Size(75, 13);
             this.lblVehicleYear.TabIndex = 7;
-            this.lblVehicleYear.Text = "2015\r\n\r\n";
+            this.lblVehicleYear.Text = "Year  here";
             // 
             // lblYear
             // 
@@ -384,12 +413,13 @@
             // 
             // lblModel
             // 
+            this.lblModel.AutoSize = true;
             this.lblModel.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.Location = new System.Drawing.Point(59, 83);
             this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(152, 24);
+            this.lblModel.Size = new System.Drawing.Size(155, 13);
             this.lblModel.TabIndex = 5;
-            this.lblModel.Text = "Porsche 911 GT3 RS\r\n";
+            this.lblModel.Text = "Model will appear here";
             // 
             // lblModelHolder
             // 
@@ -421,7 +451,7 @@
             this.pnlTechnicalNote.Controls.Add(this.richtextTechnote);
             this.pnlTechnicalNote.Controls.Add(this.lblNoteHolderText);
             this.pnlTechnicalNote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pnlTechnicalNote.Location = new System.Drawing.Point(48, 525);
+            this.pnlTechnicalNote.Location = new System.Drawing.Point(48, 552);
             this.pnlTechnicalNote.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTechnicalNote.Name = "pnlTechnicalNote";
             this.pnlTechnicalNote.Size = new System.Drawing.Size(321, 117);
@@ -615,6 +645,7 @@
             this.btnGenerateInvoice.TabIndex = 8;
             this.btnGenerateInvoice.Text = "GENERATE INVOICE";
             this.btnGenerateInvoice.UseVisualStyleBackColor = false;
+            this.btnGenerateInvoice.Click += new System.EventHandler(this.btnGenerateInvoice_Click);
             // 
             // lblGrandTotalValue
             // 
@@ -625,7 +656,7 @@
             this.lblGrandTotalValue.Name = "lblGrandTotalValue";
             this.lblGrandTotalValue.Size = new System.Drawing.Size(88, 24);
             this.lblGrandTotalValue.TabIndex = 7;
-            this.lblGrandTotalValue.Text = "$575.01";
+            this.lblGrandTotalValue.Text = "$0";
             this.lblGrandTotalValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDiscountValue
@@ -649,7 +680,7 @@
             this.lblTaxValue.Name = "lblTaxValue";
             this.lblTaxValue.Size = new System.Drawing.Size(88, 24);
             this.lblTaxValue.TabIndex = 5;
-            this.lblTaxValue.Text = "$46.51";
+            this.lblTaxValue.Text = "$0";
             this.lblTaxValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblSubTotalValue
@@ -661,7 +692,7 @@
             this.lblSubTotalValue.Name = "lblSubTotalValue";
             this.lblSubTotalValue.Size = new System.Drawing.Size(88, 24);
             this.lblSubTotalValue.TabIndex = 4;
-            this.lblSubTotalValue.Text = "$528.50";
+            this.lblSubTotalValue.Text = "$0";
             this.lblSubTotalValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblGrandTotalTitle
@@ -707,31 +738,6 @@
             this.lblSubtotalTitle.Size = new System.Drawing.Size(100, 19);
             this.lblSubtotalTitle.TabIndex = 0;
             this.lblSubtotalTitle.Text = "SUBTOTAL";
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbStatus.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "In Progress",
-            "Completed",
-            "Cancelled"});
-            this.cmbStatus.Location = new System.Drawing.Point(918, 80);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(80, 21);
-            this.cmbStatus.TabIndex = 21;
-            // 
-            // lblStatusTitle
-            // 
-            this.lblStatusTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblStatusTitle.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusTitle.Location = new System.Drawing.Point(845, 82);
-            this.lblStatusTitle.Name = "lblStatusTitle";
-            this.lblStatusTitle.Size = new System.Drawing.Size(67, 17);
-            this.lblStatusTitle.TabIndex = 22;
-            this.lblStatusTitle.Text = "STATUS:";
             // 
             // btnPrintPdf
             // 
@@ -801,7 +807,7 @@
             // clmnPartData
             // 
             this.clmnPartData.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clmnPartData.HeaderText = "Part Number And Name";
+            this.clmnPartData.HeaderText = "Part Name";
             this.clmnPartData.Name = "clmnPartData";
             this.clmnPartData.ReadOnly = true;
             // 
@@ -832,8 +838,6 @@
             this.Controls.Add(this.dgvParts);
             this.Controls.Add(this.dgvService);
             this.Controls.Add(this.btnPrintPdf);
-            this.Controls.Add(this.lblStatusTitle);
-            this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.pnlBottombar);
             this.Controls.Add(this.btnAddinventory);
             this.Controls.Add(this.lblPartsTitle);
@@ -852,8 +856,10 @@
             this.Name = "Jobcard";
             this.Size = new System.Drawing.Size(1160, 745);
             this.pnlCustomer.ResumeLayout(false);
+            this.pnlCustomer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).EndInit();
             this.pnlVehicleDetails.ResumeLayout(false);
+            this.pnlVehicleDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLicensePlate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbVehicle)).EndInit();
             this.pnlTechnicalNote.ResumeLayout(false);
@@ -920,8 +926,6 @@
         private System.Windows.Forms.Button btnGenerateInvoice;
         private System.Windows.Forms.Label lblGrandTotalValue;
         private System.Windows.Forms.Label lblDiscountValue;
-        private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.Label lblStatusTitle;
         private System.Windows.Forms.Button btnPrintPdf;
         private System.Windows.Forms.Button btnEditCusDetails;
         private System.Windows.Forms.Button btnEditVehicleDetails;
@@ -932,6 +936,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnTotal;
         private System.Windows.Forms.DataGridView dgvParts;
+        private System.Windows.Forms.Label lblColor;
+        private System.Windows.Forms.Label lblColorShow;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnPartData;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnPrice;

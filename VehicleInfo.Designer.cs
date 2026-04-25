@@ -38,6 +38,8 @@
             this.lblPlateNum = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.lblColor = new System.Windows.Forms.Label();
             this.pnlTopTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(209, 208);
+            this.btnSubmit.Location = new System.Drawing.Point(209, 263);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(85, 30);
             this.btnSubmit.TabIndex = 18;
@@ -146,11 +148,32 @@
             this.lblModel.TabIndex = 10;
             this.lblModel.Text = "Model:";
             // 
+            // txtColor
+            // 
+            this.txtColor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtColor.Location = new System.Drawing.Point(209, 211);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(266, 23);
+            this.txtColor.TabIndex = 21;
+            // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(70)))), ((int)(((byte)(87)))));
+            this.lblColor.Location = new System.Drawing.Point(52, 206);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(67, 25);
+            this.lblColor.TabIndex = 20;
+            this.lblColor.Text = "Color:";
+            // 
             // VehicleInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 255);
+            this.ClientSize = new System.Drawing.Size(504, 305);
+            this.Controls.Add(this.txtColor);
+            this.Controls.Add(this.lblColor);
             this.Controls.Add(this.pnlTopTitle);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtPlateNum);
@@ -183,5 +206,7 @@
         private System.Windows.Forms.Label lblPlateNum;
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Label lblModel;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.Label lblColor;
     }
 }

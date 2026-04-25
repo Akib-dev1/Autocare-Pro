@@ -47,14 +47,14 @@ namespace AutoCare_Pro
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                MessageBox.Show("Valid User");
-                userForm us = new userForm(this);
+                MessageBox.Show("User Authenticated Successfully!");
+                userForm us = new userForm(this, ds.Tables[0].Rows[0][0].ToString());
                 us.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Invalid User");
+                MessageBox.Show("Invalid Credentials!");
             }
             sqlCon.Close();
         }

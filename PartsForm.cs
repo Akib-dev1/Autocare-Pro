@@ -22,9 +22,9 @@ namespace AutoCare_Pro
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            this.PartsName = this.cmbParts.SelectedText;
+            this.PartsName = this.cmbParts.Text;
             this.Quantity = Convert.ToUInt32(this.numQuanitity.Value);
-            this.UnitPrice = 25.6;
+            this.UnitPrice = 5.6;
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

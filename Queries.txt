@@ -65,3 +65,62 @@ CREATE TABLE user_info
     Password VARCHAR(30)  NULL,
     Role     VARCHAR(15)  NULL
 );
+
+CREATE TABLE Inventory
+(
+    inventory_id INT            IDENTITY(1,1)  PRIMARY KEY,
+    part_name    NVARCHAR(255)  NOT NULL,
+    unit_price   DECIMAL(10,2)  NOT NULL DEFAULT 0,
+    stock_qty    INT            NOT NULL DEFAULT 0
+);
+
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Engine Oil Filter',          42.50,  50);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Air Filter',                 28.00,  35);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Cabin Air Filter',            18.00,  40);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Brake Pad Set Front',         85.00,  25);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Brake Pad Set Rear',          75.00,  25);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Brake Disc Front',           120.00,  15);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Brake Disc Rear',            110.00,  15);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Brake Fluid DOT4 1L',          8.50,  60);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Spark Plug',                  12.00, 100);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Spark Plug Wire Set',         45.00,  20);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Ignition Coil',               65.00,  18);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Battery 12V 60AH',           110.00,  12);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Battery 12V 75AH',           135.00,  10);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Alternator',                 220.00,   8);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Starter Motor',              185.00,   8);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Radiator',                   250.00,   6);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Radiator Cap',                 9.00,  45);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Coolant 1L',                  12.00,  80);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Thermostat',                  35.00,  22);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Water Pump',                  95.00,  10);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Timing Belt',                 55.00,  18);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Serpentine Belt',             40.00,  20);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Drive Belt',                  38.00,  20);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Power Steering Fluid 1L',     14.00,  50);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Power Steering Pump',        175.00,   6);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Shock Absorber Front',       145.00,  12);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Shock Absorber Rear',        130.00,  12);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Strut Mount',                 65.00,  14);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Control Arm',                155.00,   8);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Tie Rod End',                 48.00,  16);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Ball Joint',                  52.00,  16);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Wheel Bearing',               75.00,  14);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('CV Joint',                    90.00,  10);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('CV Axle Shaft',              165.00,   8);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Clutch Kit',                 220.00,   6);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Flywheel',                   180.00,   5);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Transmission Fluid 1L',       18.00,  40);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Gear Oil 1L',                 15.00,  40);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Fuel Filter',                 25.00,  30);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Fuel Pump',                  135.00,   8);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Oxygen Sensor',               85.00,  12);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Mass Air Flow Sensor',        110.00,  10);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Throttle Position Sensor',    72.00,  10);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Crankshaft Position Sensor',  68.00,  10);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Camshaft Position Sensor',    65.00,  10);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Wiper Blade Front 24 inch',   14.00,  50);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Wiper Blade Rear 14 inch',    10.00,  50);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Headlight Bulb H4',           15.00,  60);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Tail Light Bulb',              6.00,  80);
+INSERT INTO Inventory (part_name, unit_price, stock_qty) VALUES ('Fuse Set Assorted',            8.00,  70);

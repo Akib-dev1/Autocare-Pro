@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnNavlink4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAQpJREFUSEu9
+        k4ENwjAMBBmhI3QERugGMBKjdARG6AawAWzACEYfHMt5WaXULSdFKs7nP3bp4fBvZEPY22BhBvY2WJiB
+        vQ0WZmBvg4UZ2NtYLAxYfJaFGdjbYGEG9jZYmIG9jUgoIhcs1gJvFp0NiYS7h2RgbyMS7t6J1sIQETmz
+        3sN6g4VfeGpQrwvPqBXY22g94k5EZFCzrjn82etqEO8ZC0OuuLU+w/Suml5rZYzOtoVDZihdaFc3ERld
+        CEYHUC+XyYYcdeH2pVsXUsfaBpHRHHVcMMK4JoRpDYGT318b8ph58diz20PMol+A2cn9hfGM2uj8rKu1
+        IQxGhncwuIBX/b0Z9EEitAS8Ac/B6cjSmWAJAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnNavlink3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAcBJREFUSEul

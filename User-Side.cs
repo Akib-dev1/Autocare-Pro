@@ -34,19 +34,13 @@ namespace AutoCare_Pro
             this.ucJobcard.Visible = true;
             this.ucCusList.Visible = false;
             this.ucInventoryList.Visible = false;
-            if (this.ucJobcard.Visible)
-            {
-                this.btnNavlink1.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
+            this.ucInvoiceList.Visible = false;
+            
+            this.btnNavlink1.BackColor = Color.FromArgb(22, 27, 42);
+            this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink4.BackColor = Color.FromArgb(37, 42, 56);
 
-            }
-            else if (this.ucCusList.Visible)
-            {
-                this.btnNavlink2.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
-            }
         }
 
         private void btnNavlink2_Click(object sender, EventArgs e)
@@ -54,19 +48,11 @@ namespace AutoCare_Pro
             this.ucJobcard.Visible = false;
             this.ucCusList.Visible = true;
             this.ucInventoryList.Visible = false;
-            if (this.ucJobcard.Visible)
-            {
-                this.btnNavlink1.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
-
-            }
-            else if (this.ucCusList.Visible)
-            {
-                this.btnNavlink2.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
-            }
+            this.ucInvoiceList.Visible = false;
+            this.btnNavlink2.BackColor = Color.FromArgb(22, 27, 42);
+            this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink4.BackColor = Color.FromArgb(37, 42, 56);
         }
 
         private void userForm_Load(object sender, EventArgs e)
@@ -74,19 +60,11 @@ namespace AutoCare_Pro
             this.ucJobcard.Visible = true;
             this.ucInventoryList.Visible = false;
             this.ucCusList.Visible = false;
-            if (this.ucJobcard.Visible)
-            {
-                this.btnNavlink1.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
-
-            }
-            else if (this.ucCusList.Visible)
-            {
-                this.btnNavlink2.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
-            }
+            this.ucInvoiceList.Visible = false;
+            this.btnNavlink1.BackColor = Color.FromArgb(22, 27, 42);
+            this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink4.BackColor = Color.FromArgb(37, 42, 56);
         }
 
         private void btnNavlink3_Click(object sender, EventArgs e)
@@ -94,26 +72,23 @@ namespace AutoCare_Pro
             this.ucCusList.Visible = false;
             this.ucJobcard.Visible = false;
             this.ucInventoryList.Visible = true;
-            if (this.ucJobcard.Visible)
-            {
-                this.btnNavlink1.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
+            this.ucInvoiceList.Visible = false;
+            this.btnNavlink3.BackColor = Color.FromArgb(22, 27, 42);
+            this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink4.BackColor = Color.FromArgb(37, 42, 56);
+        }
 
-            }
-            else if (this.ucCusList.Visible)
-            {
-                this.btnNavlink2.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
-            }
-            else if (this.ucInventoryList.Visible)
-            {
-                this.btnNavlink3.BackColor = Color.FromArgb(22, 27, 42);
-                this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
-                this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
-            }
-
+        private void btnNavlink4_Click(object sender, EventArgs e)
+        {
+            this.ucInvoiceList.Visible = true;
+            this.ucCusList.Visible = false;
+            this.ucJobcard.Visible = false;
+            this.ucInventoryList.Visible = false;
+            this.btnNavlink4.BackColor = Color.FromArgb(22, 27, 42);
+            this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
+            this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
         }
     }
 }

@@ -37,5 +37,12 @@ namespace AutoCare_Pro
                 MessageBox.Show("Customer found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            DataSet ds = DbHelper.GetData("select * From customers;");
+            dgvCustomers.DataSource = ds.Tables[0];
+            MessageBox.Show("Customer data refresh successfull!", "Refresh Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

@@ -10,12 +10,9 @@ namespace AutoCare_Pro
 {
     internal static class DbHelper
     {
-        private static string connectionString = "Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
-
-        // ─────────────────────────────────────────────
-        // Use this when you need to GET data (SELECT)
-        // Returns a DataSet
-        // ─────────────────────────────────────────────
+        //private static string connectionString = "Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
+        private static string connectionString = "Data Source=AKIB-LAPTOP\\SQLEXPRESS;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
+        
         public static DataSet GetData(string sqlQuery)
         {
             SqlConnection sqlCon = new SqlConnection(connectionString);
@@ -27,11 +24,7 @@ namespace AutoCare_Pro
             sqlCon.Close();
             return ds;
         }
-
-        // ─────────────────────────────────────────────
-        // Use this when you need to INSERT UPDATE DELETE
-        // Returns number of rows affected
-        // ─────────────────────────────────────────────
+        
         public static int ExecuteQuery(string sqlQuery)
         {
             SqlConnection sqlCon = new SqlConnection(connectionString);
@@ -42,10 +35,6 @@ namespace AutoCare_Pro
             return rowsAffected;
         }
 
-        // ─────────────────────────────────────────────
-        // Use this when you need the new ID back
-        // Use for INSERT with SCOPE_IDENTITY()
-        // ─────────────────────────────────────────────
         public static string ExecuteScalar(string sqlQuery)
         {
             SqlConnection sqlCon = new SqlConnection(connectionString);

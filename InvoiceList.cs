@@ -46,5 +46,12 @@ namespace AutoCare_Pro
             }
             
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            DataSet ds = DbHelper.GetData("select * from invoices where employe_id='" + userForm.EmpId + "';");
+            this.dgvInvoive.DataSource = ds.Tables[0];
+            MessageBox.Show("Invoice List data refresh successfull!", "Refresh Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

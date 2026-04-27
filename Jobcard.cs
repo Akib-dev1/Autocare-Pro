@@ -57,8 +57,6 @@ namespace AutoCare_Pro
                 this.lblTaxValue.Text = "$"+ taxAmount.ToString();
                 this.lblGrandTotalValue.Text ="$"+ (taxAmount+subTotal).ToString();
             }
-            //dgvService.Rows.Add("asdda", "ssdaada", "sdawadasd", "sdwadsada");
-            //this.lblCustomerName.Text=dgvService.Rows[0].Cells[1].Value.ToString();
         }
 
         private void btnAddinventory_Click(object sender, EventArgs e)
@@ -91,34 +89,28 @@ namespace AutoCare_Pro
             double grandTotal = this.lblGrandTotalValue.Text != "" ? double.Parse(this.lblGrandTotalValue.Text.TrimStart('$')) : 0;
             double taxRate = 8.8;
             string employeeId = userForm.EmpId;
-            // STEP 1 — Save Customer
             string cusId = "";
 
-            // First check if customer already exists by phone number
             DataSet dsCheck = DbHelper.GetData("SELECT Customer_Id FROM Customers WHERE Phone = '" + cusPhone + "';");
 
             
 
             if (dsCheck.Tables[0].Rows.Count > 0)
             {
-                // Customer already exists — just get their existing Customer_Id
                 cusId = dsCheck.Tables[0].Rows[0]["Customer_Id"].ToString();
                 MessageBox.Show("Existing customer found! Using existing record.");
             }
             else
             {
-                // Customer not found — insert new customer
                 cusId = DbHelper.ExecuteScalar("INSERT INTO Customers (Name, Phone, Email, Address, Vehicle_Model, Vehicle_Year, Vehicle_Plate, Vehicle_Color) VALUES ('" + cusName + "','" + cusPhone + "','" + cusEmail + "','" + cusLocation + "','" + vehicleModel + "','" + vehicleYear + "','" + vehiclePlate + "','" + vehicleColor + "'); SELECT SCOPE_IDENTITY();");
             }
 
-            // STEP 2 — Save Invoice and get Invoice_Id
             string invoiceId = "";
 
             string sqlQuery2 = "INSERT INTO Invoices (Customer_Id, Employe_Id, Tech_Notes, Sub_Total, Tax_Percent, Tax_Amount, Grand_Total) VALUES ('" + cusId + "','" + employeeId + "','" + technicalInstructions + "','" + subtotal + "','" + taxRate + "','" + tax + "','" + grandTotal + "'); SELECT SCOPE_IDENTITY();";
             
             invoiceId = DbHelper.ExecuteScalar(sqlQuery2);
             
-            // STEP 3 — Save each row from dgvService
             foreach (DataGridViewRow row in dgvService.Rows)
             {
                 if (row.IsNewRow) continue;
@@ -134,7 +126,6 @@ namespace AutoCare_Pro
                 
                 DbHelper.ExecuteQuery(sqlQuery3);
             }
-            // STEP 4 — Save each row from dgvParts
             foreach (DataGridViewRow row in dgvParts.Rows)
             {
                 if (row.IsNewRow) continue;
@@ -149,8 +140,7 @@ namespace AutoCare_Pro
                 string sqlQuery4 = "INSERT INTO Job_Parts (Invoice_Id, Part_Name, Qty, Unit_Price, Total) VALUES ('" + invoiceId + "','" + partName + "','" + qty + "','" + price + "','" + partTotal + "');";
                 DbHelper.ExecuteQuery(sqlQuery4);
             }
-            // DONE
-            MessageBox.Show("Invoice #" + invoiceId + " Generated Successfully!");
+            MessageBox.Show("Invoice #" + invoiceId + " Generated Successfully!", "Invoice Successfull!",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Jobcard_Load(object sender, EventArgs e)
@@ -173,7 +163,6 @@ namespace AutoCare_Pro
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                // Customer found — auto fill all labels
                 this.lblCustomerName.Text = ds.Tables[0].Rows[0]["Name"].ToString();
                 this.lblPhoneNumber.Text = ds.Tables[0].Rows[0]["Phone"].ToString();
                 this.lblEmailShow.Text = ds.Tables[0].Rows[0]["Email"].ToString();
@@ -182,11 +171,10 @@ namespace AutoCare_Pro
                 this.lblVehicleYear.Text = ds.Tables[0].Rows[0]["Vehicle_Year"].ToString();
                 this.lblPlateNumber.Text = ds.Tables[0].Rows[0]["Vehicle_Plate"].ToString();
 
-                MessageBox.Show("Customer Found!");
+                MessageBox.Show("Customer Found!","Search Result",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
             {
-                // Customer not found — clear all labels
                 this.lblCustomerName.Text = "";
                 this.lblPhoneNumber.Text = "";
                 this.lblEmailShow.Text = "";
@@ -195,7 +183,7 @@ namespace AutoCare_Pro
                 this.lblVehicleYear.Text = "";
                 this.lblPlateNumber.Text = "";
 
-                MessageBox.Show("No customer found with this phone number!");
+                MessageBox.Show("No customer found with this phone number!","Search Result",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

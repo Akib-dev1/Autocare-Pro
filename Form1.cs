@@ -18,12 +18,12 @@ namespace AutoCare_Pro
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
-                int nLeft,     // x-coordinate of upper-left corner
-                int nTop,      // y-coordinate of upper-left corner
-                int nRight,    // x-coordinate of lower-right corner
-                int nBottom,   // y-coordinate of lower-right corner
-                int nWidthEllipse, // height of ellipse
-                int nHeightEllipse // width of ellipse
+                int nLeft,     
+                int nTop,      
+                int nRight,    
+                int nBottom,   
+                int nWidthEllipse, 
+                int nHeightEllipse 
             );
         public loginPage()
         {
@@ -42,14 +42,14 @@ namespace AutoCare_Pro
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                MessageBox.Show("User Authenticated Successfully! Name: "+ ds.Tables[0].Rows[0][1].ToString());
+                MessageBox.Show("User Authenticated Successfully! Name: "+ ds.Tables[0].Rows[0][1].ToString(),"Login Successfull",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 userForm us = new userForm(this, ds.Tables[0].Rows[0][0].ToString(), ds.Tables[0].Rows[0][1].ToString());
                 us.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Invalid Credentials!");
+                MessageBox.Show("Invalid Credentials!","Login Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

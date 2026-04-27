@@ -37,5 +37,12 @@ namespace AutoCare_Pro
                 MessageBox.Show("Inventory item found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            DataSet ds = DbHelper.GetData("SELECT * FROM Inventory;");
+            dgvInventory.DataSource = ds.Tables[0];
+            MessageBox.Show("Inventory List data refresh successfull!", "Refresh Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

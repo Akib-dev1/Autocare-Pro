@@ -36,17 +36,15 @@
             this.btnNavlink1 = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
+            this.ucInvoiceList = new AutoCare_Pro.InvoiceList();
             this.ucInventoryList = new AutoCare_Pro.InventoryList();
             this.ucCusList = new AutoCare_Pro.CustomerList();
             this.ucJobcard = new AutoCare_Pro.Jobcard();
-            this.ucInvoiceList = new AutoCare_Pro.InvoiceList();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSidebar
             // 
-            this.pnlSidebar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.pnlSidebar.Controls.Add(this.btnNavlink4);
             this.pnlSidebar.Controls.Add(this.btnNavlink3);
@@ -54,6 +52,7 @@
             this.pnlSidebar.Controls.Add(this.btnNavlink1);
             this.pnlSidebar.Controls.Add(this.lblDescription);
             this.pnlSidebar.Controls.Add(this.lblLogo);
+            this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(200, 746);
@@ -149,6 +148,15 @@
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "AUTOCARE PRO";
             // 
+            // ucInvoiceList
+            // 
+            this.ucInvoiceList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
+            this.ucInvoiceList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucInvoiceList.Location = new System.Drawing.Point(200, 0);
+            this.ucInvoiceList.Name = "ucInvoiceList";
+            this.ucInvoiceList.Size = new System.Drawing.Size(1157, 746);
+            this.ucInvoiceList.TabIndex = 4;
+            // 
             // ucInventoryList
             // 
             this.ucInventoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
@@ -181,14 +189,6 @@
             this.ucJobcard.Size = new System.Drawing.Size(1161, 746);
             this.ucJobcard.TabIndex = 1;
             // 
-            // ucInvoiceList
-            // 
-            this.ucInvoiceList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
-            this.ucInvoiceList.Location = new System.Drawing.Point(198, 0);
-            this.ucInvoiceList.Name = "ucInvoiceList";
-            this.ucInvoiceList.Size = new System.Drawing.Size(1160, 745);
-            this.ucInvoiceList.TabIndex = 4;
-            // 
             // userForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,7 +202,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "userForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employe | Manager Dashboard";
+            this.Text = "Employe | Employe Dashboard";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.userForm_FormClosed);
             this.Load += new System.EventHandler(this.userForm_Load);
             this.pnlSidebar.ResumeLayout(false);

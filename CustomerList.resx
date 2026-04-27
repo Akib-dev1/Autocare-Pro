@@ -117,6 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="CustomerId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="UserName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Phone.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Address.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="VehicleModel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="VehicleYear.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="VehiclePlate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="VehicleColor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -130,12 +157,12 @@
   </data>
   <data name="btnRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAD5SURBVEhL7ZTrDYJAEIQpgRLoREqgE1uwBDqQDrQD6UBLsAPt4Jxx9+QMyz2If0z4kkm8uVkG
-        jki18VOccx10KVCrozYI9NAJqtWiN0Cl2EXYCC92hcKiNlP+GqOOTsC07varKAfkWUQeagkwYsdRVISs
-        L3FqCVg/xV4k/iIDmJWReUkDHVR3iPDpuO40lgXydkkI9kaJ5N99COdkfCvJgHMy/q8lzEM7aM9hhWuq
-        0ZgAo7iEWRlZZPbvX1NSQ7f3lE2vUQHG2uNaKho0MgHTlxwhf6ZR6ahVNC8g2Eidr8XnOPCbRefQM0GA
-        RXyi1IeTMFP0fdtIUFUvv1wescYvDbIAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAPlJREFUSEvt
+        lOsNgkAQhCmBEuhESqATW7AEOpAOtAPpQEuwA+3gnHH35AzLPYh/TPiSSby5WQaOSLXxU5xzHXQpUKuj
+        Ngj00Amq1aI3QKXYRdgIL3aFwqI2U/4ao45OwLTu9qsoB+RZRB5qCTBix1FUhKwvcWoJWD/FXiT+IgOY
+        lZF5SQMdVHeI8Om47jSWBfJ2SQj2Ronk330I52R8K8mAczL+ryXMQztoz2GFa6rRmACjuIRZGVlk9u9f
+        U1JDt/eUTa9RAcba41oqGjQyAdOXHCF/plHpqFU0LyDYSJ2vxec48JtF59AzQYBFfKLUh5MwU/R920hQ
+        VS+/XB6xxi8NsgAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

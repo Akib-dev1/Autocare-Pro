@@ -20,7 +20,7 @@ namespace AutoCare_Pro
         private void InvoiceList_Load(object sender, EventArgs e)
         {
             DataSet ds = DbHelper.GetData("select * from invoices where employe_id='"+userForm.EmpId+"';");
-            this.dgvInvoive.DataSource = ds.Tables[0];
+            this.dgvInvoice.DataSource = ds.Tables[0];
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace AutoCare_Pro
             {
                 string sqlQuery = "select * From invoices where customer_id=(Select customer_id from customers where phone='" + this.txtSearch.Text + "');";
                 DataSet ds = DbHelper.GetData(sqlQuery);
-                this.dgvInvoive.DataSource = ds.Tables[0];
+                this.dgvInvoice.DataSource = ds.Tables[0];
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     MessageBox.Show("Customer found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -50,7 +50,7 @@ namespace AutoCare_Pro
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             DataSet ds = DbHelper.GetData("select * from invoices where employe_id='" + userForm.EmpId + "';");
-            this.dgvInvoive.DataSource = ds.Tables[0];
+            this.dgvInvoice.DataSource = ds.Tables[0];
             MessageBox.Show("Invoice List data refresh successfull!", "Refresh Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

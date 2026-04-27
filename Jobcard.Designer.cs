@@ -712,6 +712,8 @@
             // 
             // dgvService
             // 
+            this.dgvService.AllowUserToAddRows = false;
+            this.dgvService.AllowUserToDeleteRows = false;
             this.dgvService.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvService.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -721,6 +723,7 @@
             this.clmnTotal});
             this.dgvService.Location = new System.Drawing.Point(476, 163);
             this.dgvService.Name = "dgvService";
+            this.dgvService.ReadOnly = true;
             this.dgvService.Size = new System.Drawing.Size(618, 207);
             this.dgvService.TabIndex = 24;
             // 
@@ -751,6 +754,8 @@
             // 
             // dgvParts
             // 
+            this.dgvParts.AllowUserToAddRows = false;
+            this.dgvParts.AllowUserToDeleteRows = false;
             this.dgvParts.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -760,6 +765,7 @@
             this.clmnPartTotal});
             this.dgvParts.Location = new System.Drawing.Point(476, 461);
             this.dgvParts.Name = "dgvParts";
+            this.dgvParts.ReadOnly = true;
             this.dgvParts.Size = new System.Drawing.Size(618, 181);
             this.dgvParts.TabIndex = 25;
             // 

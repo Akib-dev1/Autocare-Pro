@@ -82,7 +82,7 @@ namespace AutoCare_Pro
             string vehicleModel = this.lblModel.Text;
             string vehicleYear = this.lblVehicleYear.Text;
             string vehiclePlate = this.lblPlateNumber.Text;
-            string technicalInstructions = this.richtextTechnote.Text;
+            string technicalInstructions = this.richtextTechnote.Text.Trim() ==""? "No Insturctions provided." : this.richtextTechnote.Text;
             string vehicleColor = this.lblColorShow.Text;
             double subtotal = this.lblSubTotalValue.Text != "" ? double.Parse(this.lblSubTotalValue.Text.TrimStart('$')) : 0;
             double tax = this.lblTaxValue.Text != "" ? double.Parse(this.lblTaxValue.Text.TrimStart('$')) : 0;

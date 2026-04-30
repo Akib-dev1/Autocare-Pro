@@ -23,26 +23,11 @@ namespace AutoCare_Pro
             dgvInventory.DataSource = ds.Tables[0];
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string sqlQuery = "SELECT * FROM Inventory WHERE part_name LIKE '%" + this.txtSearch.Text + "%';";
             DataSet ds = DbHelper.GetData(sqlQuery);
             dgvInventory.DataSource = ds.Tables[0];
-            if (ds.Tables[0].Rows.Count == 0)
-            {
-                MessageBox.Show("No inventory item found with the given part name.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Inventory item found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            DataSet ds = DbHelper.GetData("SELECT * FROM Inventory;");
-            dgvInventory.DataSource = ds.Tables[0];
-            MessageBox.Show("Inventory List data refresh successfull!", "Refresh Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

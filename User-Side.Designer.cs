@@ -36,10 +36,7 @@
             this.btnNavlink1 = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.ucInvoiceList = new AutoCare_Pro.InvoiceList();
-            this.ucInventoryList = new AutoCare_Pro.InventoryList();
-            this.ucCusList = new AutoCare_Pro.CustomerList();
-            this.ucJobcard = new AutoCare_Pro.Jobcard();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,56 +145,20 @@
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "AUTOCARE PRO";
             // 
-            // ucInvoiceList
+            // panelContainer
             // 
-            this.ucInvoiceList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
-            this.ucInvoiceList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucInvoiceList.Location = new System.Drawing.Point(200, 0);
-            this.ucInvoiceList.Name = "ucInvoiceList";
-            this.ucInvoiceList.Size = new System.Drawing.Size(1157, 746);
-            this.ucInvoiceList.TabIndex = 4;
-            // 
-            // ucInventoryList
-            // 
-            this.ucInventoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
-            this.ucInventoryList.Location = new System.Drawing.Point(198, 0);
-            this.ucInventoryList.Name = "ucInventoryList";
-            this.ucInventoryList.Size = new System.Drawing.Size(1160, 745);
-            this.ucInventoryList.TabIndex = 3;
-            // 
-            // ucCusList
-            // 
-            this.ucCusList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
-            this.ucCusList.Location = new System.Drawing.Point(198, 0);
-            this.ucCusList.Name = "ucCusList";
-            this.ucCusList.Size = new System.Drawing.Size(1160, 745);
-            this.ucCusList.TabIndex = 2;
-            this.ucCusList.Visible = false;
-            // 
-            // ucJobcard
-            // 
-            this.ucJobcard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucJobcard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
-            this.ucJobcard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ucJobcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ucJobcard.ForeColor = System.Drawing.Color.Black;
-            this.ucJobcard.Location = new System.Drawing.Point(198, 0);
-            this.ucJobcard.Margin = new System.Windows.Forms.Padding(4);
-            this.ucJobcard.Name = "ucJobcard";
-            this.ucJobcard.Size = new System.Drawing.Size(1161, 746);
-            this.ucJobcard.TabIndex = 1;
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(200, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1157, 746);
+            this.panelContainer.TabIndex = 1;
             // 
             // userForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1357, 746);
-            this.Controls.Add(this.ucInvoiceList);
-            this.Controls.Add(this.ucInventoryList);
-            this.Controls.Add(this.ucCusList);
-            this.Controls.Add(this.ucJobcard);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.pnlSidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "userForm";
@@ -219,10 +180,7 @@
         private System.Windows.Forms.Button btnNavlink1;
         private System.Windows.Forms.Button btnNavlink3;
         private System.Windows.Forms.Button btnNavlink2;
-        private Jobcard ucJobcard;
-        private CustomerList ucCusList;
-        private InventoryList ucInventoryList;
         private System.Windows.Forms.Button btnNavlink4;
-        private InvoiceList ucInvoiceList;
+        private System.Windows.Forms.Panel panelContainer;
     }
 }

@@ -576,8 +576,6 @@
             // 
             // pnlBottombar
             // 
-            this.pnlBottombar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBottombar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.pnlBottombar.Controls.Add(this.btnGenerateInvoice);
             this.pnlBottombar.Controls.Add(this.lblGrandTotalValue);
@@ -588,9 +586,10 @@
             this.pnlBottombar.Controls.Add(this.lblDiscountTitle);
             this.pnlBottombar.Controls.Add(this.lblTaxTitle);
             this.pnlBottombar.Controls.Add(this.lblSubtotalTitle);
-            this.pnlBottombar.Location = new System.Drawing.Point(0, 676);
+            this.pnlBottombar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBottombar.Location = new System.Drawing.Point(0, 674);
             this.pnlBottombar.Name = "pnlBottombar";
-            this.pnlBottombar.Size = new System.Drawing.Size(1180, 71);
+            this.pnlBottombar.Size = new System.Drawing.Size(1160, 71);
             this.pnlBottombar.TabIndex = 20;
             // 
             // btnGenerateInvoice
@@ -598,7 +597,7 @@
             this.btnGenerateInvoice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnGenerateInvoice.BackColor = System.Drawing.Color.Moccasin;
             this.btnGenerateInvoice.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateInvoice.Location = new System.Drawing.Point(908, 15);
+            this.btnGenerateInvoice.Location = new System.Drawing.Point(888, 15);
             this.btnGenerateInvoice.Name = "btnGenerateInvoice";
             this.btnGenerateInvoice.Size = new System.Drawing.Size(202, 41);
             this.btnGenerateInvoice.TabIndex = 8;
@@ -613,7 +612,7 @@
             this.lblGrandTotalValue.ForeColor = System.Drawing.Color.White;
             this.lblGrandTotalValue.Location = new System.Drawing.Point(637, 32);
             this.lblGrandTotalValue.Name = "lblGrandTotalValue";
-            this.lblGrandTotalValue.Size = new System.Drawing.Size(88, 24);
+            this.lblGrandTotalValue.Size = new System.Drawing.Size(68, 24);
             this.lblGrandTotalValue.TabIndex = 7;
             this.lblGrandTotalValue.Text = "$0";
             this.lblGrandTotalValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -625,7 +624,7 @@
             this.lblDiscountValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblDiscountValue.Location = new System.Drawing.Point(439, 33);
             this.lblDiscountValue.Name = "lblDiscountValue";
-            this.lblDiscountValue.Size = new System.Drawing.Size(88, 24);
+            this.lblDiscountValue.Size = new System.Drawing.Size(68, 24);
             this.lblDiscountValue.TabIndex = 6;
             this.lblDiscountValue.Text = "-$0.00";
             this.lblDiscountValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -637,7 +636,7 @@
             this.lblTaxValue.ForeColor = System.Drawing.Color.White;
             this.lblTaxValue.Location = new System.Drawing.Point(268, 32);
             this.lblTaxValue.Name = "lblTaxValue";
-            this.lblTaxValue.Size = new System.Drawing.Size(88, 24);
+            this.lblTaxValue.Size = new System.Drawing.Size(68, 24);
             this.lblTaxValue.TabIndex = 5;
             this.lblTaxValue.Text = "$0";
             this.lblTaxValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -649,7 +648,7 @@
             this.lblSubTotalValue.ForeColor = System.Drawing.Color.White;
             this.lblSubTotalValue.Location = new System.Drawing.Point(62, 32);
             this.lblSubTotalValue.Name = "lblSubTotalValue";
-            this.lblSubTotalValue.Size = new System.Drawing.Size(88, 24);
+            this.lblSubTotalValue.Size = new System.Drawing.Size(68, 24);
             this.lblSubTotalValue.TabIndex = 4;
             this.lblSubTotalValue.Text = "$0";
             this.lblSubTotalValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -661,7 +660,7 @@
             this.lblGrandTotalTitle.ForeColor = System.Drawing.Color.Silver;
             this.lblGrandTotalTitle.Location = new System.Drawing.Point(637, 13);
             this.lblGrandTotalTitle.Name = "lblGrandTotalTitle";
-            this.lblGrandTotalTitle.Size = new System.Drawing.Size(117, 19);
+            this.lblGrandTotalTitle.Size = new System.Drawing.Size(97, 19);
             this.lblGrandTotalTitle.TabIndex = 3;
             this.lblGrandTotalTitle.Text = "GRAND TOTAL";
             // 
@@ -672,7 +671,7 @@
             this.lblDiscountTitle.ForeColor = System.Drawing.Color.Silver;
             this.lblDiscountTitle.Location = new System.Drawing.Point(439, 13);
             this.lblDiscountTitle.Name = "lblDiscountTitle";
-            this.lblDiscountTitle.Size = new System.Drawing.Size(100, 19);
+            this.lblDiscountTitle.Size = new System.Drawing.Size(80, 19);
             this.lblDiscountTitle.TabIndex = 2;
             this.lblDiscountTitle.Text = "DISCOUNT";
             // 
@@ -683,7 +682,7 @@
             this.lblTaxTitle.ForeColor = System.Drawing.Color.Silver;
             this.lblTaxTitle.Location = new System.Drawing.Point(268, 13);
             this.lblTaxTitle.Name = "lblTaxTitle";
-            this.lblTaxTitle.Size = new System.Drawing.Size(100, 19);
+            this.lblTaxTitle.Size = new System.Drawing.Size(80, 19);
             this.lblTaxTitle.TabIndex = 1;
             this.lblTaxTitle.Text = "TAX(8.8%)";
             // 
@@ -694,7 +693,7 @@
             this.lblSubtotalTitle.ForeColor = System.Drawing.Color.Silver;
             this.lblSubtotalTitle.Location = new System.Drawing.Point(64, 13);
             this.lblSubtotalTitle.Name = "lblSubtotalTitle";
-            this.lblSubtotalTitle.Size = new System.Drawing.Size(100, 19);
+            this.lblSubtotalTitle.Size = new System.Drawing.Size(80, 19);
             this.lblSubtotalTitle.TabIndex = 0;
             this.lblSubtotalTitle.Text = "SUBTOTAL";
             // 
@@ -714,6 +713,7 @@
             // 
             this.dgvService.AllowUserToAddRows = false;
             this.dgvService.AllowUserToDeleteRows = false;
+            this.dgvService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvService.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvService.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -756,6 +756,7 @@
             // 
             this.dgvParts.AllowUserToAddRows = false;
             this.dgvParts.AllowUserToDeleteRows = false;
+            this.dgvParts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvParts.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

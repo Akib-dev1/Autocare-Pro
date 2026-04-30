@@ -120,16 +120,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAdminNavlink4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAHoSURBVEhLzZXLSgJhFMd7hB6hR+gNGkjLRivJsbTaSIsIIg2iCy2ylW2CFr1AUEKLqIVREKQO
-        BgUhKgVFRVIuXBgZ2oUKTpyZPvM7jYPX6AcH5vLN//edg840Nf0XjKK9VbQObvQ5XFFWpl5HAK/TtWUj
-        mKwtxi57Gwvp6O5PzXt972vrm8AKzzt7+u+Vdd+Fz9EsTQyi5DWYJcCyD428AkAQj/cPDqEYPGfruBIl
-        L83kwJ3gwuubWy5wayfwO8wsKR0Vg8/hdd2ODBZJwEVa5HJ5iCXOCoXnWigbsEgCzS6gJymXbtvwZ8Ml
-        ybv7Y5rLUQ8JAIRoLkc9JMEUXHhkeHbL4Kf5CrVKUnmASRnAE4ZPdxCWaL5CrZKXD4CZCHy4wxD1yOCh
-        +Qq1SravAZajkKW5HKUke0mAuSN1HKVgo7p5glOay6ElwRGgYDWuL8L72ElVvy7/pRrAjrVEJ2n1Om7o
-        8fEpQnM5qOThTR3BVfYnkIpYpyhCpmYXMrovSSrBoO8RcBSL8D7rFBmbmM6WLcEdYpWCibDT4vFVJAml
-        1NIDRbRTRWKWtP8jCB1XNSiSRr+FR8enMroSQbA2i1Znen7R9x5PnEOlJUeO87hJXQmCn86uXudun8MV
-        q7RMPQORdtG2QjP/hC/9HDnuqqf3IAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAehJREFUSEvN
+        lctKAmEUx3uEHqFH6A0aSMtGK8mxtNpIiwgiDaILLbKVbYIWvUBQQouohVEQpA4GBSEqBUVFUi5cGBna
+        hQpOnJk+8zuNg9foBwfm8s3/952DzjQ1/ReMor1VtA5u9DlcUVamXkcAr9O1ZSOYrC3GLnsbC+no7k/N
+        e33va+ubwArPO3v675V134XP0SxNDKLkNZglwLIPjbwCQBCP9w8OoRg8Z+u4EiUvzeTAneDC65tbLnBr
+        J/A7zCwpHRWDz+F13Y4MFknARVrkcnmIJc4KhedaKBuwSALNLqAnKZdu2/BnwyXJu/tjmstRDwkAhGgu
+        Rz0kwRRceGR4dsvgp/kKtUpSeYBJGcAThk93EJZovkKtkpcPgJkIfLjDEPXI4KH5CrVKtq8BlqOQpbkc
+        pSR7SYC5I3UcpWCjunmCU5rLoSXBEaBgNa4vwvvYSVW/Lv+lGsCOtUQnafU6bujx8SlCczmo5OFNHcFV
+        9ieQilinKEKmZhcyui9JKsGg7xFwFIvwPusUGZuYzpYtwR1ilYKJsNPi8VUkCaXU0gNFtFNFYpa0/yMI
+        HVc1KJJGv4VHx6cyuhJBsDaLVmd6ftH3Hk+cQ6UlR47zuEldCYKfzq5e526fwxWrtEw9A5F20bZCM/+E
+        L/0cOe6qp/cgAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnAdminNavlink3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

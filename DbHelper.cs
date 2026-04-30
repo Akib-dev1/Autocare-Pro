@@ -10,9 +10,9 @@ namespace AutoCare_Pro
 {
     internal static class DbHelper
     {
-        //private static string connectionString = "Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
+        private static string connectionString = "Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
         //private static string connectionString = "Data Source=AKIB-LAPTOP\\SQLEXPRESS;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
-        private static string connectionString = "Data Source=RAFI\\SQLEXPRESS;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=rafi123;Encrypt=False";
+        //private static string connectionString = "Data Source=RAFI\\SQLEXPRESS;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=rafi123;Encrypt=False";
 
 
         public static DataSet GetData(string sqlQuery)

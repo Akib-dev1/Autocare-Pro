@@ -35,10 +35,6 @@
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.CustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +44,9 @@
             this.VehicleYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VehiclePlate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VehicleColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +81,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(115)))), ((int)(((byte)(10)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCustomers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCustomers.BackgroundColor = System.Drawing.Color.White;
             this.dgvCustomers.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -129,59 +128,6 @@
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCustomers.Size = new System.Drawing.Size(1087, 445);
             this.dgvCustomers.TabIndex = 1;
-            this.dgvCustomers.AutoGenerateColumns = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(269, 151);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(228, 23);
-            this.txtSearch.TabIndex = 1;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(35, 151);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(226, 23);
-            this.lblSearch.TabIndex = 2;
-            this.lblSearch.Text = "Search By Phone Number";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(505, 151);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(106, 26);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRefresh.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(960, 139);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(162, 38);
-            this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "Refresh Database";
-            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // CustomerId
             // 
@@ -246,12 +192,45 @@
             this.VehicleColor.Name = "VehicleColor";
             this.VehicleColor.ReadOnly = true;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(269, 151);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(228, 23);
+            this.txtSearch.TabIndex = 1;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(35, 151);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(226, 23);
+            this.lblSearch.TabIndex = 2;
+            this.lblSearch.Text = "Search By Phone Number";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(505, 151);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(106, 26);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // CustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);
@@ -276,7 +255,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerId;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;

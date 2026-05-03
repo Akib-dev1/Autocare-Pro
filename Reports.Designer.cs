@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlReportTopBar = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblReportTitle = new System.Windows.Forms.Label();
-            this.lblReportName = new System.Windows.Forms.Label();
-            this.txtReportSearch = new System.Windows.Forms.TextBox();
             this.btnReportSearchButton = new System.Windows.Forms.Button();
+            this.txtReportSearch = new System.Windows.Forms.TextBox();
+            this.lblReportName = new System.Windows.Forms.Label();
+            this.lblReportTitle = new System.Windows.Forms.Label();
+            this.pbReportImage = new System.Windows.Forms.PictureBox();
             this.lblReportSalesAnalytics = new System.Windows.Forms.Label();
             this.pnlAvgSales = new System.Windows.Forms.Panel();
-            this.lblAvgASales = new System.Windows.Forms.Label();
-            this.lblAvgSaleTotal = new System.Windows.Forms.Label();
-            this.lblCurrency = new System.Windows.Forms.Label();
             this.pbAvgSales = new System.Windows.Forms.PictureBox();
+            this.lblCurrency = new System.Windows.Forms.Label();
+            this.lblAvgSaleTotal = new System.Windows.Forms.Label();
+            this.lblAvgASales = new System.Windows.Forms.Label();
             this.pnlNewCustomers = new System.Windows.Forms.Panel();
             this.pbNewCustomerLogo = new System.Windows.Forms.PictureBox();
             this.lblNewCustomerSubscript = new System.Windows.Forms.Label();
@@ -55,69 +55,37 @@
             this.lblProRevenueAmount = new System.Windows.Forms.Label();
             this.lblProjectedRevenueTitle = new System.Windows.Forms.Label();
             this.lblRevenueTrendTitle = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ctTrend = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblLedgerTitle = new System.Windows.Forms.Label();
+            this.dgvLedger = new System.Windows.Forms.DataGridView();
+            this.VehicleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.service = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlReportTopBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReportImage)).BeginInit();
             this.pnlAvgSales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvgSales)).BeginInit();
             this.pnlNewCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNewCustomerLogo)).BeginInit();
             this.pnlProjectedRevenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProjectedRevenueLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctTrend)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLedger)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlReportTopBar
             // 
-            this.pnlReportTopBar.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pnlReportTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.pnlReportTopBar.Controls.Add(this.btnReportSearchButton);
             this.pnlReportTopBar.Controls.Add(this.txtReportSearch);
             this.pnlReportTopBar.Controls.Add(this.lblReportName);
             this.pnlReportTopBar.Controls.Add(this.lblReportTitle);
-            this.pnlReportTopBar.Controls.Add(this.pictureBox1);
+            this.pnlReportTopBar.Controls.Add(this.pbReportImage);
             this.pnlReportTopBar.Location = new System.Drawing.Point(0, 0);
             this.pnlReportTopBar.Name = "pnlReportTopBar";
             this.pnlReportTopBar.Size = new System.Drawing.Size(1203, 70);
             this.pnlReportTopBar.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1136, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblReportTitle
-            // 
-            this.lblReportTitle.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportTitle.Location = new System.Drawing.Point(16, 15);
-            this.lblReportTitle.Name = "lblReportTitle";
-            this.lblReportTitle.Size = new System.Drawing.Size(201, 35);
-            this.lblReportTitle.TabIndex = 1;
-            this.lblReportTitle.Text = "The Machinist Ledger";
-            this.lblReportTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblReportName
-            // 
-            this.lblReportName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportName.ForeColor = System.Drawing.Color.Brown;
-            this.lblReportName.Location = new System.Drawing.Point(1042, 20);
-            this.lblReportName.Name = "lblReportName";
-            this.lblReportName.Size = new System.Drawing.Size(88, 25);
-            this.lblReportName.TabIndex = 2;
-            this.lblReportName.Text = "ADMIN";
-            this.lblReportName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtReportSearch
-            // 
-            this.txtReportSearch.Location = new System.Drawing.Point(242, 20);
-            this.txtReportSearch.Multiline = true;
-            this.txtReportSearch.Name = "txtReportSearch";
-            this.txtReportSearch.Size = new System.Drawing.Size(294, 30);
-            this.txtReportSearch.TabIndex = 3;
             // 
             // btnReportSearchButton
             // 
@@ -131,12 +99,52 @@
             this.btnReportSearchButton.Text = "Search";
             this.btnReportSearchButton.UseVisualStyleBackColor = true;
             // 
+            // txtReportSearch
+            // 
+            this.txtReportSearch.Location = new System.Drawing.Point(242, 20);
+            this.txtReportSearch.Multiline = true;
+            this.txtReportSearch.Name = "txtReportSearch";
+            this.txtReportSearch.Size = new System.Drawing.Size(294, 30);
+            this.txtReportSearch.TabIndex = 3;
+            // 
+            // lblReportName
+            // 
+            this.lblReportName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportName.ForeColor = System.Drawing.Color.Brown;
+            this.lblReportName.Location = new System.Drawing.Point(1042, 20);
+            this.lblReportName.Name = "lblReportName";
+            this.lblReportName.Size = new System.Drawing.Size(88, 25);
+            this.lblReportName.TabIndex = 2;
+            this.lblReportName.Text = "ADMIN";
+            this.lblReportName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblReportTitle
+            // 
+            this.lblReportTitle.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportTitle.Location = new System.Drawing.Point(16, 15);
+            this.lblReportTitle.Name = "lblReportTitle";
+            this.lblReportTitle.Size = new System.Drawing.Size(201, 35);
+            this.lblReportTitle.TabIndex = 1;
+            this.lblReportTitle.Text = "The Machinist Ledger";
+            this.lblReportTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pbReportImage
+            // 
+            this.pbReportImage.Image = ((System.Drawing.Image)(resources.GetObject("pbReportImage.Image")));
+            this.pbReportImage.Location = new System.Drawing.Point(1136, 15);
+            this.pbReportImage.Name = "pbReportImage";
+            this.pbReportImage.Size = new System.Drawing.Size(54, 35);
+            this.pbReportImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbReportImage.TabIndex = 0;
+            this.pbReportImage.TabStop = false;
+            // 
             // lblReportSalesAnalytics
             // 
-            this.lblReportSalesAnalytics.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportSalesAnalytics.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportSalesAnalytics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.lblReportSalesAnalytics.Location = new System.Drawing.Point(16, 107);
             this.lblReportSalesAnalytics.Name = "lblReportSalesAnalytics";
-            this.lblReportSalesAnalytics.Size = new System.Drawing.Size(177, 35);
+            this.lblReportSalesAnalytics.Size = new System.Drawing.Size(232, 35);
             this.lblReportSalesAnalytics.TabIndex = 1;
             this.lblReportSalesAnalytics.Text = "Sales Analytics";
             this.lblReportSalesAnalytics.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,15 +152,46 @@
             // pnlAvgSales
             // 
             this.pnlAvgSales.AllowDrop = true;
-            this.pnlAvgSales.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlAvgSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
             this.pnlAvgSales.Controls.Add(this.pbAvgSales);
             this.pnlAvgSales.Controls.Add(this.lblCurrency);
             this.pnlAvgSales.Controls.Add(this.lblAvgSaleTotal);
             this.pnlAvgSales.Controls.Add(this.lblAvgASales);
-            this.pnlAvgSales.Location = new System.Drawing.Point(21, 188);
+            this.pnlAvgSales.Location = new System.Drawing.Point(20, 163);
             this.pnlAvgSales.Name = "pnlAvgSales";
             this.pnlAvgSales.Size = new System.Drawing.Size(289, 151);
             this.pnlAvgSales.TabIndex = 2;
+            // 
+            // pbAvgSales
+            // 
+            this.pbAvgSales.Image = ((System.Drawing.Image)(resources.GetObject("pbAvgSales.Image")));
+            this.pbAvgSales.Location = new System.Drawing.Point(18, 28);
+            this.pbAvgSales.Name = "pbAvgSales";
+            this.pbAvgSales.Size = new System.Drawing.Size(50, 43);
+            this.pbAvgSales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvgSales.TabIndex = 3;
+            this.pbAvgSales.TabStop = false;
+            // 
+            // lblCurrency
+            // 
+            this.lblCurrency.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrency.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblCurrency.Location = new System.Drawing.Point(154, 92);
+            this.lblCurrency.Name = "lblCurrency";
+            this.lblCurrency.Size = new System.Drawing.Size(116, 34);
+            this.lblCurrency.TabIndex = 2;
+            this.lblCurrency.Text = "USD/INVOICE";
+            this.lblCurrency.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAvgSaleTotal
+            // 
+            this.lblAvgSaleTotal.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvgSaleTotal.Location = new System.Drawing.Point(12, 76);
+            this.lblAvgSaleTotal.Name = "lblAvgSaleTotal";
+            this.lblAvgSaleTotal.Size = new System.Drawing.Size(148, 54);
+            this.lblAvgSaleTotal.TabIndex = 1;
+            this.lblAvgSaleTotal.Text = "$284.50";
+            this.lblAvgSaleTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAvgASales
             // 
@@ -166,45 +205,14 @@
             this.lblAvgASales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAvgASales.Click += new System.EventHandler(this.lblAvgASales_Click);
             // 
-            // lblAvgSaleTotal
-            // 
-            this.lblAvgSaleTotal.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvgSaleTotal.Location = new System.Drawing.Point(12, 76);
-            this.lblAvgSaleTotal.Name = "lblAvgSaleTotal";
-            this.lblAvgSaleTotal.Size = new System.Drawing.Size(148, 54);
-            this.lblAvgSaleTotal.TabIndex = 1;
-            this.lblAvgSaleTotal.Text = "$284.50";
-            this.lblAvgSaleTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCurrency
-            // 
-            this.lblCurrency.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrency.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblCurrency.Location = new System.Drawing.Point(154, 92);
-            this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(116, 34);
-            this.lblCurrency.TabIndex = 2;
-            this.lblCurrency.Text = "USD/INVOICE";
-            this.lblCurrency.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbAvgSales
-            // 
-            this.pbAvgSales.Image = ((System.Drawing.Image)(resources.GetObject("pbAvgSales.Image")));
-            this.pbAvgSales.Location = new System.Drawing.Point(18, 28);
-            this.pbAvgSales.Name = "pbAvgSales";
-            this.pbAvgSales.Size = new System.Drawing.Size(50, 43);
-            this.pbAvgSales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAvgSales.TabIndex = 3;
-            this.pbAvgSales.TabStop = false;
-            // 
             // pnlNewCustomers
             // 
-            this.pnlNewCustomers.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlNewCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
             this.pnlNewCustomers.Controls.Add(this.pbNewCustomerLogo);
             this.pnlNewCustomers.Controls.Add(this.lblNewCustomerSubscript);
             this.pnlNewCustomers.Controls.Add(this.lblNewCustomerAmount);
             this.pnlNewCustomers.Controls.Add(this.lblNewCustomerTitle);
-            this.pnlNewCustomers.Location = new System.Drawing.Point(431, 188);
+            this.pnlNewCustomers.Location = new System.Drawing.Point(430, 163);
             this.pnlNewCustomers.Name = "pnlNewCustomers";
             this.pnlNewCustomers.Size = new System.Drawing.Size(289, 151);
             this.pnlNewCustomers.TabIndex = 4;
@@ -259,7 +267,7 @@
             this.pnlProjectedRevenue.Controls.Add(this.lblProRevenueSubscript);
             this.pnlProjectedRevenue.Controls.Add(this.lblProRevenueAmount);
             this.pnlProjectedRevenue.Controls.Add(this.lblProjectedRevenueTitle);
-            this.pnlProjectedRevenue.Location = new System.Drawing.Point(842, 188);
+            this.pnlProjectedRevenue.Location = new System.Drawing.Point(842, 163);
             this.pnlProjectedRevenue.Name = "pnlProjectedRevenue";
             this.pnlProjectedRevenue.Size = new System.Drawing.Size(289, 151);
             this.pnlProjectedRevenue.TabIndex = 4;
@@ -311,34 +319,97 @@
             // lblRevenueTrendTitle
             // 
             this.lblRevenueTrendTitle.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRevenueTrendTitle.Location = new System.Drawing.Point(39, 376);
+            this.lblRevenueTrendTitle.Location = new System.Drawing.Point(34, 333);
             this.lblRevenueTrendTitle.Name = "lblRevenueTrendTitle";
             this.lblRevenueTrendTitle.Size = new System.Drawing.Size(179, 30);
             this.lblRevenueTrendTitle.TabIndex = 5;
             this.lblRevenueTrendTitle.Text = "REVENUE TRENDS";
             // 
-            // chart1
+            // ctTrend
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(207, 415);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(854, 206);
-            this.chart1.TabIndex = 6;
-            this.chart1.Text = "chart1";
+            chartArea2.Name = "ChartArea1";
+            this.ctTrend.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ctTrend.Legends.Add(legend2);
+            this.ctTrend.Location = new System.Drawing.Point(20, 375);
+            this.ctTrend.Name = "ctTrend";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.ctTrend.Series.Add(series2);
+            this.ctTrend.Size = new System.Drawing.Size(588, 226);
+            this.ctTrend.TabIndex = 6;
+            this.ctTrend.Text = "chart1";
+            // 
+            // lblLedgerTitle
+            // 
+            this.lblLedgerTitle.AutoSize = true;
+            this.lblLedgerTitle.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLedgerTitle.Location = new System.Drawing.Point(650, 333);
+            this.lblLedgerTitle.Name = "lblLedgerTitle";
+            this.lblLedgerTitle.Size = new System.Drawing.Size(143, 22);
+            this.lblLedgerTitle.TabIndex = 0;
+            this.lblLedgerTitle.Text = "Priority Ledger";
+            // 
+            // dgvLedger
+            // 
+            this.dgvLedger.AllowUserToAddRows = false;
+            this.dgvLedger.AllowUserToDeleteRows = false;
+            this.dgvLedger.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgvLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLedger.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.VehicleId,
+            this.service,
+            this.Amount,
+            this.status});
+            this.dgvLedger.Location = new System.Drawing.Point(654, 375);
+            this.dgvLedger.Name = "dgvLedger";
+            this.dgvLedger.ReadOnly = true;
+            this.dgvLedger.RowHeadersWidth = 51;
+            this.dgvLedger.RowTemplate.Height = 24;
+            this.dgvLedger.Size = new System.Drawing.Size(482, 226);
+            this.dgvLedger.TabIndex = 7;
+            // 
+            // VehicleId
+            // 
+            this.VehicleId.HeaderText = "Vehicle Id";
+            this.VehicleId.MinimumWidth = 6;
+            this.VehicleId.Name = "VehicleId";
+            this.VehicleId.ReadOnly = true;
+            this.VehicleId.Width = 125;
+            // 
+            // service
+            // 
+            this.service.HeaderText = "Service";
+            this.service.MinimumWidth = 6;
+            this.service.Name = "service";
+            this.service.ReadOnly = true;
+            this.service.Width = 125;
+            // 
+            // Amount
+            // 
+            this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            this.Amount.Width = 125;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.MinimumWidth = 6;
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            this.status.Width = 125;
             // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.chart1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.Controls.Add(this.dgvLedger);
+            this.Controls.Add(this.lblLedgerTitle);
+            this.Controls.Add(this.ctTrend);
             this.Controls.Add(this.lblRevenueTrendTitle);
             this.Controls.Add(this.pnlProjectedRevenue);
             this.Controls.Add(this.pnlNewCustomers);
@@ -349,15 +420,17 @@
             this.Size = new System.Drawing.Size(1204, 649);
             this.pnlReportTopBar.ResumeLayout(false);
             this.pnlReportTopBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReportImage)).EndInit();
             this.pnlAvgSales.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvgSales)).EndInit();
             this.pnlNewCustomers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbNewCustomerLogo)).EndInit();
             this.pnlProjectedRevenue.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbProjectedRevenueLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctTrend)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLedger)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -365,7 +438,7 @@
 
         private System.Windows.Forms.Panel pnlReportTopBar;
         private System.Windows.Forms.Label lblReportTitle;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbReportImage;
         private System.Windows.Forms.Label lblReportName;
         private System.Windows.Forms.TextBox txtReportSearch;
         private System.Windows.Forms.Button btnReportSearchButton;
@@ -386,6 +459,12 @@
         private System.Windows.Forms.Label lblProRevenueAmount;
         private System.Windows.Forms.Label lblProjectedRevenueTitle;
         private System.Windows.Forms.Label lblRevenueTrendTitle;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctTrend;
+        private System.Windows.Forms.Label lblLedgerTitle;
+        private System.Windows.Forms.DataGridView dgvLedger;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VehicleId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn service;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }

@@ -87,6 +87,12 @@
     <Compile Include="InventoryList.Designer.cs">
       <DependentUpon>InventoryList.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventoryMannagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InventoryMannagement.Designer.cs">
+      <DependentUpon>InventoryMannagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryList.resx">
       <DependentUpon>InventoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryMannagement.resx">
+      <DependentUpon>InventoryMannagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InvoiceList.resx">
       <DependentUpon>InvoiceList.cs</DependentUpon>

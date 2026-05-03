@@ -153,6 +153,7 @@
             // 
             this.pnlAvgSales.AllowDrop = true;
             this.pnlAvgSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.pnlAvgSales.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlAvgSales.Controls.Add(this.pbAvgSales);
             this.pnlAvgSales.Controls.Add(this.lblCurrency);
             this.pnlAvgSales.Controls.Add(this.lblAvgSaleTotal);
@@ -208,6 +209,7 @@
             // pnlNewCustomers
             // 
             this.pnlNewCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.pnlNewCustomers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlNewCustomers.Controls.Add(this.pbNewCustomerLogo);
             this.pnlNewCustomers.Controls.Add(this.lblNewCustomerSubscript);
             this.pnlNewCustomers.Controls.Add(this.lblNewCustomerAmount);
@@ -263,6 +265,7 @@
             // pnlProjectedRevenue
             // 
             this.pnlProjectedRevenue.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.pnlProjectedRevenue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlProjectedRevenue.Controls.Add(this.pbProjectedRevenueLogo);
             this.pnlProjectedRevenue.Controls.Add(this.lblProRevenueSubscript);
             this.pnlProjectedRevenue.Controls.Add(this.lblProRevenueAmount);

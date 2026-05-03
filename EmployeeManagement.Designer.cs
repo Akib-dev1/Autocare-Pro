@@ -40,14 +40,14 @@
             this.lblTotalPersonnel = new System.Windows.Forms.Label();
             this.lblPersonnel = new System.Windows.Forms.Label();
             this.lblReportSalesAnalytics = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlShopEfficiency = new System.Windows.Forms.Panel();
             this.pbEfficiencyIcon = new System.Windows.Forms.PictureBox();
             this.lblEfficiencyText = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblEfficiencyTitle = new System.Windows.Forms.Label();
+            this.pnlActivejobs = new System.Windows.Forms.Panel();
+            this.pbActiveJobIcon = new System.Windows.Forms.PictureBox();
+            this.lblActiveJobs = new System.Windows.Forms.Label();
+            this.lblActiveJobTitle = new System.Windows.Forms.Label();
             this.pbPersonnel = new System.Windows.Forms.PictureBox();
             this.dgvEmployeeList = new System.Windows.Forms.DataGridView();
             this.member = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,10 +58,10 @@
             this.pnlEmployeeNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).BeginInit();
             this.pnlTotalPersonnel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlShopEfficiency.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEfficiencyIcon)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlActivejobs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActiveJobIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonnel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeList)).BeginInit();
             this.SuspendLayout();
@@ -178,18 +178,18 @@
             this.lblReportSalesAnalytics.Text = "Staff Roster";
             this.lblReportSalesAnalytics.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // pnlShopEfficiency
             // 
-            this.panel1.AllowDrop = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.panel1.Controls.Add(this.pbEfficiencyIcon);
-            this.panel1.Controls.Add(this.lblEfficiencyText);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(467, 172);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 151);
-            this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlShopEfficiency.AllowDrop = true;
+            this.pnlShopEfficiency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.pnlShopEfficiency.Controls.Add(this.pbEfficiencyIcon);
+            this.pnlShopEfficiency.Controls.Add(this.lblEfficiencyText);
+            this.pnlShopEfficiency.Controls.Add(this.lblEfficiencyTitle);
+            this.pnlShopEfficiency.Location = new System.Drawing.Point(467, 172);
+            this.pnlShopEfficiency.Name = "pnlShopEfficiency";
+            this.pnlShopEfficiency.Size = new System.Drawing.Size(273, 151);
+            this.pnlShopEfficiency.TabIndex = 4;
+            this.pnlShopEfficiency.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pbEfficiencyIcon
             // 
@@ -212,64 +212,64 @@
             this.lblEfficiencyText.Text = "94.2%";
             this.lblEfficiencyText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblEfficiencyTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(16, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 28);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Shop Efficiency";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblEfficiencyTitle.AutoSize = true;
+            this.lblEfficiencyTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEfficiencyTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblEfficiencyTitle.Location = new System.Drawing.Point(16, 32);
+            this.lblEfficiencyTitle.Name = "lblEfficiencyTitle";
+            this.lblEfficiencyTitle.Size = new System.Drawing.Size(210, 28);
+            this.lblEfficiencyTitle.TabIndex = 0;
+            this.lblEfficiencyTitle.Text = "Shop Efficiency";
+            this.lblEfficiencyTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEfficiencyTitle.Click += new System.EventHandler(this.label3_Click);
             // 
-            // panel2
+            // pnlActivejobs
             // 
-            this.panel2.AllowDrop = true;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(874, 172);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(276, 151);
-            this.panel2.TabIndex = 4;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnlActivejobs.AllowDrop = true;
+            this.pnlActivejobs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.pnlActivejobs.Controls.Add(this.pbActiveJobIcon);
+            this.pnlActivejobs.Controls.Add(this.lblActiveJobs);
+            this.pnlActivejobs.Controls.Add(this.lblActiveJobTitle);
+            this.pnlActivejobs.Location = new System.Drawing.Point(874, 172);
+            this.pnlActivejobs.Name = "pnlActivejobs";
+            this.pnlActivejobs.Size = new System.Drawing.Size(276, 151);
+            this.pnlActivejobs.TabIndex = 4;
+            this.pnlActivejobs.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // pictureBox3
+            // pbActiveJobIcon
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(23, 76);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.pbActiveJobIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbActiveJobIcon.Image")));
+            this.pbActiveJobIcon.Location = new System.Drawing.Point(23, 76);
+            this.pbActiveJobIcon.Name = "pbActiveJobIcon";
+            this.pbActiveJobIcon.Size = new System.Drawing.Size(50, 43);
+            this.pbActiveJobIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbActiveJobIcon.TabIndex = 3;
+            this.pbActiveJobIcon.TabStop = false;
             // 
-            // label5
+            // lblActiveJobs
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(126, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 34);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "04\r\n";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblActiveJobs.AutoSize = true;
+            this.lblActiveJobs.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveJobs.Location = new System.Drawing.Point(126, 83);
+            this.lblActiveJobs.Name = "lblActiveJobs";
+            this.lblActiveJobs.Size = new System.Drawing.Size(51, 34);
+            this.lblActiveJobs.TabIndex = 1;
+            this.lblActiveJobs.Text = "04\r\n";
+            this.lblActiveJobs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // lblActiveJobTitle
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(18, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(249, 28);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Current Active Job";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblActiveJobTitle.AutoSize = true;
+            this.lblActiveJobTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveJobTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblActiveJobTitle.Location = new System.Drawing.Point(18, 28);
+            this.lblActiveJobTitle.Name = "lblActiveJobTitle";
+            this.lblActiveJobTitle.Size = new System.Drawing.Size(249, 28);
+            this.lblActiveJobTitle.TabIndex = 0;
+            this.lblActiveJobTitle.Text = "Current Active Job";
+            this.lblActiveJobTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbPersonnel
             // 
@@ -360,8 +360,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.dgvEmployeeList);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlShopEfficiency);
+            this.Controls.Add(this.pnlActivejobs);
             this.Controls.Add(this.lblReportSalesAnalytics);
             this.Controls.Add(this.pnlTotalPersonnel);
             this.Controls.Add(this.pnlEmployeeNav);
@@ -373,12 +373,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).EndInit();
             this.pnlTotalPersonnel.ResumeLayout(false);
             this.pnlTotalPersonnel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlShopEfficiency.ResumeLayout(false);
+            this.pnlShopEfficiency.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEfficiencyIcon)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlActivejobs.ResumeLayout(false);
+            this.pnlActivejobs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActiveJobIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonnel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeList)).EndInit();
             this.ResumeLayout(false);
@@ -397,14 +397,14 @@
         private System.Windows.Forms.Label lblTotalPersonnel;
         private System.Windows.Forms.Label lblPersonnel;
         private System.Windows.Forms.Label lblReportSalesAnalytics;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlShopEfficiency;
         private System.Windows.Forms.PictureBox pbEfficiencyIcon;
         private System.Windows.Forms.Label lblEfficiencyText;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblEfficiencyTitle;
+        private System.Windows.Forms.Panel pnlActivejobs;
+        private System.Windows.Forms.PictureBox pbActiveJobIcon;
+        private System.Windows.Forms.Label lblActiveJobs;
+        private System.Windows.Forms.Label lblActiveJobTitle;
         private System.Windows.Forms.PictureBox pbPersonnel;
         private System.Windows.Forms.DataGridView dgvEmployeeList;
         private System.Windows.Forms.DataGridViewTextBoxColumn member;

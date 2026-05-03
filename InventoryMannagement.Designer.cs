@@ -58,6 +58,7 @@
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitcost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddStock = new System.Windows.Forms.Button();
             this.pnlInventoryNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).BeginInit();
             this.panel1.SuspendLayout();
@@ -137,6 +138,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.btnAddStock);
             this.panel1.Controls.Add(this.dgvIntevtoryParts);
             this.panel1.Controls.Add(this.pnlStockValue);
             this.panel1.Controls.Add(this.pnlLowStock);
@@ -392,6 +394,19 @@
             this.supplier.Name = "supplier";
             this.supplier.ReadOnly = true;
             // 
+            // btnAddStock
+            // 
+            this.btnAddStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.btnAddStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddStock.BackgroundImage")));
+            this.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddStock.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStock.Location = new System.Drawing.Point(970, 28);
+            this.btnAddStock.Name = "btnAddStock";
+            this.btnAddStock.Size = new System.Drawing.Size(172, 51);
+            this.btnAddStock.TabIndex = 9;
+            this.btnAddStock.Text = "Add Stock";
+            this.btnAddStock.UseVisualStyleBackColor = false;
+            // 
             // InventoryMannagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,5 +465,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitcost;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplier;
+        private System.Windows.Forms.Button btnAddStock;
     }
 }

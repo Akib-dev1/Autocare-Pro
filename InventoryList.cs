@@ -19,14 +19,14 @@ namespace AutoCare_Pro
 
         private void InventoryList_Load(object sender, EventArgs e)
         {
-            DataSet ds=DbHelper.GetData("SELECT * FROM Inventory;");
+            DataSet ds=userForm.Da.GetData("SELECT * FROM Inventory;");
             dgvInventory.DataSource = ds.Tables[0];
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string sqlQuery = "SELECT * FROM Inventory WHERE part_name LIKE '%" + this.txtSearch.Text + "%';";
-            DataSet ds = DbHelper.GetData(sqlQuery);
+            DataSet ds = userForm.Da.GetData(sqlQuery);
             dgvInventory.DataSource = ds.Tables[0];
         }
     }

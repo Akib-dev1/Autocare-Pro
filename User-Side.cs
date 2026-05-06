@@ -16,12 +16,14 @@ namespace AutoCare_Pro
         internal static string EmpId { get; set; }
         internal static string EmpName { get; set; }
         private UserControl CurrentPage { get; set; }
+        public static DbHelper Da {  get; set; }
         public userForm(loginPage lp,string empId,string empName)
         {
             InitializeComponent();
             this.Lp = lp;
             EmpId = empId;
             EmpName = empName;
+            Da = new DbHelper();
         }
 
         private void LoadPage(UserControl page)

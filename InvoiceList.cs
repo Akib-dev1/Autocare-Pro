@@ -19,7 +19,7 @@ namespace AutoCare_Pro
 
         private void InvoiceList_Load(object sender, EventArgs e)
         {
-            DataSet ds = DbHelper.GetData("select * from invoices where employe_id='"+userForm.EmpId+"';");
+            DataSet ds = userForm.Da.GetData("select * from invoices where employe_id='"+userForm.EmpId+"';");
             this.dgvInvoice.DataSource = ds.Tables[0];
         }
 
@@ -33,7 +33,7 @@ namespace AutoCare_Pro
             else
             {
                 string sqlQuery = "select * From invoices where customer_id=(Select customer_id from customers where phone='" + this.txtSearch.Text + "');";
-                DataSet ds = DbHelper.GetData(sqlQuery);
+                DataSet ds = userForm.Da.GetData(sqlQuery);
                 this.dgvInvoice.DataSource = ds.Tables[0];
                 if (ds.Tables[0].Rows.Count > 0)
                 {

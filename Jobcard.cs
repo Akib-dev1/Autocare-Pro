@@ -91,7 +91,7 @@ namespace AutoCare_Pro
             string employeeId = userForm.EmpId;
             string cusId = "";
 
-            DataSet dsCheck = DbHelper.GetData("SELECT Customer_Id FROM Customers WHERE Phone = '" + cusPhone + "';");
+            DataSet dsCheck = userForm.Da.GetData("SELECT Customer_Id FROM Customers WHERE Phone = '" + cusPhone + "';");
 
             
 
@@ -102,14 +102,14 @@ namespace AutoCare_Pro
             }
             else
             {
-                cusId = DbHelper.ExecuteScalar("INSERT INTO Customers (Name, Phone, Email, Address, Vehicle_Model, Vehicle_Year, Vehicle_Plate, Vehicle_Color) VALUES ('" + cusName + "','" + cusPhone + "','" + cusEmail + "','" + cusLocation + "','" + vehicleModel + "','" + vehicleYear + "','" + vehiclePlate + "','" + vehicleColor + "'); SELECT SCOPE_IDENTITY();");
+                cusId = userForm.Da.ExecuteScalar("INSERT INTO Customers (Name, Phone, Email, Address, Vehicle_Model, Vehicle_Year, Vehicle_Plate, Vehicle_Color) VALUES ('" + cusName + "','" + cusPhone + "','" + cusEmail + "','" + cusLocation + "','" + vehicleModel + "','" + vehicleYear + "','" + vehiclePlate + "','" + vehicleColor + "'); SELECT SCOPE_IDENTITY();");
             }
 
             string invoiceId = "";
 
             string sqlQuery2 = "INSERT INTO Invoices (Customer_Id, Employe_Id, Tech_Notes, Sub_Total, Tax_Percent, Tax_Amount, Grand_Total) VALUES ('" + cusId + "','" + employeeId + "','" + technicalInstructions + "','" + subtotal + "','" + taxRate + "','" + tax + "','" + grandTotal + "'); SELECT SCOPE_IDENTITY();";
             
-            invoiceId = DbHelper.ExecuteScalar(sqlQuery2);
+            invoiceId = userForm.Da.ExecuteScalar(sqlQuery2);
             
             foreach (DataGridViewRow row in dgvService.Rows)
             {
@@ -124,7 +124,7 @@ namespace AutoCare_Pro
 
                 string sqlQuery3 = "INSERT INTO Job_Services (Invoice_Id, Description, Hours, Rate, Total) VALUES ('" + invoiceId + "','" + description + "','" + hours + "','" + rate + "','" + total + "');";
                 
-                DbHelper.ExecuteQuery(sqlQuery3);
+                userForm.Da.ExecuteQuery(sqlQuery3);
             }
             foreach (DataGridViewRow row in dgvParts.Rows)
             {
@@ -138,7 +138,7 @@ namespace AutoCare_Pro
                 if (string.IsNullOrEmpty(partName)) continue;
 
                 string sqlQuery4 = "INSERT INTO Job_Parts (Invoice_Id, Part_Name, Qty, Unit_Price, Total) VALUES ('" + invoiceId + "','" + partName + "','" + qty + "','" + price + "','" + partTotal + "');";
-                DbHelper.ExecuteQuery(sqlQuery4);
+                userForm.Da.ExecuteQuery(sqlQuery4);
             }
             MessageBox.Show("Invoice #" + invoiceId + " Generated Successfully!", "Invoice Successfull!",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -159,7 +159,7 @@ namespace AutoCare_Pro
             }
 
             string sqlQuery = "SELECT * FROM Customers WHERE Phone = '" + phone + "';";
-            DataSet ds = DbHelper.GetData(sqlQuery);
+            DataSet ds = userForm.Da.GetData(sqlQuery);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

@@ -15,18 +15,19 @@ namespace AutoCare_Pro
         public CustomerList()
         {
             InitializeComponent();
+            
         }
 
         private void CustomerList_Load(object sender, EventArgs e)
         {
-            DataSet ds=DbHelper.GetData("SELECT * FROM Customers;");
+            DataSet ds=userForm.Da.GetData("SELECT * FROM Customers;");
             dgvCustomers.DataSource = ds.Tables[0];
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string sqlQuery = "SELECT * FROM Customers WHERE phone='" + this.txtSearch.Text + "';";
-            DataSet ds = DbHelper.GetData(sqlQuery);
+            DataSet ds = userForm.Da.GetData(sqlQuery);
             dgvCustomers.DataSource = ds.Tables[0];
             if (ds.Tables[0].Rows.Count == 0)
             {

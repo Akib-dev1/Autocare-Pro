@@ -25,7 +25,7 @@ namespace AutoCare_Pro
         private void LoadParts()
         {
             string sqlQuery = "SELECT part_name FROM Inventory;";
-            DataSet ds = DbHelper.GetData(sqlQuery);
+            DataSet ds = userForm.Da.GetData(sqlQuery);
 
             cmbParts.Items.Clear();
 
@@ -41,7 +41,7 @@ namespace AutoCare_Pro
             this.Quantity = Convert.ToUInt32(this.numQuanitity.Value);
 
             string sqlQuery = "SELECT unit_price FROM Inventory WHERE part_name = '" + this.cmbParts.Text + "';";
-            DataSet ds = DbHelper.GetData(sqlQuery);
+            DataSet ds = userForm.Da.GetData(sqlQuery);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

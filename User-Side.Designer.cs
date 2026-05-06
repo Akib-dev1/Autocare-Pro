@@ -163,7 +163,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "userForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employe | Employe Dashboard";
+            this.Text = "Manager | Manager Dashboard";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.userForm_FormClosed);
             this.Load += new System.EventHandler(this.userForm_Load);
             this.pnlSidebar.ResumeLayout(false);

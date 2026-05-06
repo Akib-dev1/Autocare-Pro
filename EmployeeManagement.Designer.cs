@@ -30,38 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeManagement));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlEmployeeNav = new System.Windows.Forms.Panel();
             this.btnEmployeeSearchButton = new System.Windows.Forms.Button();
             this.txtEmployeeSearch = new System.Windows.Forms.TextBox();
             this.lblReportName = new System.Windows.Forms.Label();
-            this.pbEmployeeMimage = new System.Windows.Forms.PictureBox();
             this.lblReportTitle = new System.Windows.Forms.Label();
+            this.pbEmployeeMimage = new System.Windows.Forms.PictureBox();
             this.pnlTotalPersonnel = new System.Windows.Forms.Panel();
+            this.pbPersonnel = new System.Windows.Forms.PictureBox();
             this.lblTotalPersonnel = new System.Windows.Forms.Label();
             this.lblPersonnel = new System.Windows.Forms.Label();
             this.lblReportSalesAnalytics = new System.Windows.Forms.Label();
-            this.pnlShopEfficiency = new System.Windows.Forms.Panel();
-            this.pbEfficiencyIcon = new System.Windows.Forms.PictureBox();
-            this.lblEfficiencyText = new System.Windows.Forms.Label();
-            this.lblEfficiencyTitle = new System.Windows.Forms.Label();
-            this.pnlActivejobs = new System.Windows.Forms.Panel();
-            this.pbActiveJobIcon = new System.Windows.Forms.PictureBox();
-            this.lblActiveJobs = new System.Windows.Forms.Label();
-            this.lblActiveJobTitle = new System.Windows.Forms.Label();
-            this.pbPersonnel = new System.Windows.Forms.PictureBox();
-            this.dgvEmployeeList = new System.Windows.Forms.DataGridView();
-            this.member = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobdone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.dgvEmployeeList = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Member = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemoveEmployee = new System.Windows.Forms.Button();
+            this.btnEditDetails = new System.Windows.Forms.Button();
             this.pnlEmployeeNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).BeginInit();
             this.pnlTotalPersonnel.SuspendLayout();
-            this.pnlShopEfficiency.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEfficiencyIcon)).BeginInit();
-            this.pnlActivejobs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbActiveJobIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonnel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeList)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +67,11 @@
             this.pnlEmployeeNav.Controls.Add(this.lblReportName);
             this.pnlEmployeeNav.Controls.Add(this.lblReportTitle);
             this.pnlEmployeeNav.Controls.Add(this.pbEmployeeMimage);
+            this.pnlEmployeeNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEmployeeNav.Location = new System.Drawing.Point(0, 0);
+            this.pnlEmployeeNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlEmployeeNav.Name = "pnlEmployeeNav";
-            this.pnlEmployeeNav.Size = new System.Drawing.Size(1213, 70);
+            this.pnlEmployeeNav.Size = new System.Drawing.Size(941, 57);
             this.pnlEmployeeNav.TabIndex = 1;
             // 
             // btnEmployeeSearchButton
@@ -84,52 +79,59 @@
             this.btnEmployeeSearchButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployeeSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeeSearchButton.Image")));
             this.btnEmployeeSearchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployeeSearchButton.Location = new System.Drawing.Point(534, 20);
+            this.btnEmployeeSearchButton.Location = new System.Drawing.Point(400, 14);
+            this.btnEmployeeSearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEmployeeSearchButton.Name = "btnEmployeeSearchButton";
-            this.btnEmployeeSearchButton.Size = new System.Drawing.Size(130, 30);
+            this.btnEmployeeSearchButton.Size = new System.Drawing.Size(98, 28);
             this.btnEmployeeSearchButton.TabIndex = 4;
             this.btnEmployeeSearchButton.Text = "Search";
             this.btnEmployeeSearchButton.UseVisualStyleBackColor = true;
             // 
             // txtEmployeeSearch
             // 
-            this.txtEmployeeSearch.Location = new System.Drawing.Point(242, 20);
+            this.txtEmployeeSearch.Location = new System.Drawing.Point(182, 16);
+            this.txtEmployeeSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmployeeSearch.Multiline = true;
             this.txtEmployeeSearch.Name = "txtEmployeeSearch";
-            this.txtEmployeeSearch.Size = new System.Drawing.Size(294, 30);
+            this.txtEmployeeSearch.Size = new System.Drawing.Size(222, 26);
             this.txtEmployeeSearch.TabIndex = 3;
             // 
             // lblReportName
             // 
+            this.lblReportName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblReportName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReportName.ForeColor = System.Drawing.Color.Brown;
-            this.lblReportName.Location = new System.Drawing.Point(1042, 20);
+            this.lblReportName.Location = new System.Drawing.Point(816, 18);
+            this.lblReportName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReportName.Name = "lblReportName";
-            this.lblReportName.Size = new System.Drawing.Size(88, 25);
+            this.lblReportName.Size = new System.Drawing.Size(66, 20);
             this.lblReportName.TabIndex = 2;
             this.lblReportName.Text = "ADMIN";
             this.lblReportName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblReportName.Click += new System.EventHandler(this.lblReportName_Click);
-            // 
-            // pbEmployeeMimage
-            // 
-            this.pbEmployeeMimage.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimage.Image")));
-            this.pbEmployeeMimage.Location = new System.Drawing.Point(1136, 15);
-            this.pbEmployeeMimage.Name = "pbEmployeeMimage";
-            this.pbEmployeeMimage.Size = new System.Drawing.Size(54, 35);
-            this.pbEmployeeMimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEmployeeMimage.TabIndex = 0;
-            this.pbEmployeeMimage.TabStop = false;
             // 
             // lblReportTitle
             // 
+            this.lblReportTitle.AutoSize = true;
             this.lblReportTitle.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportTitle.Location = new System.Drawing.Point(16, 15);
+            this.lblReportTitle.Location = new System.Drawing.Point(9, 20);
+            this.lblReportTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReportTitle.Name = "lblReportTitle";
-            this.lblReportTitle.Size = new System.Drawing.Size(220, 35);
+            this.lblReportTitle.Size = new System.Drawing.Size(169, 17);
             this.lblReportTitle.TabIndex = 1;
             this.lblReportTitle.Text = "Employee Management";
             this.lblReportTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pbEmployeeMimage
+            // 
+            this.pbEmployeeMimage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbEmployeeMimage.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimage.Image")));
+            this.pbEmployeeMimage.Location = new System.Drawing.Point(886, 14);
+            this.pbEmployeeMimage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbEmployeeMimage.Name = "pbEmployeeMimage";
+            this.pbEmployeeMimage.Size = new System.Drawing.Size(40, 28);
+            this.pbEmployeeMimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEmployeeMimage.TabIndex = 0;
+            this.pbEmployeeMimage.TabStop = false;
             // 
             // pnlTotalPersonnel
             // 
@@ -138,21 +140,33 @@
             this.pnlTotalPersonnel.Controls.Add(this.pbPersonnel);
             this.pnlTotalPersonnel.Controls.Add(this.lblTotalPersonnel);
             this.pnlTotalPersonnel.Controls.Add(this.lblPersonnel);
-            this.pnlTotalPersonnel.Location = new System.Drawing.Point(81, 172);
+            this.pnlTotalPersonnel.Location = new System.Drawing.Point(61, 140);
+            this.pnlTotalPersonnel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlTotalPersonnel.Name = "pnlTotalPersonnel";
-            this.pnlTotalPersonnel.Size = new System.Drawing.Size(252, 151);
+            this.pnlTotalPersonnel.Size = new System.Drawing.Size(201, 123);
             this.pnlTotalPersonnel.TabIndex = 3;
-            this.pnlTotalPersonnel.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAvgSales_Paint);
+            // 
+            // pbPersonnel
+            // 
+            this.pbPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("pbPersonnel.Image")));
+            this.pbPersonnel.Location = new System.Drawing.Point(17, 68);
+            this.pbPersonnel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPersonnel.Name = "pbPersonnel";
+            this.pbPersonnel.Size = new System.Drawing.Size(35, 36);
+            this.pbPersonnel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPersonnel.TabIndex = 2;
+            this.pbPersonnel.TabStop = false;
             // 
             // lblTotalPersonnel
             // 
             this.lblTotalPersonnel.AutoSize = true;
             this.lblTotalPersonnel.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPersonnel.Location = new System.Drawing.Point(109, 84);
+            this.lblTotalPersonnel.Location = new System.Drawing.Point(82, 72);
+            this.lblTotalPersonnel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalPersonnel.Name = "lblTotalPersonnel";
-            this.lblTotalPersonnel.Size = new System.Drawing.Size(53, 36);
+            this.lblTotalPersonnel.Size = new System.Drawing.Size(28, 29);
             this.lblTotalPersonnel.TabIndex = 1;
-            this.lblTotalPersonnel.Text = "12";
+            this.lblTotalPersonnel.Text = "0";
             this.lblTotalPersonnel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPersonnel
@@ -160,228 +174,184 @@
             this.lblPersonnel.AutoSize = true;
             this.lblPersonnel.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersonnel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblPersonnel.Location = new System.Drawing.Point(17, 28);
+            this.lblPersonnel.Location = new System.Drawing.Point(13, 23);
+            this.lblPersonnel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPersonnel.Name = "lblPersonnel";
-            this.lblPersonnel.Size = new System.Drawing.Size(213, 28);
+            this.lblPersonnel.Size = new System.Drawing.Size(180, 23);
             this.lblPersonnel.TabIndex = 0;
             this.lblPersonnel.Text = "Total Personnel";
             this.lblPersonnel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblReportSalesAnalytics
             // 
+            this.lblReportSalesAnalytics.AutoSize = true;
             this.lblReportSalesAnalytics.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReportSalesAnalytics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblReportSalesAnalytics.Location = new System.Drawing.Point(75, 102);
+            this.lblReportSalesAnalytics.Location = new System.Drawing.Point(56, 83);
+            this.lblReportSalesAnalytics.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReportSalesAnalytics.Name = "lblReportSalesAnalytics";
-            this.lblReportSalesAnalytics.Size = new System.Drawing.Size(236, 42);
+            this.lblReportSalesAnalytics.Size = new System.Drawing.Size(177, 33);
             this.lblReportSalesAnalytics.TabIndex = 4;
             this.lblReportSalesAnalytics.Text = "Staff Roster";
             this.lblReportSalesAnalytics.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlShopEfficiency
+            // btnAddEmployee
             // 
-            this.pnlShopEfficiency.AllowDrop = true;
-            this.pnlShopEfficiency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.pnlShopEfficiency.Controls.Add(this.pbEfficiencyIcon);
-            this.pnlShopEfficiency.Controls.Add(this.lblEfficiencyText);
-            this.pnlShopEfficiency.Controls.Add(this.lblEfficiencyTitle);
-            this.pnlShopEfficiency.Location = new System.Drawing.Point(467, 172);
-            this.pnlShopEfficiency.Name = "pnlShopEfficiency";
-            this.pnlShopEfficiency.Size = new System.Drawing.Size(273, 151);
-            this.pnlShopEfficiency.TabIndex = 4;
-            this.pnlShopEfficiency.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pbEfficiencyIcon
-            // 
-            this.pbEfficiencyIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbEfficiencyIcon.Image")));
-            this.pbEfficiencyIcon.Location = new System.Drawing.Point(21, 83);
-            this.pbEfficiencyIcon.Name = "pbEfficiencyIcon";
-            this.pbEfficiencyIcon.Size = new System.Drawing.Size(50, 43);
-            this.pbEfficiencyIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEfficiencyIcon.TabIndex = 3;
-            this.pbEfficiencyIcon.TabStop = false;
-            // 
-            // lblEfficiencyText
-            // 
-            this.lblEfficiencyText.AutoSize = true;
-            this.lblEfficiencyText.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEfficiencyText.Location = new System.Drawing.Point(87, 86);
-            this.lblEfficiencyText.Name = "lblEfficiencyText";
-            this.lblEfficiencyText.Size = new System.Drawing.Size(112, 34);
-            this.lblEfficiencyText.TabIndex = 1;
-            this.lblEfficiencyText.Text = "94.2%";
-            this.lblEfficiencyText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblEfficiencyTitle
-            // 
-            this.lblEfficiencyTitle.AutoSize = true;
-            this.lblEfficiencyTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEfficiencyTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblEfficiencyTitle.Location = new System.Drawing.Point(16, 32);
-            this.lblEfficiencyTitle.Name = "lblEfficiencyTitle";
-            this.lblEfficiencyTitle.Size = new System.Drawing.Size(210, 28);
-            this.lblEfficiencyTitle.TabIndex = 0;
-            this.lblEfficiencyTitle.Text = "Shop Efficiency";
-            this.lblEfficiencyTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEfficiencyTitle.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // pnlActivejobs
-            // 
-            this.pnlActivejobs.AllowDrop = true;
-            this.pnlActivejobs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.pnlActivejobs.Controls.Add(this.pbActiveJobIcon);
-            this.pnlActivejobs.Controls.Add(this.lblActiveJobs);
-            this.pnlActivejobs.Controls.Add(this.lblActiveJobTitle);
-            this.pnlActivejobs.Location = new System.Drawing.Point(874, 172);
-            this.pnlActivejobs.Name = "pnlActivejobs";
-            this.pnlActivejobs.Size = new System.Drawing.Size(276, 151);
-            this.pnlActivejobs.TabIndex = 4;
-            this.pnlActivejobs.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // pbActiveJobIcon
-            // 
-            this.pbActiveJobIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbActiveJobIcon.Image")));
-            this.pbActiveJobIcon.Location = new System.Drawing.Point(23, 76);
-            this.pbActiveJobIcon.Name = "pbActiveJobIcon";
-            this.pbActiveJobIcon.Size = new System.Drawing.Size(50, 43);
-            this.pbActiveJobIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbActiveJobIcon.TabIndex = 3;
-            this.pbActiveJobIcon.TabStop = false;
-            // 
-            // lblActiveJobs
-            // 
-            this.lblActiveJobs.AutoSize = true;
-            this.lblActiveJobs.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveJobs.Location = new System.Drawing.Point(126, 83);
-            this.lblActiveJobs.Name = "lblActiveJobs";
-            this.lblActiveJobs.Size = new System.Drawing.Size(51, 34);
-            this.lblActiveJobs.TabIndex = 1;
-            this.lblActiveJobs.Text = "04\r\n";
-            this.lblActiveJobs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblActiveJobTitle
-            // 
-            this.lblActiveJobTitle.AutoSize = true;
-            this.lblActiveJobTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveJobTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblActiveJobTitle.Location = new System.Drawing.Point(18, 28);
-            this.lblActiveJobTitle.Name = "lblActiveJobTitle";
-            this.lblActiveJobTitle.Size = new System.Drawing.Size(249, 28);
-            this.lblActiveJobTitle.TabIndex = 0;
-            this.lblActiveJobTitle.Text = "Current Active Job";
-            this.lblActiveJobTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbPersonnel
-            // 
-            this.pbPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("pbPersonnel.Image")));
-            this.pbPersonnel.Location = new System.Drawing.Point(22, 76);
-            this.pbPersonnel.Name = "pbPersonnel";
-            this.pbPersonnel.Size = new System.Drawing.Size(47, 44);
-            this.pbPersonnel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPersonnel.TabIndex = 2;
-            this.pbPersonnel.TabStop = false;
+            this.btnAddEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.btnAddEmployee.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.Location = new System.Drawing.Point(713, 83);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(174, 41);
+            this.btnAddEmployee.TabIndex = 6;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // dgvEmployeeList
             // 
             this.dgvEmployeeList.AllowUserToAddRows = false;
             this.dgvEmployeeList.AllowUserToDeleteRows = false;
-            this.dgvEmployeeList.AllowUserToResizeColumns = false;
             this.dgvEmployeeList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(115)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvEmployeeList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmployeeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEmployeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEmployeeList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
-            this.dgvEmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployeeList.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEmployeeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEmployeeList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployeeList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEmployeeList.ColumnHeadersHeight = 40;
+            this.dgvEmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvEmployeeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.member,
-            this.role,
-            this.Contact,
-            this.jobdone});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployeeList.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEmployeeList.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvEmployeeList.Location = new System.Drawing.Point(81, 362);
+            this.Id,
+            this.Member,
+            this.Email,
+            this.Password,
+            this.Role});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(115)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployeeList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEmployeeList.EnableHeadersVisualStyles = false;
+            this.dgvEmployeeList.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.dgvEmployeeList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.dgvEmployeeList.Location = new System.Drawing.Point(62, 295);
+            this.dgvEmployeeList.MultiSelect = false;
             this.dgvEmployeeList.Name = "dgvEmployeeList";
             this.dgvEmployeeList.ReadOnly = true;
-            this.dgvEmployeeList.RowHeadersWidth = 51;
-            this.dgvEmployeeList.RowTemplate.Height = 24;
-            this.dgvEmployeeList.Size = new System.Drawing.Size(1069, 243);
-            this.dgvEmployeeList.TabIndex = 5;
+            this.dgvEmployeeList.RowHeadersVisible = false;
+            this.dgvEmployeeList.RowTemplate.Height = 35;
+            this.dgvEmployeeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmployeeList.Size = new System.Drawing.Size(825, 275);
+            this.dgvEmployeeList.TabIndex = 12;
             // 
-            // member
+            // Id
             // 
-            this.member.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.member.HeaderText = "Member";
-            this.member.MinimumWidth = 6;
-            this.member.Name = "member";
-            this.member.ReadOnly = true;
-            this.member.ToolTipText = "Member Names";
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
-            // role
+            // Member
             // 
-            this.role.HeaderText = "Role";
-            this.role.MinimumWidth = 6;
-            this.role.Name = "role";
-            this.role.ReadOnly = true;
+            this.Member.DataPropertyName = "name";
+            this.Member.HeaderText = "Member";
+            this.Member.Name = "Member";
+            this.Member.ReadOnly = true;
             // 
-            // Contact
+            // Email
             // 
-            this.Contact.HeaderText = "Contact";
-            this.Contact.MinimumWidth = 6;
-            this.Contact.Name = "Contact";
-            this.Contact.ReadOnly = true;
+            this.Email.DataPropertyName = "email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
-            // jobdone
+            // Password
             // 
-            this.jobdone.HeaderText = "Job Done";
-            this.jobdone.MinimumWidth = 6;
-            this.jobdone.Name = "jobdone";
-            this.jobdone.ReadOnly = true;
+            this.Password.DataPropertyName = "password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
             // 
-            // btnAddEmployee
+            // Role
             // 
-            this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
-            this.btnAddEmployee.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.Location = new System.Drawing.Point(978, 104);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(172, 51);
-            this.btnAddEmployee.TabIndex = 6;
-            this.btnAddEmployee.Text = "Add Employee";
-            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.Role.DataPropertyName = "role";
+            this.Role.HeaderText = "Role";
+            this.Role.Name = "Role";
+            this.Role.ReadOnly = true;
+            // 
+            // btnRemoveEmployee
+            // 
+            this.btnRemoveEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.btnRemoveEmployee.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveEmployee.Location = new System.Drawing.Point(713, 128);
+            this.btnRemoveEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemoveEmployee.Name = "btnRemoveEmployee";
+            this.btnRemoveEmployee.Size = new System.Drawing.Size(174, 41);
+            this.btnRemoveEmployee.TabIndex = 13;
+            this.btnRemoveEmployee.Text = "Remove Employee";
+            this.btnRemoveEmployee.UseVisualStyleBackColor = false;
+            this.btnRemoveEmployee.Click += new System.EventHandler(this.btnRemoveEmployee_Click);
+            // 
+            // btnEditDetails
+            // 
+            this.btnEditDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.btnEditDetails.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditDetails.Location = new System.Drawing.Point(713, 173);
+            this.btnEditDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditDetails.Name = "btnEditDetails";
+            this.btnEditDetails.Size = new System.Drawing.Size(174, 41);
+            this.btnEditDetails.TabIndex = 14;
+            this.btnEditDetails.Text = "Edit Employee Details";
+            this.btnEditDetails.UseVisualStyleBackColor = false;
+            this.btnEditDetails.Click += new System.EventHandler(this.btnEditDetails_Click);
             // 
             // EmployeeManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
-            this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.btnEditDetails);
+            this.Controls.Add(this.btnRemoveEmployee);
             this.Controls.Add(this.dgvEmployeeList);
-            this.Controls.Add(this.pnlShopEfficiency);
-            this.Controls.Add(this.pnlActivejobs);
+            this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.lblReportSalesAnalytics);
             this.Controls.Add(this.pnlTotalPersonnel);
             this.Controls.Add(this.pnlEmployeeNav);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmployeeManagement";
-            this.Size = new System.Drawing.Size(1213, 638);
+            this.Size = new System.Drawing.Size(941, 707);
             this.Load += new System.EventHandler(this.EmployeeManagement_Load);
             this.pnlEmployeeNav.ResumeLayout(false);
             this.pnlEmployeeNav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).EndInit();
             this.pnlTotalPersonnel.ResumeLayout(false);
             this.pnlTotalPersonnel.PerformLayout();
-            this.pnlShopEfficiency.ResumeLayout(false);
-            this.pnlShopEfficiency.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEfficiencyIcon)).EndInit();
-            this.pnlActivejobs.ResumeLayout(false);
-            this.pnlActivejobs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbActiveJobIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonnel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeList)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -397,20 +367,15 @@
         private System.Windows.Forms.Label lblTotalPersonnel;
         private System.Windows.Forms.Label lblPersonnel;
         private System.Windows.Forms.Label lblReportSalesAnalytics;
-        private System.Windows.Forms.Panel pnlShopEfficiency;
-        private System.Windows.Forms.PictureBox pbEfficiencyIcon;
-        private System.Windows.Forms.Label lblEfficiencyText;
-        private System.Windows.Forms.Label lblEfficiencyTitle;
-        private System.Windows.Forms.Panel pnlActivejobs;
-        private System.Windows.Forms.PictureBox pbActiveJobIcon;
-        private System.Windows.Forms.Label lblActiveJobs;
-        private System.Windows.Forms.Label lblActiveJobTitle;
         private System.Windows.Forms.PictureBox pbPersonnel;
-        private System.Windows.Forms.DataGridView dgvEmployeeList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn member;
-        private System.Windows.Forms.DataGridViewTextBoxColumn role;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jobdone;
         private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.DataGridView dgvEmployeeList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Member;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.Button btnRemoveEmployee;
+        private System.Windows.Forms.Button btnEditDetails;
     }
 }

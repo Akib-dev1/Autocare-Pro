@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin-Side.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
       <DependentUpon>CustomerList.cs</DependentUpon>
     </Compile>
     <Compile Include="DbHelper.cs" />
+    <Compile Include="EditUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUserInfo.Designer.cs">
+      <DependentUpon>EditUserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +131,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveUserForm.Designer.cs">
+      <DependentUpon>RemoveUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,6 +155,9 @@
     <Compile Include="VehicleInfo.Designer.cs">
       <DependentUpon>VehicleInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin-Side.resx">
       <DependentUpon>Admin-Side.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerList.resx">
       <DependentUpon>CustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUserInfo.resx">
+      <DependentUpon>EditUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeManagement.resx">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
@@ -179,6 +203,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RemoveUserForm.resx">
+      <DependentUpon>RemoveUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,33 +16,37 @@ namespace AutoCare_Pro
         {
             InitializeComponent();
         }
+        private void LoadEmployeeData()
+        {
+            string sql = "SELECT * FROM user_info";
+            DataTable dt = AdminForm.Da.GetDataTable(sql);
+            this.dgvEmployeeList.DataSource = dt;
+            this.lblTotalPersonnel.Text = dt.Rows.Count.ToString();
+        }
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            AddUserForm addUser=new AddUserForm();
+            if(addUser.ShowDialog()==DialogResult.OK)
+            {
+                LoadEmployeeData();
+            }
+        }
 
         private void EmployeeManagement_Load(object sender, EventArgs e)
         {
-
+            LoadEmployeeData();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void btnRemoveEmployee_Click(object sender, EventArgs e)
         {
-
+            RemoveUserForm removeUser=new RemoveUserForm();
+            if(removeUser.ShowDialog()==DialogResult.OK)
+            {
+                LoadEmployeeData();
+            }
         }
 
-        private void pnlAvgSales_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblReportName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void btnEditDetails_Click(object sender, EventArgs e)
         {
 
         }

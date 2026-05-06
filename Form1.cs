@@ -15,6 +15,7 @@ namespace AutoCare_Pro
 {
     public partial class loginPage : Form
     {
+        DbHelper Da {  get; set; }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
@@ -28,6 +29,7 @@ namespace AutoCare_Pro
         public loginPage()
         {
             InitializeComponent();
+            this.Da = new DbHelper();
         }
 
         private void loginPage_Load(object sender, EventArgs e)
@@ -38,13 +40,20 @@ namespace AutoCare_Pro
         private void btnLogSubmit_Click(object sender, EventArgs e)
         {
             string sqlQuery = "select * from user_info where email='" + this.txtLoginEmail.Text + "' and password='" + this.txtLoginPass.Text+"';";
-            DataSet ds=DbHelper.GetData(sqlQuery);
+            DataSet ds=this.Da.GetData(sqlQuery);
 
-            if (ds.Tables[0].Rows.Count == 1)
+            if (ds.Tables[0].Rows.Count == 1 && (ds.Tables[0].Rows[0][4].ToString() == "manager"))
             {
-                MessageBox.Show("User Authenticated Successfully! Name: "+ ds.Tables[0].Rows[0][1].ToString(),"Login Successfull",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("User Authenticated Successfully! Name: "+ ds.Tables[0].Rows[0][1].ToString(), "Login Successfull",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 userForm us = new userForm(this, ds.Tables[0].Rows[0][0].ToString(), ds.Tables[0].Rows[0][1].ToString());
                 us.Show();
+                this.Hide();
+            }
+            else if(ds.Tables[0].Rows.Count == 1 && (ds.Tables[0].Rows[0][4].ToString() == "admin"))
+            {
+                MessageBox.Show("Admin Authenticated Successfully! Name: " + ds.Tables[0].Rows[0][1].ToString(), "Login Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AdminForm admin = new AdminForm();
+                admin.Show();
                 this.Hide();
             }
             else

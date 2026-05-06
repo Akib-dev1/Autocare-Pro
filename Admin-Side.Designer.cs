@@ -30,18 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.pnlAdminMenu = new System.Windows.Forms.Panel();
+            this.btnAdminNavlink5 = new System.Windows.Forms.Button();
             this.btnAdminNavlink4 = new System.Windows.Forms.Button();
             this.btnAdminNavlink3 = new System.Windows.Forms.Button();
             this.btnAdminNavlink2 = new System.Windows.Forms.Button();
             this.btnAdminNavlink1 = new System.Windows.Forms.Button();
             this.lblAdminDescription = new System.Windows.Forms.Label();
             this.lblAdminLogo = new System.Windows.Forms.Label();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.pnlAdminMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAdminMenu
             // 
             this.pnlAdminMenu.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlAdminMenu.Controls.Add(this.btnAdminNavlink5);
             this.pnlAdminMenu.Controls.Add(this.btnAdminNavlink4);
             this.pnlAdminMenu.Controls.Add(this.btnAdminNavlink3);
             this.pnlAdminMenu.Controls.Add(this.btnAdminNavlink2);
@@ -50,10 +53,26 @@
             this.pnlAdminMenu.Controls.Add(this.lblAdminLogo);
             this.pnlAdminMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlAdminMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlAdminMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAdminMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAdminMenu.Name = "pnlAdminMenu";
-            this.pnlAdminMenu.Size = new System.Drawing.Size(202, 509);
+            this.pnlAdminMenu.Size = new System.Drawing.Size(200, 707);
             this.pnlAdminMenu.TabIndex = 0;
+            // 
+            // btnAdminNavlink5
+            // 
+            this.btnAdminNavlink5.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnAdminNavlink5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btnAdminNavlink5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminNavlink5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminNavlink5.ForeColor = System.Drawing.Color.White;
+            this.btnAdminNavlink5.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminNavlink5.Image")));
+            this.btnAdminNavlink5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminNavlink5.Location = new System.Drawing.Point(0, 328);
+            this.btnAdminNavlink5.Name = "btnAdminNavlink5";
+            this.btnAdminNavlink5.Size = new System.Drawing.Size(202, 48);
+            this.btnAdminNavlink5.TabIndex = 7;
+            this.btnAdminNavlink5.Text = "Invoices";
+            this.btnAdminNavlink5.UseVisualStyleBackColor = false;
             // 
             // btnAdminNavlink4
             // 
@@ -86,6 +105,7 @@
             this.btnAdminNavlink3.TabIndex = 5;
             this.btnAdminNavlink3.Text = "Inventory";
             this.btnAdminNavlink3.UseVisualStyleBackColor = false;
+            this.btnAdminNavlink3.Click += new System.EventHandler(this.btnAdminNavlink3_Click);
             // 
             // btnAdminNavlink2
             // 
@@ -116,8 +136,9 @@
             this.btnAdminNavlink1.Name = "btnAdminNavlink1";
             this.btnAdminNavlink1.Size = new System.Drawing.Size(202, 48);
             this.btnAdminNavlink1.TabIndex = 3;
-            this.btnAdminNavlink1.Text = "Job Cards";
+            this.btnAdminNavlink1.Text = "Employee";
             this.btnAdminNavlink1.UseVisualStyleBackColor = false;
+            this.btnAdminNavlink1.Click += new System.EventHandler(this.btnAdminNavlink1_Click);
             // 
             // lblAdminDescription
             // 
@@ -141,18 +162,29 @@
             this.lblAdminLogo.TabIndex = 1;
             this.lblAdminLogo.Text = "AUTOCARE PRO";
             // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(200, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(941, 707);
+            this.panelContainer.TabIndex = 1;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(853, 509);
+            this.ClientSize = new System.Drawing.Size(1141, 707);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.pnlAdminMenu);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin_Side";
+            this.Text = "Admin | Admin Dashboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
             this.pnlAdminMenu.ResumeLayout(false);
             this.pnlAdminMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -168,5 +200,7 @@
         private System.Windows.Forms.Button btnAdminNavlink2;
         private System.Windows.Forms.Button btnAdminNavlink3;
         private System.Windows.Forms.Button btnAdminNavlink4;
+        private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Button btnAdminNavlink5;
     }
 }

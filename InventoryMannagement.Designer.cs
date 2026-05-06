@@ -29,46 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryMannagement));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlInventoryNav = new System.Windows.Forms.Panel();
             this.btnInventorySearchButton = new System.Windows.Forms.Button();
             this.txtInventorySearch = new System.Windows.Forms.TextBox();
-            this.lblReportName = new System.Windows.Forms.Label();
+            this.lblInventoryManagementName = new System.Windows.Forms.Label();
             this.lblInventoryTitle = new System.Windows.Forms.Label();
-            this.pbEmployeeMimage = new System.Windows.Forms.PictureBox();
+            this.pbEmployeeMimageInventory = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblInventorySubtitle = new System.Windows.Forms.Label();
-            this.lblInventoryManagementTitle = new System.Windows.Forms.Label();
-            this.pnlTotalAsset = new System.Windows.Forms.Panel();
-            this.pbAvgSales = new System.Windows.Forms.PictureBox();
-            this.lblActiveSubscript = new System.Windows.Forms.Label();
-            this.lblAvgSaleTotal = new System.Windows.Forms.Label();
-            this.lblTotalAssetTitle = new System.Windows.Forms.Label();
-            this.pnlLowStock = new System.Windows.Forms.Panel();
-            this.pbWarningIcon = new System.Windows.Forms.PictureBox();
-            this.lblLowStockSubscript = new System.Windows.Forms.Label();
-            this.lblLowStockValue = new System.Windows.Forms.Label();
-            this.lblLowStockText = new System.Windows.Forms.Label();
-            this.pnlStockValue = new System.Windows.Forms.Panel();
-            this.pbValueIcon = new System.Windows.Forms.PictureBox();
-            this.lblStockValue = new System.Windows.Forms.Label();
-            this.lblStockValueText = new System.Windows.Forms.Label();
+            this.btnAddStock = new System.Windows.Forms.Button();
             this.dgvIntevtoryParts = new System.Windows.Forms.DataGridView();
             this.partIdentification = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.catagory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitcost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddStock = new System.Windows.Forms.Button();
+            this.pnlStockValue = new System.Windows.Forms.Panel();
+            this.pbValueIcon = new System.Windows.Forms.PictureBox();
+            this.lblStockValue = new System.Windows.Forms.Label();
+            this.lblStockValueText = new System.Windows.Forms.Label();
+            this.pnlLowStock = new System.Windows.Forms.Panel();
+            this.pbWarningIcon = new System.Windows.Forms.PictureBox();
+            this.lblLowStockSubscript = new System.Windows.Forms.Label();
+            this.lblLowStockValue = new System.Windows.Forms.Label();
+            this.lblLowStockText = new System.Windows.Forms.Label();
+            this.pnlTotalAsset = new System.Windows.Forms.Panel();
+            this.pbAvgSales = new System.Windows.Forms.PictureBox();
+            this.lblActiveSubscript = new System.Windows.Forms.Label();
+            this.lblAvgSaleTotal = new System.Windows.Forms.Label();
+            this.lblTotalAssetTitle = new System.Windows.Forms.Label();
+            this.lblInventorySubtitle = new System.Windows.Forms.Label();
+            this.lblInventoryManagementTitle = new System.Windows.Forms.Label();
             this.pnlInventoryNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageInventory)).BeginInit();
             this.panel1.SuspendLayout();
-            this.pnlTotalAsset.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvgSales)).BeginInit();
-            this.pnlLowStock.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWarningIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntevtoryParts)).BeginInit();
             this.pnlStockValue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbValueIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIntevtoryParts)).BeginInit();
+            this.pnlLowStock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWarningIcon)).BeginInit();
+            this.pnlTotalAsset.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvgSales)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInventoryNav
@@ -76,9 +77,9 @@
             this.pnlInventoryNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.pnlInventoryNav.Controls.Add(this.btnInventorySearchButton);
             this.pnlInventoryNav.Controls.Add(this.txtInventorySearch);
-            this.pnlInventoryNav.Controls.Add(this.lblReportName);
+            this.pnlInventoryNav.Controls.Add(this.lblInventoryManagementName);
             this.pnlInventoryNav.Controls.Add(this.lblInventoryTitle);
-            this.pnlInventoryNav.Controls.Add(this.pbEmployeeMimage);
+            this.pnlInventoryNav.Controls.Add(this.pbEmployeeMimageInventory);
             this.pnlInventoryNav.Location = new System.Drawing.Point(0, 0);
             this.pnlInventoryNav.Name = "pnlInventoryNav";
             this.pnlInventoryNav.Size = new System.Drawing.Size(1225, 72);
@@ -104,16 +105,16 @@
             this.txtInventorySearch.Size = new System.Drawing.Size(294, 30);
             this.txtInventorySearch.TabIndex = 3;
             // 
-            // lblReportName
+            // lblInventoryManagementName
             // 
-            this.lblReportName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportName.ForeColor = System.Drawing.Color.Brown;
-            this.lblReportName.Location = new System.Drawing.Point(1042, 20);
-            this.lblReportName.Name = "lblReportName";
-            this.lblReportName.Size = new System.Drawing.Size(88, 25);
-            this.lblReportName.TabIndex = 2;
-            this.lblReportName.Text = "ADMIN";
-            this.lblReportName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInventoryManagementName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventoryManagementName.ForeColor = System.Drawing.Color.Brown;
+            this.lblInventoryManagementName.Location = new System.Drawing.Point(1042, 20);
+            this.lblInventoryManagementName.Name = "lblInventoryManagementName";
+            this.lblInventoryManagementName.Size = new System.Drawing.Size(88, 25);
+            this.lblInventoryManagementName.TabIndex = 2;
+            this.lblInventoryManagementName.Text = "ADMIN";
+            this.lblInventoryManagementName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblInventoryTitle
             // 
@@ -125,15 +126,15 @@
             this.lblInventoryTitle.Text = "Inventory Management";
             this.lblInventoryTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pbEmployeeMimage
+            // pbEmployeeMimageInventory
             // 
-            this.pbEmployeeMimage.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimage.Image")));
-            this.pbEmployeeMimage.Location = new System.Drawing.Point(1136, 15);
-            this.pbEmployeeMimage.Name = "pbEmployeeMimage";
-            this.pbEmployeeMimage.Size = new System.Drawing.Size(54, 35);
-            this.pbEmployeeMimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEmployeeMimage.TabIndex = 0;
-            this.pbEmployeeMimage.TabStop = false;
+            this.pbEmployeeMimageInventory.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimageInventory.Image")));
+            this.pbEmployeeMimageInventory.Location = new System.Drawing.Point(1136, 15);
+            this.pbEmployeeMimageInventory.Name = "pbEmployeeMimageInventory";
+            this.pbEmployeeMimageInventory.Size = new System.Drawing.Size(54, 35);
+            this.pbEmployeeMimageInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEmployeeMimageInventory.TabIndex = 0;
+            this.pbEmployeeMimageInventory.TabStop = false;
             // 
             // panel1
             // 
@@ -150,85 +151,131 @@
             this.panel1.Size = new System.Drawing.Size(1225, 552);
             this.panel1.TabIndex = 3;
             // 
-            // lblInventorySubtitle
+            // btnAddStock
             // 
-            this.lblInventorySubtitle.AutoSize = true;
-            this.lblInventorySubtitle.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventorySubtitle.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblInventorySubtitle.Location = new System.Drawing.Point(17, 53);
-            this.lblInventorySubtitle.Name = "lblInventorySubtitle";
-            this.lblInventorySubtitle.Size = new System.Drawing.Size(288, 16);
-            this.lblInventorySubtitle.TabIndex = 1;
-            this.lblInventorySubtitle.Text = "Real-time telemetry of AutoCare Pro stock levels.";
+            this.btnAddStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.btnAddStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddStock.BackgroundImage")));
+            this.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddStock.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStock.Location = new System.Drawing.Point(934, 28);
+            this.btnAddStock.Name = "btnAddStock";
+            this.btnAddStock.Size = new System.Drawing.Size(208, 41);
+            this.btnAddStock.TabIndex = 9;
+            this.btnAddStock.Text = " Add Stock\r\n\r\n";
+            this.btnAddStock.UseVisualStyleBackColor = false;
             // 
-            // lblInventoryManagementTitle
+            // dgvIntevtoryParts
             // 
-            this.lblInventoryManagementTitle.AutoSize = true;
-            this.lblInventoryManagementTitle.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventoryManagementTitle.Location = new System.Drawing.Point(15, 19);
-            this.lblInventoryManagementTitle.Name = "lblInventoryManagementTitle";
-            this.lblInventoryManagementTitle.Size = new System.Drawing.Size(349, 34);
-            this.lblInventoryManagementTitle.TabIndex = 0;
-            this.lblInventoryManagementTitle.Text = "Inventory Management";
+            this.dgvIntevtoryParts.AllowUserToAddRows = false;
+            this.dgvIntevtoryParts.AllowUserToDeleteRows = false;
+            this.dgvIntevtoryParts.AllowUserToResizeRows = false;
+            this.dgvIntevtoryParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvIntevtoryParts.BackgroundColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIntevtoryParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvIntevtoryParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIntevtoryParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.partIdentification,
+            this.catagory,
+            this.quantity,
+            this.unitcost,
+            this.supplier});
+            this.dgvIntevtoryParts.Location = new System.Drawing.Point(75, 279);
+            this.dgvIntevtoryParts.Name = "dgvIntevtoryParts";
+            this.dgvIntevtoryParts.ReadOnly = true;
+            this.dgvIntevtoryParts.RowHeadersWidth = 51;
+            this.dgvIntevtoryParts.RowTemplate.Height = 24;
+            this.dgvIntevtoryParts.Size = new System.Drawing.Size(1067, 270);
+            this.dgvIntevtoryParts.TabIndex = 8;
             // 
-            // pnlTotalAsset
+            // partIdentification
             // 
-            this.pnlTotalAsset.AllowDrop = true;
-            this.pnlTotalAsset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.pnlTotalAsset.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTotalAsset.Controls.Add(this.pbAvgSales);
-            this.pnlTotalAsset.Controls.Add(this.lblActiveSubscript);
-            this.pnlTotalAsset.Controls.Add(this.lblAvgSaleTotal);
-            this.pnlTotalAsset.Controls.Add(this.lblTotalAssetTitle);
-            this.pnlTotalAsset.Location = new System.Drawing.Point(75, 85);
-            this.pnlTotalAsset.Name = "pnlTotalAsset";
-            this.pnlTotalAsset.Size = new System.Drawing.Size(289, 151);
-            this.pnlTotalAsset.TabIndex = 3;
+            this.partIdentification.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.partIdentification.HeaderText = "Part Identification";
+            this.partIdentification.MinimumWidth = 6;
+            this.partIdentification.Name = "partIdentification";
+            this.partIdentification.ReadOnly = true;
             // 
-            // pbAvgSales
+            // catagory
             // 
-            this.pbAvgSales.Image = ((System.Drawing.Image)(resources.GetObject("pbAvgSales.Image")));
-            this.pbAvgSales.Location = new System.Drawing.Point(18, 18);
-            this.pbAvgSales.Name = "pbAvgSales";
-            this.pbAvgSales.Size = new System.Drawing.Size(50, 43);
-            this.pbAvgSales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAvgSales.TabIndex = 3;
-            this.pbAvgSales.TabStop = false;
+            this.catagory.HeaderText = "Catagory";
+            this.catagory.MinimumWidth = 6;
+            this.catagory.Name = "catagory";
+            this.catagory.ReadOnly = true;
             // 
-            // lblActiveSubscript
+            // quantity
             // 
-            this.lblActiveSubscript.AutoSize = true;
-            this.lblActiveSubscript.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveSubscript.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblActiveSubscript.Location = new System.Drawing.Point(179, 102);
-            this.lblActiveSubscript.Name = "lblActiveSubscript";
-            this.lblActiveSubscript.Size = new System.Drawing.Size(59, 18);
-            this.lblActiveSubscript.TabIndex = 2;
-            this.lblActiveSubscript.Text = "Active";
-            this.lblActiveSubscript.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.MinimumWidth = 6;
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
             // 
-            // lblAvgSaleTotal
+            // unitcost
             // 
-            this.lblAvgSaleTotal.AutoSize = true;
-            this.lblAvgSaleTotal.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvgSaleTotal.Location = new System.Drawing.Point(73, 87);
-            this.lblAvgSaleTotal.Name = "lblAvgSaleTotal";
-            this.lblAvgSaleTotal.Size = new System.Drawing.Size(100, 36);
-            this.lblAvgSaleTotal.TabIndex = 1;
-            this.lblAvgSaleTotal.Text = "1,288";
-            this.lblAvgSaleTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.unitcost.HeaderText = "Unit Cost";
+            this.unitcost.MinimumWidth = 6;
+            this.unitcost.Name = "unitcost";
+            this.unitcost.ReadOnly = true;
             // 
-            // lblTotalAssetTitle
+            // supplier
             // 
-            this.lblTotalAssetTitle.AutoSize = true;
-            this.lblTotalAssetTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAssetTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTotalAssetTitle.Location = new System.Drawing.Point(74, 28);
-            this.lblTotalAssetTitle.Name = "lblTotalAssetTitle";
-            this.lblTotalAssetTitle.Size = new System.Drawing.Size(156, 28);
-            this.lblTotalAssetTitle.TabIndex = 0;
-            this.lblTotalAssetTitle.Text = "Total Asset";
-            this.lblTotalAssetTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.supplier.HeaderText = "Supplier";
+            this.supplier.MinimumWidth = 6;
+            this.supplier.Name = "supplier";
+            this.supplier.ReadOnly = true;
+            // 
+            // pnlStockValue
+            // 
+            this.pnlStockValue.AllowDrop = true;
+            this.pnlStockValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.pnlStockValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlStockValue.Controls.Add(this.pbValueIcon);
+            this.pnlStockValue.Controls.Add(this.lblStockValue);
+            this.pnlStockValue.Controls.Add(this.lblStockValueText);
+            this.pnlStockValue.Location = new System.Drawing.Point(853, 85);
+            this.pnlStockValue.Name = "pnlStockValue";
+            this.pnlStockValue.Size = new System.Drawing.Size(289, 151);
+            this.pnlStockValue.TabIndex = 4;
+            // 
+            // pbValueIcon
+            // 
+            this.pbValueIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbValueIcon.Image")));
+            this.pbValueIcon.Location = new System.Drawing.Point(18, 18);
+            this.pbValueIcon.Name = "pbValueIcon";
+            this.pbValueIcon.Size = new System.Drawing.Size(50, 43);
+            this.pbValueIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbValueIcon.TabIndex = 3;
+            this.pbValueIcon.TabStop = false;
+            // 
+            // lblStockValue
+            // 
+            this.lblStockValue.AutoSize = true;
+            this.lblStockValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockValue.Location = new System.Drawing.Point(73, 81);
+            this.lblStockValue.Name = "lblStockValue";
+            this.lblStockValue.Size = new System.Drawing.Size(121, 36);
+            this.lblStockValue.TabIndex = 1;
+            this.lblStockValue.Text = "$30.5K";
+            this.lblStockValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblStockValueText
+            // 
+            this.lblStockValueText.AutoSize = true;
+            this.lblStockValueText.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockValueText.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblStockValueText.Location = new System.Drawing.Point(74, 28);
+            this.lblStockValueText.Name = "lblStockValueText";
+            this.lblStockValueText.Size = new System.Drawing.Size(163, 28);
+            this.lblStockValueText.TabIndex = 0;
+            this.lblStockValueText.Text = "Stock Value";
+            this.lblStockValueText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlLowStock
             // 
@@ -290,122 +337,85 @@
             this.lblLowStockText.Text = "Low Stock";
             this.lblLowStockText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlStockValue
+            // pnlTotalAsset
             // 
-            this.pnlStockValue.AllowDrop = true;
-            this.pnlStockValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.pnlStockValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlStockValue.Controls.Add(this.pbValueIcon);
-            this.pnlStockValue.Controls.Add(this.lblStockValue);
-            this.pnlStockValue.Controls.Add(this.lblStockValueText);
-            this.pnlStockValue.Location = new System.Drawing.Point(853, 85);
-            this.pnlStockValue.Name = "pnlStockValue";
-            this.pnlStockValue.Size = new System.Drawing.Size(289, 151);
-            this.pnlStockValue.TabIndex = 4;
+            this.pnlTotalAsset.AllowDrop = true;
+            this.pnlTotalAsset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.pnlTotalAsset.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlTotalAsset.Controls.Add(this.pbAvgSales);
+            this.pnlTotalAsset.Controls.Add(this.lblActiveSubscript);
+            this.pnlTotalAsset.Controls.Add(this.lblAvgSaleTotal);
+            this.pnlTotalAsset.Controls.Add(this.lblTotalAssetTitle);
+            this.pnlTotalAsset.Location = new System.Drawing.Point(75, 85);
+            this.pnlTotalAsset.Name = "pnlTotalAsset";
+            this.pnlTotalAsset.Size = new System.Drawing.Size(289, 151);
+            this.pnlTotalAsset.TabIndex = 3;
             // 
-            // pbValueIcon
+            // pbAvgSales
             // 
-            this.pbValueIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbValueIcon.Image")));
-            this.pbValueIcon.Location = new System.Drawing.Point(18, 18);
-            this.pbValueIcon.Name = "pbValueIcon";
-            this.pbValueIcon.Size = new System.Drawing.Size(50, 43);
-            this.pbValueIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbValueIcon.TabIndex = 3;
-            this.pbValueIcon.TabStop = false;
+            this.pbAvgSales.Image = ((System.Drawing.Image)(resources.GetObject("pbAvgSales.Image")));
+            this.pbAvgSales.Location = new System.Drawing.Point(18, 18);
+            this.pbAvgSales.Name = "pbAvgSales";
+            this.pbAvgSales.Size = new System.Drawing.Size(50, 43);
+            this.pbAvgSales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvgSales.TabIndex = 3;
+            this.pbAvgSales.TabStop = false;
             // 
-            // lblStockValue
+            // lblActiveSubscript
             // 
-            this.lblStockValue.AutoSize = true;
-            this.lblStockValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockValue.Location = new System.Drawing.Point(73, 81);
-            this.lblStockValue.Name = "lblStockValue";
-            this.lblStockValue.Size = new System.Drawing.Size(121, 36);
-            this.lblStockValue.TabIndex = 1;
-            this.lblStockValue.Text = "$30.5K";
-            this.lblStockValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblActiveSubscript.AutoSize = true;
+            this.lblActiveSubscript.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveSubscript.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblActiveSubscript.Location = new System.Drawing.Point(179, 102);
+            this.lblActiveSubscript.Name = "lblActiveSubscript";
+            this.lblActiveSubscript.Size = new System.Drawing.Size(59, 18);
+            this.lblActiveSubscript.TabIndex = 2;
+            this.lblActiveSubscript.Text = "Active";
+            this.lblActiveSubscript.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblStockValueText
+            // lblAvgSaleTotal
             // 
-            this.lblStockValueText.AutoSize = true;
-            this.lblStockValueText.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockValueText.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblStockValueText.Location = new System.Drawing.Point(74, 28);
-            this.lblStockValueText.Name = "lblStockValueText";
-            this.lblStockValueText.Size = new System.Drawing.Size(163, 28);
-            this.lblStockValueText.TabIndex = 0;
-            this.lblStockValueText.Text = "Stock Value";
-            this.lblStockValueText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAvgSaleTotal.AutoSize = true;
+            this.lblAvgSaleTotal.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvgSaleTotal.Location = new System.Drawing.Point(73, 87);
+            this.lblAvgSaleTotal.Name = "lblAvgSaleTotal";
+            this.lblAvgSaleTotal.Size = new System.Drawing.Size(100, 36);
+            this.lblAvgSaleTotal.TabIndex = 1;
+            this.lblAvgSaleTotal.Text = "1,288";
+            this.lblAvgSaleTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgvIntevtoryParts
+            // lblTotalAssetTitle
             // 
-            this.dgvIntevtoryParts.AllowUserToAddRows = false;
-            this.dgvIntevtoryParts.AllowUserToDeleteRows = false;
-            this.dgvIntevtoryParts.AllowUserToResizeRows = false;
-            this.dgvIntevtoryParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvIntevtoryParts.BackgroundColor = System.Drawing.Color.Beige;
-            this.dgvIntevtoryParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIntevtoryParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.partIdentification,
-            this.catagory,
-            this.quantity,
-            this.unitcost,
-            this.supplier});
-            this.dgvIntevtoryParts.Location = new System.Drawing.Point(75, 279);
-            this.dgvIntevtoryParts.Name = "dgvIntevtoryParts";
-            this.dgvIntevtoryParts.ReadOnly = true;
-            this.dgvIntevtoryParts.RowHeadersWidth = 51;
-            this.dgvIntevtoryParts.RowTemplate.Height = 24;
-            this.dgvIntevtoryParts.Size = new System.Drawing.Size(1067, 270);
-            this.dgvIntevtoryParts.TabIndex = 8;
+            this.lblTotalAssetTitle.AutoSize = true;
+            this.lblTotalAssetTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAssetTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTotalAssetTitle.Location = new System.Drawing.Point(74, 28);
+            this.lblTotalAssetTitle.Name = "lblTotalAssetTitle";
+            this.lblTotalAssetTitle.Size = new System.Drawing.Size(156, 28);
+            this.lblTotalAssetTitle.TabIndex = 0;
+            this.lblTotalAssetTitle.Text = "Total Asset";
+            this.lblTotalAssetTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // partIdentification
+            // lblInventorySubtitle
             // 
-            this.partIdentification.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.partIdentification.HeaderText = "Part Identification";
-            this.partIdentification.MinimumWidth = 6;
-            this.partIdentification.Name = "partIdentification";
-            this.partIdentification.ReadOnly = true;
+            this.lblInventorySubtitle.AutoSize = true;
+            this.lblInventorySubtitle.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventorySubtitle.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblInventorySubtitle.Location = new System.Drawing.Point(17, 53);
+            this.lblInventorySubtitle.Name = "lblInventorySubtitle";
+            this.lblInventorySubtitle.Size = new System.Drawing.Size(288, 16);
+            this.lblInventorySubtitle.TabIndex = 1;
+            this.lblInventorySubtitle.Text = "Real-time telemetry of AutoCare Pro stock levels.";
             // 
-            // catagory
+            // lblInventoryManagementTitle
             // 
-            this.catagory.HeaderText = "Catagory";
-            this.catagory.MinimumWidth = 6;
-            this.catagory.Name = "catagory";
-            this.catagory.ReadOnly = true;
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.MinimumWidth = 6;
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            // 
-            // unitcost
-            // 
-            this.unitcost.HeaderText = "Unit Cost";
-            this.unitcost.MinimumWidth = 6;
-            this.unitcost.Name = "unitcost";
-            this.unitcost.ReadOnly = true;
-            // 
-            // supplier
-            // 
-            this.supplier.HeaderText = "Supplier";
-            this.supplier.MinimumWidth = 6;
-            this.supplier.Name = "supplier";
-            this.supplier.ReadOnly = true;
-            // 
-            // btnAddStock
-            // 
-            this.btnAddStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
-            this.btnAddStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddStock.BackgroundImage")));
-            this.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddStock.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddStock.Location = new System.Drawing.Point(970, 28);
-            this.btnAddStock.Name = "btnAddStock";
-            this.btnAddStock.Size = new System.Drawing.Size(172, 51);
-            this.btnAddStock.TabIndex = 9;
-            this.btnAddStock.Text = "Add Stock";
-            this.btnAddStock.UseVisualStyleBackColor = false;
+            this.lblInventoryManagementTitle.AutoSize = true;
+            this.lblInventoryManagementTitle.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventoryManagementTitle.Location = new System.Drawing.Point(15, 19);
+            this.lblInventoryManagementTitle.Name = "lblInventoryManagementTitle";
+            this.lblInventoryManagementTitle.Size = new System.Drawing.Size(349, 34);
+            this.lblInventoryManagementTitle.TabIndex = 0;
+            this.lblInventoryManagementTitle.Text = "Inventory Management";
             // 
             // InventoryMannagement
             // 
@@ -417,19 +427,19 @@
             this.Size = new System.Drawing.Size(1224, 622);
             this.pnlInventoryNav.ResumeLayout(false);
             this.pnlInventoryNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageInventory)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlTotalAsset.ResumeLayout(false);
-            this.pnlTotalAsset.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvgSales)).EndInit();
-            this.pnlLowStock.ResumeLayout(false);
-            this.pnlLowStock.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWarningIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntevtoryParts)).EndInit();
             this.pnlStockValue.ResumeLayout(false);
             this.pnlStockValue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbValueIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIntevtoryParts)).EndInit();
+            this.pnlLowStock.ResumeLayout(false);
+            this.pnlLowStock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWarningIcon)).EndInit();
+            this.pnlTotalAsset.ResumeLayout(false);
+            this.pnlTotalAsset.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvgSales)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,9 +449,9 @@
         private System.Windows.Forms.Panel pnlInventoryNav;
         private System.Windows.Forms.Button btnInventorySearchButton;
         private System.Windows.Forms.TextBox txtInventorySearch;
-        private System.Windows.Forms.Label lblReportName;
+        private System.Windows.Forms.Label lblInventoryManagementName;
         private System.Windows.Forms.Label lblInventoryTitle;
-        private System.Windows.Forms.PictureBox pbEmployeeMimage;
+        private System.Windows.Forms.PictureBox pbEmployeeMimageInventory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblInventoryManagementTitle;
         private System.Windows.Forms.Label lblInventorySubtitle;

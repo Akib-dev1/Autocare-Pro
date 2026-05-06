@@ -32,9 +32,9 @@
             this.pnlInventoryNav = new System.Windows.Forms.Panel();
             this.btnInventorySearchButton = new System.Windows.Forms.Button();
             this.txtInventorySearch = new System.Windows.Forms.TextBox();
-            this.lblReportName = new System.Windows.Forms.Label();
+            this.lblInventoryManagementName = new System.Windows.Forms.Label();
             this.lblInventoryTitle = new System.Windows.Forms.Label();
-            this.pbEmployeeMimage = new System.Windows.Forms.PictureBox();
+            this.pbEmployeeMimageInventory = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddStock = new System.Windows.Forms.Button();
             this.dgvIntevtoryParts = new System.Windows.Forms.DataGridView();
@@ -60,7 +60,7 @@
             this.lblInventorySubtitle = new System.Windows.Forms.Label();
             this.lblInventoryManagementTitle = new System.Windows.Forms.Label();
             this.pnlInventoryNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageInventory)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntevtoryParts)).BeginInit();
             this.pnlStockValue.SuspendLayout();
@@ -76,9 +76,9 @@
             this.pnlInventoryNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.pnlInventoryNav.Controls.Add(this.btnInventorySearchButton);
             this.pnlInventoryNav.Controls.Add(this.txtInventorySearch);
-            this.pnlInventoryNav.Controls.Add(this.lblReportName);
+            this.pnlInventoryNav.Controls.Add(this.lblInventoryManagementName);
             this.pnlInventoryNav.Controls.Add(this.lblInventoryTitle);
-            this.pnlInventoryNav.Controls.Add(this.pbEmployeeMimage);
+            this.pnlInventoryNav.Controls.Add(this.pbEmployeeMimageInventory);
             this.pnlInventoryNav.Location = new System.Drawing.Point(0, 0);
             this.pnlInventoryNav.Name = "pnlInventoryNav";
             this.pnlInventoryNav.Size = new System.Drawing.Size(1225, 72);
@@ -104,16 +104,16 @@
             this.txtInventorySearch.Size = new System.Drawing.Size(294, 30);
             this.txtInventorySearch.TabIndex = 3;
             // 
-            // lblReportName
+            // lblInventoryManagementName
             // 
-            this.lblReportName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportName.ForeColor = System.Drawing.Color.Brown;
-            this.lblReportName.Location = new System.Drawing.Point(1042, 20);
-            this.lblReportName.Name = "lblReportName";
-            this.lblReportName.Size = new System.Drawing.Size(88, 25);
-            this.lblReportName.TabIndex = 2;
-            this.lblReportName.Text = "ADMIN";
-            this.lblReportName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInventoryManagementName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventoryManagementName.ForeColor = System.Drawing.Color.Brown;
+            this.lblInventoryManagementName.Location = new System.Drawing.Point(1042, 20);
+            this.lblInventoryManagementName.Name = "lblInventoryManagementName";
+            this.lblInventoryManagementName.Size = new System.Drawing.Size(88, 25);
+            this.lblInventoryManagementName.TabIndex = 2;
+            this.lblInventoryManagementName.Text = "ADMIN";
+            this.lblInventoryManagementName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblInventoryTitle
             // 
@@ -125,15 +125,15 @@
             this.lblInventoryTitle.Text = "Inventory Management";
             this.lblInventoryTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pbEmployeeMimage
+            // pbEmployeeMimageInventory
             // 
-            this.pbEmployeeMimage.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimage.Image")));
-            this.pbEmployeeMimage.Location = new System.Drawing.Point(1136, 15);
-            this.pbEmployeeMimage.Name = "pbEmployeeMimage";
-            this.pbEmployeeMimage.Size = new System.Drawing.Size(54, 35);
-            this.pbEmployeeMimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEmployeeMimage.TabIndex = 0;
-            this.pbEmployeeMimage.TabStop = false;
+            this.pbEmployeeMimageInventory.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimageInventory.Image")));
+            this.pbEmployeeMimageInventory.Location = new System.Drawing.Point(1136, 15);
+            this.pbEmployeeMimageInventory.Name = "pbEmployeeMimageInventory";
+            this.pbEmployeeMimageInventory.Size = new System.Drawing.Size(54, 35);
+            this.pbEmployeeMimageInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEmployeeMimageInventory.TabIndex = 0;
+            this.pbEmployeeMimageInventory.TabStop = false;
             // 
             // panel1
             // 
@@ -159,7 +159,7 @@
             this.btnAddStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddStock.Location = new System.Drawing.Point(934, 28);
             this.btnAddStock.Name = "btnAddStock";
-            this.btnAddStock.Size = new System.Drawing.Size(208, 51);
+            this.btnAddStock.Size = new System.Drawing.Size(208, 41);
             this.btnAddStock.TabIndex = 9;
             this.btnAddStock.Text = " Add Stock\r\n\r\n";
             this.btnAddStock.UseVisualStyleBackColor = false;
@@ -418,7 +418,7 @@
             this.Size = new System.Drawing.Size(1224, 622);
             this.pnlInventoryNav.ResumeLayout(false);
             this.pnlInventoryNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageInventory)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntevtoryParts)).EndInit();
@@ -440,9 +440,9 @@
         private System.Windows.Forms.Panel pnlInventoryNav;
         private System.Windows.Forms.Button btnInventorySearchButton;
         private System.Windows.Forms.TextBox txtInventorySearch;
-        private System.Windows.Forms.Label lblReportName;
+        private System.Windows.Forms.Label lblInventoryManagementName;
         private System.Windows.Forms.Label lblInventoryTitle;
-        private System.Windows.Forms.PictureBox pbEmployeeMimage;
+        private System.Windows.Forms.PictureBox pbEmployeeMimageInventory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblInventoryManagementTitle;
         private System.Windows.Forms.Label lblInventorySubtitle;

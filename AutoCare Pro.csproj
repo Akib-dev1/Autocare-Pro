@@ -56,6 +56,12 @@
     <Compile Include="Admin-Side.Designer.cs">
       <DependentUpon>Admin-Side.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllCustomers.Designer.cs">
+      <DependentUpon>AllCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </Compile>
     <EmbeddedResource Include="Admin-Side.resx">
       <DependentUpon>Admin-Side.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllCustomers.resx">
+      <DependentUpon>AllCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerDetails.resx">
       <DependentUpon>CustomerDetails.cs</DependentUpon>

@@ -46,5 +46,18 @@ namespace AutoCare_Pro
             }
             
         }
+
+        private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvInvoice.Columns["viewButton"].Index && e.RowIndex >= 0)
+            {
+                int invoiceId = Convert.ToInt32(dgvInvoice.Rows[e.RowIndex].Cells["InvoiceId"].Value);
+                Full_Invoice fullInvoiceForm = new Full_Invoice(invoiceId);
+                if(fullInvoiceForm.ShowDialog()==DialogResult.OK)
+                {
+                    fullInvoiceForm.Dispose();
+                }
+            }
+        }
     }
 }

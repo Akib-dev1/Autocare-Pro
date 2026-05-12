@@ -118,44 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pcbLicensePlate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAQZJREFUSEvt
-        lOENgTEQht8RjGAEIxjBCDZgAzZgA0awARuwARuwAXmkl9SFfr2K+MGTXL5E6957r9dKv8BQ0krSVtI5
-        fReS+n5jC72U8FoIxJpBgKpJdJG0TI6IkaR1JkQhTexSgkMSfMYgFcC+uV/sgmrNwSsBw/biumvvA9YK
-        WlQDbtk/9gslrFVUWQOtCrfM+hwV2fiFEuaEKaqBtoad2J84mxpOwaLucJPtDjCmJaxVCIUxN4zmq7Mx
-        gbCLHDsbYi9ploKn5JitEfw+8QlqoVqbNh+0CAe5Ix7SJrjJXDSSMaZ88/ZMnXizUBf5g/kXCuGFah/a
-        MCbEZHZd6LfAwUcFvscNPTVsoBaroagAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAArFJREFUaEPtmEuoTlEUx3+IFAamlKQkyURKKcpEHiEZmBpgYqAMyGPkVURRBkaK
+        UgaKiSJ55DERwkCEhOT9yPsV+uu/b6vdd879TO6957v7V6dvr7X22Wf/91lrn3M+KBQKhUKh0FnMAZ4A
+        fxp6PLaGf4082LRDGrqMptI1/34h5DJwMXf2AnXzaEuITr6QO3uBunm0JaQJFCF9jf4h5CBwFdif+e8A
+        74FvwH1gXRYfBRzym8IXYGEWTwwHNgJ3gQf2jQCOAq+AF8AB+8R44IrH1HWXhrEqhQwBvtr3OviFfD+A
+        DcBD24scG+lJyXcPOAtMzs5PaDLpuunag/yEPgE8s3+XY2OBS8Ax4Dfw3YsmKoVMs60V0K8GScjWqohV
+        trfZ3mz7jBejjh3ArLBgiXTeVPuvh1hCC6TYDNuVQlbb3uTfJSGWhAwADtue59hN2/ND/+7IhSQm2R8f
+        ggMt8KXv2DD7K4UccQ1MsX97iMnWrVXKqa27kPhkn/I5ksbPryOqhKy3P91tscW+X8Dc4K8U8gi4Bgz1
+        SadCTP1+AnuA566XBY4lIeNC/3TO/wgZDbwBPoQ6EEqlfV7kt8AY+1sK0SBq6/addlHFglcs1Yi+AWSr
+        lsRt27ND/+7IhSh9VGPyLQ/+yE7H047ZUojqQW1tixIiQbJTwUchKlbZN2xru5R9EhhsX3fkQlJK5dt+
+        ZLf7rLXdUoi2O7UX295rOxW82kqtrWH7TSszIaSXtuFzwETHqohCtFsqlWWf90LqECu9LR93n88hhVsK
+        0euy2in/ltlOBa80kxBN+BawxumQ0GT0lqoJvgNmhlgropB0rfwQK4CnwEePPz2M0VJIEylC+hr9S0jd
+        t3JPUjePtoTUfSv3JHXzaEtIE+g8IR3zl6le/posputP7EKhUCgUCp3CXzTX9ucscAXgAAAAAElFTkSu
+        QmCC
 </value>
   </data>
-  <metadata name="InvoiceId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="pcbVehicle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAsVJREFUSEvt
+        VFtLVFEU9if0E3rregbzIehCSBSFEUSFPfSQD0UQVkJGQoFWlCGI1UPpOUNqKk2heQknbaZmctLyRhnh
+        pXLGzC6gpGWo5Zzvi3X23Jwc8aGHHvxgnzlrnbXXt9e31p6kpCUsIbmUyzTDLNIMeOLXap3JEmMzmGX5
+        dLNUs3NPfI4FIQQ2HS9tBph+H9xfA+6tBnfdBcWX+RAsfwVmNYHbq8AUO4Li13RmxOdKCM1AnWyqHyC7
+        P5NtH8mOEbK6jxbJWQ95740iKngG5vvAzeWKKFzlghAJJDi/FdMdn1RSWULU8FbZ55+SDwbIbVXqm1Qk
+        RCl2zNp0BESJ+LwRWDIZGE+vwc+xKdI3HCVpGSKbBpV9yUe6B8ktFerbiWawuFP9KtnM0vjcEazRecwK
+        CiUOv2t61I5d4o+NtVYoVitBv6aj1mYwd46E4V5c7wSvdoBFHWBhO1jwHLzSBl5uBS/6wNwW8JwXzHkC
+        nnaDWY/AzCbwqBM8VA9Lxq2V4Do7zJjDekIkQa84fgfJqVly8hc5MUOKdF8myeHvpP8b2T9K9nxVw+D7
+        oKSTHoWHQaQrbAMveMHjTnC3I0QkY67pqBMJgib/KdEZV1hOMy9JHmKYoEUUGFfNdr4nR34sjqikm9Y9
+        utY+lyhCIpdJjN5R0hUgN5VHG7rjDtg3tjDRkcZo/ClXtKLsUCWWXCtvcrlNx8TWSkynOcCNZaDLTzb7
+        1egerAc9Q6Q7QDYPko3vSLdfEUmcxAhRcZeSrqQLzGiwBmBG8kbuj4ybzcCQ9GanAzNh6VIrEo9yYJyp
+        2Y/VJb79WkknRNbpZcx1eOe9oKuKmebo5UmArO1XGzaUwbnWYGrskupjDscDtRit6CH31YDJBswVN2iL
+        z/0Xcjw8LJvX38KLcMJE0AyzbG6VZl58TEIs6k8vBDmIVDivPEv4L/EHKSWgtP97zsMAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <metadata name="clmnDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="CustomerId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnHours.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="EmployeId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnRate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="TechNote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="SubTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnPartData.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="TaxPercent.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnQty.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="TaxAmount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="GrandTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnPartTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="CreatedAt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="viewButton.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmnHours.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmnRate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmnTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmnPartData.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmnQty.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmnPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmnPartTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

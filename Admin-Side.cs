@@ -62,5 +62,35 @@ namespace AutoCare_Pro
         {
             Application.Exit();
         }
+
+        private void btnAdminNavlink2_Click(object sender, EventArgs e)
+        {
+            this.LoadPage(new AllCustomers());
+            this.btnAdminNavlink2.BackColor = Color.RoyalBlue;
+            this.btnAdminNavlink4.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink1.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink3.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink5.BackColor = Color.MidnightBlue;
+        }
+
+        private void btnAdminNavlink4_Click(object sender, EventArgs e)
+        {
+            this.LoadPage(new Reports());
+            this.btnAdminNavlink4.BackColor = Color.RoyalBlue;
+            this.btnAdminNavlink3.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink1.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink2.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink5.BackColor = Color.MidnightBlue;
+        }
+
+        private void btnAdminNavlink5_Click(object sender, EventArgs e)
+        {
+            this.LoadPage(new AllInvoices());
+            this.btnAdminNavlink5.BackColor = Color.RoyalBlue;
+            this.btnAdminNavlink4.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink1.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink2.BackColor = Color.MidnightBlue;
+            this.btnAdminNavlink3.BackColor = Color.MidnightBlue;
+        }
     }
 }

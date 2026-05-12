@@ -73,6 +73,7 @@
             this.btnAdminNavlink5.TabIndex = 7;
             this.btnAdminNavlink5.Text = "Invoices";
             this.btnAdminNavlink5.UseVisualStyleBackColor = false;
+            this.btnAdminNavlink5.Click += new System.EventHandler(this.btnAdminNavlink5_Click);
             // 
             // btnAdminNavlink4
             // 
@@ -89,6 +90,7 @@
             this.btnAdminNavlink4.TabIndex = 6;
             this.btnAdminNavlink4.Text = "Reports";
             this.btnAdminNavlink4.UseVisualStyleBackColor = false;
+            this.btnAdminNavlink4.Click += new System.EventHandler(this.btnAdminNavlink4_Click);
             // 
             // btnAdminNavlink3
             // 
@@ -122,6 +124,7 @@
             this.btnAdminNavlink2.TabIndex = 4;
             this.btnAdminNavlink2.Text = "Customers";
             this.btnAdminNavlink2.UseVisualStyleBackColor = false;
+            this.btnAdminNavlink2.Click += new System.EventHandler(this.btnAdminNavlink2_Click);
             // 
             // btnAdminNavlink1
             // 

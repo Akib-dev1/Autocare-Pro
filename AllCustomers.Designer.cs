@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllCustomers));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlAllCustomers = new System.Windows.Forms.Panel();
-            this.dgvAllCustomers = new System.Windows.Forms.DataGridView();
+            this.pnlFleetCount = new System.Windows.Forms.Panel();
+            this.pbFleetpic = new System.Windows.Forms.PictureBox();
+            this.lblVehicleSubscript = new System.Windows.Forms.Label();
+            this.lblFleetCountValue = new System.Windows.Forms.Label();
+            this.lblFleetCountTitle = new System.Windows.Forms.Label();
             this.pnlAveragePurchase = new System.Windows.Forms.Panel();
             this.pbAvgPurchaseIcon = new System.Windows.Forms.PictureBox();
             this.lblAvgPurchaseValue = new System.Windows.Forms.Label();
@@ -48,89 +54,131 @@
             this.lblAllCustomerName = new System.Windows.Forms.Label();
             this.lblAllCustomersTitle = new System.Windows.Forms.Label();
             this.pbEmployeeMimageAllCustomer = new System.Windows.Forms.PictureBox();
-            this.pnlFleetCount = new System.Windows.Forms.Panel();
-            this.pbFleetpic = new System.Windows.Forms.PictureBox();
-            this.lblVehicleSubscript = new System.Windows.Forms.Label();
-            this.lblFleetCountValue = new System.Windows.Forms.Label();
-            this.lblFleetCountTitle = new System.Windows.Forms.Label();
-            this.clientIdentity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fleetsize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalbilling = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCustomerList = new System.Windows.Forms.DataGridView();
+            this.customerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VehicleModel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VehicleYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAllCustomers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomers)).BeginInit();
+            this.pnlFleetCount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFleetpic)).BeginInit();
             this.pnlAveragePurchase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvgPurchaseIcon)).BeginInit();
             this.pnlTotalClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTotalClient)).BeginInit();
             this.pnlAllCustomersNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageAllCustomer)).BeginInit();
-            this.pnlFleetCount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFleetpic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerList)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAllCustomers
             // 
-            this.pnlAllCustomers.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlAllCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.pnlAllCustomers.Controls.Add(this.dgvCustomerList);
             this.pnlAllCustomers.Controls.Add(this.pnlFleetCount);
-            this.pnlAllCustomers.Controls.Add(this.dgvAllCustomers);
             this.pnlAllCustomers.Controls.Add(this.pnlAveragePurchase);
             this.pnlAllCustomers.Controls.Add(this.pnlTotalClient);
             this.pnlAllCustomers.Controls.Add(this.lblAllCustomerSubtitle);
             this.pnlAllCustomers.Controls.Add(this.lblAllCustomerTitlehero);
-            this.pnlAllCustomers.Location = new System.Drawing.Point(0, 72);
+            this.pnlAllCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAllCustomers.Location = new System.Drawing.Point(0, 0);
+            this.pnlAllCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAllCustomers.Name = "pnlAllCustomers";
-            this.pnlAllCustomers.Size = new System.Drawing.Size(1214, 592);
+            this.pnlAllCustomers.Size = new System.Drawing.Size(941, 707);
             this.pnlAllCustomers.TabIndex = 4;
             // 
-            // dgvAllCustomers
+            // pnlFleetCount
             // 
-            this.dgvAllCustomers.AllowUserToAddRows = false;
-            this.dgvAllCustomers.AllowUserToDeleteRows = false;
-            this.dgvAllCustomers.AllowUserToResizeRows = false;
-            this.dgvAllCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAllCustomers.BackgroundColor = System.Drawing.Color.Beige;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAllCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clientIdentity,
-            this.status,
-            this.fleetsize,
-            this.totalbilling});
-            this.dgvAllCustomers.Location = new System.Drawing.Point(75, 279);
-            this.dgvAllCustomers.Name = "dgvAllCustomers";
-            this.dgvAllCustomers.ReadOnly = true;
-            this.dgvAllCustomers.RowHeadersWidth = 51;
-            this.dgvAllCustomers.RowTemplate.Height = 24;
-            this.dgvAllCustomers.Size = new System.Drawing.Size(1067, 310);
-            this.dgvAllCustomers.TabIndex = 8;
+            this.pnlFleetCount.AllowDrop = true;
+            this.pnlFleetCount.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlFleetCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
+            this.pnlFleetCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlFleetCount.Controls.Add(this.pbFleetpic);
+            this.pnlFleetCount.Controls.Add(this.lblVehicleSubscript);
+            this.pnlFleetCount.Controls.Add(this.lblFleetCountValue);
+            this.pnlFleetCount.Controls.Add(this.lblFleetCountTitle);
+            this.pnlFleetCount.Location = new System.Drawing.Point(365, 119);
+            this.pnlFleetCount.Margin = new System.Windows.Forms.Padding(10);
+            this.pnlFleetCount.Name = "pnlFleetCount";
+            this.pnlFleetCount.Size = new System.Drawing.Size(218, 123);
+            this.pnlFleetCount.TabIndex = 4;
+            // 
+            // pbFleetpic
+            // 
+            this.pbFleetpic.Image = ((System.Drawing.Image)(resources.GetObject("pbFleetpic.Image")));
+            this.pbFleetpic.Location = new System.Drawing.Point(14, 15);
+            this.pbFleetpic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbFleetpic.Name = "pbFleetpic";
+            this.pbFleetpic.Size = new System.Drawing.Size(38, 35);
+            this.pbFleetpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFleetpic.TabIndex = 3;
+            this.pbFleetpic.TabStop = false;
+            // 
+            // lblVehicleSubscript
+            // 
+            this.lblVehicleSubscript.AutoSize = true;
+            this.lblVehicleSubscript.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleSubscript.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblVehicleSubscript.Location = new System.Drawing.Point(134, 83);
+            this.lblVehicleSubscript.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVehicleSubscript.Name = "lblVehicleSubscript";
+            this.lblVehicleSubscript.Size = new System.Drawing.Size(62, 14);
+            this.lblVehicleSubscript.TabIndex = 2;
+            this.lblVehicleSubscript.Text = "Vehicles";
+            this.lblVehicleSubscript.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFleetCountValue
+            // 
+            this.lblFleetCountValue.AutoSize = true;
+            this.lblFleetCountValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFleetCountValue.Location = new System.Drawing.Point(55, 71);
+            this.lblFleetCountValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFleetCountValue.Name = "lblFleetCountValue";
+            this.lblFleetCountValue.Size = new System.Drawing.Size(28, 29);
+            this.lblFleetCountValue.TabIndex = 1;
+            this.lblFleetCountValue.Text = "0";
+            this.lblFleetCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFleetCountTitle
+            // 
+            this.lblFleetCountTitle.AutoSize = true;
+            this.lblFleetCountTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFleetCountTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblFleetCountTitle.Location = new System.Drawing.Point(61, 23);
+            this.lblFleetCountTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFleetCountTitle.Name = "lblFleetCountTitle";
+            this.lblFleetCountTitle.Size = new System.Drawing.Size(135, 23);
+            this.lblFleetCountTitle.TabIndex = 0;
+            this.lblFleetCountTitle.Text = "Fleet Count";
+            this.lblFleetCountTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlAveragePurchase
             // 
             this.pnlAveragePurchase.AllowDrop = true;
+            this.pnlAveragePurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAveragePurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
             this.pnlAveragePurchase.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlAveragePurchase.Controls.Add(this.pbAvgPurchaseIcon);
             this.pnlAveragePurchase.Controls.Add(this.lblAvgPurchaseValue);
             this.pnlAveragePurchase.Controls.Add(this.lblAvgPurchaseText);
-            this.pnlAveragePurchase.Location = new System.Drawing.Point(853, 85);
+            this.pnlAveragePurchase.Location = new System.Drawing.Point(658, 119);
+            this.pnlAveragePurchase.Margin = new System.Windows.Forms.Padding(10);
             this.pnlAveragePurchase.Name = "pnlAveragePurchase";
-            this.pnlAveragePurchase.Size = new System.Drawing.Size(289, 151);
+            this.pnlAveragePurchase.Size = new System.Drawing.Size(218, 123);
             this.pnlAveragePurchase.TabIndex = 4;
             // 
             // pbAvgPurchaseIcon
             // 
             this.pbAvgPurchaseIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbAvgPurchaseIcon.Image")));
-            this.pbAvgPurchaseIcon.Location = new System.Drawing.Point(18, 18);
+            this.pbAvgPurchaseIcon.Location = new System.Drawing.Point(14, 15);
+            this.pbAvgPurchaseIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbAvgPurchaseIcon.Name = "pbAvgPurchaseIcon";
-            this.pbAvgPurchaseIcon.Size = new System.Drawing.Size(50, 43);
+            this.pbAvgPurchaseIcon.Size = new System.Drawing.Size(38, 35);
             this.pbAvgPurchaseIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAvgPurchaseIcon.TabIndex = 3;
             this.pbAvgPurchaseIcon.TabStop = false;
@@ -139,11 +187,12 @@
             // 
             this.lblAvgPurchaseValue.AutoSize = true;
             this.lblAvgPurchaseValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvgPurchaseValue.Location = new System.Drawing.Point(89, 84);
+            this.lblAvgPurchaseValue.Location = new System.Drawing.Point(67, 68);
+            this.lblAvgPurchaseValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAvgPurchaseValue.Name = "lblAvgPurchaseValue";
-            this.lblAvgPurchaseValue.Size = new System.Drawing.Size(121, 36);
+            this.lblAvgPurchaseValue.Size = new System.Drawing.Size(43, 29);
             this.lblAvgPurchaseValue.TabIndex = 1;
-            this.lblAvgPurchaseValue.Text = "$30.5K";
+            this.lblAvgPurchaseValue.Text = "$0";
             this.lblAvgPurchaseValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAvgPurchaseText
@@ -151,9 +200,10 @@
             this.lblAvgPurchaseText.AutoSize = true;
             this.lblAvgPurchaseText.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvgPurchaseText.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblAvgPurchaseText.Location = new System.Drawing.Point(74, 28);
+            this.lblAvgPurchaseText.Location = new System.Drawing.Point(56, 21);
+            this.lblAvgPurchaseText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAvgPurchaseText.Name = "lblAvgPurchaseText";
-            this.lblAvgPurchaseText.Size = new System.Drawing.Size(187, 28);
+            this.lblAvgPurchaseText.Size = new System.Drawing.Size(156, 23);
             this.lblAvgPurchaseText.TabIndex = 0;
             this.lblAvgPurchaseText.Text = "Avg Purchase";
             this.lblAvgPurchaseText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,17 +216,19 @@
             this.pnlTotalClient.Controls.Add(this.pbTotalClient);
             this.pnlTotalClient.Controls.Add(this.lblTotalClientValue);
             this.pnlTotalClient.Controls.Add(this.lblTotalClientTitle);
-            this.pnlTotalClient.Location = new System.Drawing.Point(75, 85);
+            this.pnlTotalClient.Location = new System.Drawing.Point(74, 119);
+            this.pnlTotalClient.Margin = new System.Windows.Forms.Padding(10);
             this.pnlTotalClient.Name = "pnlTotalClient";
-            this.pnlTotalClient.Size = new System.Drawing.Size(289, 151);
+            this.pnlTotalClient.Size = new System.Drawing.Size(218, 123);
             this.pnlTotalClient.TabIndex = 3;
             // 
             // pbTotalClient
             // 
             this.pbTotalClient.Image = ((System.Drawing.Image)(resources.GetObject("pbTotalClient.Image")));
-            this.pbTotalClient.Location = new System.Drawing.Point(18, 18);
+            this.pbTotalClient.Location = new System.Drawing.Point(14, 15);
+            this.pbTotalClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbTotalClient.Name = "pbTotalClient";
-            this.pbTotalClient.Size = new System.Drawing.Size(50, 43);
+            this.pbTotalClient.Size = new System.Drawing.Size(38, 35);
             this.pbTotalClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTotalClient.TabIndex = 3;
             this.pbTotalClient.TabStop = false;
@@ -185,11 +237,12 @@
             // 
             this.lblTotalClientValue.AutoSize = true;
             this.lblTotalClientValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalClientValue.Location = new System.Drawing.Point(87, 87);
+            this.lblTotalClientValue.Location = new System.Drawing.Point(65, 71);
+            this.lblTotalClientValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalClientValue.Name = "lblTotalClientValue";
-            this.lblTotalClientValue.Size = new System.Drawing.Size(100, 36);
+            this.lblTotalClientValue.Size = new System.Drawing.Size(28, 29);
             this.lblTotalClientValue.TabIndex = 1;
-            this.lblTotalClientValue.Text = "1,288";
+            this.lblTotalClientValue.Text = "0";
             this.lblTotalClientValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTotalClientTitle
@@ -197,11 +250,12 @@
             this.lblTotalClientTitle.AutoSize = true;
             this.lblTotalClientTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalClientTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTotalClientTitle.Location = new System.Drawing.Point(74, 28);
+            this.lblTotalClientTitle.Location = new System.Drawing.Point(56, 21);
+            this.lblTotalClientTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalClientTitle.Name = "lblTotalClientTitle";
-            this.lblTotalClientTitle.Size = new System.Drawing.Size(159, 28);
+            this.lblTotalClientTitle.Size = new System.Drawing.Size(147, 23);
             this.lblTotalClientTitle.TabIndex = 0;
-            this.lblTotalClientTitle.Text = "Total Client";
+            this.lblTotalClientTitle.Text = "Total Clients";
             this.lblTotalClientTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAllCustomerSubtitle
@@ -209,9 +263,10 @@
             this.lblAllCustomerSubtitle.AutoSize = true;
             this.lblAllCustomerSubtitle.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAllCustomerSubtitle.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblAllCustomerSubtitle.Location = new System.Drawing.Point(17, 53);
+            this.lblAllCustomerSubtitle.Location = new System.Drawing.Point(13, 43);
+            this.lblAllCustomerSubtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllCustomerSubtitle.Name = "lblAllCustomerSubtitle";
-            this.lblAllCustomerSubtitle.Size = new System.Drawing.Size(247, 16);
+            this.lblAllCustomerSubtitle.Size = new System.Drawing.Size(209, 13);
             this.lblAllCustomerSubtitle.TabIndex = 1;
             this.lblAllCustomerSubtitle.Text = "Directory of calibrated client relationships.";
             // 
@@ -219,9 +274,10 @@
             // 
             this.lblAllCustomerTitlehero.AutoSize = true;
             this.lblAllCustomerTitlehero.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllCustomerTitlehero.Location = new System.Drawing.Point(15, 19);
+            this.lblAllCustomerTitlehero.Location = new System.Drawing.Point(11, 15);
+            this.lblAllCustomerTitlehero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllCustomerTitlehero.Name = "lblAllCustomerTitlehero";
-            this.lblAllCustomerTitlehero.Size = new System.Drawing.Size(190, 34);
+            this.lblAllCustomerTitlehero.Size = new System.Drawing.Size(150, 27);
             this.lblAllCustomerTitlehero.TabIndex = 0;
             this.lblAllCustomerTitlehero.Text = "Total Clients";
             // 
@@ -233,9 +289,11 @@
             this.pnlAllCustomersNav.Controls.Add(this.lblAllCustomerName);
             this.pnlAllCustomersNav.Controls.Add(this.lblAllCustomersTitle);
             this.pnlAllCustomersNav.Controls.Add(this.pbEmployeeMimageAllCustomer);
+            this.pnlAllCustomersNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAllCustomersNav.Location = new System.Drawing.Point(0, 0);
+            this.pnlAllCustomersNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAllCustomersNav.Name = "pnlAllCustomersNav";
-            this.pnlAllCustomersNav.Size = new System.Drawing.Size(1214, 74);
+            this.pnlAllCustomersNav.Size = new System.Drawing.Size(941, 60);
             this.pnlAllCustomersNav.TabIndex = 5;
             // 
             // btnAllCustomerSearchButton
@@ -243,28 +301,32 @@
             this.btnAllCustomerSearchButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllCustomerSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("btnAllCustomerSearchButton.Image")));
             this.btnAllCustomerSearchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllCustomerSearchButton.Location = new System.Drawing.Point(553, 20);
+            this.btnAllCustomerSearchButton.Location = new System.Drawing.Point(414, 14);
+            this.btnAllCustomerSearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAllCustomerSearchButton.Name = "btnAllCustomerSearchButton";
-            this.btnAllCustomerSearchButton.Size = new System.Drawing.Size(130, 30);
+            this.btnAllCustomerSearchButton.Size = new System.Drawing.Size(98, 28);
             this.btnAllCustomerSearchButton.TabIndex = 4;
             this.btnAllCustomerSearchButton.Text = "Search";
             this.btnAllCustomerSearchButton.UseVisualStyleBackColor = true;
             // 
             // txtAllCustomerSearch
             // 
-            this.txtAllCustomerSearch.Location = new System.Drawing.Point(264, 20);
+            this.txtAllCustomerSearch.Location = new System.Drawing.Point(198, 16);
+            this.txtAllCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAllCustomerSearch.Multiline = true;
             this.txtAllCustomerSearch.Name = "txtAllCustomerSearch";
-            this.txtAllCustomerSearch.Size = new System.Drawing.Size(294, 30);
+            this.txtAllCustomerSearch.Size = new System.Drawing.Size(222, 24);
             this.txtAllCustomerSearch.TabIndex = 3;
             // 
             // lblAllCustomerName
             // 
+            this.lblAllCustomerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAllCustomerName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAllCustomerName.ForeColor = System.Drawing.Color.Brown;
-            this.lblAllCustomerName.Location = new System.Drawing.Point(1042, 20);
+            this.lblAllCustomerName.Location = new System.Drawing.Point(782, 18);
+            this.lblAllCustomerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllCustomerName.Name = "lblAllCustomerName";
-            this.lblAllCustomerName.Size = new System.Drawing.Size(88, 25);
+            this.lblAllCustomerName.Size = new System.Drawing.Size(66, 20);
             this.lblAllCustomerName.TabIndex = 2;
             this.lblAllCustomerName.Text = "ADMIN";
             this.lblAllCustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,123 +334,163 @@
             // lblAllCustomersTitle
             // 
             this.lblAllCustomersTitle.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllCustomersTitle.Location = new System.Drawing.Point(16, 20);
+            this.lblAllCustomersTitle.Location = new System.Drawing.Point(12, 14);
+            this.lblAllCustomersTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllCustomersTitle.Name = "lblAllCustomersTitle";
-            this.lblAllCustomersTitle.Size = new System.Drawing.Size(225, 35);
+            this.lblAllCustomersTitle.Size = new System.Drawing.Size(169, 28);
             this.lblAllCustomersTitle.TabIndex = 1;
             this.lblAllCustomersTitle.Text = "ALL CUSTOMERS";
             this.lblAllCustomersTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbEmployeeMimageAllCustomer
             // 
+            this.pbEmployeeMimageAllCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbEmployeeMimageAllCustomer.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimageAllCustomer.Image")));
-            this.pbEmployeeMimageAllCustomer.Location = new System.Drawing.Point(1136, 15);
+            this.pbEmployeeMimageAllCustomer.Location = new System.Drawing.Point(852, 14);
+            this.pbEmployeeMimageAllCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbEmployeeMimageAllCustomer.Name = "pbEmployeeMimageAllCustomer";
-            this.pbEmployeeMimageAllCustomer.Size = new System.Drawing.Size(54, 35);
+            this.pbEmployeeMimageAllCustomer.Size = new System.Drawing.Size(40, 28);
             this.pbEmployeeMimageAllCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEmployeeMimageAllCustomer.TabIndex = 0;
             this.pbEmployeeMimageAllCustomer.TabStop = false;
             // 
-            // pnlFleetCount
+            // dgvCustomerList
             // 
-            this.pnlFleetCount.AllowDrop = true;
-            this.pnlFleetCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(213)))), ((int)(((byte)(237)))));
-            this.pnlFleetCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlFleetCount.Controls.Add(this.pbFleetpic);
-            this.pnlFleetCount.Controls.Add(this.lblVehicleSubscript);
-            this.pnlFleetCount.Controls.Add(this.lblFleetCountValue);
-            this.pnlFleetCount.Controls.Add(this.lblFleetCountTitle);
-            this.pnlFleetCount.Location = new System.Drawing.Point(463, 85);
-            this.pnlFleetCount.Name = "pnlFleetCount";
-            this.pnlFleetCount.Size = new System.Drawing.Size(289, 151);
-            this.pnlFleetCount.TabIndex = 4;
+            this.dgvCustomerList.AllowUserToAddRows = false;
+            this.dgvCustomerList.AllowUserToDeleteRows = false;
+            this.dgvCustomerList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(115)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCustomerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCustomerList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCustomerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCustomerList.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCustomerList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCustomerList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCustomerList.ColumnHeadersHeight = 40;
+            this.dgvCustomerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvCustomerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.customerId,
+            this.userName,
+            this.Phone,
+            this.Email,
+            this.Address,
+            this.VehicleModel,
+            this.VehicleYear,
+            this.Plate,
+            this.Color});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(115)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomerList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCustomerList.EnableHeadersVisualStyles = false;
+            this.dgvCustomerList.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.dgvCustomerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.dgvCustomerList.Location = new System.Drawing.Point(74, 273);
+            this.dgvCustomerList.MultiSelect = false;
+            this.dgvCustomerList.Name = "dgvCustomerList";
+            this.dgvCustomerList.ReadOnly = true;
+            this.dgvCustomerList.RowHeadersVisible = false;
+            this.dgvCustomerList.RowTemplate.Height = 35;
+            this.dgvCustomerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCustomerList.Size = new System.Drawing.Size(802, 394);
+            this.dgvCustomerList.TabIndex = 13;
             // 
-            // pbFleetpic
+            // customerId
             // 
-            this.pbFleetpic.Image = ((System.Drawing.Image)(resources.GetObject("pbFleetpic.Image")));
-            this.pbFleetpic.Location = new System.Drawing.Point(18, 18);
-            this.pbFleetpic.Name = "pbFleetpic";
-            this.pbFleetpic.Size = new System.Drawing.Size(50, 43);
-            this.pbFleetpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFleetpic.TabIndex = 3;
-            this.pbFleetpic.TabStop = false;
+            this.customerId.DataPropertyName = "customer_id";
+            this.customerId.HeaderText = "ID";
+            this.customerId.Name = "customerId";
+            this.customerId.ReadOnly = true;
             // 
-            // lblVehicleSubscript
+            // userName
             // 
-            this.lblVehicleSubscript.AutoSize = true;
-            this.lblVehicleSubscript.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVehicleSubscript.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblVehicleSubscript.Location = new System.Drawing.Point(179, 102);
-            this.lblVehicleSubscript.Name = "lblVehicleSubscript";
-            this.lblVehicleSubscript.Size = new System.Drawing.Size(74, 18);
-            this.lblVehicleSubscript.TabIndex = 2;
-            this.lblVehicleSubscript.Text = "Vehicles";
-            this.lblVehicleSubscript.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.userName.DataPropertyName = "name";
+            this.userName.HeaderText = "Name";
+            this.userName.Name = "userName";
+            this.userName.ReadOnly = true;
             // 
-            // lblFleetCountValue
+            // Phone
             // 
-            this.lblFleetCountValue.AutoSize = true;
-            this.lblFleetCountValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFleetCountValue.Location = new System.Drawing.Point(73, 87);
-            this.lblFleetCountValue.Name = "lblFleetCountValue";
-            this.lblFleetCountValue.Size = new System.Drawing.Size(100, 36);
-            this.lblFleetCountValue.TabIndex = 1;
-            this.lblFleetCountValue.Text = "1,288";
-            this.lblFleetCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Phone.DataPropertyName = "phone";
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
             // 
-            // lblFleetCountTitle
+            // Email
             // 
-            this.lblFleetCountTitle.AutoSize = true;
-            this.lblFleetCountTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFleetCountTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblFleetCountTitle.Location = new System.Drawing.Point(74, 28);
-            this.lblFleetCountTitle.Name = "lblFleetCountTitle";
-            this.lblFleetCountTitle.Size = new System.Drawing.Size(158, 28);
-            this.lblFleetCountTitle.TabIndex = 0;
-            this.lblFleetCountTitle.Text = "Fleet Count";
-            this.lblFleetCountTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Email.DataPropertyName = "email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
-            // clientIdentity
+            // Address
             // 
-            this.clientIdentity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clientIdentity.HeaderText = "Client Identity";
-            this.clientIdentity.MinimumWidth = 6;
-            this.clientIdentity.Name = "clientIdentity";
-            this.clientIdentity.ReadOnly = true;
+            this.Address.DataPropertyName = "address";
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
-            // status
+            // VehicleModel
             // 
-            this.status.HeaderText = "Status";
-            this.status.MinimumWidth = 6;
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
+            this.VehicleModel.DataPropertyName = "vehicle_model";
+            this.VehicleModel.HeaderText = "Vehicle Model";
+            this.VehicleModel.Name = "VehicleModel";
+            this.VehicleModel.ReadOnly = true;
             // 
-            // fleetsize
+            // VehicleYear
             // 
-            this.fleetsize.HeaderText = "Fleet Size";
-            this.fleetsize.MinimumWidth = 6;
-            this.fleetsize.Name = "fleetsize";
-            this.fleetsize.ReadOnly = true;
-            this.fleetsize.ToolTipText = "Number of Vehicles";
+            this.VehicleYear.DataPropertyName = "vehicle_year";
+            this.VehicleYear.HeaderText = "Vehicle Year";
+            this.VehicleYear.Name = "VehicleYear";
+            this.VehicleYear.ReadOnly = true;
             // 
-            // totalbilling
+            // Plate
             // 
-            this.totalbilling.HeaderText = "Total Billing";
-            this.totalbilling.MinimumWidth = 6;
-            this.totalbilling.Name = "totalbilling";
-            this.totalbilling.ReadOnly = true;
+            this.Plate.DataPropertyName = "vehicle_plate";
+            this.Plate.HeaderText = "Plate";
+            this.Plate.Name = "Plate";
+            this.Plate.ReadOnly = true;
+            // 
+            // Color
+            // 
+            this.Color.DataPropertyName = "vehicle_color";
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            this.Color.ReadOnly = true;
             // 
             // AllCustomers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlAllCustomersNav);
             this.Controls.Add(this.pnlAllCustomers);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AllCustomers";
-            this.Size = new System.Drawing.Size(1214, 664);
+            this.Size = new System.Drawing.Size(941, 707);
+            this.Load += new System.EventHandler(this.AllCustomers_Load);
             this.pnlAllCustomers.ResumeLayout(false);
             this.pnlAllCustomers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomers)).EndInit();
+            this.pnlFleetCount.ResumeLayout(false);
+            this.pnlFleetCount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFleetpic)).EndInit();
             this.pnlAveragePurchase.ResumeLayout(false);
             this.pnlAveragePurchase.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvgPurchaseIcon)).EndInit();
@@ -398,9 +500,7 @@
             this.pnlAllCustomersNav.ResumeLayout(false);
             this.pnlAllCustomersNav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageAllCustomer)).EndInit();
-            this.pnlFleetCount.ResumeLayout(false);
-            this.pnlFleetCount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFleetpic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,7 +508,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlAllCustomers;
-        private System.Windows.Forms.DataGridView dgvAllCustomers;
         private System.Windows.Forms.Panel pnlAveragePurchase;
         private System.Windows.Forms.PictureBox pbAvgPurchaseIcon;
         private System.Windows.Forms.Label lblAvgPurchaseValue;
@@ -430,9 +529,15 @@
         private System.Windows.Forms.Label lblVehicleSubscript;
         private System.Windows.Forms.Label lblFleetCountValue;
         private System.Windows.Forms.Label lblFleetCountTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientIdentity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fleetsize;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalbilling;
+        private System.Windows.Forms.DataGridView dgvCustomerList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VehicleModel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VehicleYear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Plate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
     }
 }

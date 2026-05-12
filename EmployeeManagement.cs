@@ -20,7 +20,7 @@ namespace AutoCare_Pro
         {
             string sql = "SELECT * FROM user_info";
             DataTable dt = AdminForm.Da.GetDataTable(sql);
-            this.dgvEmployeeList.DataSource = dt;
+            this.dgvCustomerList.DataSource = dt;
             this.lblTotalPersonnel.Text = dt.Rows.Count.ToString();
         }
         private void btnAddEmployee_Click(object sender, EventArgs e)
@@ -28,13 +28,13 @@ namespace AutoCare_Pro
             AddUserForm addUser=new AddUserForm();
             if(addUser.ShowDialog()==DialogResult.OK)
             {
-                LoadEmployeeData();
+                this.LoadEmployeeData();
             }
         }
 
         private void EmployeeManagement_Load(object sender, EventArgs e)
         {
-            LoadEmployeeData();
+            this.LoadEmployeeData();
         }
 
         private void btnRemoveEmployee_Click(object sender, EventArgs e)
@@ -42,13 +42,17 @@ namespace AutoCare_Pro
             RemoveUserForm removeUser=new RemoveUserForm();
             if(removeUser.ShowDialog()==DialogResult.OK)
             {
-                LoadEmployeeData();
+                this.LoadEmployeeData();
             }
         }
 
         private void btnEditDetails_Click(object sender, EventArgs e)
         {
-
+            EditUserInfo editUserInfo=new EditUserInfo();
+            if (editUserInfo.ShowDialog() == DialogResult.OK)
+            {
+                this.LoadEmployeeData();
+            }
         }
     }
 }

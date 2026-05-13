@@ -75,72 +75,164 @@ namespace AutoCare_Pro
 
         private void btnGenerateInvoice_Click(object sender, EventArgs e)
         {
-            string cusName = this.lblCustomerName.Text;
-            string cusPhone = this.lblPhoneNumber.Text;
-            string cusEmail = this.lblEmailShow.Text;
-            string cusLocation = this.lblLocationShow.Text;
-            string vehicleModel = this.lblModel.Text;
-            string vehicleYear = this.lblVehicleYear.Text;
-            string vehiclePlate = this.lblPlateNumber.Text;
-            string technicalInstructions = this.richtextTechnote.Text.Trim() ==""? "No Insturctions provided." : this.richtextTechnote.Text;
-            string vehicleColor = this.lblColorShow.Text;
-            double subtotal = this.lblSubTotalValue.Text != "" ? double.Parse(this.lblSubTotalValue.Text.TrimStart('$')) : 0;
-            double tax = this.lblTaxValue.Text != "" ? double.Parse(this.lblTaxValue.Text.TrimStart('$')) : 0;
-            double grandTotal = this.lblGrandTotalValue.Text != "" ? double.Parse(this.lblGrandTotalValue.Text.TrimStart('$')) : 0;
-            double taxRate = 8.8;
-            string employeeId = userForm.EmpId;
-            string cusId = "";
-
-            DataSet dsCheck = userForm.Da.GetData("SELECT Customer_Id FROM Customers WHERE Phone = '" + cusPhone + "';");
-
-            
-
-            if (dsCheck.Tables[0].Rows.Count > 0)
+            if (string.IsNullOrEmpty(this.lblCustomerName.Text) || this.lblCustomerName.Text== "Name will appear here")
             {
-                cusId = dsCheck.Tables[0].Rows[0]["Customer_Id"].ToString();
-                MessageBox.Show("Existing customer found! Using existing record.");
-            }
-            else
-            {
-                cusId = userForm.Da.ExecuteScalar("INSERT INTO Customers (Name, Phone, Email, Address, Vehicle_Model, Vehicle_Year, Vehicle_Plate, Vehicle_Color) VALUES ('" + cusName + "','" + cusPhone + "','" + cusEmail + "','" + cusLocation + "','" + vehicleModel + "','" + vehicleYear + "','" + vehiclePlate + "','" + vehicleColor + "'); SELECT SCOPE_IDENTITY();");
+                MessageBox.Show("Please search and select a customer before generating invoice. Or Add details about the customer.", "Missing Customer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            string invoiceId = "";
+            if (string.IsNullOrEmpty(this.lblPhoneNumber.Text) || this.lblPhoneNumber.Text == "Phone Number will appear here")
+            {
+                MessageBox.Show("Customer phone number is missing.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            string sqlQuery2 = "INSERT INTO Invoices (Customer_Id, Employe_Id, Tech_Notes, Sub_Total, Tax_Percent, Tax_Amount, Grand_Total) VALUES ('" + cusId + "','" + employeeId + "','" + technicalInstructions + "','" + subtotal + "','" + taxRate + "','" + tax + "','" + grandTotal + "'); SELECT SCOPE_IDENTITY();";
-            
-            invoiceId = userForm.Da.ExecuteScalar(sqlQuery2);
-            
+            if (string.IsNullOrEmpty(this.lblModel.Text) || this.lblModel.Text == "Model will appear here")
+            {
+                MessageBox.Show("Vehicle details are missing. Please select a customer with a vehicle.", "Missing Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(this.lblPlateNumber.Text) || this.lblPlateNumber.Text == "Plate Number")
+            {
+                MessageBox.Show("Vehicle plate number is missing.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int serviceRowCount = 0;
+            foreach (DataGridViewRow row in dgvService.Rows)
+            {
+                if (!row.IsNewRow && !string.IsNullOrEmpty(row.Cells["clmnDescription"].Value?.ToString()))
+                    serviceRowCount++;
+            }
+
+            int partsRowCount = 0;
+            foreach (DataGridViewRow row in dgvParts.Rows)
+            {
+                if (!row.IsNewRow && !string.IsNullOrEmpty(row.Cells["clmnPartData"].Value?.ToString()))
+                    partsRowCount++;
+            }
+
+            if (serviceRowCount == 0 && partsRowCount == 0)
+            {
+                MessageBox.Show("Please add at least one service or one part before generating invoice.", "Nothing Added", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (this.lblSubTotalValue.Text == "$0")
+            {
+                MessageBox.Show("Total amount cannot be zero. Please add services or parts.", "Invalid Total", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             foreach (DataGridViewRow row in dgvService.Rows)
             {
                 if (row.IsNewRow) continue;
+                if (string.IsNullOrEmpty(row.Cells["clmnDescription"].Value?.ToString())) continue;
 
-                string description = row.Cells["clmnDescription"].Value?.ToString();
-                string hours = row.Cells["clmnHours"].Value?.ToString();
-                string rate = row.Cells["clmnRate"].Value?.ToString();
-                string total = row.Cells["clmnTotal"].Value?.ToString();
-
-                if (string.IsNullOrEmpty(description)) continue;
-
-                string sqlQuery3 = "INSERT INTO Job_Services (Invoice_Id, Description, Hours, Rate, Total) VALUES ('" + invoiceId + "','" + description + "','" + hours + "','" + rate + "','" + total + "');";
-                
-                userForm.Da.ExecuteQuery(sqlQuery3);
+                if (string.IsNullOrEmpty(row.Cells["clmnHours"].Value?.ToString()) || string.IsNullOrEmpty(row.Cells["clmnRate"].Value?.ToString()))
+                {
+                    MessageBox.Show("One or more service rows are missing Hours or Rate values.", "Incomplete Service", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
+
             foreach (DataGridViewRow row in dgvParts.Rows)
             {
                 if (row.IsNewRow) continue;
+                if (string.IsNullOrEmpty(row.Cells["clmnPartData"].Value?.ToString())) continue;
 
-                string partName = row.Cells["clmnPartData"].Value?.ToString();
-                string qty = row.Cells["clmnQty"].Value?.ToString();
-                string price = row.Cells["clmnPrice"].Value?.ToString();
-                string partTotal = row.Cells["clmnPartTotal"].Value?.ToString();
+                if (string.IsNullOrEmpty(row.Cells["clmnQty"].Value?.ToString()) || string.IsNullOrEmpty(row.Cells["clmnPrice"].Value?.ToString()))
+                {
+                    MessageBox.Show("One or more part rows are missing Quantity or Price values.", "Incomplete Part", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-                if (string.IsNullOrEmpty(partName)) continue;
-
-                string sqlQuery4 = "INSERT INTO Job_Parts (Invoice_Id, Part_Name, Qty, Unit_Price, Total) VALUES ('" + invoiceId + "','" + partName + "','" + qty + "','" + price + "','" + partTotal + "');";
-                userForm.Da.ExecuteQuery(sqlQuery4);
+                if (Convert.ToInt32(row.Cells["clmnQty"].Value) <= 0)
+                {
+                    MessageBox.Show("Part quantity cannot be zero or less for: " + row.Cells["clmnPartData"].Value?.ToString(), "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
-            MessageBox.Show("Invoice #" + invoiceId + " Generated Successfully!", "Invoice Successfull!",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                string cusName = this.lblCustomerName.Text;
+                string cusPhone = this.lblPhoneNumber.Text;
+                string cusEmail = this.lblEmailShow.Text;
+                string cusLocation = this.lblLocationShow.Text;
+                string vehicleModel = this.lblModel.Text;
+                string vehicleYear = this.lblVehicleYear.Text;
+                string vehiclePlate = this.lblPlateNumber.Text;
+                string technicalInstructions = this.richtextTechnote.Text.Trim() == "" ? "No Insturctions provided." : this.richtextTechnote.Text;
+                string vehicleColor = this.lblColorShow.Text;
+                double subtotal = this.lblSubTotalValue.Text != "" ? double.Parse(this.lblSubTotalValue.Text.TrimStart('$')) : 0;
+                double tax = this.lblTaxValue.Text != "" ? double.Parse(this.lblTaxValue.Text.TrimStart('$')) : 0;
+                double grandTotal = this.lblGrandTotalValue.Text != "" ? double.Parse(this.lblGrandTotalValue.Text.TrimStart('$')) : 0;
+                double taxRate = 8.8;
+                string employeeId = userForm.EmpId;
+                string cusId = "";
+
+                DataSet dsCheck = userForm.Da.GetData("SELECT Customer_Id FROM Customers WHERE Phone = '" + cusPhone + "';");
+
+
+
+                if (dsCheck.Tables[0].Rows.Count > 0)
+                {
+                    cusId = dsCheck.Tables[0].Rows[0]["Customer_Id"].ToString();
+                    MessageBox.Show("Existing customer found! Using existing record.");
+                }
+                else
+                {
+                    cusId = userForm.Da.ExecuteScalar("INSERT INTO Customers (Name, Phone, Email, Address, Vehicle_Model, Vehicle_Year, Vehicle_Plate, Vehicle_Color) VALUES ('" + cusName + "','" + cusPhone + "','" + cusEmail + "','" + cusLocation + "','" + vehicleModel + "','" + vehicleYear + "','" + vehiclePlate + "','" + vehicleColor + "'); SELECT SCOPE_IDENTITY();");
+                }
+
+                string invoiceId = "";
+
+                string sqlQuery2 = "INSERT INTO Invoices (Customer_Id, Employe_Id, Tech_Notes, Sub_Total, Tax_Percent, Tax_Amount, Grand_Total) VALUES ('" + cusId + "','" + employeeId + "','" + technicalInstructions + "','" + subtotal + "','" + taxRate + "','" + tax + "','" + grandTotal + "'); SELECT SCOPE_IDENTITY();";
+
+                invoiceId = userForm.Da.ExecuteScalar(sqlQuery2);
+
+                foreach (DataGridViewRow row in dgvService.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    string description = row.Cells["clmnDescription"].Value?.ToString();
+                    string hours = row.Cells["clmnHours"].Value?.ToString();
+                    string rate = row.Cells["clmnRate"].Value?.ToString();
+                    string total = row.Cells["clmnTotal"].Value?.ToString();
+
+                    if (string.IsNullOrEmpty(description)) continue;
+
+                    string sqlQuery3 = "INSERT INTO Job_Services (Invoice_Id, Description, Hours, Rate, Total) VALUES ('" + invoiceId + "','" + description + "','" + hours + "','" + rate + "','" + total + "');";
+
+                    userForm.Da.ExecuteQuery(sqlQuery3);
+                }
+                foreach (DataGridViewRow row in dgvParts.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    string partName = row.Cells["clmnPartData"].Value?.ToString();
+                    string qty = row.Cells["clmnQty"].Value?.ToString();
+                    string price = row.Cells["clmnPrice"].Value?.ToString();
+                    string partTotal = row.Cells["clmnPartTotal"].Value?.ToString();
+
+                    if (string.IsNullOrEmpty(partName)) continue;
+
+                    string sqlQuery4 = "INSERT INTO Job_Parts (Invoice_Id, Part_Name, Qty, Unit_Price, Total) VALUES ('" + invoiceId + "','" + partName + "','" + qty + "','" + price + "','" + partTotal + "');";
+                    userForm.Da.ExecuteQuery(sqlQuery4);
+                }
+                MessageBox.Show("Invoice #" + invoiceId + " Generated Successfully!", "Invoice Successfull!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Jobcard_Load(object sender, EventArgs e)
@@ -150,40 +242,53 @@ namespace AutoCare_Pro
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string phone = this.txtSearch.Text.Trim();
-
-            if (phone == "")
+            try
             {
-                MessageBox.Show("Please enter a phone number to search!");
-                return;
+                string phone = this.txtSearch.Text.Trim();
+
+                if (phone == "")
+                {
+                    MessageBox.Show("Please enter a phone number to search!");
+                    return;
+                }
+
+                string sqlQuery = "SELECT * FROM Customers WHERE Phone = '" + phone + "';";
+                DataSet ds = userForm.Da.GetData(sqlQuery);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    this.lblCustomerName.Text = ds.Tables[0].Rows[0]["Name"].ToString();
+                    this.lblPhoneNumber.Text = ds.Tables[0].Rows[0]["Phone"].ToString();
+                    this.lblEmailShow.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+                    this.lblLocationShow.Text = ds.Tables[0].Rows[0]["Address"].ToString();
+                    this.lblModel.Text = ds.Tables[0].Rows[0]["Vehicle_Model"].ToString();
+                    this.lblVehicleYear.Text = ds.Tables[0].Rows[0]["Vehicle_Year"].ToString();
+                    this.lblPlateNumber.Text = ds.Tables[0].Rows[0]["Vehicle_Plate"].ToString();
+
+                    MessageBox.Show("Customer Found!", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    this.lblCustomerName.Text = "";
+                    this.lblPhoneNumber.Text = "";
+                    this.lblEmailShow.Text = "";
+                    this.lblLocationShow.Text = "";
+                    this.lblModel.Text = "";
+                    this.lblVehicleYear.Text = "";
+                    this.lblPlateNumber.Text = "";
+
+                    MessageBox.Show("No customer found with this phone number!", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
-            string sqlQuery = "SELECT * FROM Customers WHERE Phone = '" + phone + "';";
-            DataSet ds = userForm.Da.GetData(sqlQuery);
-
-            if (ds.Tables[0].Rows.Count > 0)
+            catch (SqlException ex)
             {
-                this.lblCustomerName.Text = ds.Tables[0].Rows[0]["Name"].ToString();
-                this.lblPhoneNumber.Text = ds.Tables[0].Rows[0]["Phone"].ToString();
-                this.lblEmailShow.Text = ds.Tables[0].Rows[0]["Email"].ToString();
-                this.lblLocationShow.Text = ds.Tables[0].Rows[0]["Address"].ToString();
-                this.lblModel.Text = ds.Tables[0].Rows[0]["Vehicle_Model"].ToString();
-                this.lblVehicleYear.Text = ds.Tables[0].Rows[0]["Vehicle_Year"].ToString();
-                this.lblPlateNumber.Text = ds.Tables[0].Rows[0]["Vehicle_Plate"].ToString();
-
-                MessageBox.Show("Customer Found!","Search Result",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            catch (Exception ex)
             {
-                this.lblCustomerName.Text = "";
-                this.lblPhoneNumber.Text = "";
-                this.lblEmailShow.Text = "";
-                this.lblLocationShow.Text = "";
-                this.lblModel.Text = "";
-                this.lblVehicleYear.Text = "";
-                this.lblPlateNumber.Text = "";
-
-                MessageBox.Show("No customer found with this phone number!","Search Result",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

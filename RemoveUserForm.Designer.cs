@@ -79,6 +79,7 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;

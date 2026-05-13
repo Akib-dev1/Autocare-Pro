@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,30 +25,56 @@ namespace AutoCare_Pro
                 MessageBox.Show("Please select a user to remove.");
                 return;
             }
-            string query = $"DELETE FROM user_info WHERE id='{cmbUsers.Text}'";
-            int result = AdminForm.Da.ExecuteQuery(query);
-            if (result == 0)
+            try
             {
-                MessageBox.Show("Failed to remove user. Please try again.");
+                string query = $"DELETE FROM user_info WHERE id='{cmbUsers.Text}'";
+                int result = AdminForm.Da.ExecuteQuery(query);
+                if (result == 0)
+                {
+                    MessageBox.Show("Failed to remove user. Please try again.");
+                }
+                else
+                {
+                    MessageBox.Show("User removed successfully.");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
-            else
+            catch (SqlException ex)
             {
-                MessageBox.Show("User removed successfully.");
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void RemoveUserForm_Load(object sender, EventArgs e)
         {
-            string sqlQuery = "SELECT id FROM user_info;";
-            DataSet ds = AdminForm.Da.GetData(sqlQuery);
-
-            cmbUsers.Items.Clear();
-
-            foreach (DataRow row in ds.Tables[0].Rows)
+            try
             {
-                cmbUsers.Items.Add(row["id"].ToString());
+                string sqlQuery = "SELECT id FROM user_info;";
+                DataSet ds = AdminForm.Da.GetData(sqlQuery);
+
+                cmbUsers.Items.Clear();
+
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    cmbUsers.Items.Add(row["id"].ToString());
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

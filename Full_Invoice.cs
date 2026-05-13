@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -45,19 +46,34 @@ namespace AutoCare_Pro
             this.lblSubTotalShow.Text += this.InvoiceTable.Rows[0][4].ToString();
             this.lblTaxShow.Text += this.InvoiceTable.Rows[0][6].ToString();
             this.lblGrandTotalShow.Text += this.InvoiceTable.Rows[0][7].ToString();
+            this.dgvParts.AutoGenerateColumns=false;
+            this.dgvService.AutoGenerateColumns = false;
         }
 
         private void Full_Invoice_Load(object sender, EventArgs e)
         {
-            string invoiceQuery = $"select * from invoices where invoice_id = {this.InvoiceID};";
-            this.InvoiceTable=userForm.Da.GetDataTable(invoiceQuery);
-            string jobServicesQuery = $"select * from job_services where invoice_id={this.InvoiceID};";
-            this.JobServicesTable = userForm.Da.GetDataTable(jobServicesQuery);
-            string partsQuery = $"select * from job_parts where invoice_id={this.InvoiceID};";
-            this.PartsTable = userForm.Da.GetDataTable(partsQuery);
-            string customerQuery = $"select * from customers where customer_id=(select customer_id from invoices where invoice_id={this.InvoiceID});";
-            this.CustomerTable = userForm.Da.GetDataTable(customerQuery);
-            LoadInvoiceDetails();
+            try
+            {
+                string invoiceQuery = $"select * from invoices where invoice_id = {this.InvoiceID};";
+                this.InvoiceTable = userForm.Da.GetDataTable(invoiceQuery);
+                string jobServicesQuery = $"select * from job_services where invoice_id={this.InvoiceID};";
+                this.JobServicesTable = userForm.Da.GetDataTable(jobServicesQuery);
+                string partsQuery = $"select * from job_parts where invoice_id={this.InvoiceID};";
+                this.PartsTable = userForm.Da.GetDataTable(partsQuery);
+                string customerQuery = $"select * from customers where customer_id=(select customer_id from invoices where invoice_id={this.InvoiceID});";
+                this.CustomerTable = userForm.Da.GetDataTable(customerQuery);
+                LoadInvoiceDetails();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnOk_Click(object sender, EventArgs e)

@@ -32,7 +32,6 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblLedger = new System.Windows.Forms.Label();
             this.lblOrangeCard = new System.Windows.Forms.Label();
-            this.lblJobId = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblCusDetails = new System.Windows.Forms.Label();
             this.pnlCustomer = new System.Windows.Forms.Panel();
@@ -78,7 +77,6 @@
             this.lblDiscountTitle = new System.Windows.Forms.Label();
             this.lblTaxTitle = new System.Windows.Forms.Label();
             this.lblSubtotalTitle = new System.Windows.Forms.Label();
-            this.btnPrintPdf = new System.Windows.Forms.Button();
             this.dgvService = new System.Windows.Forms.DataGridView();
             this.clmnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmnHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,7 +108,7 @@
             this.txtSearch.Location = new System.Drawing.Point(48, 21);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(347, 30);
+            this.txtSearch.Size = new System.Drawing.Size(347, 26);
             this.txtSearch.TabIndex = 0;
             // 
             // lblLedger
@@ -118,7 +116,7 @@
             this.lblLedger.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLedger.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLedger.Location = new System.Drawing.Point(45, 80);
+            this.lblLedger.Location = new System.Drawing.Point(43, 111);
             this.lblLedger.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLedger.Name = "lblLedger";
             this.lblLedger.Size = new System.Drawing.Size(64, 18);
@@ -132,28 +130,17 @@
             this.lblOrangeCard.AutoSize = true;
             this.lblOrangeCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrangeCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(19)))));
-            this.lblOrangeCard.Location = new System.Drawing.Point(110, 81);
+            this.lblOrangeCard.Location = new System.Drawing.Point(108, 112);
             this.lblOrangeCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrangeCard.Name = "lblOrangeCard";
-            this.lblOrangeCard.Size = new System.Drawing.Size(109, 17);
+            this.lblOrangeCard.Size = new System.Drawing.Size(90, 13);
             this.lblOrangeCard.TabIndex = 3;
             this.lblOrangeCard.Text = "NEW INVOICE";
-            // 
-            // lblJobId
-            // 
-            this.lblJobId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblJobId.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobId.Location = new System.Drawing.Point(43, 112);
-            this.lblJobId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblJobId.Name = "lblJobId";
-            this.lblJobId.Size = new System.Drawing.Size(295, 29);
-            this.lblJobId.TabIndex = 4;
-            this.lblJobId.Text = "Job Card #JC-2024-0042";
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,6 +188,7 @@
             // btnEditCusDetails
             // 
             this.btnEditCusDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditCusDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditCusDetails.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditCusDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCusDetails.Image")));
             this.btnEditCusDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +208,7 @@
             this.lblLocationShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocationShow.Location = new System.Drawing.Point(89, 137);
             this.lblLocationShow.Name = "lblLocationShow";
-            this.lblLocationShow.Size = new System.Drawing.Size(189, 16);
+            this.lblLocationShow.Size = new System.Drawing.Size(172, 13);
             this.lblLocationShow.TabIndex = 7;
             this.lblLocationShow.Text = "Location will appear here";
             // 
@@ -240,7 +228,7 @@
             this.lblEmailShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailShow.Location = new System.Drawing.Point(89, 113);
             this.lblEmailShow.Name = "lblEmailShow";
-            this.lblEmailShow.Size = new System.Drawing.Size(167, 16);
+            this.lblEmailShow.Size = new System.Drawing.Size(153, 13);
             this.lblEmailShow.TabIndex = 5;
             this.lblEmailShow.Text = "Email will appear here";
             // 
@@ -260,7 +248,7 @@
             this.lblPhoneNumber.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumber.Location = new System.Drawing.Point(59, 85);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(239, 18);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(206, 14);
             this.lblPhoneNumber.TabIndex = 3;
             this.lblPhoneNumber.Text = "Phone Number will appear here";
             // 
@@ -270,7 +258,7 @@
             this.lblCustomerName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerName.Location = new System.Drawing.Point(60, 66);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(191, 18);
+            this.lblCustomerName.Size = new System.Drawing.Size(157, 14);
             this.lblCustomerName.TabIndex = 2;
             this.lblCustomerName.Text = "Name will appear here";
             // 
@@ -315,7 +303,7 @@
             this.lblColorShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColorShow.Location = new System.Drawing.Point(187, 154);
             this.lblColorShow.Name = "lblColorShow";
-            this.lblColorShow.Size = new System.Drawing.Size(45, 16);
+            this.lblColorShow.Size = new System.Drawing.Size(41, 13);
             this.lblColorShow.TabIndex = 13;
             this.lblColorShow.Text = "Color";
             // 
@@ -326,13 +314,14 @@
             this.lblColor.ForeColor = System.Drawing.Color.DimGray;
             this.lblColor.Location = new System.Drawing.Point(59, 154);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(50, 18);
+            this.lblColor.Size = new System.Drawing.Size(42, 14);
             this.lblColor.TabIndex = 12;
             this.lblColor.Text = "Color";
             // 
             // btnEditVehicleDetails
             // 
             this.btnEditVehicleDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditVehicleDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditVehicleDetails.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditVehicleDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnEditVehicleDetails.Image")));
             this.btnEditVehicleDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -372,7 +361,7 @@
             this.lblPlateNumber.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlateNumber.Location = new System.Drawing.Point(187, 116);
             this.lblPlateNumber.Name = "lblPlateNumber";
-            this.lblPlateNumber.Size = new System.Drawing.Size(105, 16);
+            this.lblPlateNumber.Size = new System.Drawing.Size(95, 13);
             this.lblPlateNumber.TabIndex = 9;
             this.lblPlateNumber.Text = "Plate Number";
             // 
@@ -392,7 +381,7 @@
             this.lblVehicleYear.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleYear.Location = new System.Drawing.Point(217, 83);
             this.lblVehicleYear.Name = "lblVehicleYear";
-            this.lblVehicleYear.Size = new System.Drawing.Size(82, 16);
+            this.lblVehicleYear.Size = new System.Drawing.Size(75, 13);
             this.lblVehicleYear.TabIndex = 7;
             this.lblVehicleYear.Text = "Year  here";
             // 
@@ -412,7 +401,7 @@
             this.lblModel.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.Location = new System.Drawing.Point(59, 83);
             this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(170, 16);
+            this.lblModel.Size = new System.Drawing.Size(155, 13);
             this.lblModel.TabIndex = 5;
             this.lblModel.Text = "Model will appear here";
             // 
@@ -509,9 +498,9 @@
             this.lblEmployeeDesignation.ForeColor = System.Drawing.Color.Gray;
             this.lblEmployeeDesignation.Location = new System.Drawing.Point(918, 33);
             this.lblEmployeeDesignation.Name = "lblEmployeeDesignation";
-            this.lblEmployeeDesignation.Size = new System.Drawing.Size(115, 18);
+            this.lblEmployeeDesignation.Size = new System.Drawing.Size(62, 14);
             this.lblEmployeeDesignation.TabIndex = 12;
-            this.lblEmployeeDesignation.Text = "Floor Manager";
+            this.lblEmployeeDesignation.Text = "Manager";
             // 
             // lblEmployeeName
             // 
@@ -520,7 +509,7 @@
             this.lblEmployeeName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeName.Location = new System.Drawing.Point(918, 11);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(105, 18);
+            this.lblEmployeeName.Size = new System.Drawing.Size(84, 14);
             this.lblEmployeeName.TabIndex = 11;
             this.lblEmployeeName.Text = "Admin Staff";
             // 
@@ -539,6 +528,7 @@
             // 
             this.btnAddLabour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddLabour.BackColor = System.Drawing.Color.White;
+            this.btnAddLabour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddLabour.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLabour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(19)))));
             this.btnAddLabour.Location = new System.Drawing.Point(963, 112);
@@ -564,6 +554,7 @@
             // 
             this.btnAddinventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddinventory.BackColor = System.Drawing.Color.White;
+            this.btnAddinventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddinventory.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddinventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(19)))));
             this.btnAddinventory.Location = new System.Drawing.Point(921, 405);
@@ -596,6 +587,7 @@
             // 
             this.btnGenerateInvoice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnGenerateInvoice.BackColor = System.Drawing.Color.Moccasin;
+            this.btnGenerateInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerateInvoice.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateInvoice.Location = new System.Drawing.Point(888, 15);
             this.btnGenerateInvoice.Name = "btnGenerateInvoice";
@@ -696,18 +688,6 @@
             this.lblSubtotalTitle.Size = new System.Drawing.Size(80, 19);
             this.lblSubtotalTitle.TabIndex = 0;
             this.lblSubtotalTitle.Text = "SUBTOTAL";
-            // 
-            // btnPrintPdf
-            // 
-            this.btnPrintPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrintPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPrintPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnPrintPdf.Location = new System.Drawing.Point(1007, 73);
-            this.btnPrintPdf.Name = "btnPrintPdf";
-            this.btnPrintPdf.Size = new System.Drawing.Size(87, 33);
-            this.btnPrintPdf.TabIndex = 23;
-            this.btnPrintPdf.Text = "Print PDF";
-            this.btnPrintPdf.UseVisualStyleBackColor = false;
             // 
             // dgvService
             // 
@@ -815,13 +795,12 @@
             // 
             // Jobcard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Controls.Add(this.dgvParts);
             this.Controls.Add(this.dgvService);
-            this.Controls.Add(this.btnPrintPdf);
             this.Controls.Add(this.pnlBottombar);
             this.Controls.Add(this.btnAddinventory);
             this.Controls.Add(this.lblPartsTitle);
@@ -831,7 +810,6 @@
             this.Controls.Add(this.pnlTechnicalNote);
             this.Controls.Add(this.pnlVehicleDetails);
             this.Controls.Add(this.pnlCustomer);
-            this.Controls.Add(this.lblJobId);
             this.Controls.Add(this.lblOrangeCard);
             this.Controls.Add(this.lblLedger);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -863,7 +841,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblLedger;
         private System.Windows.Forms.Label lblOrangeCard;
-        private System.Windows.Forms.Label lblJobId;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblCusDetails;
         private System.Windows.Forms.Panel pnlCustomer;
@@ -905,7 +882,6 @@
         private System.Windows.Forms.Button btnGenerateInvoice;
         private System.Windows.Forms.Label lblGrandTotalValue;
         private System.Windows.Forms.Label lblDiscountValue;
-        private System.Windows.Forms.Button btnPrintPdf;
         private System.Windows.Forms.Button btnEditCusDetails;
         private System.Windows.Forms.Button btnEditVehicleDetails;
         private System.Windows.Forms.DataGridView dgvService;

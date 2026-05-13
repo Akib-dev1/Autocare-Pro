@@ -59,12 +59,12 @@
             this.lblAllCustomerSubtitle = new System.Windows.Forms.Label();
             this.lblAllCustomerTitlehero = new System.Windows.Forms.Label();
             this.pnlAllCustomersNav = new System.Windows.Forms.Panel();
+            this.lblSearchByPhoneNumber = new System.Windows.Forms.Label();
             this.btnAllCustomerSearchButton = new System.Windows.Forms.Button();
             this.txtAllCustomerSearch = new System.Windows.Forms.TextBox();
             this.lblAllCustomerName = new System.Windows.Forms.Label();
             this.lblAllCustomersTitle = new System.Windows.Forms.Label();
             this.pbEmployeeMimageAllCustomer = new System.Windows.Forms.PictureBox();
-            this.lblSearchByPhoneNumber = new System.Windows.Forms.Label();
             this.pnlAllCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerList)).BeginInit();
             this.pnlFleetCount.SuspendLayout();
@@ -88,9 +88,9 @@
             this.pnlAllCustomers.Controls.Add(this.lblAllCustomerTitlehero);
             this.pnlAllCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAllCustomers.Location = new System.Drawing.Point(0, 0);
-            this.pnlAllCustomers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlAllCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAllCustomers.Name = "pnlAllCustomers";
-            this.pnlAllCustomers.Size = new System.Drawing.Size(1255, 870);
+            this.pnlAllCustomers.Size = new System.Drawing.Size(941, 707);
             this.pnlAllCustomers.TabIndex = 4;
             // 
             // dgvCustomerList
@@ -142,8 +142,7 @@
             this.dgvCustomerList.EnableHeadersVisualStyles = false;
             this.dgvCustomerList.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.dgvCustomerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.dgvCustomerList.Location = new System.Drawing.Point(99, 336);
-            this.dgvCustomerList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCustomerList.Location = new System.Drawing.Point(74, 273);
             this.dgvCustomerList.MultiSelect = false;
             this.dgvCustomerList.Name = "dgvCustomerList";
             this.dgvCustomerList.ReadOnly = true;
@@ -151,7 +150,7 @@
             this.dgvCustomerList.RowHeadersWidth = 51;
             this.dgvCustomerList.RowTemplate.Height = 35;
             this.dgvCustomerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomerList.Size = new System.Drawing.Size(1069, 485);
+            this.dgvCustomerList.Size = new System.Drawing.Size(802, 394);
             this.dgvCustomerList.TabIndex = 13;
             // 
             // customerId
@@ -236,19 +235,19 @@
             this.pnlFleetCount.Controls.Add(this.lblVehicleSubscript);
             this.pnlFleetCount.Controls.Add(this.lblFleetCountValue);
             this.pnlFleetCount.Controls.Add(this.lblFleetCountTitle);
-            this.pnlFleetCount.Location = new System.Drawing.Point(487, 146);
-            this.pnlFleetCount.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.pnlFleetCount.Location = new System.Drawing.Point(365, 119);
+            this.pnlFleetCount.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.pnlFleetCount.Name = "pnlFleetCount";
-            this.pnlFleetCount.Size = new System.Drawing.Size(289, 150);
+            this.pnlFleetCount.Size = new System.Drawing.Size(218, 123);
             this.pnlFleetCount.TabIndex = 4;
             // 
             // pbFleetpic
             // 
             this.pbFleetpic.Image = ((System.Drawing.Image)(resources.GetObject("pbFleetpic.Image")));
-            this.pbFleetpic.Location = new System.Drawing.Point(19, 18);
-            this.pbFleetpic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbFleetpic.Location = new System.Drawing.Point(14, 15);
+            this.pbFleetpic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbFleetpic.Name = "pbFleetpic";
-            this.pbFleetpic.Size = new System.Drawing.Size(51, 43);
+            this.pbFleetpic.Size = new System.Drawing.Size(38, 35);
             this.pbFleetpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFleetpic.TabIndex = 3;
             this.pbFleetpic.TabStop = false;
@@ -258,9 +257,10 @@
             this.lblVehicleSubscript.AutoSize = true;
             this.lblVehicleSubscript.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleSubscript.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblVehicleSubscript.Location = new System.Drawing.Point(179, 102);
+            this.lblVehicleSubscript.Location = new System.Drawing.Point(134, 83);
+            this.lblVehicleSubscript.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVehicleSubscript.Name = "lblVehicleSubscript";
-            this.lblVehicleSubscript.Size = new System.Drawing.Size(74, 18);
+            this.lblVehicleSubscript.Size = new System.Drawing.Size(62, 14);
             this.lblVehicleSubscript.TabIndex = 2;
             this.lblVehicleSubscript.Text = "Vehicles";
             this.lblVehicleSubscript.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,9 +269,10 @@
             // 
             this.lblFleetCountValue.AutoSize = true;
             this.lblFleetCountValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFleetCountValue.Location = new System.Drawing.Point(73, 87);
+            this.lblFleetCountValue.Location = new System.Drawing.Point(55, 71);
+            this.lblFleetCountValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFleetCountValue.Name = "lblFleetCountValue";
-            this.lblFleetCountValue.Size = new System.Drawing.Size(34, 36);
+            this.lblFleetCountValue.Size = new System.Drawing.Size(28, 29);
             this.lblFleetCountValue.TabIndex = 1;
             this.lblFleetCountValue.Text = "0";
             this.lblFleetCountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -281,9 +282,10 @@
             this.lblFleetCountTitle.AutoSize = true;
             this.lblFleetCountTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFleetCountTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblFleetCountTitle.Location = new System.Drawing.Point(81, 28);
+            this.lblFleetCountTitle.Location = new System.Drawing.Point(61, 23);
+            this.lblFleetCountTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFleetCountTitle.Name = "lblFleetCountTitle";
-            this.lblFleetCountTitle.Size = new System.Drawing.Size(158, 28);
+            this.lblFleetCountTitle.Size = new System.Drawing.Size(135, 23);
             this.lblFleetCountTitle.TabIndex = 0;
             this.lblFleetCountTitle.Text = "Fleet Count";
             this.lblFleetCountTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -297,19 +299,19 @@
             this.pnlAveragePurchase.Controls.Add(this.pbAvgPurchaseIcon);
             this.pnlAveragePurchase.Controls.Add(this.lblAvgPurchaseValue);
             this.pnlAveragePurchase.Controls.Add(this.lblAvgPurchaseText);
-            this.pnlAveragePurchase.Location = new System.Drawing.Point(877, 146);
-            this.pnlAveragePurchase.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.pnlAveragePurchase.Location = new System.Drawing.Point(658, 119);
+            this.pnlAveragePurchase.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.pnlAveragePurchase.Name = "pnlAveragePurchase";
-            this.pnlAveragePurchase.Size = new System.Drawing.Size(289, 150);
+            this.pnlAveragePurchase.Size = new System.Drawing.Size(218, 123);
             this.pnlAveragePurchase.TabIndex = 4;
             // 
             // pbAvgPurchaseIcon
             // 
             this.pbAvgPurchaseIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbAvgPurchaseIcon.Image")));
-            this.pbAvgPurchaseIcon.Location = new System.Drawing.Point(19, 18);
-            this.pbAvgPurchaseIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAvgPurchaseIcon.Location = new System.Drawing.Point(14, 15);
+            this.pbAvgPurchaseIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbAvgPurchaseIcon.Name = "pbAvgPurchaseIcon";
-            this.pbAvgPurchaseIcon.Size = new System.Drawing.Size(51, 43);
+            this.pbAvgPurchaseIcon.Size = new System.Drawing.Size(38, 35);
             this.pbAvgPurchaseIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAvgPurchaseIcon.TabIndex = 3;
             this.pbAvgPurchaseIcon.TabStop = false;
@@ -318,9 +320,10 @@
             // 
             this.lblAvgPurchaseValue.AutoSize = true;
             this.lblAvgPurchaseValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvgPurchaseValue.Location = new System.Drawing.Point(89, 84);
+            this.lblAvgPurchaseValue.Location = new System.Drawing.Point(67, 68);
+            this.lblAvgPurchaseValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAvgPurchaseValue.Name = "lblAvgPurchaseValue";
-            this.lblAvgPurchaseValue.Size = new System.Drawing.Size(53, 36);
+            this.lblAvgPurchaseValue.Size = new System.Drawing.Size(43, 29);
             this.lblAvgPurchaseValue.TabIndex = 1;
             this.lblAvgPurchaseValue.Text = "$0";
             this.lblAvgPurchaseValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -330,9 +333,10 @@
             this.lblAvgPurchaseText.AutoSize = true;
             this.lblAvgPurchaseText.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvgPurchaseText.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblAvgPurchaseText.Location = new System.Drawing.Point(75, 26);
+            this.lblAvgPurchaseText.Location = new System.Drawing.Point(56, 21);
+            this.lblAvgPurchaseText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAvgPurchaseText.Name = "lblAvgPurchaseText";
-            this.lblAvgPurchaseText.Size = new System.Drawing.Size(187, 28);
+            this.lblAvgPurchaseText.Size = new System.Drawing.Size(156, 23);
             this.lblAvgPurchaseText.TabIndex = 0;
             this.lblAvgPurchaseText.Text = "Avg Purchase";
             this.lblAvgPurchaseText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -345,19 +349,19 @@
             this.pnlTotalClient.Controls.Add(this.pbTotalClient);
             this.pnlTotalClient.Controls.Add(this.lblTotalClientValue);
             this.pnlTotalClient.Controls.Add(this.lblTotalClientTitle);
-            this.pnlTotalClient.Location = new System.Drawing.Point(99, 146);
-            this.pnlTotalClient.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.pnlTotalClient.Location = new System.Drawing.Point(74, 119);
+            this.pnlTotalClient.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.pnlTotalClient.Name = "pnlTotalClient";
-            this.pnlTotalClient.Size = new System.Drawing.Size(289, 150);
+            this.pnlTotalClient.Size = new System.Drawing.Size(218, 123);
             this.pnlTotalClient.TabIndex = 3;
             // 
             // pbTotalClient
             // 
             this.pbTotalClient.Image = ((System.Drawing.Image)(resources.GetObject("pbTotalClient.Image")));
-            this.pbTotalClient.Location = new System.Drawing.Point(19, 18);
-            this.pbTotalClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbTotalClient.Location = new System.Drawing.Point(14, 15);
+            this.pbTotalClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbTotalClient.Name = "pbTotalClient";
-            this.pbTotalClient.Size = new System.Drawing.Size(51, 43);
+            this.pbTotalClient.Size = new System.Drawing.Size(38, 35);
             this.pbTotalClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTotalClient.TabIndex = 3;
             this.pbTotalClient.TabStop = false;
@@ -366,9 +370,10 @@
             // 
             this.lblTotalClientValue.AutoSize = true;
             this.lblTotalClientValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalClientValue.Location = new System.Drawing.Point(87, 87);
+            this.lblTotalClientValue.Location = new System.Drawing.Point(65, 71);
+            this.lblTotalClientValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalClientValue.Name = "lblTotalClientValue";
-            this.lblTotalClientValue.Size = new System.Drawing.Size(34, 36);
+            this.lblTotalClientValue.Size = new System.Drawing.Size(28, 29);
             this.lblTotalClientValue.TabIndex = 1;
             this.lblTotalClientValue.Text = "0";
             this.lblTotalClientValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -378,9 +383,10 @@
             this.lblTotalClientTitle.AutoSize = true;
             this.lblTotalClientTitle.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalClientTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTotalClientTitle.Location = new System.Drawing.Point(75, 26);
+            this.lblTotalClientTitle.Location = new System.Drawing.Point(56, 21);
+            this.lblTotalClientTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalClientTitle.Name = "lblTotalClientTitle";
-            this.lblTotalClientTitle.Size = new System.Drawing.Size(173, 28);
+            this.lblTotalClientTitle.Size = new System.Drawing.Size(147, 23);
             this.lblTotalClientTitle.TabIndex = 0;
             this.lblTotalClientTitle.Text = "Total Clients";
             this.lblTotalClientTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -390,9 +396,10 @@
             this.lblAllCustomerSubtitle.AutoSize = true;
             this.lblAllCustomerSubtitle.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAllCustomerSubtitle.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblAllCustomerSubtitle.Location = new System.Drawing.Point(17, 53);
+            this.lblAllCustomerSubtitle.Location = new System.Drawing.Point(13, 43);
+            this.lblAllCustomerSubtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllCustomerSubtitle.Name = "lblAllCustomerSubtitle";
-            this.lblAllCustomerSubtitle.Size = new System.Drawing.Size(247, 16);
+            this.lblAllCustomerSubtitle.Size = new System.Drawing.Size(209, 13);
             this.lblAllCustomerSubtitle.TabIndex = 1;
             this.lblAllCustomerSubtitle.Text = "Directory of calibrated client relationships.";
             // 
@@ -400,9 +407,10 @@
             // 
             this.lblAllCustomerTitlehero.AutoSize = true;
             this.lblAllCustomerTitlehero.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllCustomerTitlehero.Location = new System.Drawing.Point(15, 18);
+            this.lblAllCustomerTitlehero.Location = new System.Drawing.Point(11, 15);
+            this.lblAllCustomerTitlehero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllCustomerTitlehero.Name = "lblAllCustomerTitlehero";
-            this.lblAllCustomerTitlehero.Size = new System.Drawing.Size(190, 34);
+            this.lblAllCustomerTitlehero.Size = new System.Drawing.Size(150, 27);
             this.lblAllCustomerTitlehero.TabIndex = 0;
             this.lblAllCustomerTitlehero.Text = "Total Clients";
             // 
@@ -417,20 +425,33 @@
             this.pnlAllCustomersNav.Controls.Add(this.pbEmployeeMimageAllCustomer);
             this.pnlAllCustomersNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAllCustomersNav.Location = new System.Drawing.Point(0, 0);
-            this.pnlAllCustomersNav.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlAllCustomersNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAllCustomersNav.Name = "pnlAllCustomersNav";
-            this.pnlAllCustomersNav.Size = new System.Drawing.Size(1255, 74);
+            this.pnlAllCustomersNav.Size = new System.Drawing.Size(941, 60);
             this.pnlAllCustomersNav.TabIndex = 5;
+            // 
+            // lblSearchByPhoneNumber
+            // 
+            this.lblSearchByPhoneNumber.AutoSize = true;
+            this.lblSearchByPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchByPhoneNumber.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblSearchByPhoneNumber.Location = new System.Drawing.Point(202, 0);
+            this.lblSearchByPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchByPhoneNumber.Name = "lblSearchByPhoneNumber";
+            this.lblSearchByPhoneNumber.Size = new System.Drawing.Size(170, 15);
+            this.lblSearchByPhoneNumber.TabIndex = 6;
+            this.lblSearchByPhoneNumber.Text = "Search by Phone Number";
             // 
             // btnAllCustomerSearchButton
             // 
+            this.btnAllCustomerSearchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAllCustomerSearchButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllCustomerSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("btnAllCustomerSearchButton.Image")));
             this.btnAllCustomerSearchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllCustomerSearchButton.Location = new System.Drawing.Point(552, 17);
-            this.btnAllCustomerSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAllCustomerSearchButton.Location = new System.Drawing.Point(414, 14);
+            this.btnAllCustomerSearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAllCustomerSearchButton.Name = "btnAllCustomerSearchButton";
-            this.btnAllCustomerSearchButton.Size = new System.Drawing.Size(131, 34);
+            this.btnAllCustomerSearchButton.Size = new System.Drawing.Size(98, 28);
             this.btnAllCustomerSearchButton.TabIndex = 4;
             this.btnAllCustomerSearchButton.Text = "Search";
             this.btnAllCustomerSearchButton.UseVisualStyleBackColor = true;
@@ -438,11 +459,11 @@
             // 
             // txtAllCustomerSearch
             // 
-            this.txtAllCustomerSearch.Location = new System.Drawing.Point(264, 20);
-            this.txtAllCustomerSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAllCustomerSearch.Location = new System.Drawing.Point(198, 16);
+            this.txtAllCustomerSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAllCustomerSearch.Multiline = true;
             this.txtAllCustomerSearch.Name = "txtAllCustomerSearch";
-            this.txtAllCustomerSearch.Size = new System.Drawing.Size(295, 29);
+            this.txtAllCustomerSearch.Size = new System.Drawing.Size(222, 24);
             this.txtAllCustomerSearch.TabIndex = 3;
             // 
             // lblAllCustomerName
@@ -450,9 +471,10 @@
             this.lblAllCustomerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAllCustomerName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAllCustomerName.ForeColor = System.Drawing.Color.Brown;
-            this.lblAllCustomerName.Location = new System.Drawing.Point(1043, 22);
+            this.lblAllCustomerName.Location = new System.Drawing.Point(782, 18);
+            this.lblAllCustomerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllCustomerName.Name = "lblAllCustomerName";
-            this.lblAllCustomerName.Size = new System.Drawing.Size(88, 25);
+            this.lblAllCustomerName.Size = new System.Drawing.Size(66, 20);
             this.lblAllCustomerName.TabIndex = 2;
             this.lblAllCustomerName.Text = "ADMIN";
             this.lblAllCustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -460,9 +482,10 @@
             // lblAllCustomersTitle
             // 
             this.lblAllCustomersTitle.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllCustomersTitle.Location = new System.Drawing.Point(16, 17);
+            this.lblAllCustomersTitle.Location = new System.Drawing.Point(12, 14);
+            this.lblAllCustomersTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllCustomersTitle.Name = "lblAllCustomersTitle";
-            this.lblAllCustomersTitle.Size = new System.Drawing.Size(225, 34);
+            this.lblAllCustomersTitle.Size = new System.Drawing.Size(169, 28);
             this.lblAllCustomersTitle.TabIndex = 1;
             this.lblAllCustomersTitle.Text = "ALL CUSTOMERS";
             this.lblAllCustomersTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -471,34 +494,23 @@
             // 
             this.pbEmployeeMimageAllCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbEmployeeMimageAllCustomer.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimageAllCustomer.Image")));
-            this.pbEmployeeMimageAllCustomer.Location = new System.Drawing.Point(1136, 17);
-            this.pbEmployeeMimageAllCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbEmployeeMimageAllCustomer.Location = new System.Drawing.Point(852, 14);
+            this.pbEmployeeMimageAllCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbEmployeeMimageAllCustomer.Name = "pbEmployeeMimageAllCustomer";
-            this.pbEmployeeMimageAllCustomer.Size = new System.Drawing.Size(53, 34);
+            this.pbEmployeeMimageAllCustomer.Size = new System.Drawing.Size(40, 28);
             this.pbEmployeeMimageAllCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEmployeeMimageAllCustomer.TabIndex = 0;
             this.pbEmployeeMimageAllCustomer.TabStop = false;
             // 
-            // lblSearchByPhoneNumber
-            // 
-            this.lblSearchByPhoneNumber.AutoSize = true;
-            this.lblSearchByPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchByPhoneNumber.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSearchByPhoneNumber.Location = new System.Drawing.Point(270, 0);
-            this.lblSearchByPhoneNumber.Name = "lblSearchByPhoneNumber";
-            this.lblSearchByPhoneNumber.Size = new System.Drawing.Size(200, 18);
-            this.lblSearchByPhoneNumber.TabIndex = 6;
-            this.lblSearchByPhoneNumber.Text = "Search by Phone Number";
-            // 
             // AllCustomers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlAllCustomersNav);
             this.Controls.Add(this.pnlAllCustomers);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AllCustomers";
-            this.Size = new System.Drawing.Size(1255, 870);
+            this.Size = new System.Drawing.Size(941, 707);
             this.Load += new System.EventHandler(this.AllCustomers_Load);
             this.pnlAllCustomers.ResumeLayout(false);
             this.pnlAllCustomers.PerformLayout();

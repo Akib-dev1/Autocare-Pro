@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userForm));
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnNavlink4 = new System.Windows.Forms.Button();
             this.btnNavlink3 = new System.Windows.Forms.Button();
             this.btnNavlink2 = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.pnlSidebar.Controls.Add(this.btnLogOut);
             this.pnlSidebar.Controls.Add(this.btnNavlink4);
             this.pnlSidebar.Controls.Add(this.btnNavlink3);
             this.pnlSidebar.Controls.Add(this.btnNavlink2);
@@ -55,9 +57,28 @@
             this.pnlSidebar.Size = new System.Drawing.Size(200, 746);
             this.pnlSidebar.TabIndex = 0;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 647);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(200, 48);
+            this.btnLogOut.TabIndex = 6;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // btnNavlink4
             // 
             this.btnNavlink4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnNavlink4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNavlink4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
             this.btnNavlink4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavlink4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,6 +96,7 @@
             // btnNavlink3
             // 
             this.btnNavlink3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnNavlink3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNavlink3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
             this.btnNavlink3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavlink3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,6 +114,7 @@
             // btnNavlink2
             // 
             this.btnNavlink2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnNavlink2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNavlink2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
             this.btnNavlink2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavlink2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,6 +132,7 @@
             // btnNavlink1
             // 
             this.btnNavlink1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnNavlink1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNavlink1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
             this.btnNavlink1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavlink1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,5 +206,6 @@
         private System.Windows.Forms.Button btnNavlink2;
         private System.Windows.Forms.Button btnNavlink4;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

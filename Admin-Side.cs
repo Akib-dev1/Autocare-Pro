@@ -13,6 +13,7 @@ namespace AutoCare_Pro
     public partial class AdminForm : Form
     {
         UserControl CurrentPage { get; set; }
+        loginPage LoginPage { get; set; }
         public static DbHelper Da { get; set; }
         public AdminForm()
         {
@@ -21,18 +22,20 @@ namespace AutoCare_Pro
             this.btnAdminNavlink1.BackColor = Color.RoyalBlue;
             Da = new DbHelper();
         }
+        public AdminForm(loginPage lp) : this() 
+        {
+            this.LoginPage = lp;
+        }
         private void LoadPage(UserControl page)
         {
-            // Remove old page
             if (CurrentPage != null)
             {
                 panelContainer.Controls.Remove(CurrentPage);
-                CurrentPage.Dispose(); // optional (depends on reuse)
+                CurrentPage.Dispose();
             }
 
             CurrentPage = page;
 
-            // Setup new page
             page.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(page);
             page.BringToFront();
@@ -91,6 +94,12 @@ namespace AutoCare_Pro
             this.btnAdminNavlink1.BackColor = Color.MidnightBlue;
             this.btnAdminNavlink2.BackColor = Color.MidnightBlue;
             this.btnAdminNavlink3.BackColor = Color.MidnightBlue;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.LoginPage.Show();
+            this.Hide();
         }
     }
 }

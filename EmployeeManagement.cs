@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,10 +19,23 @@ namespace AutoCare_Pro
         }
         private void LoadEmployeeData()
         {
-            string sql = "SELECT * FROM user_info";
-            DataTable dt = AdminForm.Da.GetDataTable(sql);
-            this.dgvCustomerList.DataSource = dt;
-            this.lblTotalPersonnel.Text = dt.Rows.Count.ToString();
+            try
+            {
+                string sql = "SELECT * FROM user_info";
+                DataTable dt = AdminForm.Da.GetDataTable(sql);
+                this.dgvCustomerList.DataSource = dt;
+                this.lblTotalPersonnel.Text = dt.Rows.Count.ToString();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
@@ -57,18 +71,31 @@ namespace AutoCare_Pro
 
         private void btnEmployeeSearchButton_Click(object sender, EventArgs e)
         {
-            string searchText = txtEmployeeSearch.Text.Trim();
-
-            if (string.IsNullOrEmpty(searchText))
+            try
             {
-                MessageBox.Show("Please enter an Name to search.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            string sql = $"SELECT * FROM user_info WHERE Name LIKE '%{searchText}%'";
+                string searchText = txtEmployeeSearch.Text.Trim();
 
-            DataTable dt = AdminForm.Da.GetDataTable(sql);
-            this.dgvCustomerList.DataSource = dt;
-            
+                if (string.IsNullOrEmpty(searchText))
+                {
+                    MessageBox.Show("Please enter an Name to search.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string sql = $"SELECT * FROM user_info WHERE Name LIKE '%{searchText}%'";
+
+                DataTable dt = AdminForm.Da.GetDataTable(sql);
+                this.dgvCustomerList.DataSource = dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

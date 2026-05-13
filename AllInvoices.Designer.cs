@@ -32,19 +32,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlAllInvoicesNav = new System.Windows.Forms.Panel();
+            this.lblSearchByName = new System.Windows.Forms.Label();
             this.btnAllInvoicesSearchButton = new System.Windows.Forms.Button();
             this.txtAllInvoicesSearch = new System.Windows.Forms.TextBox();
             this.lblAllInvoicesName = new System.Windows.Forms.Label();
             this.lblAllInvoicesTitle = new System.Windows.Forms.Label();
             this.pbEmployeeMimageAllInvoices = new System.Windows.Forms.PictureBox();
             this.dgvAllInvoices = new System.Windows.Forms.DataGridView();
-            this.lblAllInvoiceTitleHero = new System.Windows.Forms.Label();
-            this.lblAllInvoicesSubtitle = new System.Windows.Forms.Label();
-            this.lblSearchByName = new System.Windows.Forms.Label();
             this.invoiceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblAllInvoiceTitleHero = new System.Windows.Forms.Label();
+            this.lblAllInvoicesSubtitle = new System.Windows.Forms.Label();
             this.pnlAllInvoicesNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageAllInvoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllInvoices)).BeginInit();
@@ -59,19 +59,35 @@
             this.pnlAllInvoicesNav.Controls.Add(this.lblAllInvoicesName);
             this.pnlAllInvoicesNav.Controls.Add(this.lblAllInvoicesTitle);
             this.pnlAllInvoicesNav.Controls.Add(this.pbEmployeeMimageAllInvoices);
+            this.pnlAllInvoicesNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAllInvoicesNav.Location = new System.Drawing.Point(0, 0);
+            this.pnlAllInvoicesNav.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAllInvoicesNav.Name = "pnlAllInvoicesNav";
-            this.pnlAllInvoicesNav.Size = new System.Drawing.Size(1241, 77);
+            this.pnlAllInvoicesNav.Size = new System.Drawing.Size(931, 63);
             this.pnlAllInvoicesNav.TabIndex = 6;
+            // 
+            // lblSearchByName
+            // 
+            this.lblSearchByName.AutoSize = true;
+            this.lblSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchByName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblSearchByName.Location = new System.Drawing.Point(197, 0);
+            this.lblSearchByName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchByName.Name = "lblSearchByName";
+            this.lblSearchByName.Size = new System.Drawing.Size(135, 15);
+            this.lblSearchByName.TabIndex = 10;
+            this.lblSearchByName.Text = "Search by Invoice Id";
             // 
             // btnAllInvoicesSearchButton
             // 
+            this.btnAllInvoicesSearchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAllInvoicesSearchButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllInvoicesSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("btnAllInvoicesSearchButton.Image")));
             this.btnAllInvoicesSearchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllInvoicesSearchButton.Location = new System.Drawing.Point(553, 20);
+            this.btnAllInvoicesSearchButton.Location = new System.Drawing.Point(391, 22);
+            this.btnAllInvoicesSearchButton.Margin = new System.Windows.Forms.Padding(2);
             this.btnAllInvoicesSearchButton.Name = "btnAllInvoicesSearchButton";
-            this.btnAllInvoicesSearchButton.Size = new System.Drawing.Size(130, 30);
+            this.btnAllInvoicesSearchButton.Size = new System.Drawing.Size(98, 25);
             this.btnAllInvoicesSearchButton.TabIndex = 4;
             this.btnAllInvoicesSearchButton.Text = "Search";
             this.btnAllInvoicesSearchButton.UseVisualStyleBackColor = true;
@@ -79,39 +95,46 @@
             // 
             // txtAllInvoicesSearch
             // 
-            this.txtAllInvoicesSearch.Location = new System.Drawing.Point(264, 20);
+            this.txtAllInvoicesSearch.Location = new System.Drawing.Point(174, 22);
+            this.txtAllInvoicesSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtAllInvoicesSearch.Multiline = true;
             this.txtAllInvoicesSearch.Name = "txtAllInvoicesSearch";
-            this.txtAllInvoicesSearch.Size = new System.Drawing.Size(294, 30);
+            this.txtAllInvoicesSearch.Size = new System.Drawing.Size(222, 25);
             this.txtAllInvoicesSearch.TabIndex = 3;
             // 
             // lblAllInvoicesName
             // 
+            this.lblAllInvoicesName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAllInvoicesName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAllInvoicesName.ForeColor = System.Drawing.Color.Brown;
-            this.lblAllInvoicesName.Location = new System.Drawing.Point(1042, 20);
+            this.lblAllInvoicesName.Location = new System.Drawing.Point(784, 22);
+            this.lblAllInvoicesName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllInvoicesName.Name = "lblAllInvoicesName";
-            this.lblAllInvoicesName.Size = new System.Drawing.Size(88, 25);
+            this.lblAllInvoicesName.Size = new System.Drawing.Size(66, 20);
             this.lblAllInvoicesName.TabIndex = 2;
             this.lblAllInvoicesName.Text = "ADMIN";
             this.lblAllInvoicesName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAllInvoicesTitle
             // 
+            this.lblAllInvoicesTitle.AutoSize = true;
             this.lblAllInvoicesTitle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllInvoicesTitle.Location = new System.Drawing.Point(16, 20);
+            this.lblAllInvoicesTitle.Location = new System.Drawing.Point(36, 25);
+            this.lblAllInvoicesTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllInvoicesTitle.Name = "lblAllInvoicesTitle";
-            this.lblAllInvoicesTitle.Size = new System.Drawing.Size(225, 35);
+            this.lblAllInvoicesTitle.Size = new System.Drawing.Size(134, 18);
             this.lblAllInvoicesTitle.TabIndex = 1;
             this.lblAllInvoicesTitle.Text = "ALL INVOICES";
             this.lblAllInvoicesTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbEmployeeMimageAllInvoices
             // 
+            this.pbEmployeeMimageAllInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbEmployeeMimageAllInvoices.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimageAllInvoices.Image")));
-            this.pbEmployeeMimageAllInvoices.Location = new System.Drawing.Point(1136, 15);
+            this.pbEmployeeMimageAllInvoices.Location = new System.Drawing.Point(854, 18);
+            this.pbEmployeeMimageAllInvoices.Margin = new System.Windows.Forms.Padding(2);
             this.pbEmployeeMimageAllInvoices.Name = "pbEmployeeMimageAllInvoices";
-            this.pbEmployeeMimageAllInvoices.Size = new System.Drawing.Size(54, 35);
+            this.pbEmployeeMimageAllInvoices.Size = new System.Drawing.Size(40, 28);
             this.pbEmployeeMimageAllInvoices.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEmployeeMimageAllInvoices.TabIndex = 0;
             this.pbEmployeeMimageAllInvoices.TabStop = false;
@@ -120,6 +143,9 @@
             // 
             this.dgvAllInvoices.AllowUserToAddRows = false;
             this.dgvAllInvoices.AllowUserToDeleteRows = false;
+            this.dgvAllInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAllInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAllInvoices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -144,45 +170,14 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAllInvoices.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAllInvoices.Location = new System.Drawing.Point(48, 155);
+            this.dgvAllInvoices.Location = new System.Drawing.Point(36, 126);
+            this.dgvAllInvoices.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAllInvoices.Name = "dgvAllInvoices";
             this.dgvAllInvoices.ReadOnly = true;
             this.dgvAllInvoices.RowHeadersWidth = 51;
             this.dgvAllInvoices.RowTemplate.Height = 24;
-            this.dgvAllInvoices.Size = new System.Drawing.Size(1142, 507);
+            this.dgvAllInvoices.Size = new System.Drawing.Size(856, 374);
             this.dgvAllInvoices.TabIndex = 7;
-            // 
-            // lblAllInvoiceTitleHero
-            // 
-            this.lblAllInvoiceTitleHero.AutoSize = true;
-            this.lblAllInvoiceTitleHero.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllInvoiceTitleHero.Location = new System.Drawing.Point(45, 88);
-            this.lblAllInvoiceTitleHero.Name = "lblAllInvoiceTitleHero";
-            this.lblAllInvoiceTitleHero.Size = new System.Drawing.Size(210, 34);
-            this.lblAllInvoiceTitleHero.TabIndex = 8;
-            this.lblAllInvoiceTitleHero.Text = "Sales Records";
-            // 
-            // lblAllInvoicesSubtitle
-            // 
-            this.lblAllInvoicesSubtitle.AutoSize = true;
-            this.lblAllInvoicesSubtitle.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllInvoicesSubtitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblAllInvoicesSubtitle.Location = new System.Drawing.Point(48, 122);
-            this.lblAllInvoicesSubtitle.Name = "lblAllInvoicesSubtitle";
-            this.lblAllInvoicesSubtitle.Size = new System.Drawing.Size(252, 16);
-            this.lblAllInvoicesSubtitle.TabIndex = 9;
-            this.lblAllInvoicesSubtitle.Text = "AutoCare Pro High-Performance Telemetry";
-            // 
-            // lblSearchByName
-            // 
-            this.lblSearchByName.AutoSize = true;
-            this.lblSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchByName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSearchByName.Location = new System.Drawing.Point(270, 0);
-            this.lblSearchByName.Name = "lblSearchByName";
-            this.lblSearchByName.Size = new System.Drawing.Size(159, 18);
-            this.lblSearchByName.TabIndex = 10;
-            this.lblSearchByName.Text = "Search by Invoice Id";
             // 
             // invoiceno
             // 
@@ -216,16 +211,40 @@
             this.amount.Name = "amount";
             this.amount.ReadOnly = true;
             // 
+            // lblAllInvoiceTitleHero
+            // 
+            this.lblAllInvoiceTitleHero.AutoSize = true;
+            this.lblAllInvoiceTitleHero.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllInvoiceTitleHero.Location = new System.Drawing.Point(34, 72);
+            this.lblAllInvoiceTitleHero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllInvoiceTitleHero.Name = "lblAllInvoiceTitleHero";
+            this.lblAllInvoiceTitleHero.Size = new System.Drawing.Size(166, 27);
+            this.lblAllInvoiceTitleHero.TabIndex = 8;
+            this.lblAllInvoiceTitleHero.Text = "Sales Records";
+            // 
+            // lblAllInvoicesSubtitle
+            // 
+            this.lblAllInvoicesSubtitle.AutoSize = true;
+            this.lblAllInvoicesSubtitle.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllInvoicesSubtitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblAllInvoicesSubtitle.Location = new System.Drawing.Point(36, 99);
+            this.lblAllInvoicesSubtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllInvoicesSubtitle.Name = "lblAllInvoicesSubtitle";
+            this.lblAllInvoicesSubtitle.Size = new System.Drawing.Size(212, 13);
+            this.lblAllInvoicesSubtitle.TabIndex = 9;
+            this.lblAllInvoicesSubtitle.Text = "AutoCare Pro High-Performance Telemetry";
+            // 
             // AllInvoices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblAllInvoicesSubtitle);
             this.Controls.Add(this.lblAllInvoiceTitleHero);
             this.Controls.Add(this.dgvAllInvoices);
             this.Controls.Add(this.pnlAllInvoicesNav);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AllInvoices";
-            this.Size = new System.Drawing.Size(1241, 662);
+            this.Size = new System.Drawing.Size(931, 538);
             this.Load += new System.EventHandler(this.AllInvoices_Load);
             this.pnlAllInvoicesNav.ResumeLayout(false);
             this.pnlAllInvoicesNav.PerformLayout();

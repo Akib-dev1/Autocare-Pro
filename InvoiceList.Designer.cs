@@ -37,8 +37,6 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvInvoice = new System.Windows.Forms.DataGridView();
-            this.pnlTopBar = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.InvoiceId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,8 @@
             this.GrandTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewButton = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pnlTopBar = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).BeginInit();
             this.pnlTopBar.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,26 +150,6 @@
             this.dgvInvoice.TabIndex = 11;
             this.dgvInvoice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoice_CellContentClick);
             // 
-            // pnlTopBar
-            // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
-            this.pnlTopBar.Controls.Add(this.lblTitle);
-            this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
-            this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(1160, 88);
-            this.pnlTopBar.TabIndex = 9;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(29, 27);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(268, 35);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Invoice Database";
-            // 
             // InvoiceId
             // 
             this.InvoiceId.DataPropertyName = "invoice_id";
@@ -244,6 +225,26 @@
             this.viewButton.ReadOnly = true;
             this.viewButton.Text = "View";
             this.viewButton.UseColumnTextForButtonValue = true;
+            // 
+            // pnlTopBar
+            // 
+            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            this.pnlTopBar.Controls.Add(this.lblTitle);
+            this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopBar.Name = "pnlTopBar";
+            this.pnlTopBar.Size = new System.Drawing.Size(1160, 88);
+            this.pnlTopBar.TabIndex = 9;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(29, 27);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(268, 35);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Invoice Database";
             // 
             // InvoiceList
             // 

@@ -141,6 +141,7 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;

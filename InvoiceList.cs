@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,21 @@ namespace AutoCare_Pro
 
         private void InvoiceList_Load(object sender, EventArgs e)
         {
-            DataSet ds = userForm.Da.GetData("select * from invoices where employe_id='"+userForm.EmpId+"';");
-            this.dgvInvoice.DataSource = ds.Tables[0];
+            try
+            {
+                DataSet ds = userForm.Da.GetData("select * from invoices where employe_id='" + userForm.EmpId + "';");
+                this.dgvInvoice.DataSource = ds.Tables[0];
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -32,16 +46,29 @@ namespace AutoCare_Pro
             }
             else
             {
-                string sqlQuery = "select * From invoices where customer_id=(Select customer_id from customers where phone='" + this.txtSearch.Text + "');";
-                DataSet ds = userForm.Da.GetData(sqlQuery);
-                this.dgvInvoice.DataSource = ds.Tables[0];
-                if (ds.Tables[0].Rows.Count > 0)
+                try
                 {
-                    MessageBox.Show("Customer found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string sqlQuery = "select * From invoices where customer_id=(Select customer_id from customers where phone='" + this.txtSearch.Text + "');";
+                    DataSet ds = userForm.Da.GetData(sqlQuery);
+                    this.dgvInvoice.DataSource = ds.Tables[0];
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        MessageBox.Show("Customer found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Customer not found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (SqlException ex)
                 {
-                    MessageBox.Show("Customer not found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             

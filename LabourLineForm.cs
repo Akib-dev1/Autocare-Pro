@@ -22,6 +22,12 @@ namespace AutoCare_Pro
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(this.rtextDescription.Text.Trim()) || this.numHours.Value == 0 || this.numRate.Value == 0)
+            {
+                MessageBox.Show("Fields can't be empty.", "Input Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             this.LabourDescription = this.rtextDescription.Text.Trim();
             this.Hours = Convert.ToDouble(this.numHours.Value);
             this.Rate = Convert.ToDouble(this.numRate.Value);

@@ -41,8 +41,8 @@ namespace AutoCare_Pro
         public DbHelper()
         {
             //string connectionString = "Data Source=AKIB-LAPTOP\\SQLEXPRESS;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
-            string connectionString = "Data Source=RAFI\\SQLEXPRESS;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=rafi123;Encrypt=False";
-            //string connectionString = "Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
+            //string connectionString = "Data Source=RAFI\\SQLEXPRESS;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=rafi123;Encrypt=False";
+            string connectionString = "Data Source=AKIB\\SQLMAIN;Initial Catalog=AutoCarePro;Persist Security Info=True;User ID=sa;Password=password@Ak;Encrypt=False";
             this.Sqlcon = new SqlConnection(connectionString);
             Sqlcon.Open();
         }

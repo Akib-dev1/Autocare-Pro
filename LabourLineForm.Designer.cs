@@ -116,6 +116,12 @@
             // 
             // numHours
             // 
+            this.numHours.DecimalPlaces = 1;
+            this.numHours.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.numHours.Location = new System.Drawing.Point(213, 168);
             this.numHours.Name = "numHours";
             this.numHours.Size = new System.Drawing.Size(120, 20);
@@ -123,6 +129,7 @@
             // 
             // numRate
             // 
+            this.numRate.DecimalPlaces = 2;
             this.numRate.Location = new System.Drawing.Point(213, 205);
             this.numRate.Name = "numRate";
             this.numRate.Size = new System.Drawing.Size(120, 20);

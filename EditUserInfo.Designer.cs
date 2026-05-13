@@ -166,6 +166,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;

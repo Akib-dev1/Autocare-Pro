@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlEmployeeNav = new System.Windows.Forms.Panel();
+            this.lblSearchByName = new System.Windows.Forms.Label();
             this.btnEmployeeSearchButton = new System.Windows.Forms.Button();
             this.txtEmployeeSearch = new System.Windows.Forms.TextBox();
             this.lblReportName = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemoveEmployee = new System.Windows.Forms.Button();
             this.btnEditDetails = new System.Windows.Forms.Button();
-            this.lblSearchByName = new System.Windows.Forms.Label();
             this.pnlEmployeeNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimage)).BeginInit();
             this.pnlTotalPersonnel.SuspendLayout();
@@ -71,20 +71,33 @@
             this.pnlEmployeeNav.Controls.Add(this.pbEmployeeMimage);
             this.pnlEmployeeNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEmployeeNav.Location = new System.Drawing.Point(0, 0);
-            this.pnlEmployeeNav.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlEmployeeNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlEmployeeNav.Name = "pnlEmployeeNav";
-            this.pnlEmployeeNav.Size = new System.Drawing.Size(1255, 70);
+            this.pnlEmployeeNav.Size = new System.Drawing.Size(941, 57);
             this.pnlEmployeeNav.TabIndex = 1;
+            // 
+            // lblSearchByName
+            // 
+            this.lblSearchByName.AutoSize = true;
+            this.lblSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchByName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblSearchByName.Location = new System.Drawing.Point(186, 2);
+            this.lblSearchByName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchByName.Name = "lblSearchByName";
+            this.lblSearchByName.Size = new System.Drawing.Size(112, 15);
+            this.lblSearchByName.TabIndex = 5;
+            this.lblSearchByName.Text = "Search by Name";
             // 
             // btnEmployeeSearchButton
             // 
+            this.btnEmployeeSearchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEmployeeSearchButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployeeSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeeSearchButton.Image")));
             this.btnEmployeeSearchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployeeSearchButton.Location = new System.Drawing.Point(535, 17);
-            this.btnEmployeeSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEmployeeSearchButton.Location = new System.Drawing.Point(401, 14);
+            this.btnEmployeeSearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEmployeeSearchButton.Name = "btnEmployeeSearchButton";
-            this.btnEmployeeSearchButton.Size = new System.Drawing.Size(131, 36);
+            this.btnEmployeeSearchButton.Size = new System.Drawing.Size(98, 29);
             this.btnEmployeeSearchButton.TabIndex = 4;
             this.btnEmployeeSearchButton.Text = "Search";
             this.btnEmployeeSearchButton.UseVisualStyleBackColor = true;
@@ -92,11 +105,11 @@
             // 
             // txtEmployeeSearch
             // 
-            this.txtEmployeeSearch.Location = new System.Drawing.Point(243, 20);
-            this.txtEmployeeSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmployeeSearch.Location = new System.Drawing.Point(182, 16);
+            this.txtEmployeeSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmployeeSearch.Multiline = true;
             this.txtEmployeeSearch.Name = "txtEmployeeSearch";
-            this.txtEmployeeSearch.Size = new System.Drawing.Size(295, 31);
+            this.txtEmployeeSearch.Size = new System.Drawing.Size(222, 26);
             this.txtEmployeeSearch.TabIndex = 3;
             // 
             // lblReportName
@@ -104,9 +117,10 @@
             this.lblReportName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblReportName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReportName.ForeColor = System.Drawing.Color.Brown;
-            this.lblReportName.Location = new System.Drawing.Point(1088, 22);
+            this.lblReportName.Location = new System.Drawing.Point(816, 18);
+            this.lblReportName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReportName.Name = "lblReportName";
-            this.lblReportName.Size = new System.Drawing.Size(88, 25);
+            this.lblReportName.Size = new System.Drawing.Size(66, 20);
             this.lblReportName.TabIndex = 2;
             this.lblReportName.Text = "ADMIN";
             this.lblReportName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -115,9 +129,10 @@
             // 
             this.lblReportTitle.AutoSize = true;
             this.lblReportTitle.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportTitle.Location = new System.Drawing.Point(12, 25);
+            this.lblReportTitle.Location = new System.Drawing.Point(9, 20);
+            this.lblReportTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReportTitle.Name = "lblReportTitle";
-            this.lblReportTitle.Size = new System.Drawing.Size(209, 21);
+            this.lblReportTitle.Size = new System.Drawing.Size(169, 17);
             this.lblReportTitle.TabIndex = 1;
             this.lblReportTitle.Text = "Employee Management";
             this.lblReportTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,10 +141,10 @@
             // 
             this.pbEmployeeMimage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbEmployeeMimage.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployeeMimage.Image")));
-            this.pbEmployeeMimage.Location = new System.Drawing.Point(1181, 17);
-            this.pbEmployeeMimage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbEmployeeMimage.Location = new System.Drawing.Point(886, 14);
+            this.pbEmployeeMimage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbEmployeeMimage.Name = "pbEmployeeMimage";
-            this.pbEmployeeMimage.Size = new System.Drawing.Size(53, 34);
+            this.pbEmployeeMimage.Size = new System.Drawing.Size(40, 28);
             this.pbEmployeeMimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEmployeeMimage.TabIndex = 0;
             this.pbEmployeeMimage.TabStop = false;
@@ -141,19 +156,19 @@
             this.pnlTotalPersonnel.Controls.Add(this.pbPersonnel);
             this.pnlTotalPersonnel.Controls.Add(this.lblTotalPersonnel);
             this.pnlTotalPersonnel.Controls.Add(this.lblPersonnel);
-            this.pnlTotalPersonnel.Location = new System.Drawing.Point(81, 172);
-            this.pnlTotalPersonnel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlTotalPersonnel.Location = new System.Drawing.Point(61, 140);
+            this.pnlTotalPersonnel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlTotalPersonnel.Name = "pnlTotalPersonnel";
-            this.pnlTotalPersonnel.Size = new System.Drawing.Size(268, 151);
+            this.pnlTotalPersonnel.Size = new System.Drawing.Size(201, 123);
             this.pnlTotalPersonnel.TabIndex = 3;
             // 
             // pbPersonnel
             // 
             this.pbPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("pbPersonnel.Image")));
-            this.pbPersonnel.Location = new System.Drawing.Point(23, 84);
-            this.pbPersonnel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbPersonnel.Location = new System.Drawing.Point(17, 68);
+            this.pbPersonnel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbPersonnel.Name = "pbPersonnel";
-            this.pbPersonnel.Size = new System.Drawing.Size(47, 44);
+            this.pbPersonnel.Size = new System.Drawing.Size(35, 36);
             this.pbPersonnel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPersonnel.TabIndex = 2;
             this.pbPersonnel.TabStop = false;
@@ -162,9 +177,10 @@
             // 
             this.lblTotalPersonnel.AutoSize = true;
             this.lblTotalPersonnel.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPersonnel.Location = new System.Drawing.Point(109, 89);
+            this.lblTotalPersonnel.Location = new System.Drawing.Point(82, 72);
+            this.lblTotalPersonnel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalPersonnel.Name = "lblTotalPersonnel";
-            this.lblTotalPersonnel.Size = new System.Drawing.Size(34, 36);
+            this.lblTotalPersonnel.Size = new System.Drawing.Size(28, 29);
             this.lblTotalPersonnel.TabIndex = 1;
             this.lblTotalPersonnel.Text = "0";
             this.lblTotalPersonnel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,9 +190,10 @@
             this.lblPersonnel.AutoSize = true;
             this.lblPersonnel.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersonnel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblPersonnel.Location = new System.Drawing.Point(17, 28);
+            this.lblPersonnel.Location = new System.Drawing.Point(13, 23);
+            this.lblPersonnel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPersonnel.Name = "lblPersonnel";
-            this.lblPersonnel.Size = new System.Drawing.Size(213, 28);
+            this.lblPersonnel.Size = new System.Drawing.Size(180, 23);
             this.lblPersonnel.TabIndex = 0;
             this.lblPersonnel.Text = "Total Personnel";
             this.lblPersonnel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,9 +203,10 @@
             this.lblReportSalesAnalytics.AutoSize = true;
             this.lblReportSalesAnalytics.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReportSalesAnalytics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblReportSalesAnalytics.Location = new System.Drawing.Point(75, 102);
+            this.lblReportSalesAnalytics.Location = new System.Drawing.Point(56, 83);
+            this.lblReportSalesAnalytics.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReportSalesAnalytics.Name = "lblReportSalesAnalytics";
-            this.lblReportSalesAnalytics.Size = new System.Drawing.Size(217, 40);
+            this.lblReportSalesAnalytics.Size = new System.Drawing.Size(177, 33);
             this.lblReportSalesAnalytics.TabIndex = 4;
             this.lblReportSalesAnalytics.Text = "Staff Roster";
             this.lblReportSalesAnalytics.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -197,11 +215,12 @@
             // 
             this.btnAddEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.btnAddEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddEmployee.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.Location = new System.Drawing.Point(951, 102);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddEmployee.Location = new System.Drawing.Point(713, 83);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(232, 50);
+            this.btnAddEmployee.Size = new System.Drawing.Size(174, 41);
             this.btnAddEmployee.TabIndex = 6;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
@@ -252,8 +271,7 @@
             this.dgvCustomerList.EnableHeadersVisualStyles = false;
             this.dgvCustomerList.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.dgvCustomerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.dgvCustomerList.Location = new System.Drawing.Point(83, 363);
-            this.dgvCustomerList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCustomerList.Location = new System.Drawing.Point(62, 295);
             this.dgvCustomerList.MultiSelect = false;
             this.dgvCustomerList.Name = "dgvCustomerList";
             this.dgvCustomerList.ReadOnly = true;
@@ -261,7 +279,7 @@
             this.dgvCustomerList.RowHeadersWidth = 51;
             this.dgvCustomerList.RowTemplate.Height = 35;
             this.dgvCustomerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomerList.Size = new System.Drawing.Size(1100, 446);
+            this.dgvCustomerList.Size = new System.Drawing.Size(825, 362);
             this.dgvCustomerList.TabIndex = 12;
             // 
             // Id
@@ -308,11 +326,12 @@
             // 
             this.btnRemoveEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemoveEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.btnRemoveEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveEmployee.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveEmployee.Location = new System.Drawing.Point(951, 158);
-            this.btnRemoveEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRemoveEmployee.Location = new System.Drawing.Point(713, 128);
+            this.btnRemoveEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemoveEmployee.Name = "btnRemoveEmployee";
-            this.btnRemoveEmployee.Size = new System.Drawing.Size(232, 50);
+            this.btnRemoveEmployee.Size = new System.Drawing.Size(174, 41);
             this.btnRemoveEmployee.TabIndex = 13;
             this.btnRemoveEmployee.Text = "Remove Employee";
             this.btnRemoveEmployee.UseVisualStyleBackColor = false;
@@ -322,30 +341,20 @@
             // 
             this.btnEditDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
+            this.btnEditDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditDetails.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDetails.Location = new System.Drawing.Point(951, 213);
-            this.btnEditDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditDetails.Location = new System.Drawing.Point(713, 173);
+            this.btnEditDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditDetails.Name = "btnEditDetails";
-            this.btnEditDetails.Size = new System.Drawing.Size(232, 50);
+            this.btnEditDetails.Size = new System.Drawing.Size(174, 41);
             this.btnEditDetails.TabIndex = 14;
             this.btnEditDetails.Text = "Edit Employee Details";
             this.btnEditDetails.UseVisualStyleBackColor = false;
             this.btnEditDetails.Click += new System.EventHandler(this.btnEditDetails_Click);
             // 
-            // lblSearchByName
-            // 
-            this.lblSearchByName.AutoSize = true;
-            this.lblSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchByName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSearchByName.Location = new System.Drawing.Point(248, 2);
-            this.lblSearchByName.Name = "lblSearchByName";
-            this.lblSearchByName.Size = new System.Drawing.Size(132, 18);
-            this.lblSearchByName.TabIndex = 5;
-            this.lblSearchByName.Text = "Search by Name";
-            // 
             // EmployeeManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(215)))), ((int)(((byte)(172)))));
             this.Controls.Add(this.btnEditDetails);
@@ -355,9 +364,9 @@
             this.Controls.Add(this.lblReportSalesAnalytics);
             this.Controls.Add(this.pnlTotalPersonnel);
             this.Controls.Add(this.pnlEmployeeNav);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmployeeManagement";
-            this.Size = new System.Drawing.Size(1255, 870);
+            this.Size = new System.Drawing.Size(941, 707);
             this.Load += new System.EventHandler(this.EmployeeManagement_Load);
             this.pnlEmployeeNav.ResumeLayout(false);
             this.pnlEmployeeNav.PerformLayout();

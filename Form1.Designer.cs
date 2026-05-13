@@ -38,13 +38,13 @@ namespace AutoCare_Pro
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.btnLogSubmit = new System.Windows.Forms.Button();
             this.pnlLoginForm = new System.Windows.Forms.Panel();
+            this.checkShowPass = new System.Windows.Forms.CheckBox();
             this.txtLoginPass = new System.Windows.Forms.TextBox();
             this.lblLoginPass = new System.Windows.Forms.Label();
             this.txtLoginEmail = new System.Windows.Forms.TextBox();
             this.lblLoginEmail = new System.Windows.Forms.Label();
             this.pnlCar = new System.Windows.Forms.Panel();
             this.picCar = new System.Windows.Forms.PictureBox();
-            this.checkShowPass = new System.Windows.Forms.CheckBox();
             this.pnlLogin.SuspendLayout();
             this.pnlLoginForm.SuspendLayout();
             this.pnlCar.SuspendLayout();
@@ -92,6 +92,7 @@ namespace AutoCare_Pro
             // btnLogSubmit
             // 
             this.btnLogSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(64)))));
+            this.btnLogSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogSubmit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogSubmit.Location = new System.Drawing.Point(36, 206);
@@ -113,6 +114,18 @@ namespace AutoCare_Pro
             this.pnlLoginForm.Name = "pnlLoginForm";
             this.pnlLoginForm.Size = new System.Drawing.Size(413, 168);
             this.pnlLoginForm.TabIndex = 6;
+            // 
+            // checkShowPass
+            // 
+            this.checkShowPass.AutoSize = true;
+            this.checkShowPass.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkShowPass.Location = new System.Drawing.Point(250, 94);
+            this.checkShowPass.Name = "checkShowPass";
+            this.checkShowPass.Size = new System.Drawing.Size(146, 22);
+            this.checkShowPass.TabIndex = 6;
+            this.checkShowPass.Text = "Show Password";
+            this.checkShowPass.UseVisualStyleBackColor = true;
+            this.checkShowPass.CheckedChanged += new System.EventHandler(this.checkShowPass_CheckedChanged);
             // 
             // txtLoginPass
             // 
@@ -174,18 +187,6 @@ namespace AutoCare_Pro
             this.picCar.Size = new System.Drawing.Size(43, 41);
             this.picCar.TabIndex = 0;
             this.picCar.TabStop = false;
-            // 
-            // checkShowPass
-            // 
-            this.checkShowPass.AutoSize = true;
-            this.checkShowPass.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkShowPass.Location = new System.Drawing.Point(250, 94);
-            this.checkShowPass.Name = "checkShowPass";
-            this.checkShowPass.Size = new System.Drawing.Size(146, 22);
-            this.checkShowPass.TabIndex = 6;
-            this.checkShowPass.Text = "Show Password";
-            this.checkShowPass.UseVisualStyleBackColor = true;
-            this.checkShowPass.CheckedChanged += new System.EventHandler(this.checkShowPass_CheckedChanged);
             // 
             // loginPage
             // 

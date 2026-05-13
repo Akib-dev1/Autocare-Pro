@@ -12,7 +12,7 @@ namespace AutoCare_Pro
 {
     public partial class userForm : Form
     {
-        internal loginPage Lp { get; set; }
+        loginPage Lp { get; set; }
         internal static string EmpId { get; set; }
         internal static string EmpName { get; set; }
         private UserControl CurrentPage { get; set; }
@@ -99,6 +99,12 @@ namespace AutoCare_Pro
             this.btnNavlink2.BackColor = Color.FromArgb(37, 42, 56);
             this.btnNavlink3.BackColor = Color.FromArgb(37, 42, 56);
             this.btnNavlink1.BackColor = Color.FromArgb(37, 42, 56);
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Lp.Show();
+            this.Hide();
         }
     }
 }

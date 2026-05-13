@@ -39,26 +39,39 @@ namespace AutoCare_Pro
 
         private void btnLogSubmit_Click(object sender, EventArgs e)
         {
-            string sqlQuery = "select * from user_info where email='" + this.txtLoginEmail.Text + "' and password='" + this.txtLoginPass.Text+"';";
-            DataSet ds=this.Da.GetData(sqlQuery);
+            try
+            {
+                string sqlQuery = "select * from user_info where email='" + this.txtLoginEmail.Text + "' and password='" + this.txtLoginPass.Text + "';";
+                DataSet ds = this.Da.GetData(sqlQuery);
 
-            if (ds.Tables[0].Rows.Count == 1 && (ds.Tables[0].Rows[0][4].ToString() == "manager"))
-            {
-                MessageBox.Show("User Authenticated Successfully! Name: "+ ds.Tables[0].Rows[0][1].ToString(), "Login Successfull",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                userForm us = new userForm(this, ds.Tables[0].Rows[0][0].ToString(), ds.Tables[0].Rows[0][1].ToString());
-                us.Show();
-                this.Hide();
+                if (ds.Tables[0].Rows.Count == 1 && (ds.Tables[0].Rows[0][4].ToString() == "manager"))
+                {
+                    MessageBox.Show("User Authenticated Successfully! Name: " + ds.Tables[0].Rows[0][1].ToString(), "Login Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    userForm us = new userForm(this, ds.Tables[0].Rows[0][0].ToString(), ds.Tables[0].Rows[0][1].ToString());
+                    us.Show();
+                    this.Hide();
+                }
+                else if (ds.Tables[0].Rows.Count == 1 && (ds.Tables[0].Rows[0][4].ToString() == "admin"))
+                {
+                    MessageBox.Show("Admin Authenticated Successfully! Name: " + ds.Tables[0].Rows[0][1].ToString(), "Login Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AdminForm admin = new AdminForm(this);
+                    admin.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Credentials!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else if(ds.Tables[0].Rows.Count == 1 && (ds.Tables[0].Rows[0][4].ToString() == "admin"))
+            catch (SqlException ex)
             {
-                MessageBox.Show("Admin Authenticated Successfully! Name: " + ds.Tables[0].Rows[0][1].ToString(), "Login Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AdminForm admin = new AdminForm();
-                admin.Show();
-                this.Hide();
+                MessageBox.Show("Database error: " + ex.Message, "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid Credentials!","Login Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

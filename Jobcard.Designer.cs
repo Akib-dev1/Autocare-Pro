@@ -110,7 +110,7 @@
             this.txtSearch.Location = new System.Drawing.Point(48, 21);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(347, 26);
+            this.txtSearch.Size = new System.Drawing.Size(347, 30);
             this.txtSearch.TabIndex = 0;
             // 
             // lblLedger
@@ -135,7 +135,7 @@
             this.lblOrangeCard.Location = new System.Drawing.Point(110, 81);
             this.lblOrangeCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrangeCard.Name = "lblOrangeCard";
-            this.lblOrangeCard.Size = new System.Drawing.Size(90, 13);
+            this.lblOrangeCard.Size = new System.Drawing.Size(109, 17);
             this.lblOrangeCard.TabIndex = 3;
             this.lblOrangeCard.Text = "NEW INVOICE";
             // 
@@ -220,7 +220,7 @@
             this.lblLocationShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocationShow.Location = new System.Drawing.Point(89, 137);
             this.lblLocationShow.Name = "lblLocationShow";
-            this.lblLocationShow.Size = new System.Drawing.Size(172, 13);
+            this.lblLocationShow.Size = new System.Drawing.Size(189, 16);
             this.lblLocationShow.TabIndex = 7;
             this.lblLocationShow.Text = "Location will appear here";
             // 
@@ -240,7 +240,7 @@
             this.lblEmailShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailShow.Location = new System.Drawing.Point(89, 113);
             this.lblEmailShow.Name = "lblEmailShow";
-            this.lblEmailShow.Size = new System.Drawing.Size(153, 13);
+            this.lblEmailShow.Size = new System.Drawing.Size(167, 16);
             this.lblEmailShow.TabIndex = 5;
             this.lblEmailShow.Text = "Email will appear here";
             // 
@@ -260,7 +260,7 @@
             this.lblPhoneNumber.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumber.Location = new System.Drawing.Point(59, 85);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(206, 14);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(239, 18);
             this.lblPhoneNumber.TabIndex = 3;
             this.lblPhoneNumber.Text = "Phone Number will appear here";
             // 
@@ -270,7 +270,7 @@
             this.lblCustomerName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerName.Location = new System.Drawing.Point(60, 66);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(157, 14);
+            this.lblCustomerName.Size = new System.Drawing.Size(191, 18);
             this.lblCustomerName.TabIndex = 2;
             this.lblCustomerName.Text = "Name will appear here";
             // 
@@ -315,7 +315,7 @@
             this.lblColorShow.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColorShow.Location = new System.Drawing.Point(187, 154);
             this.lblColorShow.Name = "lblColorShow";
-            this.lblColorShow.Size = new System.Drawing.Size(41, 13);
+            this.lblColorShow.Size = new System.Drawing.Size(45, 16);
             this.lblColorShow.TabIndex = 13;
             this.lblColorShow.Text = "Color";
             // 
@@ -326,7 +326,7 @@
             this.lblColor.ForeColor = System.Drawing.Color.DimGray;
             this.lblColor.Location = new System.Drawing.Point(59, 154);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(42, 14);
+            this.lblColor.Size = new System.Drawing.Size(50, 18);
             this.lblColor.TabIndex = 12;
             this.lblColor.Text = "Color";
             // 
@@ -372,7 +372,7 @@
             this.lblPlateNumber.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlateNumber.Location = new System.Drawing.Point(187, 116);
             this.lblPlateNumber.Name = "lblPlateNumber";
-            this.lblPlateNumber.Size = new System.Drawing.Size(95, 13);
+            this.lblPlateNumber.Size = new System.Drawing.Size(105, 16);
             this.lblPlateNumber.TabIndex = 9;
             this.lblPlateNumber.Text = "Plate Number";
             // 
@@ -392,7 +392,7 @@
             this.lblVehicleYear.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleYear.Location = new System.Drawing.Point(217, 83);
             this.lblVehicleYear.Name = "lblVehicleYear";
-            this.lblVehicleYear.Size = new System.Drawing.Size(75, 13);
+            this.lblVehicleYear.Size = new System.Drawing.Size(82, 16);
             this.lblVehicleYear.TabIndex = 7;
             this.lblVehicleYear.Text = "Year  here";
             // 
@@ -412,7 +412,7 @@
             this.lblModel.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.Location = new System.Drawing.Point(59, 83);
             this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(155, 13);
+            this.lblModel.Size = new System.Drawing.Size(170, 16);
             this.lblModel.TabIndex = 5;
             this.lblModel.Text = "Model will appear here";
             // 
@@ -509,7 +509,7 @@
             this.lblEmployeeDesignation.ForeColor = System.Drawing.Color.Gray;
             this.lblEmployeeDesignation.Location = new System.Drawing.Point(918, 33);
             this.lblEmployeeDesignation.Name = "lblEmployeeDesignation";
-            this.lblEmployeeDesignation.Size = new System.Drawing.Size(97, 14);
+            this.lblEmployeeDesignation.Size = new System.Drawing.Size(115, 18);
             this.lblEmployeeDesignation.TabIndex = 12;
             this.lblEmployeeDesignation.Text = "Floor Manager";
             // 
@@ -520,7 +520,7 @@
             this.lblEmployeeName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeName.Location = new System.Drawing.Point(918, 11);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(84, 14);
+            this.lblEmployeeName.Size = new System.Drawing.Size(105, 18);
             this.lblEmployeeName.TabIndex = 11;
             this.lblEmployeeName.Text = "Admin Staff";
             // 
@@ -715,6 +715,7 @@
             this.dgvService.AllowUserToDeleteRows = false;
             this.dgvService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvService.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dgvService.ColumnHeadersHeight = 29;
             this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvService.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmnDescription,
@@ -724,6 +725,7 @@
             this.dgvService.Location = new System.Drawing.Point(476, 163);
             this.dgvService.Name = "dgvService";
             this.dgvService.ReadOnly = true;
+            this.dgvService.RowHeadersWidth = 51;
             this.dgvService.Size = new System.Drawing.Size(618, 207);
             this.dgvService.TabIndex = 24;
             // 
@@ -731,26 +733,33 @@
             // 
             this.clmnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.clmnDescription.HeaderText = "Service Description";
+            this.clmnDescription.MinimumWidth = 6;
             this.clmnDescription.Name = "clmnDescription";
             this.clmnDescription.ReadOnly = true;
             // 
             // clmnHours
             // 
             this.clmnHours.HeaderText = "Hours";
+            this.clmnHours.MinimumWidth = 6;
             this.clmnHours.Name = "clmnHours";
             this.clmnHours.ReadOnly = true;
+            this.clmnHours.Width = 125;
             // 
             // clmnRate
             // 
             this.clmnRate.HeaderText = "Rate";
+            this.clmnRate.MinimumWidth = 6;
             this.clmnRate.Name = "clmnRate";
             this.clmnRate.ReadOnly = true;
+            this.clmnRate.Width = 125;
             // 
             // clmnTotal
             // 
             this.clmnTotal.HeaderText = "Total";
+            this.clmnTotal.MinimumWidth = 6;
             this.clmnTotal.Name = "clmnTotal";
             this.clmnTotal.ReadOnly = true;
+            this.clmnTotal.Width = 125;
             // 
             // dgvParts
             // 
@@ -758,6 +767,7 @@
             this.dgvParts.AllowUserToDeleteRows = false;
             this.dgvParts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvParts.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dgvParts.ColumnHeadersHeight = 29;
             this.dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmnPartData,
@@ -767,6 +777,7 @@
             this.dgvParts.Location = new System.Drawing.Point(476, 461);
             this.dgvParts.Name = "dgvParts";
             this.dgvParts.ReadOnly = true;
+            this.dgvParts.RowHeadersWidth = 51;
             this.dgvParts.Size = new System.Drawing.Size(618, 181);
             this.dgvParts.TabIndex = 25;
             // 
@@ -774,30 +785,37 @@
             // 
             this.clmnPartData.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.clmnPartData.HeaderText = "Part Name";
+            this.clmnPartData.MinimumWidth = 6;
             this.clmnPartData.Name = "clmnPartData";
             this.clmnPartData.ReadOnly = true;
             // 
             // clmnQty
             // 
             this.clmnQty.HeaderText = "Qty";
+            this.clmnQty.MinimumWidth = 6;
             this.clmnQty.Name = "clmnQty";
             this.clmnQty.ReadOnly = true;
+            this.clmnQty.Width = 125;
             // 
             // clmnPrice
             // 
             this.clmnPrice.HeaderText = "Unit Price";
+            this.clmnPrice.MinimumWidth = 6;
             this.clmnPrice.Name = "clmnPrice";
             this.clmnPrice.ReadOnly = true;
+            this.clmnPrice.Width = 125;
             // 
             // clmnPartTotal
             // 
             this.clmnPartTotal.HeaderText = "Total";
+            this.clmnPartTotal.MinimumWidth = 6;
             this.clmnPartTotal.Name = "clmnPartTotal";
             this.clmnPartTotal.ReadOnly = true;
+            this.clmnPartTotal.Width = 125;
             // 
             // Jobcard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(247)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;

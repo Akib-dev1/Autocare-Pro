@@ -40,7 +40,15 @@ namespace AutoCare_Pro
 
         private void InventoryMannagement_Load(object sender, EventArgs e)
         {
+            
             this.LoadInventoryData();
+        }
+
+        private void txtInventorySearch_TextChanged(object sender, EventArgs e)
+        {
+             string sqlQuery = "SELECT * FROM Inventory WHERE part_name LIKE '%" + this.txtInventorySearch.Text + "%';";
+            DataSet ds = AdminForm.Da.GetData(sqlQuery);
+            this.dgvInventory.DataSource=ds.Tables[0];
         }
     }
 }

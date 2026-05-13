@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlReportTopBar = new System.Windows.Forms.Panel();
-            this.btnReportSearchButton = new System.Windows.Forms.Button();
-            this.txtReportSearch = new System.Windows.Forms.TextBox();
             this.lblReportName = new System.Windows.Forms.Label();
             this.lblReportTitle = new System.Windows.Forms.Label();
             this.pbReportImage = new System.Windows.Forms.PictureBox();
@@ -43,12 +41,12 @@
             this.pbAvgSales = new System.Windows.Forms.PictureBox();
             this.lblCurrency = new System.Windows.Forms.Label();
             this.lblAvgSaleTotal = new System.Windows.Forms.Label();
-            this.lblAvgASales = new System.Windows.Forms.Label();
+            this.lblAvgSales = new System.Windows.Forms.Label();
             this.pnlNewCustomers = new System.Windows.Forms.Panel();
             this.pbNewCustomerLogo = new System.Windows.Forms.PictureBox();
             this.lblNewCustomerSubscript = new System.Windows.Forms.Label();
-            this.lblNewCustomerAmount = new System.Windows.Forms.Label();
-            this.lblNewCustomerTitle = new System.Windows.Forms.Label();
+            this.lblTotalCustomerAmount = new System.Windows.Forms.Label();
+            this.lblTotalCustomerTitle = new System.Windows.Forms.Label();
             this.pnlProjectedRevenue = new System.Windows.Forms.Panel();
             this.pbProjectedRevenueLogo = new System.Windows.Forms.PictureBox();
             this.lblProRevenueSubscript = new System.Windows.Forms.Label();
@@ -58,7 +56,7 @@
             this.ctTrend = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblLedgerTitle = new System.Windows.Forms.Label();
             this.dgvLedger = new System.Windows.Forms.DataGridView();
-            this.VehicleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VehicleModel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.service = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,38 +75,18 @@
             // pnlReportTopBar
             // 
             this.pnlReportTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.pnlReportTopBar.Controls.Add(this.btnReportSearchButton);
-            this.pnlReportTopBar.Controls.Add(this.txtReportSearch);
             this.pnlReportTopBar.Controls.Add(this.lblReportName);
             this.pnlReportTopBar.Controls.Add(this.lblReportTitle);
             this.pnlReportTopBar.Controls.Add(this.pbReportImage);
+            this.pnlReportTopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlReportTopBar.Location = new System.Drawing.Point(0, 0);
             this.pnlReportTopBar.Name = "pnlReportTopBar";
-            this.pnlReportTopBar.Size = new System.Drawing.Size(1203, 70);
+            this.pnlReportTopBar.Size = new System.Drawing.Size(1204, 70);
             this.pnlReportTopBar.TabIndex = 0;
-            // 
-            // btnReportSearchButton
-            // 
-            this.btnReportSearchButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("btnReportSearchButton.Image")));
-            this.btnReportSearchButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportSearchButton.Location = new System.Drawing.Point(534, 20);
-            this.btnReportSearchButton.Name = "btnReportSearchButton";
-            this.btnReportSearchButton.Size = new System.Drawing.Size(130, 30);
-            this.btnReportSearchButton.TabIndex = 4;
-            this.btnReportSearchButton.Text = "Search";
-            this.btnReportSearchButton.UseVisualStyleBackColor = true;
-            // 
-            // txtReportSearch
-            // 
-            this.txtReportSearch.Location = new System.Drawing.Point(242, 20);
-            this.txtReportSearch.Multiline = true;
-            this.txtReportSearch.Name = "txtReportSearch";
-            this.txtReportSearch.Size = new System.Drawing.Size(294, 30);
-            this.txtReportSearch.TabIndex = 3;
             // 
             // lblReportName
             // 
+            this.lblReportName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblReportName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReportName.ForeColor = System.Drawing.Color.Brown;
             this.lblReportName.Location = new System.Drawing.Point(1042, 20);
@@ -130,6 +108,7 @@
             // 
             // pbReportImage
             // 
+            this.pbReportImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbReportImage.Image = ((System.Drawing.Image)(resources.GetObject("pbReportImage.Image")));
             this.pbReportImage.Location = new System.Drawing.Point(1136, 15);
             this.pbReportImage.Name = "pbReportImage";
@@ -157,7 +136,7 @@
             this.pnlAvgSales.Controls.Add(this.pbAvgSales);
             this.pnlAvgSales.Controls.Add(this.lblCurrency);
             this.pnlAvgSales.Controls.Add(this.lblAvgSaleTotal);
-            this.pnlAvgSales.Controls.Add(this.lblAvgASales);
+            this.pnlAvgSales.Controls.Add(this.lblAvgSales);
             this.pnlAvgSales.Location = new System.Drawing.Point(20, 163);
             this.pnlAvgSales.Name = "pnlAvgSales";
             this.pnlAvgSales.Size = new System.Drawing.Size(289, 151);
@@ -194,17 +173,16 @@
             this.lblAvgSaleTotal.Text = "$284.50";
             this.lblAvgSaleTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblAvgASales
+            // lblAvgSales
             // 
-            this.lblAvgASales.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvgASales.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblAvgASales.Location = new System.Drawing.Point(84, 28);
-            this.lblAvgASales.Name = "lblAvgASales";
-            this.lblAvgASales.Size = new System.Drawing.Size(129, 43);
-            this.lblAvgASales.TabIndex = 0;
-            this.lblAvgASales.Text = "AVG SALES";
-            this.lblAvgASales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAvgASales.Click += new System.EventHandler(this.lblAvgASales_Click);
+            this.lblAvgSales.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvgSales.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblAvgSales.Location = new System.Drawing.Point(84, 28);
+            this.lblAvgSales.Name = "lblAvgSales";
+            this.lblAvgSales.Size = new System.Drawing.Size(129, 43);
+            this.lblAvgSales.TabIndex = 0;
+            this.lblAvgSales.Text = "AVG SALES";
+            this.lblAvgSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlNewCustomers
             // 
@@ -212,8 +190,8 @@
             this.pnlNewCustomers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlNewCustomers.Controls.Add(this.pbNewCustomerLogo);
             this.pnlNewCustomers.Controls.Add(this.lblNewCustomerSubscript);
-            this.pnlNewCustomers.Controls.Add(this.lblNewCustomerAmount);
-            this.pnlNewCustomers.Controls.Add(this.lblNewCustomerTitle);
+            this.pnlNewCustomers.Controls.Add(this.lblTotalCustomerAmount);
+            this.pnlNewCustomers.Controls.Add(this.lblTotalCustomerTitle);
             this.pnlNewCustomers.Location = new System.Drawing.Point(430, 163);
             this.pnlNewCustomers.Name = "pnlNewCustomers";
             this.pnlNewCustomers.Size = new System.Drawing.Size(289, 151);
@@ -240,27 +218,26 @@
             this.lblNewCustomerSubscript.Text = "ACUISITIONS";
             this.lblNewCustomerSubscript.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblNewCustomerAmount
+            // lblTotalCustomerAmount
             // 
-            this.lblNewCustomerAmount.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCustomerAmount.Location = new System.Drawing.Point(12, 76);
-            this.lblNewCustomerAmount.Name = "lblNewCustomerAmount";
-            this.lblNewCustomerAmount.Size = new System.Drawing.Size(82, 54);
-            this.lblNewCustomerAmount.TabIndex = 1;
-            this.lblNewCustomerAmount.Text = "123";
-            this.lblNewCustomerAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNewCustomerAmount.Click += new System.EventHandler(this.label2_Click);
+            this.lblTotalCustomerAmount.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCustomerAmount.Location = new System.Drawing.Point(12, 76);
+            this.lblTotalCustomerAmount.Name = "lblTotalCustomerAmount";
+            this.lblTotalCustomerAmount.Size = new System.Drawing.Size(82, 54);
+            this.lblTotalCustomerAmount.TabIndex = 1;
+            this.lblTotalCustomerAmount.Text = "123";
+            this.lblTotalCustomerAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblNewCustomerTitle
+            // lblTotalCustomerTitle
             // 
-            this.lblNewCustomerTitle.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewCustomerTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblNewCustomerTitle.Location = new System.Drawing.Point(84, 28);
-            this.lblNewCustomerTitle.Name = "lblNewCustomerTitle";
-            this.lblNewCustomerTitle.Size = new System.Drawing.Size(173, 43);
-            this.lblNewCustomerTitle.TabIndex = 0;
-            this.lblNewCustomerTitle.Text = "NEW CUSTOMERS";
-            this.lblNewCustomerTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotalCustomerTitle.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCustomerTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTotalCustomerTitle.Location = new System.Drawing.Point(84, 28);
+            this.lblTotalCustomerTitle.Name = "lblTotalCustomerTitle";
+            this.lblTotalCustomerTitle.Size = new System.Drawing.Size(173, 43);
+            this.lblTotalCustomerTitle.TabIndex = 0;
+            this.lblTotalCustomerTitle.Text = "TOTAL CUSTOMERS";
+            this.lblTotalCustomerTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlProjectedRevenue
             // 
@@ -330,16 +307,16 @@
             // 
             // ctTrend
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ctTrend.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.ctTrend.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.ctTrend.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.ctTrend.Legends.Add(legend3);
             this.ctTrend.Location = new System.Drawing.Point(20, 375);
             this.ctTrend.Name = "ctTrend";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.ctTrend.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.ctTrend.Series.Add(series3);
             this.ctTrend.Size = new System.Drawing.Size(588, 226);
             this.ctTrend.TabIndex = 6;
             this.ctTrend.Text = "chart1";
@@ -358,10 +335,11 @@
             // 
             this.dgvLedger.AllowUserToAddRows = false;
             this.dgvLedger.AllowUserToDeleteRows = false;
+            this.dgvLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvLedger.BackgroundColor = System.Drawing.Color.Beige;
             this.dgvLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLedger.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.VehicleId,
+            this.VehicleModel,
             this.service,
             this.Amount,
             this.status});
@@ -373,16 +351,18 @@
             this.dgvLedger.Size = new System.Drawing.Size(482, 226);
             this.dgvLedger.TabIndex = 7;
             // 
-            // VehicleId
+            // VehicleModel
             // 
-            this.VehicleId.HeaderText = "Vehicle Id";
-            this.VehicleId.MinimumWidth = 6;
-            this.VehicleId.Name = "VehicleId";
-            this.VehicleId.ReadOnly = true;
-            this.VehicleId.Width = 125;
+            this.VehicleModel.DataPropertyName = "Vehicle_Model";
+            this.VehicleModel.HeaderText = "Vehicle Model";
+            this.VehicleModel.MinimumWidth = 6;
+            this.VehicleModel.Name = "VehicleModel";
+            this.VehicleModel.ReadOnly = true;
+            this.VehicleModel.Width = 125;
             // 
             // service
             // 
+            this.service.DataPropertyName = "Description";
             this.service.HeaderText = "Service";
             this.service.MinimumWidth = 6;
             this.service.Name = "service";
@@ -391,6 +371,7 @@
             // 
             // Amount
             // 
+            this.Amount.DataPropertyName = "Grand_Total";
             this.Amount.HeaderText = "Amount";
             this.Amount.MinimumWidth = 6;
             this.Amount.Name = "Amount";
@@ -399,6 +380,7 @@
             // 
             // status
             // 
+            this.status.DataPropertyName = "Tech_Notes";
             this.status.HeaderText = "Status";
             this.status.MinimumWidth = 6;
             this.status.Name = "status";
@@ -421,8 +403,8 @@
             this.Controls.Add(this.pnlReportTopBar);
             this.Name = "Reports";
             this.Size = new System.Drawing.Size(1204, 649);
+            this.Load += new System.EventHandler(this.Reports_Load);
             this.pnlReportTopBar.ResumeLayout(false);
-            this.pnlReportTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbReportImage)).EndInit();
             this.pnlAvgSales.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvgSales)).EndInit();
@@ -443,19 +425,17 @@
         private System.Windows.Forms.Label lblReportTitle;
         private System.Windows.Forms.PictureBox pbReportImage;
         private System.Windows.Forms.Label lblReportName;
-        private System.Windows.Forms.TextBox txtReportSearch;
-        private System.Windows.Forms.Button btnReportSearchButton;
         private System.Windows.Forms.Label lblReportSalesAnalytics;
         private System.Windows.Forms.Panel pnlAvgSales;
-        private System.Windows.Forms.Label lblAvgASales;
+        private System.Windows.Forms.Label lblAvgSales;
         private System.Windows.Forms.Label lblCurrency;
         private System.Windows.Forms.Label lblAvgSaleTotal;
         private System.Windows.Forms.PictureBox pbAvgSales;
         private System.Windows.Forms.Panel pnlNewCustomers;
         private System.Windows.Forms.PictureBox pbNewCustomerLogo;
         private System.Windows.Forms.Label lblNewCustomerSubscript;
-        private System.Windows.Forms.Label lblNewCustomerAmount;
-        private System.Windows.Forms.Label lblNewCustomerTitle;
+        private System.Windows.Forms.Label lblTotalCustomerAmount;
+        private System.Windows.Forms.Label lblTotalCustomerTitle;
         private System.Windows.Forms.Panel pnlProjectedRevenue;
         private System.Windows.Forms.PictureBox pbProjectedRevenueLogo;
         private System.Windows.Forms.Label lblProRevenueSubscript;
@@ -465,7 +445,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart ctTrend;
         private System.Windows.Forms.Label lblLedgerTitle;
         private System.Windows.Forms.DataGridView dgvLedger;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VehicleId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VehicleModel;
         private System.Windows.Forms.DataGridViewTextBoxColumn service;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;

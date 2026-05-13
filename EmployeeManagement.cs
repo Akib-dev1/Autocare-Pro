@@ -54,5 +54,21 @@ namespace AutoCare_Pro
                 this.LoadEmployeeData();
             }
         }
+
+        private void btnEmployeeSearchButton_Click(object sender, EventArgs e)
+        {
+            string searchText = txtEmployeeSearch.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Please enter an Name to search.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string sql = $"SELECT * FROM user_info WHERE Name LIKE '%{searchText}%'";
+
+            DataTable dt = AdminForm.Da.GetDataTable(sql);
+            this.dgvCustomerList.DataSource = dt;
+            
+        }
     }
 }

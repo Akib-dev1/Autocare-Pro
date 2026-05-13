@@ -40,6 +40,7 @@
             this.dgvAllInvoices = new System.Windows.Forms.DataGridView();
             this.lblAllInvoiceTitleHero = new System.Windows.Forms.Label();
             this.lblAllInvoicesSubtitle = new System.Windows.Forms.Label();
+            this.lblSearchByName = new System.Windows.Forms.Label();
             this.invoiceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +53,7 @@
             // pnlAllInvoicesNav
             // 
             this.pnlAllInvoicesNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.pnlAllInvoicesNav.Controls.Add(this.lblSearchByName);
             this.pnlAllInvoicesNav.Controls.Add(this.btnAllInvoicesSearchButton);
             this.pnlAllInvoicesNav.Controls.Add(this.txtAllInvoicesSearch);
             this.pnlAllInvoicesNav.Controls.Add(this.lblAllInvoicesName);
@@ -73,6 +75,7 @@
             this.btnAllInvoicesSearchButton.TabIndex = 4;
             this.btnAllInvoicesSearchButton.Text = "Search";
             this.btnAllInvoicesSearchButton.UseVisualStyleBackColor = true;
+            this.btnAllInvoicesSearchButton.Click += new System.EventHandler(this.btnAllInvoicesSearchButton_Click);
             // 
             // txtAllInvoicesSearch
             // 
@@ -170,8 +173,20 @@
             this.lblAllInvoicesSubtitle.TabIndex = 9;
             this.lblAllInvoicesSubtitle.Text = "AutoCare Pro High-Performance Telemetry";
             // 
+            // lblSearchByName
+            // 
+            this.lblSearchByName.AutoSize = true;
+            this.lblSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchByName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblSearchByName.Location = new System.Drawing.Point(270, 0);
+            this.lblSearchByName.Name = "lblSearchByName";
+            this.lblSearchByName.Size = new System.Drawing.Size(159, 18);
+            this.lblSearchByName.TabIndex = 10;
+            this.lblSearchByName.Text = "Search by Invoice Id";
+            // 
             // invoiceno
             // 
+            this.invoiceno.DataPropertyName = "Invoice_Id";
             this.invoiceno.HeaderText = "Invoice No.";
             this.invoiceno.MinimumWidth = 6;
             this.invoiceno.Name = "invoiceno";
@@ -179,6 +194,7 @@
             // 
             // date
             // 
+            this.date.DataPropertyName = "created_at";
             this.date.HeaderText = "Date";
             this.date.MinimumWidth = 6;
             this.date.Name = "date";
@@ -186,6 +202,7 @@
             // 
             // customer
             // 
+            this.customer.DataPropertyName = "Name";
             this.customer.HeaderText = "Customer";
             this.customer.MinimumWidth = 6;
             this.customer.Name = "customer";
@@ -193,6 +210,7 @@
             // 
             // amount
             // 
+            this.amount.DataPropertyName = "Grand_Total";
             this.amount.HeaderText = "Amount";
             this.amount.MinimumWidth = 6;
             this.amount.Name = "amount";
@@ -208,6 +226,7 @@
             this.Controls.Add(this.pnlAllInvoicesNav);
             this.Name = "AllInvoices";
             this.Size = new System.Drawing.Size(1241, 662);
+            this.Load += new System.EventHandler(this.AllInvoices_Load);
             this.pnlAllInvoicesNav.ResumeLayout(false);
             this.pnlAllInvoicesNav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageAllInvoices)).EndInit();
@@ -228,6 +247,7 @@
         private System.Windows.Forms.DataGridView dgvAllInvoices;
         private System.Windows.Forms.Label lblAllInvoiceTitleHero;
         private System.Windows.Forms.Label lblAllInvoicesSubtitle;
+        private System.Windows.Forms.Label lblSearchByName;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceno;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn customer;

@@ -38,7 +38,7 @@
             this.btnAdminNavlink1 = new System.Windows.Forms.Button();
             this.lblAdminDescription = new System.Windows.Forms.Label();
             this.lblAdminLogo = new System.Windows.Forms.Label();
-            this.panelContainer = new System.Windows.Forms.Panel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlAdminMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,13 +191,13 @@
             this.lblAdminLogo.TabIndex = 1;
             this.lblAdminLogo.Text = "AUTOCARE PRO";
             // 
-            // panelContainer
+            // pnlContainer
             // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(200, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(941, 707);
-            this.panelContainer.TabIndex = 1;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(200, 0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(941, 707);
+            this.pnlContainer.TabIndex = 1;
             // 
             // AdminForm
             // 
@@ -205,7 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1141, 707);
-            this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlAdminMenu);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -229,7 +229,7 @@
         private System.Windows.Forms.Button btnAdminNavlink2;
         private System.Windows.Forms.Button btnAdminNavlink3;
         private System.Windows.Forms.Button btnAdminNavlink4;
-        private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Button btnAdminNavlink5;
         private System.Windows.Forms.Button btnLogOut;
     }

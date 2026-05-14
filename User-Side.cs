@@ -28,18 +28,16 @@ namespace AutoCare_Pro
 
         private void LoadPage(UserControl page)
         {
-            // Remove old page
             if (CurrentPage != null)
             {
-                panelContainer.Controls.Remove(CurrentPage);
-                CurrentPage.Dispose(); // optional (depends on reuse)
+                this.pnlContainer.Controls.Remove(CurrentPage);
+                CurrentPage.Dispose();
             }
 
             CurrentPage = page;
 
-            // Setup new page
             page.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(page);
+            this.pnlContainer.Controls.Add(page);
             page.BringToFront();
         }
 

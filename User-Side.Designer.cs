@@ -37,7 +37,7 @@
             this.btnNavlink1 = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.panelContainer = new System.Windows.Forms.Panel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,20 +170,20 @@
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "AUTOCARE PRO";
             // 
-            // panelContainer
+            // pnlContainer
             // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(200, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1157, 746);
-            this.panelContainer.TabIndex = 1;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(200, 0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(1157, 746);
+            this.pnlContainer.TabIndex = 1;
             // 
             // userForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1357, 746);
-            this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlSidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "userForm";
@@ -206,7 +206,7 @@
         private System.Windows.Forms.Button btnNavlink3;
         private System.Windows.Forms.Button btnNavlink2;
         private System.Windows.Forms.Button btnNavlink4;
-        private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Button btnLogOut;
     }
 }

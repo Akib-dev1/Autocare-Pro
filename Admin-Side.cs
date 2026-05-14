@@ -30,14 +30,14 @@ namespace AutoCare_Pro
         {
             if (CurrentPage != null)
             {
-                panelContainer.Controls.Remove(CurrentPage);
+                this.pnlContainer.Controls.Remove(CurrentPage);
                 CurrentPage.Dispose();
             }
 
             CurrentPage = page;
 
             page.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(page);
+            this.pnlContainer.Controls.Add(page);
             page.BringToFront();
         }
 

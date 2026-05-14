@@ -103,8 +103,13 @@ namespace AutoCare_Pro
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Lp.Show();
-            this.Hide();
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?","Confirm Logout",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+                this.Lp.Show();
+                this.Hide();
+            }
         }
     }
 }

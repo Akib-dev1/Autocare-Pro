@@ -39,12 +39,13 @@
             this.lblAllInvoicesTitle = new System.Windows.Forms.Label();
             this.pbEmployeeMimageAllInvoices = new System.Windows.Forms.PictureBox();
             this.dgvAllInvoices = new System.Windows.Forms.DataGridView();
+            this.lblAllInvoiceTitleHero = new System.Windows.Forms.Label();
+            this.lblAllInvoicesSubtitle = new System.Windows.Forms.Label();
             this.invoiceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblAllInvoiceTitleHero = new System.Windows.Forms.Label();
-            this.lblAllInvoicesSubtitle = new System.Windows.Forms.Label();
             this.pnlAllInvoicesNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeeMimageAllInvoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllInvoices)).BeginInit();
@@ -71,12 +72,12 @@
             this.lblSearchByName.AutoSize = true;
             this.lblSearchByName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchByName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSearchByName.Location = new System.Drawing.Point(197, 0);
+            this.lblSearchByName.Location = new System.Drawing.Point(171, 5);
             this.lblSearchByName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearchByName.Name = "lblSearchByName";
-            this.lblSearchByName.Size = new System.Drawing.Size(135, 15);
+            this.lblSearchByName.Size = new System.Drawing.Size(174, 15);
             this.lblSearchByName.TabIndex = 10;
-            this.lblSearchByName.Text = "Search by Invoice Id";
+            this.lblSearchByName.Text = "Search by  Phone Number";
             // 
             // btnAllInvoicesSearchButton
             // 
@@ -159,6 +160,7 @@
             this.dgvAllInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.invoiceno,
+            this.phone,
             this.date,
             this.customer,
             this.amount});
@@ -179,6 +181,29 @@
             this.dgvAllInvoices.Size = new System.Drawing.Size(856, 374);
             this.dgvAllInvoices.TabIndex = 7;
             // 
+            // lblAllInvoiceTitleHero
+            // 
+            this.lblAllInvoiceTitleHero.AutoSize = true;
+            this.lblAllInvoiceTitleHero.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllInvoiceTitleHero.Location = new System.Drawing.Point(34, 72);
+            this.lblAllInvoiceTitleHero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllInvoiceTitleHero.Name = "lblAllInvoiceTitleHero";
+            this.lblAllInvoiceTitleHero.Size = new System.Drawing.Size(166, 27);
+            this.lblAllInvoiceTitleHero.TabIndex = 8;
+            this.lblAllInvoiceTitleHero.Text = "Sales Records";
+            // 
+            // lblAllInvoicesSubtitle
+            // 
+            this.lblAllInvoicesSubtitle.AutoSize = true;
+            this.lblAllInvoicesSubtitle.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllInvoicesSubtitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblAllInvoicesSubtitle.Location = new System.Drawing.Point(36, 99);
+            this.lblAllInvoicesSubtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllInvoicesSubtitle.Name = "lblAllInvoicesSubtitle";
+            this.lblAllInvoicesSubtitle.Size = new System.Drawing.Size(212, 13);
+            this.lblAllInvoicesSubtitle.TabIndex = 9;
+            this.lblAllInvoicesSubtitle.Text = "AutoCare Pro High-Performance Telemetry";
+            // 
             // invoiceno
             // 
             this.invoiceno.DataPropertyName = "Invoice_Id";
@@ -186,6 +211,13 @@
             this.invoiceno.MinimumWidth = 6;
             this.invoiceno.Name = "invoiceno";
             this.invoiceno.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "Phone Number";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
             // 
             // date
             // 
@@ -210,29 +242,6 @@
             this.amount.MinimumWidth = 6;
             this.amount.Name = "amount";
             this.amount.ReadOnly = true;
-            // 
-            // lblAllInvoiceTitleHero
-            // 
-            this.lblAllInvoiceTitleHero.AutoSize = true;
-            this.lblAllInvoiceTitleHero.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllInvoiceTitleHero.Location = new System.Drawing.Point(34, 72);
-            this.lblAllInvoiceTitleHero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAllInvoiceTitleHero.Name = "lblAllInvoiceTitleHero";
-            this.lblAllInvoiceTitleHero.Size = new System.Drawing.Size(166, 27);
-            this.lblAllInvoiceTitleHero.TabIndex = 8;
-            this.lblAllInvoiceTitleHero.Text = "Sales Records";
-            // 
-            // lblAllInvoicesSubtitle
-            // 
-            this.lblAllInvoicesSubtitle.AutoSize = true;
-            this.lblAllInvoicesSubtitle.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllInvoicesSubtitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblAllInvoicesSubtitle.Location = new System.Drawing.Point(36, 99);
-            this.lblAllInvoicesSubtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAllInvoicesSubtitle.Name = "lblAllInvoicesSubtitle";
-            this.lblAllInvoicesSubtitle.Size = new System.Drawing.Size(212, 13);
-            this.lblAllInvoicesSubtitle.TabIndex = 9;
-            this.lblAllInvoicesSubtitle.Text = "AutoCare Pro High-Performance Telemetry";
             // 
             // AllInvoices
             // 
@@ -268,6 +277,7 @@
         private System.Windows.Forms.Label lblAllInvoicesSubtitle;
         private System.Windows.Forms.Label lblSearchByName;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;

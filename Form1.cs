@@ -41,13 +41,15 @@ namespace AutoCare_Pro
         {
             try
             {
-                string sqlQuery = "select * from user_info where email='" + this.txtLoginEmail.Text + "' and password='" + this.txtLoginPass.Text + "';";
+                string sqlQuery = "select * from user_info where id='" + this.txtLoginID.Text + "' and password='" + this.txtLoginPass.Text + "';";
                 DataSet ds = this.Da.GetData(sqlQuery);
 
                 if (ds.Tables[0].Rows.Count == 1 && (ds.Tables[0].Rows[0][4].ToString() == "manager"))
                 {
                     MessageBox.Show("User Authenticated Successfully! Name: " + ds.Tables[0].Rows[0][1].ToString(), "Login Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     userForm us = new userForm(this, ds.Tables[0].Rows[0][0].ToString(), ds.Tables[0].Rows[0][1].ToString());
+                    this.txtLoginID.Text= "";
+                    this.txtLoginPass.Text = "";
                     us.Show();
                     this.Hide();
                 }
@@ -55,6 +57,8 @@ namespace AutoCare_Pro
                 {
                     MessageBox.Show("Admin Authenticated Successfully! Name: " + ds.Tables[0].Rows[0][1].ToString(), "Login Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AdminForm admin = new AdminForm(this);
+                    this.txtLoginID.Text = "";
+                    this.txtLoginPass.Text = "";
                     admin.Show();
                     this.Hide();
                 }

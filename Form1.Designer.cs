@@ -41,8 +41,8 @@ namespace AutoCare_Pro
             this.checkShowPass = new System.Windows.Forms.CheckBox();
             this.txtLoginPass = new System.Windows.Forms.TextBox();
             this.lblLoginPass = new System.Windows.Forms.Label();
-            this.txtLoginEmail = new System.Windows.Forms.TextBox();
-            this.lblLoginEmail = new System.Windows.Forms.Label();
+            this.txtLoginID = new System.Windows.Forms.TextBox();
+            this.lblLoginID = new System.Windows.Forms.Label();
             this.pnlCar = new System.Windows.Forms.Panel();
             this.picCar = new System.Windows.Forms.PictureBox();
             this.pnlLogin.SuspendLayout();
@@ -108,8 +108,8 @@ namespace AutoCare_Pro
             this.pnlLoginForm.Controls.Add(this.checkShowPass);
             this.pnlLoginForm.Controls.Add(this.txtLoginPass);
             this.pnlLoginForm.Controls.Add(this.lblLoginPass);
-            this.pnlLoginForm.Controls.Add(this.txtLoginEmail);
-            this.pnlLoginForm.Controls.Add(this.lblLoginEmail);
+            this.pnlLoginForm.Controls.Add(this.txtLoginID);
+            this.pnlLoginForm.Controls.Add(this.lblLoginID);
             this.pnlLoginForm.Location = new System.Drawing.Point(21, 32);
             this.pnlLoginForm.Name = "pnlLoginForm";
             this.pnlLoginForm.Size = new System.Drawing.Size(413, 168);
@@ -148,25 +148,25 @@ namespace AutoCare_Pro
             this.lblLoginPass.TabIndex = 4;
             this.lblLoginPass.Text = "Password";
             // 
-            // txtLoginEmail
+            // txtLoginID
             // 
-            this.txtLoginEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.txtLoginEmail.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginEmail.Location = new System.Drawing.Point(15, 41);
-            this.txtLoginEmail.Name = "txtLoginEmail";
-            this.txtLoginEmail.Size = new System.Drawing.Size(381, 26);
-            this.txtLoginEmail.TabIndex = 3;
+            this.txtLoginID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.txtLoginID.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoginID.Location = new System.Drawing.Point(15, 41);
+            this.txtLoginID.Name = "txtLoginID";
+            this.txtLoginID.Size = new System.Drawing.Size(381, 26);
+            this.txtLoginID.TabIndex = 3;
             // 
-            // lblLoginEmail
+            // lblLoginID
             // 
-            this.lblLoginEmail.AutoSize = true;
-            this.lblLoginEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.lblLoginEmail.Location = new System.Drawing.Point(12, 13);
-            this.lblLoginEmail.Name = "lblLoginEmail";
-            this.lblLoginEmail.Size = new System.Drawing.Size(54, 18);
-            this.lblLoginEmail.TabIndex = 2;
-            this.lblLoginEmail.Text = "Email";
+            this.lblLoginID.AutoSize = true;
+            this.lblLoginID.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.lblLoginID.Location = new System.Drawing.Point(12, 13);
+            this.lblLoginID.Name = "lblLoginID";
+            this.lblLoginID.Size = new System.Drawing.Size(75, 18);
+            this.lblLoginID.TabIndex = 2;
+            this.lblLoginID.Text = "User ID";
             // 
             // pnlCar
             // 
@@ -223,8 +223,8 @@ namespace AutoCare_Pro
         private Panel pnlLoginForm;
         private TextBox txtLoginPass;
         private Label lblLoginPass;
-        private TextBox txtLoginEmail;
-        private Label lblLoginEmail;
+        private TextBox txtLoginID;
+        private Label lblLoginID;
         private Panel pnlCar;
         private PictureBox picCar;
         private CheckBox checkShowPass;

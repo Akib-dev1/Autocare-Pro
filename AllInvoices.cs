@@ -23,7 +23,7 @@ namespace AutoCare_Pro
             {
                 string sql = @"SELECT i.Invoice_Id , 
                   i.created_at, 
-                  c.Name, 
+                  c.Name, c.phone,
                   i.Grand_Total
            FROM Invoices i, Customers c
            WHERE i.Customer_Id = c.Customer_Id";
@@ -55,7 +55,7 @@ namespace AutoCare_Pro
             string searchText = this.txtAllInvoicesSearch.Text.Trim();
             if (string.IsNullOrEmpty(searchText))
             {
-                MessageBox.Show("Please enter an Invoice Number to search.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter an Phone Number to search.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -63,10 +63,11 @@ namespace AutoCare_Pro
                 string sql = "SELECT i.Invoice_Id, " +
                               "i.created_at, " +
                                "c.Name, " +
+                               "c.phone, " +
                                "i.Grand_Total " +
                                "FROM Invoices i, Customers c " +
                                "WHERE i.Customer_Id = c.Customer_Id " +
-                               "AND i.Invoice_Id = " + searchText;
+                               "AND c.phone = '" + searchText + "'";
                 DataTable dt = AdminForm.Da.GetDataTable(sql);
                 this.dgvAllInvoices.DataSource = dt;
             }

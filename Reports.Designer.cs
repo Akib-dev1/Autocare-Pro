@@ -74,7 +74,7 @@
             this.pnlReportTopBar.Controls.Add(this.pbReportImage);
             this.pnlReportTopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlReportTopBar.Location = new System.Drawing.Point(0, 0);
-            this.pnlReportTopBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlReportTopBar.Margin = new System.Windows.Forms.Padding(2);
             this.pnlReportTopBar.Name = "pnlReportTopBar";
             this.pnlReportTopBar.Size = new System.Drawing.Size(903, 57);
             this.pnlReportTopBar.TabIndex = 0;
@@ -109,7 +109,7 @@
             this.pbReportImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbReportImage.Image = ((System.Drawing.Image)(resources.GetObject("pbReportImage.Image")));
             this.pbReportImage.Location = new System.Drawing.Point(852, 12);
-            this.pbReportImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbReportImage.Margin = new System.Windows.Forms.Padding(2);
             this.pbReportImage.Name = "pbReportImage";
             this.pbReportImage.Size = new System.Drawing.Size(40, 28);
             this.pbReportImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,7 +139,7 @@
             this.pnlAvgSales.Controls.Add(this.lblAvgSaleTotal);
             this.pnlAvgSales.Controls.Add(this.lblAvgSales);
             this.pnlAvgSales.Location = new System.Drawing.Point(43, 131);
-            this.pnlAvgSales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAvgSales.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAvgSales.Name = "pnlAvgSales";
             this.pnlAvgSales.Size = new System.Drawing.Size(231, 123);
             this.pnlAvgSales.TabIndex = 2;
@@ -148,7 +148,7 @@
             // 
             this.pbAvgSales.Image = ((System.Drawing.Image)(resources.GetObject("pbAvgSales.Image")));
             this.pbAvgSales.Location = new System.Drawing.Point(14, 23);
-            this.pbAvgSales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbAvgSales.Margin = new System.Windows.Forms.Padding(2);
             this.pbAvgSales.Name = "pbAvgSales";
             this.pbAvgSales.Size = new System.Drawing.Size(38, 35);
             this.pbAvgSales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +160,7 @@
             this.lblCurrency.AutoSize = true;
             this.lblCurrency.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrency.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblCurrency.Location = new System.Drawing.Point(88, 73);
+            this.lblCurrency.Location = new System.Drawing.Point(130, 73);
             this.lblCurrency.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurrency.Name = "lblCurrency";
             this.lblCurrency.Size = new System.Drawing.Size(95, 13);
@@ -185,7 +185,7 @@
             this.lblAvgSales.AutoSize = true;
             this.lblAvgSales.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAvgSales.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblAvgSales.Location = new System.Drawing.Point(101, 33);
+            this.lblAvgSales.Location = new System.Drawing.Point(143, 33);
             this.lblAvgSales.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAvgSales.Name = "lblAvgSales";
             this.lblAvgSales.Size = new System.Drawing.Size(82, 14);
@@ -203,7 +203,7 @@
             this.pnlNewCustomers.Controls.Add(this.lblTotalCustomerAmount);
             this.pnlNewCustomers.Controls.Add(this.lblTotalCustomerTitle);
             this.pnlNewCustomers.Location = new System.Drawing.Point(339, 131);
-            this.pnlNewCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlNewCustomers.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNewCustomers.Name = "pnlNewCustomers";
             this.pnlNewCustomers.Size = new System.Drawing.Size(218, 123);
             this.pnlNewCustomers.TabIndex = 4;
@@ -212,7 +212,7 @@
             // 
             this.pbNewCustomerLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbNewCustomerLogo.Image")));
             this.pbNewCustomerLogo.Location = new System.Drawing.Point(14, 23);
-            this.pbNewCustomerLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbNewCustomerLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pbNewCustomerLogo.Name = "pbNewCustomerLogo";
             this.pbNewCustomerLogo.Size = new System.Drawing.Size(38, 35);
             this.pbNewCustomerLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -267,7 +267,7 @@
             this.pnlProjectedRevenue.Controls.Add(this.lblProRevenueAmount);
             this.pnlProjectedRevenue.Controls.Add(this.lblProjectedRevenueTitle);
             this.pnlProjectedRevenue.Location = new System.Drawing.Point(622, 131);
-            this.pnlProjectedRevenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlProjectedRevenue.Margin = new System.Windows.Forms.Padding(2);
             this.pnlProjectedRevenue.Name = "pnlProjectedRevenue";
             this.pnlProjectedRevenue.Size = new System.Drawing.Size(243, 123);
             this.pnlProjectedRevenue.TabIndex = 4;
@@ -276,7 +276,7 @@
             // 
             this.pbProjectedRevenueLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbProjectedRevenueLogo.Image")));
             this.pbProjectedRevenueLogo.Location = new System.Drawing.Point(14, 23);
-            this.pbProjectedRevenueLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbProjectedRevenueLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pbProjectedRevenueLogo.Name = "pbProjectedRevenueLogo";
             this.pbProjectedRevenueLogo.Size = new System.Drawing.Size(38, 35);
             this.pbProjectedRevenueLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -349,7 +349,7 @@
             this.Amount,
             this.status});
             this.dgvLedger.Location = new System.Drawing.Point(43, 308);
-            this.dgvLedger.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvLedger.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLedger.Name = "dgvLedger";
             this.dgvLedger.ReadOnly = true;
             this.dgvLedger.RowHeadersWidth = 51;
@@ -405,7 +405,7 @@
             this.Controls.Add(this.pnlAvgSales);
             this.Controls.Add(this.lblReportSalesAnalytics);
             this.Controls.Add(this.pnlReportTopBar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Reports";
             this.Size = new System.Drawing.Size(903, 527);
             this.Load += new System.EventHandler(this.Reports_Load);

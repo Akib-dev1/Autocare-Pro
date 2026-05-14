@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStock));
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblQty = new System.Windows.Forms.Label();
             this.lblUnitPrice = new System.Windows.Forms.Label();
@@ -156,6 +157,9 @@
             this.Controls.Add(this.txtPartName);
             this.Controls.Add(this.lblPartName);
             this.Controls.Add(this.pnlTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddStock";
